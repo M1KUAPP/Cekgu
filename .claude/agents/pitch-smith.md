@@ -15,7 +15,7 @@ effort: max
 > **The deck is not optional here.** MUBA requires a pitch deck as a submission artifact on Devfolio, and it must cover
 > five named sections: Problem Statement & Project Objective, Motivation and Challenges, Commercialisation and Business
 > Model, Technology Stacks and Track Chosen, and the Overall Concept. That is a checklist, not a suggestion. Confirm
-> against `docs/brief.md` before drafting.
+> against `docs/BRIEF.md` before drafting.
 >
 > **The video is about the system, not the story.** Asked directly at the opening ceremony whether the presentation
 > video should cover theme and architecture or just the system, the organiser answered: more on the system, the
@@ -35,7 +35,7 @@ Ship complete units, not partial ones.
    a 2-minute video showing the product in action.
 
 That is the whole remit. Do not touch `src/`, do not open issues, do not review PRs, do not edit `AGENTS.md` or
-`docs/brief.md`. If you notice a product bug, say so in one line in your report and keep going.
+`docs/BRIEF.md`. If you notice a product bug, say so in one line in your report and keep going.
 
 **Never mess these up.** They are the last thing that happens before judging and there is no time to redo them.
 
@@ -43,7 +43,7 @@ That is the whole remit. Do not touch `src/`, do not open issues, do not review 
 
 - `docs/PRODUCT.md` for the user, the problem, the demo moment and the scope ladder. **This is the spine of the
   script** - do not invent a different framing.
-- `docs/brief.md` for judging criteria, timings and the submission checklist
+- `docs/BRIEF.md` for judging criteria, timings and the submission checklist
 - `docs/source/gonkarouter-challenge.md` for the track's own submission criteria
 - `docs/source/opening-ceremony-transcript.md` for what the organisers actually said about the video and the pitch
   format

@@ -384,7 +384,7 @@ See [LICENSE](LICENSE) for more information.
 ## Acknowledgments
 
 - [GonkaRouter](https://gonkarouter.io) — the gateway every reasoning call in this project runs through.
-- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](docs/brief.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
+- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](docs/BRIEF.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
 - [Live2D sample data](https://www.live2d.com/download/sample-data/) — Tororo and Hijiki are Live2D sample characters, not Cekgu originals — used under the Live2D Free Material License Agreement and built with the Live2D Cubism SDK.
 - [Acceptable use](docs/legal/acceptable-use.md) — **Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md), [acceptable use](docs/legal/acceptable-use.md).
 - [archify](https://github.com/tt-a1i/archify) — architecture diagrams.

@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Canonical, tool-agnostic project instructions. Every agentic tool works from this file; `CLAUDE.md` only points here.
-**Read [`docs/brief.md`](docs/brief.md) before acting** — deadlines, rules and the judging rubric.
+**Read [`docs/BRIEF.md`](docs/BRIEF.md) before acting** — deadlines, rules and the judging rubric.
 
 Contents:
 
@@ -25,7 +25,7 @@ Contents:
 **MUBA Blockchain Hackathon 2026**, track **GonkaRouter - AI for Society**. Repo: `github.com/M1KUAPP/Cekgu` (public).
 
 **Submission deadline: 5 Sept 2026, 23:59 MYT**, on Devfolio. No submission means disqualification from pitching. Every
-other event fact lives in [`docs/brief.md`](docs/brief.md), which is the single source of truth for them; organizer
+other event fact lives in [`docs/BRIEF.md`](docs/BRIEF.md), which is the single source of truth for them; organizer
 source material is in [`docs/source/`](docs/source/).
 
 ## Track requirements
@@ -33,7 +33,7 @@ source material is in [`docs/source/`](docs/source/).
 Non-negotiable, from [`docs/source/gonkarouter-challenge.md`](docs/source/gonkarouter-challenge.md):
 
 1. **All AI reasoning and verification runs through GonkaRouter** (`https://api.gonkarouter.io`). Reasoning and
-   verification, which is the organizers' own wording — see [`docs/brief.md`](docs/brief.md). Two directories are
+   verification, which is the organizers' own wording — see [`docs/BRIEF.md`](docs/BRIEF.md). Two directories are
    exempt, and neither may decide anything: `src/server/transcribe/` turns an uploaded image or PDF into the text
    printed on it ([`docs/TRD.md` section 20](docs/TRD.md#20-reading-a-paper-from-an-upload)), and `src/server/chat/`
    phrases the record assistant's answers from facts the Gonka readers already produced
@@ -299,7 +299,7 @@ gh issue close <n>                     # done
 - **Do not** hardcode model ids without verifying them against `/v1/models`. They are case- and slash-sensitive
 - **Do not** create `docs/architecture.md` or a second README beside the root `README.md`
 - **Do not** start implementation before `PRODUCT.md`, `PRD.md` and `TRD.md` all exist
-- **Do not** change a quotation in [`docs/source/`](docs/source/). Corrections go in `docs/brief.md`
+- **Do not** change a quotation in [`docs/source/`](docs/source/). Corrections go in `docs/BRIEF.md`
 - **Do not** commit a path that only exists on your machine. `~/CS/...`, `/home/<you>/...`, `C:\Users\...`,
   `\\wsl.localhost\...` and scratch dirs under `/tmp` are invisible to everyone else. Name the tool, not your copy of
   it. Machine-independent locations like `~/.claude/` are fine

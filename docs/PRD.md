@@ -63,7 +63,7 @@ that other guests can see and delete what they add, they may submit a small real
 the protected sample record even if every live model is unavailable at that moment.
 
 **The judge on demo day** watches the five-minute pitch, may open the deployed URL during Q&A, and reads the README.
-They are scoring the four track requirements and the rubric in [`brief.md`](brief.md#how-we-are-judged). They need the
+They are scoring the four track requirements and the rubric in [`BRIEF.md`](BRIEF.md#how-we-are-judged). They need the
 request ids, the model names and the consensus rule visible on the screen, not described in a slide.
 
 ## Functional requirements

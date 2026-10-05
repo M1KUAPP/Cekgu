@@ -36,7 +36,7 @@ every other team gets from the same prompt.
 One file per topic, named `<topic>.md`: measured gateway and model capabilities, candidate concepts, rankings against
 the rubric, competitor scans, red-team findings.
 
-**Not here:** summaries of the rules ([`../../brief.md`](../../brief.md)), organizer material
+**Not here:** summaries of the rules ([`../../BRIEF.md`](../../BRIEF.md)), organizer material
 ([`../../source/`](../../source/)), or a locked product decision. Research informs a decision; it is not the record of
 one.
 

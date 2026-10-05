@@ -39,7 +39,7 @@ Contents:
 ## Format and conventions
 
 - **Slot** — 3 minutes presentation plus 1 minute Q&A, confirmed with the organizers on 5 September. The 5-plus-5 figure
-  in [`../brief.md`](../brief.md#how-we-are-judged) is what was announced at the opening ceremony and is superseded.
+  in [`../BRIEF.md`](../BRIEF.md#how-we-are-judged) is what was announced at the opening ceremony and is superseded.
 - **Budget** — 2:30 deck, 0:30 live demo, last word by **3:00** with nothing held back as buffer. There is no buffer at
   three minutes; the buffer is the [cut list](#what-gets-cut-if-you-run-long).
 - **Deck** — [`pitch-deck.html`](pitch-deck.html), 9 slides. PDF backup: [`pitch-deck.pdf`](pitch-deck.pdf). Arrow keys
@@ -56,7 +56,7 @@ Contents:
 
 ### Where the five required deck sections live
 
-Devfolio requires five named sections ([`../brief.md`](../brief.md#what-we-submit)). Each is a whole slide and carries
+Devfolio requires five named sections ([`../BRIEF.md`](../BRIEF.md#what-we-submit)). Each is a whole slide and carries
 its section name as the slide's eyebrow, so a judge holding the checklist can tick it from the back row. Three minutes
 does not allow a spoken paragraph on each, and it does not have to: the deck is a submitted artifact in its own right.
 

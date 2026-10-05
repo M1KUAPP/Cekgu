@@ -1510,7 +1510,7 @@ between them is the whole design.
 The track's mandatory rule binds AI **reasoning and verification logic** to the Gonka Network, in the organizers' own
 words. Copying printed words off a page is neither, and step 2 — every judgement in the feature — carries an
 `x-request-id` like any other inference in the product. mrJiang's ruling permitting a third-party provider outside the
-mandatory path is recorded in [`brief.md`](brief.md#non-negotiable-requirements).
+mandatory path is recorded in [`BRIEF.md`](BRIEF.md#non-negotiable-requirements).
 
 **The organizers' own reference architecture draws the same line**, which is worth more than our reading of it. Their
 mandatory list separates item 1, **Claim Extraction**, "accept a URL, tweet, or text snippet as input", from item 2,

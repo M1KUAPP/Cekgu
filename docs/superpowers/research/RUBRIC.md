@@ -4,7 +4,7 @@ The instrument we score candidate concepts against, before anything is built. It
 is ours, built to predict theirs, with one dimension they leave unweighted made explicit because it is where this track
 will actually be won or lost.
 
-Official criteria live in [`../../brief.md`](../../brief.md). Read them first.
+Official criteria live in [`../../BRIEF.md`](../../BRIEF.md). Read them first.
 
 Contents:
 

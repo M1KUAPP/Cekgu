@@ -711,7 +711,7 @@ two-reader idea land in the first ten seconds.
 - [Multi-model capability](superpowers/research/multi-model-capability.md) — what distinct model families do and do not
   prove
 - [TRD](TRD.md) — measured gateway behaviour, receipt eligibility and all eventual application architecture
-- [MUBA brief](brief.md#how-we-are-judged) — deadline, deliverables and judging priorities
+- [MUBA brief](BRIEF.md#how-we-are-judged) — deadline, deliverables and judging priorities
 - [UiTM final-examination guidance][uitm-vetting] — institutional vetting and confidentiality
 - [ExamEval mis-key guidance][exameval] and [CramKit verification][cramkit] — direct product and mechanism prior art
 - [Tororo & Hijiki sample page][tororo-hijiki], [sample-data terms][sample-terms], [Cubism SDK for Web][live2d-web],
