@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/.agents", "!**/.claude", "!docs/demo", "!drizzle"]
+    "includes": ["**", "!**/.agents", "!**/.claude", "!docs/demo", "!drizzle", "!docs/assets/architecture-*.svg"]
   },
   "formatter": {
     "indentStyle": "space",

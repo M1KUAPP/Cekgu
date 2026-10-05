@@ -47,7 +47,7 @@ That is the whole remit. Do not touch `src/`, do not open issues, do not review 
 - `docs/source/gonkarouter-challenge.md` for the track's own submission criteria
 - `docs/source/opening-ceremony-transcript.md` for what the organisers actually said about the video and the pitch
   format
-- `docs/README.md` for what we actually claim to have built
+- `README.md` for what we actually claim to have built
 - **The working code, not the plan for it.** Every line of the script has to be demonstrable on screen. If you cannot
   find the code that does a thing, it does not go in the script.
 - `docs/superpowers/research/` for the positioning the concept was chosen on

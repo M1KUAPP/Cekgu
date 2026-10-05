@@ -131,7 +131,7 @@ is off, so fenced code samples are never rewritten.
 
 `rtk` and `graphify`, both optional and per-machine, are documented in
 [`docs/reference/agent-tooling.md`](docs/reference/agent-tooling.md). The repository layout is not written down
-anywhere: `docs/README.md` is judge-facing and carries architecture rather than a directory tree. Read it off the tree
+anywhere: `README.md` is judge-facing and carries architecture rather than a directory tree. Read it off the tree
 itself.
 
 ## CLI first, always
@@ -187,7 +187,7 @@ restructuring a document. The rules below are this project's additions to it, no
 
 Both may describe architecture. They differ in **depth and audience**, not subject.
 
-|              | `docs/README.md`                                                 | `docs/TRD.md`                                  |
+|              | `README.md`                                                      | `docs/TRD.md`                                  |
 | ------------ | ---------------------------------------------------------------- | ---------------------------------------------- |
 | **Audience** | Judges, external reviewers, anyone landing on the repo           | Developers implementing against it             |
 | **Depth**    | High-level narrative: the whats, hows and whys                   | Canonical implementation-level reference       |
@@ -196,8 +196,9 @@ Both may describe architecture. They differ in **depth and audience**, not subje
 
 "It is in the TRD" is a valid answer for implementation detail, **not** for anything a reviewer needs. **A judge reads
 the README.** The track brief asks for "clean code with clear documentation on the GonkaRouter integration", and that is
-where they look. It lives in `docs/`, not the repo root, and GitHub renders it as the landing page, so keep links
-relative to `docs/`.
+where they look. It lives at the repo root, where GitHub renders it as the landing page, so keep links relative to the
+root. It follows the M1KUAPP org README template, which wins over
+[`docs/reference/markdown-style.md`](docs/reference/markdown-style.md) for that file.
 
 ## Design standards
 
@@ -297,7 +298,7 @@ gh issue close <n>                     # done
 - **Do not** merge a draft, conflicted, failing or known-breaking PR. Leave it open and report the blocker
 - **Do not** track TODOs in a markdown file
 - **Do not** hardcode model ids without verifying them against `/v1/models`. They are case- and slash-sensitive
-- **Do not** create `docs/architecture.md` or a second README
+- **Do not** create `docs/architecture.md` or a second README beside the root `README.md`
 - **Do not** start implementation before `PRODUCT.md`, `PRD.md` and `TRD.md` all exist
 - **Do not** change a quotation in [`docs/source/`](docs/source/). Corrections go in `docs/brief.md`
 - **Do not** commit a path that only exists on your machine. `~/CS/...`, `/home/<you>/...`, `C:\Users\...`,
