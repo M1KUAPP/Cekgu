@@ -284,8 +284,8 @@ export function Dashboard() {
 
             {health === null ? (
               /* Not a skeleton pretending to be a status. Until /api/health answers there is
-                 nothing true to show, and a shimmering placeholder in the shape of one is a claim
-                 that a reader is there. */
+               * nothing true to show, and a shimmering placeholder in the shape of one is a claim
+               * that a reader is there. */
               <p className="type-ui text-ink-muted">Checking which readers are answering.</p>
             ) : (
               <div>

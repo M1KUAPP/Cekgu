@@ -10,11 +10,11 @@ What was said at the GonkaRouter developer workshop, and in particular the Q&A r
 
 Contents:
 
-1. [Read this before quoting anything here](#read-this-before-quoting-anything-here)
-1. [Run of show](#run-of-show)
-1. [Jack's framing, from 11:15](#jacks-framing-from-1115)
-1. [The Q&A, and what was actually ruled](#the-qa-and-what-was-actually-ruled)
-1. [Deltas against the brief](#deltas-against-the-brief)
+1.  [Read this before quoting anything here](#read-this-before-quoting-anything-here)
+1.  [Run of show](#run-of-show)
+1.  [Jack's framing, from 11:15](#jacks-framing-from-1115)
+1.  [The Q&A, and what was actually ruled](#the-qa-and-what-was-actually-ruled)
+1.  [Deltas against the brief](#deltas-against-the-brief)
 
 ## Read this before quoting anything here
 

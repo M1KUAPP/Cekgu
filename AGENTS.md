@@ -11,4 +11,4 @@
 @docs/agents/documentation.md
 @docs/agents/design.md
 @docs/agents/do-nots.md
-@docs/agents/skills.md
+@docs/agents/harness.md

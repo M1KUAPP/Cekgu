@@ -129,9 +129,6 @@ logs/
 .claude/projects/
 .rtk/
 
-# skills.sh writes this universal tree; we install with -a claude-code only
-/agent/
-
 # Raw recordings. Transcripts under docs/source/ are committed
 docs/source/*.mp3
 docs/source/*.mp4

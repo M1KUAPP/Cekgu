@@ -8,14 +8,14 @@ Official criteria live in [`../BRIEF.md`](../BRIEF.md). Read them first.
 
 Contents:
 
-1. [Why this exists](#why-this-exists)
-1. [The weights](#the-weights)
-1. [The novelty test](#the-novelty-test)
-1. [Banned clusters](#banned-clusters)
-1. [Two hard rules for generation](#two-hard-rules-for-generation)
-1. [What this track structurally rewards](#what-this-track-structurally-rewards)
-1. [Kill criteria](#kill-criteria)
-1. [Using this rubric](#using-this-rubric)
+1.  [Why this exists](#why-this-exists)
+1.  [The weights](#the-weights)
+1.  [The novelty test](#the-novelty-test)
+1.  [Banned clusters](#banned-clusters)
+1.  [Two hard rules for generation](#two-hard-rules-for-generation)
+1.  [What this track structurally rewards](#what-this-track-structurally-rewards)
+1.  [Kill criteria](#kill-criteria)
+1.  [Using this rubric](#using-this-rubric)
 
 ## Why this exists
 
@@ -180,10 +180,10 @@ Stop work on a concept the moment any of these is true. Write down which one, an
 
 ## Using this rubric
 
-1. Generate candidates **without** an LLM writing the shortlist. `hackathon-idea-generator` structures the session; it
-   does not choose.
-1. Score each against the five dimensions. Record the numbers and the reasoning, not just the verdict.
-1. Run the [novelty test](#the-novelty-test) in full on anything above 70. Most candidates die here, which is the point.
-1. Take survivors to `competitor-analysis` and `strategy-red-team` before committing.
-1. Write the winner up as `docs/PRODUCT.md`. Archive the rest under `archive/round-N/` with a note on **why each was
-   cut** — a documented dead end stops being repeated.
+1.  Generate candidates **without** an LLM writing the shortlist. `hackathon-idea-generator` structures the session; it
+    does not choose.
+1.  Score each against the five dimensions. Record the numbers and the reasoning, not just the verdict.
+1.  Run the [novelty test](#the-novelty-test) in full on anything above 70. Most candidates die here, which is the point.
+1.  Take survivors to `competitor-analysis` and `strategy-red-team` before committing.
+1.  Write the winner up as `docs/PRODUCT.md`. Archive the rest under `archive/round-N/` with a note on **why each was
+    cut** — a documented dead end stops being repeated.
