@@ -4,14 +4,17 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/MUBA-M1KU/Cekgu">
-    <img src="public/brand/cekgu-lockup-dark.svg" alt="Banner">
+  <a href="https://github.com/M1KUAPP/Cekgu">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="public/brand/cekgu-lockup-dark.svg">
+      <img src="public/brand/cekgu-lockup.svg" alt="Banner">
+    </picture>
   </a>
 
   <h3>Cekgu</h3>
 
   <p>
-    Two AI readers solve a multiple-choice paper without seeing its answer key, and every reading they are allowed to use carries a Gonka Request ID a judge can look up.
+    Two AI readers solve a multiple-choice paper without seeing its answer key.
     <br />
     <a href="https://cekgu-op7lf5dspq-as.a.run.app"><strong>Live Demo »</strong></a>
     &middot;
@@ -21,11 +24,14 @@
     <br />
   </p>
 
-[![MUBA Blockchain Hackathon 2026: GonkaRouter Track][MUBA]][MUBA-url] [![4th Place][Placing]][Placing-url]
-
-[![Bun][Bun]][Bun-url] [![Hono][Hono.dev]][Hono-url] [![React][React.js]][React-url]
-[![TypeScript][TypeScript]][TypeScript-url] [![Tailwind CSS][Tailwind]][Tailwind-url]
-[![PostgreSQL][Postgres]][Postgres-url] [![Drizzle][Drizzle]][Drizzle-url] [![Cloud Run][CloudRun]][CloudRun-url]
+[![Bun][Bun]][Bun-url]
+[![Hono][Hono.dev]][Hono-url]
+[![React][React.js]][React-url]
+[![TypeScript][TypeScript]][TypeScript-url]
+[![Tailwind CSS][Tailwind]][Tailwind-url]
+[![PostgreSQL][Postgres]][Postgres-url]
+[![Drizzle][Drizzle]][Drizzle-url]
+[![Cloud Run][CloudRun]][CloudRun-url]
 [![GonkaRouter][GonkaRouter]][GonkaRouter-url]
 
 </div>
@@ -40,7 +46,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#demo-video">Demo Video</a></li>
         <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#features">Features</a></li>
@@ -72,7 +77,8 @@ complaint rather than from the paper.
 
 **Cekgu** puts one evidence step in front of that. An educator submits a small multiple-choice paper with its answer
 key. Two different model families solve each question through GonkaRouter, neither shown the key, and a fixed rule
-compares the two readings with each other before it ever compares them to the key.
+compares the two readings with each other before it ever compares them to the key. Every reading the two readers are
+allowed to use carries a Gonka Request ID a judge can look up.
 
 | Cekgu does                                                | Cekgu does not                  |
 | --------------------------------------------------------- | ------------------------------- |
@@ -85,18 +91,17 @@ question. The sample carries a real instance: a question written to be ambiguous
 readers committed to the same single answer. Built for practice papers and synthetic examples, not for confidential or
 unreleased examinations.
 
-<p align="right"><a href="#readme-top">&uarr;</a></p>
-
-### Demo Video
-
-<video src="https://github.com/user-attachments/assets/09f7f9f2-9757-4d40-8aa3-0973fe5ee2b2" controls muted poster="docs/assets/demo-poster.jpg" width="100%">
-  Your browser does not support inline video playback.
-  <a href="https://github.com/MUBA-M1KU/Cekgu/releases/download/demo-video-v1/Cekgu-Demo-720p.mp4">Download the film</a> instead.
-</video>
+Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — AI for Society track, where it placed
+**4th** and earned **20M GonkaRouter tokens over six months**.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
 ### Screenshots
+
+<video src="https://github.com/user-attachments/assets/09f7f9f2-9757-4d40-8aa3-0973fe5ee2b2" controls muted poster="docs/assets/demo-poster.jpg" width="100%">
+  Your browser does not support inline video playback.
+  <a href="https://github.com/M1KUAPP/Cekgu/releases/download/demo-video-v1/Cekgu-Demo-720p.mp4">Download the film</a> instead.
+</video>
 
 <table>
   <tr>
@@ -211,14 +216,16 @@ unreleased examinations.
 
 **The GonkaRouter integration.** The track's four requirements are enforced in code, not asserted in prose.
 
-| Track requirement                 | How it is enforced                                                                           | Where                    |
-| --------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------ |
-| All reasoning through GonkaRouter | One file calls a model; the guard fails the build if a provider appears anywhere else        | `gateway/client.ts`      |
-| Two models cross-verify           | A verdict needs two admitted readings whose **served** models differ, taken from the receipt | `gateway/`, `verdict.ts` |
-| Request IDs surfaced in the UI    | Every reading shows request id, devshard, requested and served model, and receipt state      | `/receipt/:requestId`    |
-| Explicit consensus logic          | The five-outcome rule is a pure function, with its reason sentence shown beside the verdict  | `shared/verdict.ts`      |
+- **All reasoning through GonkaRouter.** One file calls a model; the guard fails the build if a provider appears
+  anywhere else. Where: `gateway/client.ts`
+- **Two models cross-verify.** A verdict needs two admitted readings whose **served** models differ, taken from the
+  receipt. Where: `gateway/`, `verdict.ts`
+- **Request IDs surfaced in the UI.** Every reading shows request id, devshard, requested and served model, and receipt
+  state. Where: `/receipt/:requestId`
+- **Explicit consensus logic.** The five-outcome rule is a pure function, with its reason sentence shown beside the
+  verdict. Where: `shared/verdict.ts`
 
-Three guarantees sit behind that table:
+Three guarantees sit behind those four:
 
 - **No silent substitution.** Every call sends `X-Gonka-No-Fallback: true`, and any reply carrying an `X-Gonka-Fallback`
   header is refused even when its body is a perfectly good completion.
@@ -326,20 +333,20 @@ directory imports the verdict rule or the record writer, or if a provider hostna
 
 ### Tech Stack
 
-| Layer          | Technology                                     | Role                                                             |
-| -------------- | ---------------------------------------------- | ---------------------------------------------------------------- |
-| Runtime        | Bun 1.4                                        | Server runtime, package manager, test runner                     |
-| Server         | Hono, Zod                                      | API, boundary validation, SSE                                    |
-| Client         | React 19, React Router 8, Vite 8, Tailwind 4   | Review workspace, evidence views, public pages                   |
-| Data           | PostgreSQL (Neon), Drizzle ORM and Drizzle Kit | Records, items, attempts, dispositions, model health, migrations |
-| Auth           | Better Auth                                    | Email and password, Google OAuth, shared Guest workspace         |
-| Inference      | GonkaRouter                                    | Blind reads, draft structuring, receipts — all reasoning         |
-| Transcription  | Vision model, uploads only                     | Printed text from an image or PDF, no judgement                  |
-| Retrieval      | Search API, no model                           | Text other people published, quoted verbatim, no judgement       |
-| Assistant      | GonkaRouter, MiniMax-M2.7 with tool calling    | Grounded answers about one record, with receipts                 |
-| Mascot         | PixiJS, pixi-live2d-display, Web Speech        | Live2D reader seats, their captions and their voice              |
-| Hosting and CI | Cloud Run, Artifact Registry, GitHub Actions   | Container build, tagged PR previews, production deploy           |
-| Quality        | Biome, Prettier, TypeScript, Playwright        | Lint, format, strict types, browser smoke pass                   |
+- **Runtime:** Bun 1.4. Server runtime, package manager, test runner
+- **Server:** Hono, Zod. API, boundary validation, SSE
+- **Client:** React 19, React Router 8, Vite 8, Tailwind 4. Review workspace, evidence views, public pages
+- **Data:** PostgreSQL (Neon), Drizzle ORM and Drizzle Kit. Records, items, attempts, dispositions, model health,
+  migrations
+- **Auth:** Better Auth. Email and password, Google OAuth, shared Guest workspace
+- **Inference:** GonkaRouter. Blind reads, draft structuring, receipts — all reasoning
+- **Transcription:** Vision model, uploads only. Printed text from an image or PDF, no judgement
+- **Retrieval:** Search API, no model. Text other people published, quoted verbatim, no judgement
+- **Assistant:** GonkaRouter, MiniMax-M2.7 with tool calling. Grounded answers about one record, with receipts
+- **Mascot:** PixiJS, pixi-live2d-display, Web Speech. Live2D reader seats, their captions and their voice
+- **Hosting and CI:** Cloud Run, Artifact Registry, GitHub Actions. Container build, tagged PR previews, production
+  deploy
+- **Quality:** Biome, Prettier, TypeScript, Playwright. Lint, format, strict types, browser smoke pass
 
 Implementation detail, API contracts, model measurements, queue policy and test evidence live in [TRD](docs/TRD.md).
 Users, scope and the business hypothesis live in [PRODUCT](docs/PRODUCT.md), and the acceptance criteria in
@@ -353,6 +360,12 @@ Users, scope and the business hypothesis live in [PRODUCT](docs/PRODUCT.md), and
 
 The deployed app needs nothing installed: open the [live demo](https://cekgu-op7lf5dspq-as.a.run.app) and press **Sign
 In as Guest**, or read the [sample report](https://cekgu-op7lf5dspq-as.a.run.app/sample) without signing in at all.
+
+**Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any
+deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are
+removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days
+is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md),
+[acceptable use](docs/legal/acceptable-use.md).
 
 Running it locally needs a Postgres database and a GonkaRouter key, because there is no offline inference path and there
 is not meant to be one.
@@ -438,8 +451,7 @@ One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missi
 
 ## Roadmap
 
-See the [open issues](https://github.com/MUBA-M1KU/Cekgu/issues) for a full list of proposed features (and known
-issues).
+See [open issues](https://github.com/M1KUAPP/Cekgu/issues) for a full list of proposed features (and known issues).
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -447,43 +459,11 @@ issues).
 
 ## Team
 
-Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — AI for Society track, where it placed
-**4th** and earned **20M GonkaRouter tokens over six months**.
+<a href="https://github.com/M1KUAPP/Cekgu/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=M1KUAPP/Cekgu" alt="Team" />
+</a>
 
-<div align="center">
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <a href="https://github.com/AlaskanTuna"><img src="https://github.com/AlaskanTuna.png?size=100" width="96" alt="ZJ" /></a><br />
-      <b>ZJ</b><br />
-      <a href="https://github.com/AlaskanTuna">@AlaskanTuna</a>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/kymil4"><img src="https://github.com/kymil4.png?size=100" width="96" alt="YK" /></a><br />
-      <b>YK</b><br />
-      <a href="https://github.com/kymil4">@kymil4</a>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/chaosiris"><img src="https://github.com/chaosiris.png?size=100" width="96" alt="chaosiris" /></a><br />
-      <b>chaosiris</b><br />
-      <a href="https://github.com/chaosiris">@chaosiris</a>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/c3638"><img src="https://github.com/c3638.png?size=100" width="96" alt="KH" /></a><br />
-      <b>KH</b><br />
-      <a href="https://github.com/c3638">@c3638</a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center"><sub>The gateway client, verdict rule, queue and schema — and the client built on them.</sub></td>
-    <td align="center"><sub>The Truth Score, live retrieval, the sample record, and the paper-from-a-link path.</sub></td>
-    <td align="center"><sub>The record assistant on the gateway, the readers' voice and mascot, and the deck.</sub></td>
-    <td align="center"><sub>Legal notices, the judge-facing README, acceptance testing, and the Devfolio draft.</sub></td>
-  </tr>
-</table>
-</div>
-
-Every [contributor](https://github.com/MUBA-M1KU/Cekgu/graphs/contributors).
+Made with [contrib.rocks](https://contrib.rocks).
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -503,22 +483,13 @@ See [LICENSE](LICENSE) for more information.
 - [MUBA Blockchain Hackathon 2026](docs/brief.md) — the event and the AI for Society track brief
 - Tororo and Hijiki are Live2D sample characters, not Cekgu originals — used under the Live2D Free Material License
   Agreement and built with the Live2D Cubism SDK.
-- **Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any
-  deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are
-  removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days
-  is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md),
-  [acceptable use](docs/legal/acceptable-use.md).
 - [Shields.io](https://shields.io)
+- [contrib.rocks](https://contrib.rocks)
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[MUBA]:
-  https://img.shields.io/badge/MUBA_Blockchain_Hackathon_2026-GonkaRouter_Track-2456A6?labelColor=14181F&style=for-the-badge
-[MUBA-url]: docs/brief.md
-[Placing]: https://img.shields.io/badge/%F0%9F%8F%85_4th_Place-B3202F?style=for-the-badge
-[Placing-url]: https://devfolio.co/projects/cekgu
 [Bun]: https://img.shields.io/badge/Bun-14151A?style=for-the-badge&logo=bun&logoColor=white
 [Bun-url]: https://bun.sh
 [Hono.dev]: https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white
@@ -536,4 +507,4 @@ See [LICENSE](LICENSE) for more information.
 [CloudRun]: https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white
 [CloudRun-url]: https://cloud.google.com/run
 [GonkaRouter]: https://img.shields.io/badge/GonkaRouter-B3202F?style=for-the-badge
-[GonkaRouter-url]: https://api.gonkarouter.io
+[GonkaRouter-url]: https://gonkarouter.io
