@@ -7,7 +7,7 @@ import { runTool } from './tools'
 // exemption than the first. src/server/transcribe/ turns pixels into the words already on the page
 // and decides nothing; an answer about a record is closer to reasoning, and a strict reading of the
 // track's first rule does not permit it. It is here because the team decided it on 4 September, on
-// the record in docs/superpowers/specs/2026-09-04-talking-cats-and-record-agent-design.md.
+// the record in docs/plans/2026-09-04-talking-cats-and-record-agent-design.md.
 //
 // What keeps it honest rather than hidden, and what a reviewer should check still holds:
 //

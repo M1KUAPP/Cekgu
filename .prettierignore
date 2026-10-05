@@ -1,1 +1,20 @@
+.agents/
+.claude/
+
+# Repo-specific
+# Agent scratch: audits and working notes
 .tmp/
+
+# Biome owns code, JSON, CSS and HTML; Prettier owns Markdown and YAML
+*.ts
+*.tsx
+*.mts
+*.cts
+*.js
+*.jsx
+*.mjs
+*.cjs
+*.json
+*.jsonc
+*.css
+*.html

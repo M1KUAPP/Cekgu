@@ -15,7 +15,7 @@ effort: max
 > **The deck is not optional here.** MUBA requires a pitch deck as a submission artifact on Devfolio, and it must cover
 > five named sections: Problem Statement & Project Objective, Motivation and Challenges, Commercialisation and Business
 > Model, Technology Stacks and Track Chosen, and the Overall Concept. That is a checklist, not a suggestion. Confirm
-> against `docs/brief.md` before drafting.
+> against `docs/BRIEF.md` before drafting.
 >
 > **The video is about the system, not the story.** Asked directly at the opening ceremony whether the presentation
 > video should cover theme and architecture or just the system, the organiser answered: more on the system, the
@@ -35,7 +35,7 @@ Ship complete units, not partial ones.
    a 2-minute video showing the product in action.
 
 That is the whole remit. Do not touch `src/`, do not open issues, do not review PRs, do not edit `AGENTS.md` or
-`docs/brief.md`. If you notice a product bug, say so in one line in your report and keep going.
+`docs/BRIEF.md`. If you notice a product bug, say so in one line in your report and keep going.
 
 **Never mess these up.** They are the last thing that happens before judging and there is no time to redo them.
 
@@ -43,14 +43,14 @@ That is the whole remit. Do not touch `src/`, do not open issues, do not review 
 
 - `docs/PRODUCT.md` for the user, the problem, the demo moment and the scope ladder. **This is the spine of the
   script** - do not invent a different framing.
-- `docs/brief.md` for judging criteria, timings and the submission checklist
+- `docs/BRIEF.md` for judging criteria, timings and the submission checklist
 - `docs/source/gonkarouter-challenge.md` for the track's own submission criteria
 - `docs/source/opening-ceremony-transcript.md` for what the organisers actually said about the video and the pitch
   format
 - `README.md` for what we actually claim to have built
 - **The working code, not the plan for it.** Every line of the script has to be demonstrable on screen. If you cannot
   find the code that does a thing, it does not go in the script.
-- `docs/superpowers/research/` for the positioning the concept was chosen on
+- `docs/research/` for the positioning the concept was chosen on
 - `docs/TRD.md` for the architecture slide, and `docs/DESIGN.md` for the palette and type pairing if one is recorded
 
 ---
@@ -171,7 +171,7 @@ Read `AGENTS.md` and `.agents/skills/VENDORED.md`. Short version:
   `impeccable` is the usual way this fails.
 - If `docs/DESIGN.md` exists, use it. Do not invent a second palette for the deck.
 - Anti-slop: no purple-to-blue gradient hero, no Inter as the safe default, nothing centre aligned by reflex.
-- Sentence case for headings and labels, per `docs/reference/markdown-style.md`. UI chrome in the deck keeps TitleCase.
+- Sentence case for headings and labels, per `docs/references/markdown-style.md`. UI chrome in the deck keeps TitleCase.
 
 ## Structure that works
 

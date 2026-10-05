@@ -69,18 +69,10 @@ The clause-level fact ("the bill removes citizenship by operation of law for s.1
 The minister's "won't worsen statelessness" is a prediction about administrative behaviour and is not. This is the
 honest boundary the product must draw on screen.
 
-[Malay Mail, 19 Mar 2024]:
-  https://www.malaymail.com/news/malaysia/2024/03/19/amid-growing-concerns-home-minister-insists-citizenship-law-changes-wont-worsen-statelessness/124325
-  "Amid growing concerns, Home Minister insists citizenship law changes won't worsen statelessness"
-[Aliran, 2024]:
-  https://m.aliran.com/civil-society-voices/saifuddin-is-wrong-the-stateless-face-huge-difficulties-in-applying-for-citizenship
-  'Saifuddin is wrong, the stateless face huge difficulties in applying for citizenship'
-[MalaysiaNow, 22 Mar 2024]:
-  https://www.malaysianow.com/news/2024/03/22/government-drops-plan-to-deny-automatic-citizenship-to-foundlings-stateless-children
-  'Government drops plan to deny automatic citizenship to foundlings, stateless children'
-[MalaysiaNow, 18 Mar 2024]:
-  https://www.malaysianow.com/news/2024/03/18/rights-body-schools-saifuddin-after-bizarre-defence-of-citizenship-law-changes
-  "Rights body schools Saifuddin after 'bizarre' defence of citizenship law changes"
+[Malay Mail, 19 Mar 2024]: https://www.malaymail.com/news/malaysia/2024/03/19/amid-growing-concerns-home-minister-insists-citizenship-law-changes-wont-worsen-statelessness/124325 "Amid growing concerns, Home Minister insists citizenship law changes won't worsen statelessness"
+[Aliran, 2024]: https://m.aliran.com/civil-society-voices/saifuddin-is-wrong-the-stateless-face-huge-difficulties-in-applying-for-citizenship 'Saifuddin is wrong, the stateless face huge difficulties in applying for citizenship'
+[MalaysiaNow, 22 Mar 2024]: https://www.malaysianow.com/news/2024/03/22/government-drops-plan-to-deny-automatic-citizenship-to-foundlings-stateless-children 'Government drops plan to deny automatic citizenship to foundlings, stateless children'
+[MalaysiaNow, 18 Mar 2024]: https://www.malaysianow.com/news/2024/03/18/rights-body-schools-saifuddin-after-bizarre-defence-of-citizenship-law-changes "Rights body schools Saifuddin after 'bizarre' defence of citizenship law changes"
 
 ### Online Safety Bill 2024: clause readings exist, the contrast is implicit
 
@@ -96,18 +88,10 @@ Negative result: ARTICLE 19's analysis "does not directly quote contrasting gove
 individual users" line against ss.54 to 61 is the product's kind of claim-clause pair, but no published source has yet
 put them side by side. That is an opportunity and a warning: the demo would be the first to do it, so it must be right.
 
-[Global Voices, 16 Dec 2024]:
-  https://globalvoices.org/2024/12/16/online-safety-or-censorship-malaysias-parliament-passes-two-contentious-media-bills/
-  "Online safety or censorship? Malaysia's parliament passes two contentious media bills"
-[Malay Mail, 17 Dec 2024]:
-  https://www.malaymail.com/news/malaysia/2024/12/17/act-588-amendment-focuses-on-excessive-vulgarity-serves-as-enforcement-guide-not-definitive-says-fahmi/160122
-  'Act 588 amendment focuses on excessive vulgarity, serves as enforcement guide, not definitive, says Fahmi'
-[RDS Law Partners]:
-  https://www.rdslawpartners.com/post/from-platform-discretion-to-statutory-oversight-malaysia-s-online-safety-act-2025
-  "From Platform Discretion To Statutory Oversight: Malaysia's Online Safety Act 2025"
-[ARTICLE 19, Dec 2024]:
-  https://www.article19.org/resources/malaysia-passage-of-the-online-safety-bill-a-grave-blow-to-foe/
-  'Malaysia: Passage of Online Safety Bill a grave blow to free expression'
+[Global Voices, 16 Dec 2024]: https://globalvoices.org/2024/12/16/online-safety-or-censorship-malaysias-parliament-passes-two-contentious-media-bills/ "Online safety or censorship? Malaysia's parliament passes two contentious media bills"
+[Malay Mail, 17 Dec 2024]: https://www.malaymail.com/news/malaysia/2024/12/17/act-588-amendment-focuses-on-excessive-vulgarity-serves-as-enforcement-guide-not-definitive-says-fahmi/160122 'Act 588 amendment focuses on excessive vulgarity, serves as enforcement guide, not definitive, says Fahmi'
+[RDS Law Partners]: https://www.rdslawpartners.com/post/from-platform-discretion-to-statutory-oversight-malaysia-s-online-safety-act-2025 "From Platform Discretion To Statutory Oversight: Malaysia's Online Safety Act 2025"
+[ARTICLE 19, Dec 2024]: https://www.article19.org/resources/malaysia-passage-of-the-online-safety-bill-a-grave-blow-to-foe/ 'Malaysia: Passage of Online Safety Bill a grave blow to free expression'
 
 ### Cyber Security Act 2024 and Gig Workers Act 2025: negative results
 
@@ -116,17 +100,10 @@ put them side by side. That is an opportunity and a warning: the demo would be t
 | Cyber Security Act 2024 | Negative result for any minister-versus-clause dispute. Closest: the Act "not setting out criteria or parameters which the Minister must consider for the designation of an NCII Sector Lead". Tabled 25 Mar 2024 by Gobind Singh Deo, gazetted 26 Jun 2024, in force 26 Aug 2024     | [Mayer Brown, Dec 2024], [NACSA Act 854]                         |
 | Gig Workers Act 2025    | Negative result for a ministry "misconception" clarification. Critiques found are of substance, not misstatement: FMT, "Why the Gig Workers Act 2025 misses the mark", 6 Jul 2026; "The illusion of protection under the Gig Workers Act 2025" (Life News Agency). Passed 28 Aug 2025 | [FMT, 6 Jul 2026], [Life News Agency], [Malay Mail, 28 Aug 2025] |
 
-[Mayer Brown, Dec 2024]:
-  https://www.mayerbrown.com/en/insights/publications/2024/12/malaysias-new-cyber-security-act-2024-a-summary-and-brief-comparative-analysis
-  "Malaysia's New Cyber Security Act 2024: A Summary and Brief Comparative Analysis"
-[FMT, 6 Jul 2026]:
-  https://www.freemalaysiatoday.com/category/opinion/2026/07/06/why-the-gig-workers-act-2025-misses-the-mark
-  'Why the Gig Workers Act 2025 misses the mark'
-[Life News Agency]:
-  https://lifenewsagency.com/the-illusion-of-protection-under-the-gig-workers-act-2025/
-  'The illusion of protection under the Gig Workers Act 2025'
-[Malay Mail, 28 Aug 2025]:
-  https://www.malaymail.com/amp/news/malaysia/2025/08/28/parliament-passes-landmark-gig-workers-bill-extending-long-overdue-protections-to-12-million-malaysians/189239
+[Mayer Brown, Dec 2024]: https://www.mayerbrown.com/en/insights/publications/2024/12/malaysias-new-cyber-security-act-2024-a-summary-and-brief-comparative-analysis "Malaysia's New Cyber Security Act 2024: A Summary and Brief Comparative Analysis"
+[FMT, 6 Jul 2026]: https://www.freemalaysiatoday.com/category/opinion/2026/07/06/why-the-gig-workers-act-2025-misses-the-mark 'Why the Gig Workers Act 2025 misses the mark'
+[Life News Agency]: https://lifenewsagency.com/the-illusion-of-protection-under-the-gig-workers-act-2025/ 'The illusion of protection under the Gig Workers Act 2025'
+[Malay Mail, 28 Aug 2025]: https://www.malaymail.com/amp/news/malaysia/2025/08/28/parliament-passes-landmark-gig-workers-bill-extending-long-overdue-protections-to-12-million-malaysians/189239
 
 ## Data
 
@@ -143,21 +120,13 @@ Unverified because the budget ran out: whether the 2024 to 2025 bill PDFs are bo
 1993 Hansard PDFs in the index are almost certainly scans; recent bills from the AGC are expected to be text. Confirm
 with one `pdftotext` run before committing to the pipeline.
 
-[Parlimen bills page]:
-  https://www.parlimen.gov.my/bills-dewan-rakyat.html?uweb=dr
-  'Portal Rasmi Parlimen Malaysia, Rang Undang-Undang'
+[Parlimen bills page]: https://www.parlimen.gov.my/bills-dewan-rakyat.html?uweb=dr 'Portal Rasmi Parlimen Malaysia, Rang Undang-Undang'
 [Parlimen DN.5.2025]: https://parlimen.gov.my/ipms/eps/2025-09-04/DN.5.2025%20-%20DN5.2025.pdf
-[University of Melbourne libguide]:
-  https://unimelb.libguides.com/c.php?g=930183&p=6721988
-  'Southeast Asian Region Countries Law: Legislation'
+[University of Melbourne libguide]: https://unimelb.libguides.com/c.php?g=930183&p=6721988 'Southeast Asian Region Countries Law: Legislation'
 [Hansard DN 12 Dec 2019]: https://www.parlimen.gov.my/files/hindex/pdf/DN-12122019.pdf
-[Hansard verbatim handbook]:
-  https://www.parlimen.gov.my/images/webuser/dn/Buku%20Panduan%20Penyediaan%20Verbatim%20Penyata%20Rasmi%20Hansard.pdf
-  'Buku Panduan Penyediaan Verbatim Penyata Rasmi (Hansard)'
+[Hansard verbatim handbook]: https://www.parlimen.gov.my/images/webuser/dn/Buku%20Panduan%20Penyediaan%20Verbatim%20Penyata%20Rasmi%20Hansard.pdf 'Buku Panduan Penyediaan Verbatim Penyata Rasmi (Hansard)'
 [MOHR Act 872]: https://www.mohr.gov.my/aktapekerjagig2025/assets/documents/Act%20872.pdf
-[JHEKS MOHR]:
-  https://jheks.mohr.gov.my/index.php/en/gig-workers-bill-2025-tabled-in-parliament-landmark-move-to-protect-1-2-million-gig-workers/
-  'Gig Workers Bill 2025 Tabled in Parliament'
+[JHEKS MOHR]: https://jheks.mohr.gov.my/index.php/en/gig-workers-bill-2025-tabled-in-parliament-landmark-move-to-protect-1-2-million-gig-workers/ 'Gig Workers Bill 2025 Tabled in Parliament'
 [Sinar Project pardocs]: https://pardocs.sinarproject.org/ 'Parliamentary Documents'
 [Sinar Project govdocs]: https://govdocs.sinarproject.org/ 'Malaysian Government Document Archives'
 [Sinar GitHub]: https://github.com/Sinar
@@ -190,17 +159,11 @@ show the obligation exists on paper with no automated check behind it.
 [Sinar open parliament]: https://sinarproject.org/open-parliament
 [UNDI18 Wikipedia]: https://en.wikipedia.org/wiki/UNDI18
 [BillTrack50]: https://www.billtrack50.com/info/help/ai-assist-bill-summaries 'AI Generated Bill Summaries'
-[Plural Policy]:
-  https://pluralpolicy.com/blog/summarizing-bills-with-generative-ai/
-  'Summarizing Bills With Generative AI'
+[Plural Policy]: https://pluralpolicy.com/blog/summarizing-bills-with-generative-ai/ 'Summarizing Bills With Generative AI'
 [CaseMark]: https://casemark.com/workflows/bill-summary
 [Quorum]: https://www.quorum.us/blog/ai-bill-tracking-advanced-legislative-intelligence/
-[NZ PCO]:
-  https://pco.govt.nz/about-us/legislative-data-and-technology/How-successful-is-AI-at-drafting-an-explanatory-note
-  'How Successful Is AI At Drafting An Explanatory Note?'
-[TechPolicy.Press]:
-  https://www.techpolicy.press/governments-are-using-ai-to-draft-legislation-what-could-possibly-go-wrong/
-  'Governments Are Using AI To Draft Legislation. What Could Possibly Go Wrong?'
+[NZ PCO]: https://pco.govt.nz/about-us/legislative-data-and-technology/How-successful-is-AI-at-drafting-an-explanatory-note 'How Successful Is AI At Drafting An Explanatory Note?'
+[TechPolicy.Press]: https://www.techpolicy.press/governments-are-using-ai-to-draft-legislation-what-could-possibly-go-wrong/ 'Governments Are Using AI To Draft Legislation. What Could Possibly Go Wrong?'
 
 ## Ground truth
 
@@ -319,13 +282,7 @@ Full URLs appear inline above.
 - **Interpretation and drafting practice** — PM&C Legislation Handbook Chapter 7; Act 388 reprint (JKPTG); Conventus Law
   on PJD Regency
 
-[FMT, 26 Feb 2025]:
-  https://www.freemalaysiatoday.com/category/nation/2025/02/26/the-urban-renewal-act-controversy-explained
-  'Mikha Chan, The Urban Renewal Act controversy explained'
-[Malaysian Bar, 27 Aug 2025]:
-  https://www.malaysianbar.org.my/article/about-us/president-s-corner/pressstatements/press-release-malaysian-bar-s-position-on-the-urban-renewal-bill-2025
-  "Mohamad Ezri Abdul Wahab, Press Release: Malaysian Bar's Position on the Urban Renewal Bill 2025"
-[ARTICLE 19, 11 Dec 2024]:
-  https://www.article19.org/resources/malaysia-online-safety-bill/
-  'Malaysia: Concerns with the Online Safety Bill 2024'
+[FMT, 26 Feb 2025]: https://www.freemalaysiatoday.com/category/nation/2025/02/26/the-urban-renewal-act-controversy-explained 'Mikha Chan, The Urban Renewal Act controversy explained'
+[Malaysian Bar, 27 Aug 2025]: https://www.malaysianbar.org.my/article/about-us/president-s-corner/pressstatements/press-release-malaysian-bar-s-position-on-the-urban-renewal-bill-2025 "Mohamad Ezri Abdul Wahab, Press Release: Malaysian Bar's Position on the Urban Renewal Bill 2025"
+[ARTICLE 19, 11 Dec 2024]: https://www.article19.org/resources/malaysia-online-safety-bill/ 'Malaysia: Concerns with the Online Safety Bill 2024'
 [NACSA Act 854]: https://www.nacsa.gov.my/act854.php

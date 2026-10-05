@@ -338,12 +338,10 @@ Running it locally needs a Postgres database and a GonkaRouter key, because ther
 1. **Run the checks.** No CI runs these.
 
    ```sh
-   bun run lint           # Biome across the code, Prettier across Markdown and YAML
-   bun run typecheck      # tsc --noEmit, strict, noUncheckedIndexedAccess
-   bun test               # 498 pass, 77 skip, 0 fail across 52 files
-   bun run e2e            # Playwright against the deployment named by E2E_BASE_URL
-   bun run check:anchors
+   bun run check
    ```
+
+   `bun run check` runs `bun run lint` (Biome across the code, Prettier across Markdown and YAML), `bun run typecheck` (`tsc --noEmit`, strict, `noUncheckedIndexedAccess`), `bun test` (498 pass, 77 skip, 0 fail across 52 files), `bun run check:anchors` and `bun run test:guard`. `bun run e2e` runs Playwright against the deployment named by `E2E_BASE_URL`; it is not part of `check`.
 
    `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
 
@@ -384,7 +382,7 @@ See [LICENSE](LICENSE) for more information.
 ## Acknowledgments
 
 - [GonkaRouter](https://gonkarouter.io) — the gateway every reasoning call in this project runs through.
-- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](docs/brief.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
+- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](docs/BRIEF.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
 - [Live2D sample data](https://www.live2d.com/download/sample-data/) — Tororo and Hijiki are Live2D sample characters, not Cekgu originals — used under the Live2D Free Material License Agreement and built with the Live2D Cubism SDK.
 - [Acceptable use](docs/legal/acceptable-use.md) — **Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md), [acceptable use](docs/legal/acceptable-use.md).
 - [archify](https://github.com/tt-a1i/archify) — architecture diagrams.

@@ -46,7 +46,7 @@ const sources = [...new Glob('src/**/*.{ts,tsx}').scanSync({ cwd: new URL('.', r
 //
 //   src/server/chat/        The record agent's phrasing layer. Decided by chaosiris on 4 September,
 //                           on the record in
-//                           docs/superpowers/specs/2026-09-04-talking-cats-and-record-agent-design.md.
+//                           docs/plans/2026-09-04-talking-cats-and-record-agent-design.md.
 //                           THIS ONE IS DIFFERENT FROM THE FIRST AND THE DIFFERENCE MATTERS: an
 //                           answer about a record is closer to reasoning than a transcription is,
 //                           and a strict reading of the track's first rule does not permit it. What
