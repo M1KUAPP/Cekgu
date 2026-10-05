@@ -1,6 +1,6 @@
 # Privacy
 
-<!-- Review baseline: 5 September 2026, main 8f8e890. -->
+<!-- Review baseline: 5 September 2026, main c4e6d48. -->
 
 Cekgu processes assessment content so educators can inspect potential problems. Do not enter confidential final papers
 or personal data in questions or notes. A private account does not make that content suitable for external processing.
