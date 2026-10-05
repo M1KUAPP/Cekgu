@@ -148,6 +148,8 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
    model family through GonkaRouter. The prompt carries the stem, the lettered options, the subject and the language —
    never the supplied key, and never the other reader's output.
 
+   <img src="docs/readme/steps/2-queued-readers.png" alt="A record just submitted, its three questions queued and the two reader seats waiting beside the summary" width="100%">
+
 1. **Evidence is admitted, not assumed.** A reply becomes a usable reading only if all five hold:
 
    - Returned HTTP 200
@@ -174,6 +176,8 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
    | **Clear**              | Both readers chose the supplied key.                                          |
    | **Possible Key Error** | Both readers agreed on the same option, and it is not the key.                |
 
+   <img src="docs/readme/steps/4-five-outcomes.png" alt="The landing page at A Fixed Rule Decides, above the five verdict outcomes and how many sample items each one holds" width="100%">
+
 1. **The public web is consulted, and quoted.** Before the readers run, one search fetches up to four pages relevant to
    the question, and both readers are shown the same snippets as background rather than authority. The supplied key is
    never in the query — searching for the key returns pages that agree with the key.
@@ -195,6 +199,8 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
    the sample is in depends on whether the build has re-seeded it from the committed fixture. See
    [TRD section 22](docs/TRD.md#22-live-retrieval-for-cross-verification).
 
+   <img src="docs/readme/steps/5-web-pages.png" alt="Evidence for the kilobyte question: both readings with their served models and request ids, then the pages retrieved from the web, labeled as fetched after the readings" width="100%">
+
 1. **A score puts a number on it.** The same two readings produce a Truth Score from 0 to 100, shown on the record and
    on every item. Computed in `src/shared/truth-score.ts` from readings already on the record — no extra inference call,
    and no model is asked how confident it feels, because no receipt could back that.
@@ -215,6 +221,8 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
    question is correct. An **Unverified** item scores null rather than 0, because 0 is what two readers agreeing
    _against_ the key earns. The record figure always prints its own denominator: three verified items out of twelve can
    average 100.
+
+   <img src="docs/readme/steps/6-truth-score.png" alt="The sample record in the workspace: its Truth Score of 77 in the summary, beside each item's own score of 0, 25 or 100" width="100%">
 
 1. **A human decides.** The verdict is an attention signal, not a mark. The educator records what they did — corrected
    the key, revised the wording, confirmed the key, dismissed the flag, or asked for a retry — and that decision is
