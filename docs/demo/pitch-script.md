@@ -1,7 +1,6 @@
 # Cekgu pitch script
 
-The spoken script for Demo Day at APU, 6 September 2026, Auditorium 1 on Level 7. Owned by the `pitch-smith` subagent
-([`.claude/agents/pitch-smith.md`](../../.claude/agents/pitch-smith.md)).
+The spoken script for Demo Day at APU, 6 September 2026, Auditorium 1 on Level 7.
 
 > **The slot is 3 minutes plus 1 minute of Q&A**, cut down from 5 plus 5 and confirmed with the organizers on the
 > evening of 5 September. This is a re-cut, not a trim: 3 minutes carries fewer claims, harder. The deck was re-cut with

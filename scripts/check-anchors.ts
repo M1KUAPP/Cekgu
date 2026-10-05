@@ -1,11 +1,5 @@
-// Every Markdown anchor link in the repo, checked against the headings it points at.
-//
-//   bun run check:anchors
-//
-// Not wired into CI. It exists because the break it catches is silent: a rewrite of
-// the README deleted the `repository-layout` heading that AGENTS.md links to, and nothing
-// complained. Renaming a heading is an ordinary edit, and the file that breaks is one nobody
-// opened.
+// Every Markdown anchor link in the repo, checked against the headings it points at. A renamed
+// heading breaks a link in a file nobody opened, and nothing else complains.
 
 import { Glob } from 'bun'
 

@@ -1,7 +1,4 @@
 .git
-.github
-.claude
-.husky
 node_modules
 dist
 docs
@@ -9,4 +6,3 @@ graphify-out
 *.log
 .env
 .env.*
-!.env.example

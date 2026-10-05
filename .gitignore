@@ -94,21 +94,11 @@ graphify-out/*
 
 # Build output
 dist/
-build/
-.next/
-.output/
-*.tsbuildinfo
 coverage/
-
-# Caches
-.cache/
-.turbo/
-.vite/
 
 # Python
 .venv/
 __pycache__/
-.pytest_cache/
 
 # Secrets
 secrets/

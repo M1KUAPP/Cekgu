@@ -1,15 +1,7 @@
 import { expect, type Page, test } from '@playwright/test'
 
-// The eight numbered steps of `docs/demo/pitch-script.md` section 6, walked against a deployment.
-//
-// That file says of its own literals: "Every literal below is the label the screen shows today. If
-// one has changed, the screen wins, not this file." This turns that sentence into an alarm. The
-// driver reads these words off a projector in front of judges; a label that quietly changed should
-// be found here rather than on stage.
-//
-// It earns its place by having already failed. Step 8 asserts the attention count drops after a
-// decision, which the script has claimed since it was written and the product did not do until
-// #151 — nobody noticed, because the beat had never been walked to its end on a deployment.
+// The eight numbered steps of `docs/demo/pitch-script.md` section 6, walked against a deployment so
+// a label that quietly changed fails here rather than on stage.
 //
 // Serial, over one page, because a walk is a sequence: step 5 means nothing if step 3 did not
 // narrow the list, and signing in once is what the driver does.
@@ -17,14 +9,8 @@ test.describe.configure({ mode: 'serial' })
 
 let page: Page
 
-// FR-SAMPLE-3, the script's own pre-flight, so step 8 starts with no decision on the item.
-//
-// It DOES disturb anything reading the sample concurrently, which an earlier version of this
-// comment claimed it could not. Clearing dispositions is not all it does — it also returns the
-// record to ready — and every test here signs into the one shared Guest account besides. Run on
-// four workers the suite failed 6 of 14 and left 2 unrun against a healthy production (#158). Three
-// clean runs were not evidence of safety; they were three passes of a race. The suite now runs on
-// one worker, which is what makes this call safe rather than anything about the call itself.
+// FR-SAMPLE-3, the script's own pre-flight, so step 8 starts with no decision on the item. It
+// disturbs anything reading the sample concurrently; the single worker is what makes it safe.
 const resetSample = () =>
   page.evaluate(async () => (await (await fetch('/api/sample/reset', { method: 'POST' })).json()) as unknown)
 
