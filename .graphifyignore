@@ -1,8 +1,10 @@
+.agents/
+.claude/
+
+# Repo-specific
 # Scopes the knowledge graph to our code. Merged with .gitignore; ! re-includes.
 # Config and prose drown real architecture, so both are excluded.
 
-.agents/
-.claude/
 .husky/
 graphify-out/
 node_modules/
@@ -17,7 +19,7 @@ dist/
 !docs/DESIGN.md
 
 biome.json
-commitlint.config.js
+commitlint.config.mjs
 tsconfig.json
 .env.example
 

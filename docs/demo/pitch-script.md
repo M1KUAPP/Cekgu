@@ -39,7 +39,7 @@ Contents:
 ## Format and conventions
 
 - **Slot** — 3 minutes presentation plus 1 minute Q&A, confirmed with the organizers on 5 September. The 5-plus-5 figure
-  in [`../brief.md`](../brief.md#how-we-are-judged) is what was announced at the opening ceremony and is superseded.
+  in [`../BRIEF.md`](../BRIEF.md#how-we-are-judged) is what was announced at the opening ceremony and is superseded.
 - **Budget** — 2:30 deck, 0:30 live demo, last word by **3:00** with nothing held back as buffer. There is no buffer at
   three minutes; the buffer is the [cut list](#what-gets-cut-if-you-run-long).
 - **Deck** — [`pitch-deck.html`](pitch-deck.html), 9 slides. PDF backup: [`pitch-deck.pdf`](pitch-deck.pdf). Arrow keys
@@ -56,7 +56,7 @@ Contents:
 
 ### Where the five required deck sections live
 
-Devfolio requires five named sections ([`../brief.md`](../brief.md#what-we-submit)). Each is a whole slide and carries
+Devfolio requires five named sections ([`../BRIEF.md`](../BRIEF.md#what-we-submit)). Each is a whole slide and carries
 its section name as the slide's eyebrow, so a judge holding the checklist can tick it from the back row. Three minutes
 does not allow a spoken paragraph on each, and it does not have to: the deck is a submitted artifact in its own right.
 
@@ -134,7 +134,7 @@ projecting it spends the same fourteen seconds twice. The opening now hands the 
 ### Route B — the student's grievance
 
 The line the concept was selected on, from
-[the plain-language pitch](../superpowers/research/three-day-rescore.md#the-product-in-plain-language).
+[the plain-language pitch](../research/three-day-rescore.md#the-product-in-plain-language).
 
 > "Every one of us has lost a mark we deserved, because the answer key was wrong. We're Team M1KU, and Cekgu is how that
 > stops."
@@ -328,10 +328,10 @@ line.**
 
 `NOTE:` **Two measurements share the right of this slide and the deck keeps them apart.** Never blur them.
 
-- The chart is the [3 September mechanism benchmark](../superpowers/research/three-day-rescore.md), which judged a
+- The chart is the [3 September mechanism benchmark](../research/three-day-rescore.md), which judged a
   synchronous design nobody shipped. Its recorded verdict of "failed" is about that design, not the queue.
 - The dot field is the
-  [30-question set run twice through the deployed queue](../superpowers/research/three-day-rescore.md#the-30-item-evaluation-set--4-september),
+  [30-question set run twice through the deployed queue](../research/three-day-rescore.md#the-30-item-evaluation-set--4-september),
   60 item-runs in all.
 
 `NOTE:` **That run's own Unverified rate, 19 of 60, is deliberately off the slide.** It is a load effect, not a

@@ -580,7 +580,7 @@ Possible Key Error". The check is made on rendered text, not source, since `text
 way.
 
 Markdown files, including this one, follow the sentence-case rule in
-[documentation hygiene](../AGENTS.md#documentation-hygiene) instead.
+[documentation hygiene](agents/documentation.md#documentation-hygiene) instead.
 
 ## Accessibility
 
@@ -604,7 +604,7 @@ Markdown files, including this one, follow the sentence-case rule in
 
 ## Tells this system avoids
 
-Each line is one tell from [design standards](../AGENTS.md#design-standards) and what Cekgu does instead.
+Each line is one tell from [design standards](agents/design.md#design-standards) and what Cekgu does instead.
 
 - **Warm cream, serif display, terracotta.** Warm-grey photocopy paper, a grotesque display, and a crimson pen. The
   serif is the paper's face for stems and options, never a display face

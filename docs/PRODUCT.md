@@ -7,7 +7,7 @@ architecture, contracts and schemas. Where those documents eventually disagree, 
 
 The concept is selected with one evidence-driven change: Cekgu is an **asynchronous review service**, not an instant
 full-paper checker. The
-[3 September mechanism benchmark](superpowers/research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september)
+[3 September mechanism benchmark](research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september)
 returned no wrong two-model verdicts, but only 13 of 24 item-runs obtained two receipt-verified readings within 90
 seconds and none did so within 30 seconds. The product must make waiting, retrying and **Unverified** honest states.
 
@@ -704,22 +704,21 @@ two-reader idea land in the first ten seconds.
 
 ## Sources
 
-- [Three-day rescore and second opinion](superpowers/research/three-day-rescore.md#the-second-opinion) — selection,
+- [Three-day rescore and second opinion](research/three-day-rescore.md#the-second-opinion) — selection,
   competitor correction, plain-language pitch and the measured mechanism benchmark
-- [Disagreement as product](superpowers/research/disagreement-as-product.md) — why blind independence, a written rule
+- [Disagreement as product](research/disagreement-as-product.md) — why blind independence, a written rule
   and later human adjudication are necessary
-- [Multi-model capability](superpowers/research/multi-model-capability.md) — what distinct model families do and do not
+- [Multi-model capability](research/multi-model-capability.md) — what distinct model families do and do not
   prove
 - [TRD](TRD.md) — measured gateway behaviour, receipt eligibility and all eventual application architecture
-- [MUBA brief](brief.md#how-we-are-judged) — deadline, deliverables and judging priorities
+- [MUBA brief](BRIEF.md#how-we-are-judged) — deadline, deliverables and judging priorities
 - [UiTM final-examination guidance][uitm-vetting] — institutional vetting and confidentiality
 - [ExamEval mis-key guidance][exameval] and [CramKit verification][cramkit] — direct product and mechanism prior art
 - [Tororo & Hijiki sample page][tororo-hijiki], [sample-data terms][sample-terms], [Cubism SDK for Web][live2d-web],
   [Cubism Web samples][live2d-samples] and [SDK publication licence][sdk-license] — mascot compatibility and licence
   boundaries
 
-[uitm-vetting]:
-  https://fskm.uitm.edu.my/v4/images/quality/proseduroperasi/PKO09-Penyediaan-Kertas-Soalan-Peperiksaan-Akhir.pdf
+[uitm-vetting]: https://fskm.uitm.edu.my/v4/images/quality/proseduroperasi/PKO09-Penyediaan-Kertas-Soalan-Peperiksaan-Akhir.pdf
 [exameval]: https://www.exameval.com/articles/flaws/miskeyed-answer
 [cramkit]: https://cramkit.com/how-we-verify
 [tororo-hijiki]: https://www.live2d.com/en/learn/sample/tororo-hijiki/

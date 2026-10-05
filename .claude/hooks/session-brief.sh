@@ -12,4 +12,4 @@ branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo '?')
 dirty=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
 
 echo "MUBA/GonkaRouter | branch=$branch | uncommitted=$dirty | ${left}d to submission"
-echo "TODOs live in GitHub Issues (gh issue list). Rules and judging: docs/brief.md."
+echo "TODOs live in GitHub Issues (gh issue list). Rules and judging: docs/BRIEF.md."
