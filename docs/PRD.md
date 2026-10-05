@@ -478,7 +478,7 @@ documentation. It is **not** rendered in the product.
 - AlaskanTuna removed it from the frontend on 3 September and accepted responsibility for the licence position. It was
   previously a footer on every page. Note that the Live2D Free Material License Agreement does carry attribution
   conditions, so this is a decision the team lead owns rather than a detail the build settled
-- It remains in [`README.md`](README.md) and [`TRD.md`](TRD.md), which is where a licence review would look
+- It remains in [`README.md`](../README.md) and [`TRD.md`](TRD.md), which is where a licence review would look
 
 ## Non-functional requirements
 
