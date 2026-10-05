@@ -24,15 +24,19 @@
     <br />
   </p>
 
-[![Bun][Bun]][Bun-url]
-[![Hono][Hono.dev]][Hono-url]
-[![React][React.js]][React-url]
-[![TypeScript][TypeScript]][TypeScript-url]
-[![Tailwind CSS][Tailwind]][Tailwind-url]
-[![PostgreSQL][Postgres]][Postgres-url]
-[![Drizzle][Drizzle]][Drizzle-url]
-[![Cloud Run][CloudRun]][CloudRun-url]
-[![GonkaRouter][GonkaRouter]][GonkaRouter-url]
+[![TypeScript][typescript-badge]][typescript-url]
+[![React][react-badge]][react-url]
+[![Vite][vite-badge]][vite-url]
+[![Tailwind CSS][tailwindcss-badge]][tailwindcss-url]
+[![Bun][bun-badge]][bun-url]
+[![Hono][hono-badge]][hono-url]
+[![PostgreSQL][postgresql-badge]][postgresql-url]
+[![Drizzle][drizzle-badge]][drizzle-url]
+[![GonkaRouter][gonkarouter-badge]][gonkarouter-url]
+[![Docker][docker-badge]][docker-url]
+[![Cloud Run][cloudrun-badge]][cloudrun-url]
+[![Biome][biome-badge]][biome-url]
+[![Playwright][playwright-badge]][playwright-url]
 
 </div>
 
@@ -105,20 +109,28 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/assets/landing.png" alt="The Cekgu landing page" width="100%"></td>
-    <td width="50%"><img src="docs/assets/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%"></td>
+    <td width="50%" valign="top" align="left">
+      <img src="docs/assets/landing.png" alt="The Cekgu landing page" width="100%">
+      <br />
+      <strong>Landing Page</strong> · What a signed-out visitor sees first.
+    </td>
+    <td width="50%" valign="top" align="left">
+      <img src="docs/assets/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%">
+      <br />
+      <strong>Sample Report</strong> · A public report with its Truth Score and verdict breakdown, no account needed.
+    </td>
   </tr>
   <tr>
-    <td><sub>The landing page, signed out.</sub></td>
-    <td><sub>The public sample report, readable without an account.</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/assets/dashboard.png" alt="The account dashboard" width="100%"></td>
-    <td width="50%"><img src="docs/assets/item-evidence.png" alt="Item evidence on the deployed sample: two served models, two request ids, receipt states, and the pages retrieved from the web, labelled as fetched after the readings" width="100%"></td>
-  </tr>
-  <tr>
-    <td><sub>The dashboard: verified readings against total, the verdict breakdown, and each family's share of the work.</sub></td>
-    <td><sub>Item evidence: two served models, two request ids, receipt states, and the attempts that were refused.</sub></td>
+    <td width="50%" valign="top" align="left">
+      <img src="docs/assets/dashboard.png" alt="The account dashboard" width="100%">
+      <br />
+      <strong>Dashboard</strong> · Verified readings against total, the verdict breakdown, and each family's share of the work.
+    </td>
+    <td width="50%" valign="top" align="left">
+      <img src="docs/assets/item-evidence.png" alt="Item evidence on the deployed sample: two served models, two request ids, receipt states, and the pages retrieved from the web, labelled as fetched after the readings" width="100%">
+      <br />
+      <strong>Item Evidence</strong> · Two served models, two request ids, receipt states, and the attempts that were refused.
+    </td>
   </tr>
 </table>
 
@@ -490,21 +502,29 @@ See [LICENSE](LICENSE) for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[Bun]: https://img.shields.io/badge/Bun-14151A?style=for-the-badge&logo=bun&logoColor=white
-[Bun-url]: https://bun.sh
-[Hono.dev]: https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white
-[Hono-url]: https://hono.dev
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://react.dev
-[TypeScript]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
-[TypeScript-url]: https://www.typescriptlang.org
-[Tailwind]: https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white
-[Tailwind-url]: https://tailwindcss.com
-[Postgres]: https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white
-[Postgres-url]: https://www.postgresql.org
-[Drizzle]: https://img.shields.io/badge/Drizzle-C5F74F?style=for-the-badge&logo=drizzle&logoColor=000000
-[Drizzle-url]: https://orm.drizzle.team
-[CloudRun]: https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white
-[CloudRun-url]: https://cloud.google.com/run
-[GonkaRouter]: https://img.shields.io/badge/GonkaRouter-B3202F?style=for-the-badge
-[GonkaRouter-url]: https://gonkarouter.io
+[typescript-badge]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
+[typescript-url]: https://www.typescriptlang.org/
+[react-badge]: https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black
+[react-url]: https://react.dev/
+[vite-badge]: https://img.shields.io/badge/Vite-9135FF?style=for-the-badge&logo=vite&logoColor=white
+[vite-url]: https://vite.dev/
+[tailwindcss-badge]: https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[tailwindcss-url]: https://tailwindcss.com/
+[bun-badge]: https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white
+[bun-url]: https://bun.sh/
+[hono-badge]: https://img.shields.io/badge/Hono-E36002?style=for-the-badge&logo=hono&logoColor=white
+[hono-url]: https://hono.dev/
+[postgresql-badge]: https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white
+[postgresql-url]: https://www.postgresql.org/
+[drizzle-badge]: https://img.shields.io/badge/Drizzle-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black
+[drizzle-url]: https://orm.drizzle.team/
+[gonkarouter-badge]: https://img.shields.io/badge/GonkaRouter-B3202F?style=for-the-badge
+[gonkarouter-url]: https://gonkarouter.io
+[docker-badge]: https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+[docker-url]: https://www.docker.com/
+[cloudrun-badge]: https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white
+[cloudrun-url]: https://cloud.google.com/run
+[biome-badge]: https://img.shields.io/badge/Biome-60A5FA?style=for-the-badge&logo=biome&logoColor=white
+[biome-url]: https://biomejs.dev/
+[playwright-badge]: https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge
+[playwright-url]: https://playwright.dev/
