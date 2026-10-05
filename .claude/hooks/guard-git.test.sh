@@ -70,12 +70,12 @@ check_in "$main_repo" "feature worktree while the session sits on main" 0 "git -
 check_in "$feature_repo" "main worktree while the session sits on a branch" 2 "git -C $main_repo push"
 check_in "$feature_repo" "cd into a main worktree first" 2 "cd $main_repo && git push"
 
-check "read-only API request" 0 "gh api repos/MUBA-M1KU/dev/pulls/12"
-check "API main ref update" 2 "gh api -X PATCH repos/MUBA-M1KU/dev/git/refs/heads/main -f sha=$sha"
-check "API direct merge" 2 "gh api -X PUT repos/MUBA-M1KU/dev/pulls/12/merge"
-check "quoted API direct merge" 2 "gh api -X PUT 'repos/MUBA-M1KU/dev/pulls/12/merge'"
-check "API input direct merge" 2 "gh api repos/MUBA-M1KU/dev/pulls/12/merge --input payload.json"
-check "API base-main merge" 2 "gh api -X POST repos/MUBA-M1KU/dev/merges -f base=main -f head=feature"
+check "read-only API request" 0 "gh api repos/M1KUAPP/Cekgu/pulls/12"
+check "API main ref update" 2 "gh api -X PATCH repos/M1KUAPP/Cekgu/git/refs/heads/main -f sha=$sha"
+check "API direct merge" 2 "gh api -X PUT repos/M1KUAPP/Cekgu/pulls/12/merge"
+check "quoted API direct merge" 2 "gh api -X PUT 'repos/M1KUAPP/Cekgu/pulls/12/merge'"
+check "API input direct merge" 2 "gh api repos/M1KUAPP/Cekgu/pulls/12/merge --input payload.json"
+check "API base-main merge" 2 "gh api -X POST repos/M1KUAPP/Cekgu/merges -f base=main -f head=feature"
 check "GraphQL merge mutation" 2 "gh api graphql -f query='mutation { mergePullRequest(input: {}) { clientMutationId } }'"
 
 if [[ $failures -ne 0 ]]; then

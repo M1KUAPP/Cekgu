@@ -22,8 +22,7 @@ Contents:
 
 ## Project
 
-**MUBA Blockchain Hackathon 2026**, track **GonkaRouter - AI for Society**. Repo: `github.com/MUBA-M1KU/Cekgu`
-(private).
+**MUBA Blockchain Hackathon 2026**, track **GonkaRouter - AI for Society**. Repo: `github.com/M1KUAPP/Cekgu` (public).
 
 **Submission deadline: 5 Sept 2026, 23:59 MYT**, on Devfolio. No submission means disqualification from pitching. Every
 other event fact lives in [`docs/brief.md`](docs/brief.md), which is the single source of truth for them; organizer
@@ -248,8 +247,8 @@ Give it an absolute path, and resize before anything lands in the repo. Art dire
 
 ## How work ships
 
-**`main` is PR-gated. No stray commits.** Server-side branch protection (pull request required, force pushes and
-deletions blocked, admins included) enforces it; `.claude/hooks/guard-git.sh` enforces it locally.
+**`main` is PR-gated. No stray commits.** `.claude/hooks/guard-git.sh` enforces it locally. Nothing on GitHub enforces
+it: `main` has no branch protection or ruleset, and no CI runs on pull requests.
 
 1. **Branch.** `<type>/<short-slug>`, matching the commit types below
 1. **Commit** in [Conventional Commits](https://www.conventionalcommits.org/) form: `<type>[scope]: <description>`, a
@@ -261,7 +260,6 @@ deletions blocked, admins included) enforces it; `.claude/hooks/guard-git.sh` en
    from `gh pr view`, verify and review that exact SHA, then put its literal value in the merge command. Agents are
    authorised to merge without per-PR human approval when all of these are true:
    - The PR targets `main`, is not a draft and GitHub reports it mergeable
-   - Every required GitHub check passes
    - Fresh project verification passes against the PR head
    - There is no unresolved Critical or Important review finding and no known regression
 
