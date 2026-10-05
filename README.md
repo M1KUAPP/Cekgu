@@ -267,10 +267,13 @@ describe the same evidence. It grades within a verdict rather than ranking acros
 ### Architecture
 
 <p align="center">
-  <img
-    src="docs/assets/architecture.png"
-    alt="A React SPA and a Hono API on one Cloud Run container, with a queue worker and a gateway semaphore behind it, PostgreSQL on Neon beside them, and every reasoning call leaving through GonkaRouter with a request id and a public receipt"
-    width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/architecture-dark.svg">
+    <img
+      src="docs/assets/architecture-light.svg"
+      alt="A React SPA and a Hono API on one Cloud Run container, with a queue worker and a gateway semaphore behind it, PostgreSQL on Neon beside them, and every reasoning call leaving through GonkaRouter with a request id and a public receipt"
+      width="100%">
+  </picture>
 </p>
 
 | Piece                 | What it holds or does                                                                     |
