@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Repo-specific
+# Vendored Live2D runtime files keep their upstream line endings (ReadMe.txt is CRLF)
+public/live2d/** -text
