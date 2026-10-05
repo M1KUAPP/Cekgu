@@ -70,7 +70,7 @@ request ids, the model names and the consensus rule visible on the screen, not d
 
 Acceptance criteria are written so a reviewer can check each one against the deployed URL. Chrome text in criteria uses
 the product's TitleCase for buttons, labels and headings and sentence case for body, helper and error text, per
-[design standards](../AGENTS.md#design-standards).
+[design standards](agents/design.md#design-standards).
 
 ### Public pages
 
@@ -524,7 +524,7 @@ records, is operable by keyboard alone with a visible focus state.
 **NFR-UX-3.** Verdict and status are never conveyed by colour alone; each carries a text label.
 
 **NFR-UX-4.** Chrome text uses TitleCase and body, helper, error, placeholder and empty-state text uses sentence case,
-per [design standards](../AGENTS.md#design-standards), checked against rendered text.
+per [design standards](agents/design.md#design-standards), checked against rendered text.
 
 **NFR-UX-5.** `prefers-reduced-motion` disables continuous animation everywhere, not only for the mascot.
 

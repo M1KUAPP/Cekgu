@@ -463,17 +463,17 @@ from one definition, which is what keeps FR-CHECK-2's server-side checks equal t
 
 ### Stack
 
-| Layer             | Choice                                        | Reason                                                                                  |
-| ----------------- | --------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Runtime, packages | Bun                                           | Already the project's runner; runs TypeScript without a compile step                    |
-| HTTP              | Hono                                          | Small, typed, runs on Bun natively, streams SSE without an adapter                      |
-| Client            | Vite 8, React 19, React Router 8, Tailwind v4 | Fast build, no framework server to host; the app is one SPA behind `/api`               |
-| Language          | TypeScript 7, strict                          | `noUncheckedIndexedAccess`; the shared types are the contract between the halves        |
-| ORM               | Drizzle with drizzle-kit migrations           | Schema in TypeScript, SQL migrations committed, Better Auth adapter exists              |
-| Auth              | Better Auth                                   | Google OAuth and email/password with a Drizzle adapter, sessions in Postgres            |
-| Validation        | zod, in `src/shared`                          | One schema for the form and the API boundary                                            |
-| Lint, format      | Biome for code, Prettier for Markdown         | Unchanged from the tooling table in [`AGENTS.md`](../AGENTS.md#tech-stack-and-commands) |
-| Tests             | `bun test`, Playwright                        | See [Testing](#18-testing)                                                              |
+| Layer             | Choice                                        | Reason                                                                                       |
+| ----------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Runtime, packages | Bun                                           | Already the project's runner; runs TypeScript without a compile step                         |
+| HTTP              | Hono                                          | Small, typed, runs on Bun natively, streams SSE without an adapter                           |
+| Client            | Vite 8, React 19, React Router 8, Tailwind v4 | Fast build, no framework server to host; the app is one SPA behind `/api`                    |
+| Language          | TypeScript 7, strict                          | `noUncheckedIndexedAccess`; the shared types are the contract between the halves             |
+| ORM               | Drizzle with drizzle-kit migrations           | Schema in TypeScript, SQL migrations committed, Better Auth adapter exists                   |
+| Auth              | Better Auth                                   | Google OAuth and email/password with a Drizzle adapter, sessions in Postgres                 |
+| Validation        | zod, in `src/shared`                          | One schema for the form and the API boundary                                                 |
+| Lint, format      | Biome for code, Prettier for Markdown         | Unchanged from the tooling table in [`AGENTS.md`](agents/tooling.md#tech-stack-and-commands) |
+| Tests             | `bun test`, Playwright                        | See [Testing](#18-testing)                                                                   |
 
 The client talks to the server only through the contracts in [section 15](#15-api-contracts). The GonkaRouter key never
 reaches the client (NFR-SEC-2); every inference call originates in `src/server/gateway`.
@@ -1794,7 +1794,7 @@ That claim rests on one flag:
   directories are held to: it may not import the verdict rule, the schema, the round or the gateway client
 
 `src/server/retrieval/` is therefore **not a third exemption**. The two exemptions in
-[Track requirements](../AGENTS.md#track-requirements) are directories that call a model; this one does not.
+[Track requirements](agents/project.md#track-requirements) are directories that call a model; this one does not.
 
 ### What runs, and when
 
