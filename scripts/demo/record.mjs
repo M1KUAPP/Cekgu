@@ -246,10 +246,8 @@ export async function recordDemo(options = {}) {
     const guestButton = page.getByRole('button', { name: exactText('Sign In as Guest') })
     await must(guestButton, 'shot 2 Sign In as Guest')
     await click(guestButton, 500)
-    // A guest with no saved destination lands on /dashboard since SignIn.tsx:103 changed; it used to
-    // be /records. The walk holds there long enough to read, then takes the sidebar to Records, which
-    // is where the shot list continues. Clicking the link rather than pushing the URL keeps the rail
-    // visibly doing its job, and the shot needs a post-auth page on screen either way.
+    // Sign-in lands on /dashboard. The walk holds there, then clicks the rail to Records, where the
+    // shot list continues, so the rail is visibly doing its job.
     await page.waitForURL(/\/(dashboard|records)(?:[/?#]|$)/)
     if (new URL(page.url()).pathname.startsWith('/dashboard')) {
       await pause(2_400)
@@ -321,11 +319,8 @@ export async function recordDemo(options = {}) {
     const allAttempts = item.getByRole('heading', { name: exactText('All Attempts') })
     await scrollTo(allAttempts, 'start')
     const timedOut = attemptStatusLabel(item, 'Timed Out')
-    // The per-attempt reason this shot used to rest on was removed in #202 at the owner's request,
-    // and the footer sentence that replaced it has since moved onto the heading as a tooltip. So the
-    // camera holds on the Status chip, then rests on the mark beside All Attempts until the rule
-    // appears under the pointer. Hovering is the shot now: the sentence arrives because the viewer
-    // watched someone ask for it, which reads better than a paragraph that was always there.
+    // The camera holds on the Status chip, then hovers the mark beside All Attempts until its
+    // tooltip shows the rule.
     const attemptsRule = item.locator('.attempts-tip').first()
     await must(timedOut, 'shot 6 Timed Out')
     await must(attemptsRule, 'shot 6 attempts rule')
