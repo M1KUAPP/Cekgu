@@ -1,5 +1,5 @@
-// Captures each pitch deck slide as a still, from the HTML rather than the committed PDF: the PDF
-// is stale against #233 and still carries the claim #224 removed (issue #237).
+// Captures each pitch deck slide as a still, from the HTML rather than the committed PDF, so the
+// deck that ships is whatever the HTML currently says.
 //
 // Stills rather than a single screen recording, deliberately. Playwright's capture carries a
 // variable lead-in, and the deck's slides are too uniformly dark for scene detection to recover the

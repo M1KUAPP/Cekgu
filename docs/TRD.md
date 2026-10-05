@@ -409,10 +409,9 @@ The queue's whole design treats the gateway as unreliable and degrades around it
 precondition. The Anthropic surface is unused by the product; the base-URL rule in
 [section 1](#1-gateway-base-urls-and-auth) still stands for anyone pointing Claude Code at the gateway.
 
-**`.env.example` carries exactly the names above**, with their comments and empty values, and is committed. The
-`env-drift` hook compares `.env` against it, so the two files change together. Two further variables exist in the
-server's environment and deliberately do not appear here: `MIGRATE_ON_START` and `WORKER_ENABLED`, both defaulting to
-on, which only pull-request preview revisions set to `false`. They are explained in
+**`.env.example` carries exactly the names above**, with their comments and empty values, and is committed. Two
+further variables exist in the server's environment and deliberately do not appear here: `MIGRATE_ON_START` and
+`WORKER_ENABLED`, both defaulting to on, which only pull-request preview revisions set to `false`. They are explained in
 [section 10](#10-hosting-and-deploys), because they are a deployment concern rather than part of the contract a
 developer fills in. `PORT` defaults to `8080`.
 
