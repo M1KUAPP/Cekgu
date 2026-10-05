@@ -340,7 +340,7 @@ Quoting it without that sentence misrepresents both runs, and the sentence does 
 
 `NOTE:` **The one green dot at the end of the defect row is a real miss.** Question 6 of the sample record, written to
 be ambiguous, came back **Clear** in the first pass and **Unverified** in the second. It is in
-[the README](../README.md#about-the-project) as a characterised limitation. **DO NOT PRESENT IT AS FIXED OR AS A
+[the README](../../README.md#about-the-project) as a characterised limitation. **DO NOT PRESENT IT AS FIXED OR AS A
 ONE-OFF.**
 
 ## 10. Business model (2:41-2:51 · 20 words · SPEAKER)
