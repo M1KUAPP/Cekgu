@@ -3,7 +3,7 @@
 //   bun run check:anchors
 //
 // Not wired into CI. It exists because the break it catches is silent: a rewrite of
-// docs/README.md deleted the `repository-layout` heading that AGENTS.md links to, and nothing
+// the README deleted the `repository-layout` heading that AGENTS.md links to, and nothing
 // complained. Renaming a heading is an ordinary edit, and the file that breaks is one nobody
 // opened.
 
