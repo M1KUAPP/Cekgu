@@ -203,38 +203,18 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
 
 ### Features
 
-**The GonkaRouter integration.** The track's four requirements are enforced in code, not asserted in prose.
-
-- **All reasoning through GonkaRouter.** One file calls a model; the guard fails the build if a provider appears anywhere else. Where: `gateway/client.ts`
-- **Two models cross-verify.** A verdict needs two admitted readings whose **served** models differ, taken from the receipt. Where: `gateway/`, `verdict.ts`
-- **Request IDs surfaced in the UI.** Every reading shows request id, devshard, requested and served model, and receipt state. Where: `/receipt/:requestId`
-- **Explicit consensus logic.** The five-outcome rule is a pure function, with its reason sentence shown beside the verdict. Where: `shared/verdict.ts`
-
-Three guarantees sit behind those four:
-
+- **All reasoning through GonkaRouter.** The track's four requirements are enforced in code, not asserted in prose: one file, `gateway/client.ts`, calls a model, and the guard fails the build if a provider appears anywhere else.
+- **Two models cross-verify.** A verdict needs two admitted readings whose **served** models differ, taken from the receipt and never from the model requested, so two calls to one family can never count as two readers (`gateway/`, `verdict.ts`). Reasoning content is cleaned before comparison: `<think>` blocks are stripped, and each prompt carries a nonce so the gateway cache cannot serve one inference under two request ids.
+- **Request IDs surfaced in the UI.** Every reading shows request id, devshard, requested and served model, and receipt state, and `/receipt/:requestId` reads the receipt back through the server, because the gateway sends no CORS header. The viewer distinguishes a receipt that does not exist from a gateway it could not reach.
+- **Explicit consensus logic.** The five-outcome rule is a pure function in `shared/verdict.ts`, with its reason sentence shown beside the verdict. The Truth Score is a second pure function over the same two readings from the same round, so number and verdict always describe the same evidence, and it grades within a verdict rather than ranking across verdicts — [TRD section 14](docs/TRD.md#truth-score) sets out where the bands overlap.
 - **No silent substitution.** Every call sends `X-Gonka-No-Fallback: true`, and any reply carrying an `X-Gonka-Fallback` header is refused even when its body is a perfectly good completion.
-- **Distinctness comes from the receipt**, never from the model requested, so two calls to one family can never count as two readers. `/receipt/:requestId` reads the receipt back through the server, because the gateway sends no CORS header; the viewer distinguishes a receipt that does not exist from a gateway it could not reach.
 - **Retrieval decides nothing.** `src/server/retrieval/` reaches the public web and is held by `only-gonkarouter.test.ts` to the same rule as the two provider directories: it may not import the verdict rule, the schema, the round or the gateway client. It is not a third exemption, because it calls no model.
-
-The Truth Score is a second pure function over the same two readings from the same round, so number and verdict always describe the same evidence. It grades within a verdict rather than ranking across verdicts — [TRD section 14](docs/TRD.md#truth-score) sets out where the bands overlap.
-
-**The checking pipeline.**
-
-- Every attempt is recorded, admitted or refused — a timeout, a 429, a receipt mismatch and a fallback each leave a row with its own reason, shown in the evidence panel under the two readings.
-- Bounded concurrency: a Postgres `SKIP LOCKED` claim per item, at most four calls in flight against the gateway account, three attempts per family, and a deferred hedge that duplicates a call only after 45 seconds.
-- Model health is tracked over a rolling 15-minute window. A family with three failures and nothing successful behind it is demoted rather than dropped, because dropping it can leave a round with one candidate and a guaranteed **Unverified**.
-- Reasoning content is cleaned before comparison: `<think>` blocks are stripped, and each prompt carries a nonce so the gateway cache cannot serve one inference under two request ids.
-- A record streams progress over SSE, so a queued paper fills in without a refresh.
-
-**The product around it.**
-
-- A public sample report, readable signed out, seeded from a real recorded benchmark pass — 12 questions, 42 attempts, 24 of them admitted, captured 3 September 2026 with the request ids intact.
-- Guest sign-in into one shared workspace, no account needed; guest records expire after 24 hours.
-- Email and password accounts, plus Google sign-in when the deployment has an OAuth client.
-- A dashboard counting verified readings against total for the account, and each family's share of the work by served model.
-- A pasted link, fetched and reduced to the words on the page by a parser that calls no model, then structured into a draft by a Gonka model — the only input that reaches nothing outside the Gonka network, so it works with no vision key. Links resolving inside a private network are refused before a socket opens, which matters on Cloud Run where `169.254.169.254` hands out service-account tokens.
-- Upload of PNG, JPEG, WebP or PDF up to 10 MB, transcribed to text and then structured into a draft by a Gonka model.
-- An optional Live2D mascot, off unless `MASCOT_ENABLED=true`, respecting Reduce Motion and falling back to a still image when WebGL is unavailable.
+- **Every attempt recorded.** Admitted or refused, a timeout, a 429, a receipt mismatch and a fallback each leave a row with its own reason, shown in the evidence panel under the two readings, and a record streams progress over SSE, so a queued paper fills in without a refresh.
+- **Bounded concurrency and model health.** A Postgres `SKIP LOCKED` claim per item, at most four calls in flight against the gateway account, three attempts per family, and a deferred hedge that duplicates a call only after 45 seconds. Model health is tracked over a rolling 15-minute window, and a family with three failures and nothing successful behind it is demoted rather than dropped, because dropping it can leave a round with one candidate and a guaranteed **Unverified**.
+- **Public sample report.** Readable signed out, seeded from a real recorded benchmark pass — 12 questions, 42 attempts, 24 of them admitted, captured 3 September 2026 with the request ids intact.
+- **Guest and account sign-in.** Guest sign-in enters one shared workspace with no account needed, and guest records expire after 24 hours; email and password accounts work too, plus Google sign-in when the deployment has an OAuth client. A dashboard counts verified readings against total for the account, and each family's share of the work by served model.
+- **A paper from a link or an upload.** A pasted link is fetched and reduced to the words on the page by a parser that calls no model, then structured into a draft by a Gonka model — the only input that reaches nothing outside the Gonka network, so it works with no vision key — and links resolving inside a private network are refused before a socket opens, which matters on Cloud Run where `169.254.169.254` hands out service-account tokens. An upload of PNG, JPEG, WebP or PDF up to 10 MB is transcribed to text and then structured into a draft by a Gonka model.
+- **An optional Live2D mascot.** Off unless `MASCOT_ENABLED=true`, it respects Reduce Motion and falls back to a still image when WebGL is unavailable.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -279,24 +259,19 @@ Four things hold, all checkable in the code:
 
 **Every blind read, verdict, receipt and answer in this product is GonkaRouter's.** `src/server/transcribe/` is used; `src/server/chat/`'s off-gateway client is dormant. The test named above fails the build if that list widens, if either directory imports the verdict rule or the record writer, or if a provider hostname reaches the reasoning path at all. [TRD section 21](docs/TRD.md#21-the-readers-voice-and-the-record-assistant) holds the decision and its reasoning.
 
+Implementation detail, API contracts, model measurements, queue policy and test evidence live in [TRD](docs/TRD.md). Users, scope and the business hypothesis live in [PRODUCT](docs/PRODUCT.md), and the acceptance criteria in [PRD](docs/PRD.md).
+
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
 ### Tech Stack
 
-- **Runtime:** Bun 1.4. Server runtime, package manager, test runner
-- **Server:** Hono, Zod. API, boundary validation, SSE
-- **Client:** React 19, React Router 8, Vite 8, Tailwind 4. Review workspace, evidence views, public pages
-- **Data:** PostgreSQL (Neon), Drizzle ORM and Drizzle Kit. Records, items, attempts, dispositions, model health, migrations
-- **Auth:** Better Auth. Email and password, Google OAuth, shared Guest workspace
-- **Inference:** GonkaRouter. Blind reads, draft structuring, receipts — all reasoning
-- **Transcription:** Vision model, uploads only. Printed text from an image or PDF, no judgment
-- **Retrieval:** Search API, no model. Text other people published, quoted verbatim, no judgment
-- **Assistant:** GonkaRouter, MiniMax-M2.7 with tool calling. Grounded answers about one record, with receipts
-- **Mascot:** PixiJS, pixi-live2d-display, Web Speech. Live2D reader seats, their captions and their voice
-- **Hosting:** Cloud Run, Artifact Registry. Container build and a manual production deploy with [`scripts/deploy-local.sh`](scripts/deploy-local.sh)
-- **Quality:** Biome, Prettier, TypeScript, Playwright. Lint, format, strict types, browser smoke pass
-
-Implementation detail, API contracts, model measurements, queue policy and test evidence live in [TRD](docs/TRD.md). Users, scope and the business hypothesis live in [PRODUCT](docs/PRODUCT.md), and the acceptance criteria in [PRD](docs/PRD.md).
+- **Languages:** TypeScript.
+- **Frontend:** React 19, React Router 8, Vite 8 and Tailwind 4 for the review workspace, evidence views and public pages; PixiJS, pixi-live2d-display and Web Speech for the Live2D reader seats, their captions and their voice.
+- **Backend:** Bun 1.4 as server runtime, package manager and test runner; Hono and Zod for the API, boundary validation and SSE; Better Auth for email and password, Google OAuth and the shared Guest workspace.
+- **Data:** PostgreSQL (Neon), Drizzle ORM and Drizzle Kit for records, items, attempts, dispositions, model health and migrations.
+- **AI and services:** GonkaRouter for blind reads, draft structuring and receipts — all reasoning; GonkaRouter's MiniMax-M2.7 with tool calling for the assistant's grounded answers about one record, with receipts; a vision model, uploads only, for printed text from an image or PDF, no judgment; a search API, no model, for text other people published, quoted verbatim, no judgment.
+- **Infrastructure:** Docker, Cloud Run and Artifact Registry for the container build and a manual production deploy with [`scripts/deploy-local.sh`](scripts/deploy-local.sh).
+- **Tooling:** Biome, Prettier, TypeScript and Playwright for lint, format, strict types and a browser smoke pass.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
