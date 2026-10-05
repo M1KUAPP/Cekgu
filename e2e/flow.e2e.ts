@@ -57,12 +57,8 @@ test('a guest types a check and gets a receipt-verified verdict', async ({ page 
   expect(await page.locator('a[href*="/receipt/"]').count()).toBeGreaterThanOrEqual(2)
   expect(errors).toEqual([])
 
-  // Guest records expire in 24 hours anyway, but leaving demo litter in a shared workspace is rude,
-  // and the workspace is shared with whoever opens the demo next. This deletes through the page's own
-  // context because the bare `request` fixture is a separate context that never saw the guest sign-in:
-  // it holds no session cookie, so the same call there answers 401 and drops the record on the floor.
-  // Asserted, because a cleanup nothing checks is how five 'Browser flow check' records reached
-  // production in one morning.
+  // Deletes through the page's context: the bare `request` fixture never saw the guest sign-in, so
+  // it would answer 401. Asserted, because an unchecked cleanup leaves litter in the shared workspace.
   const cleanup = await page.context().request.delete('/api/records', { data: { ids: [recordId] } })
   expect(cleanup.ok(), `cleanup failed: ${cleanup.status()} ${await cleanup.text()}`).toBe(true)
 })

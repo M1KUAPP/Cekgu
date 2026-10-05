@@ -96,9 +96,7 @@ export async function runShotChecks(options = {}) {
 
     if (await guestButton.isVisible().catch(() => false)) {
       await guestButton.click()
-      // SignIn.tsx:103 sends a guest with no saved destination to /dashboard; it was /records when
-      // this gate was written. The shot list still films Records, so the walk goes there explicitly
-      // rather than asserting wherever sign-in happens to land this week.
+      // Sign-in lands on /dashboard; the shot list films Records, so the walk goes there explicitly.
       await page.waitForURL(/\/(dashboard|records)(?:[/?#]|$)/)
       await page.getByRole('link', { name: exactText('Records') }).click()
       await page.waitForURL(/\/records(?:[/?#]|$)/)
@@ -245,15 +243,8 @@ export async function runShotChecks(options = {}) {
       }
     )
     await check(6, 'Timed Out attempt', "text='Timed Out' i", item.getByText(exactText('Timed Out')))
-    // Shot 6 used to check for "The call passed the 90 second evidence cutoff." on the timed-out
-    // row. #202 removed every per-attempt reason from this table at the owner's request; the string
-    // is still on the record the API returns, but nothing renders it. The Status chip is what names
-    // a failed attempt now, and it is checked directly above.
-    //
-    // The sentence that carries the shot's actual claim - that nothing was hidden - moved from a
-    // paragraph under the table onto the heading over it, as a tooltip. So the anchor is the control
-    // that holds it and the assertion is on the text it would reveal, which is the same claim
-    // checked one layer in rather than a weaker check on a visible string.
+    // The shot's claim, that nothing was hidden, lives in the All Attempts heading's tooltip, so the
+    // anchor is that control and the assertion is on the text it would reveal.
     await check(
       6,
       'Attempts rule',

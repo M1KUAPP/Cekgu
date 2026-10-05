@@ -6,9 +6,6 @@
 # Config and prose drown real architecture, so both are excluded.
 
 .husky/
-graphify-out/
-node_modules/
-dist/
 
 *.json
 *.md
@@ -17,9 +14,7 @@ dist/
 !docs/TRD.md
 !docs/DESIGN.md
 
-biome.json
 commitlint.config.mjs
-tsconfig.json
 .env.example
 
 *.pdf
