@@ -19,27 +19,27 @@ than a description of our code.
 
 Contents:
 
-1. [Gateway, base URLs and auth](#1-gateway-base-urls-and-auth)
-1. [Endpoints](#2-endpoints)
-1. [Models, measured](#3-models-measured)
-1. [Request IDs and provenance](#4-request-ids-and-provenance) — the track's hard requirement
-1. [Verified gotchas](#5-verified-gotchas)
-1. [Rate limits and timeouts](#6-rate-limits-and-timeouts)
-1. [Error codes](#7-error-codes)
-1. [Configuration contract](#8-configuration-contract)
-1. [Application architecture](#9-application-architecture)
-1. [Hosting and deploys](#10-hosting-and-deploys)
-1. [Data model](#11-data-model)
-1. [Auth and the Guest account](#12-auth-and-the-guest-account)
-1. [Queue and worker](#13-queue-and-worker)
-1. [Consensus rule](#14-consensus-rule)
-1. [API contracts](#15-api-contracts)
-1. [Provenance display](#16-provenance-display)
-1. [Mascot runtime](#17-mascot-runtime)
-1. [Testing](#18-testing)
-1. [Decided](#19-decided)
-1. [Reading a paper from an upload](#20-reading-a-paper-from-an-upload) — the first non-Gonka call
-1. [The readers' voice and the record assistant](#21-the-readers-voice-and-the-record-assistant) — the second
+1.  [Gateway, base URLs and auth](#1-gateway-base-urls-and-auth)
+1.  [Endpoints](#2-endpoints)
+1.  [Models, measured](#3-models-measured)
+1.  [Request IDs and provenance](#4-request-ids-and-provenance) — the track's hard requirement
+1.  [Verified gotchas](#5-verified-gotchas)
+1.  [Rate limits and timeouts](#6-rate-limits-and-timeouts)
+1.  [Error codes](#7-error-codes)
+1.  [Configuration contract](#8-configuration-contract)
+1.  [Application architecture](#9-application-architecture)
+1.  [Hosting and deploys](#10-hosting-and-deploys)
+1.  [Data model](#11-data-model)
+1.  [Auth and the Guest account](#12-auth-and-the-guest-account)
+1.  [Queue and worker](#13-queue-and-worker)
+1.  [Consensus rule](#14-consensus-rule)
+1.  [API contracts](#15-api-contracts)
+1.  [Provenance display](#16-provenance-display)
+1.  [Mascot runtime](#17-mascot-runtime)
+1.  [Testing](#18-testing)
+1.  [Decided](#19-decided)
+1.  [Reading a paper from an upload](#20-reading-a-paper-from-an-upload) — the first non-Gonka call
+1.  [The readers' voice and the record assistant](#21-the-readers-voice-and-the-record-assistant) — the second
 
 ## 1. Gateway, base URLs and auth
 
@@ -100,14 +100,14 @@ curl -s https://api.gonkarouter.io/v1/messages \
   -H "anthropic-version: 2023-06-01" \
   -H "content-type: application/json" \
   -d '{"model":"moonshotai/Kimi-K2.6","max_tokens":1024,
-       "messages":[{"role":"user","content":"Reply with just: pong"}]}'
+        "messages":[{"role":"user","content":"Reply with just: pong"}]}'
 
 # OpenAI surface
 curl -s https://api.gonkarouter.io/v1/chat/completions \
   -H "Authorization: Bearer $GONKA_API_KEY" \
   -H "content-type: application/json" \
   -d '{"model":"deepseek-ai/DeepSeek-V4-Flash-0731","max_tokens":1024,
-       "messages":[{"role":"user","content":"Reply with just: pong"}]}'
+        "messages":[{"role":"user","content":"Reply with just: pong"}]}'
 ```
 
 ## 3. Models, measured
@@ -242,13 +242,13 @@ twice unless the call layer fails closed.
 
 Every reasoning request must:
 
-1. Send `X-Gonka-No-Fallback: true`.
-2. Capture `x-request-id`, `x-devshard-id` and `X-Gonka-Fallback` from the raw response.
-3. Reject the response if `X-Gonka-Fallback` is present, even if the body is otherwise successful.
-4. Poll `GET /v1/receipts/{x-request-id}` until it answers, then require the receipt's `model` to equal
-   `requested_model`. The receipt lags the response and a single immediate fetch always misses it, which is
-   [gotcha 11](#5-verified-gotchas).
-5. Admit a result to consensus only when at least two successful records have different `served_model` values.
+1.  Send `X-Gonka-No-Fallback: true`.
+2.  Capture `x-request-id`, `x-devshard-id` and `X-Gonka-Fallback` from the raw response.
+3.  Reject the response if `X-Gonka-Fallback` is present, even if the body is otherwise successful.
+4.  Poll `GET /v1/receipts/{x-request-id}` until it answers, then require the receipt's `model` to equal
+    `requested_model`. The receipt lags the response and a single immediate fetch always misses it, which is
+    [gotcha 11](#5-verified-gotchas).
+5.  Admit a result to consensus only when at least two successful records have different `served_model` values.
 
 Failure at any step returns **verification unavailable**, never a consensus answer. The receipt is unsigned gateway
 metadata: it makes the serving model publicly inspectable, but it is not cryptographic or on-chain proof.
@@ -435,26 +435,26 @@ critical path, and Bun runs TypeScript directly so the server has no build step.
 
 ```text
 src/
-  client/            Vite + React 19 single-page app, TypeScript strict, Tailwind v4
-  server/            Hono on Bun: /api routes, static serving, the queue worker
-    db/              the Drizzle schema and the pooled connection
-    gateway/         the hand-rolled fetch client, reading admission, the model-id constant (sections 14 and 8)
-    queue/           claim, round, hedge, health, semaphore, worker (section 13)
-    records/         the query layer the records routes call
-    routes/          one file per resource in section 15
-    fixtures/        the committed evaluation set and the benchmark pass the sample is seeded from
-                     (`seedSample` re-seeds when this file no longer matches the stored row — see below)
-    index.ts         entry point: migrate, seed the Guest user and sample, start the worker, listen
-  shared/            TypeScript types, zod schemas, verdict.ts (the rule as a pure function)
-public/              static assets, copied into the client build as-is
-  brand/             logo, favicon, the still mascot PNGs
-  live2d/            tororo/runtime and hijiki/runtime, committed Cubism runtime files
-drizzle/             SQL migrations generated by drizzle-kit, committed
-e2e/                 Playwright: smoke.e2e.ts against a deployed URL, flow.e2e.ts behind E2E_FLOW=1
-scripts/             repo tooling, including deploy-local.sh, the manual production deploy (section 10)
-Dockerfile           multi-stage on oven/bun:1.4.2
-vite.config.ts       client build, dev proxy of /api to the server
-drizzle.config.ts    schema path, migrations folder, DATABASE_URL
+  client/             Vite + React 19 single-page app, TypeScript strict, Tailwind v4
+  server/             Hono on Bun: /api routes, static serving, the queue worker
+    db/               the Drizzle schema and the pooled connection
+    gateway/          the hand-rolled fetch client, reading admission, the model-id constant (sections 14 and 8)
+    queue/            claim, round, hedge, health, semaphore, worker (section 13)
+    records/          the query layer the records routes call
+    routes/           one file per resource in section 15
+    fixtures/         the committed evaluation set and the benchmark pass the sample is seeded from
+                      (`seedSample` re-seeds when this file no longer matches the stored row — see below)
+    index.ts          entry point: migrate, seed the Guest user and sample, start the worker, listen
+  shared/             TypeScript types, zod schemas, verdict.ts (the rule as a pure function)
+public/               static assets, copied into the client build as-is
+  brand/              logo, favicon, the still mascot PNGs
+  live2d/             tororo/runtime and hijiki/runtime, committed Cubism runtime files
+drizzle/              SQL migrations generated by drizzle-kit, committed
+e2e/                  Playwright: smoke.e2e.ts against a deployed URL, flow.e2e.ts behind E2E_FLOW=1
+scripts/              repo tooling, including deploy-local.sh, the manual production deploy (section 10)
+Dockerfile            multi-stage on oven/bun:1.4.2
+vite.config.ts        client build, dev proxy of /api to the server
+drizzle.config.ts     schema path, migrations folder, DATABASE_URL
 ```
 
 `src/shared` is imported by both halves and contains no I/O. Anything that touches `fetch`, the database or the DOM
@@ -534,11 +534,11 @@ That failure is silent, and it happened: production served the #19 scaffold thro
 noticed. `GET /` answers 200 on every revision, so only `POST /api/auth/guest`, which exists in one revision and not the
 other, exposed it. Three steps in `scripts/deploy-local.sh` close it:
 
-1. Deploy the image.
-2. Route with `gcloud run services update-traffic cekgu --to-revisions <revision>=100`, naming the revision that run
-   built rather than `--to-latest`, which a concurrent deploy could win.
-3. Re-read the service and fail the run unless the revision serving 100% is **the one that run deployed** and `GET /`
-   returns 200.
+1.  Deploy the image.
+2.  Route with `gcloud run services update-traffic cekgu --to-revisions <revision>=100`, naming the revision that run
+    built rather than `--to-latest`, which a concurrent deploy could win.
+3.  Re-read the service and fail the run unless the revision serving 100% is **the one that run deployed** and `GET /`
+    returns 200.
 
 Step 3 compares against that revision rather than against the service's newest, because preview deploys for open pull
 requests created newer revisions continuously; comparing against those failed a deploy whose traffic was in fact
@@ -585,8 +585,9 @@ delete rows on a timer.
 ## 11. Data model
 
 Neon Postgres, Singapore region (`ap-southeast-1`), one database, one schema. Drizzle ORM defines the tables in
-`src/server/db/schema.ts`; `drizzle-kit generate` writes SQL into `drizzle/`, and the server applies pending migrations
-at start.
+`src/server/db/schema.ts`; `bun run db:generate` runs `drizzle-kit generate`, which writes SQL into `drizzle/`, then
+`scripts/format-drizzle.ts`, which re-indents that output to `.editorconfig`. The server applies pending migrations at
+start.
 
 **Why Neon and Postgres.** Records are the product memory ([product principle 5](PRODUCT.md#product-principles)), so
 they need a database that survives a redeploy, which rules out SQLite on Cloud Run's ephemeral disk. The queue claim in
@@ -817,28 +818,28 @@ rolling back — a Cloud Run instance replaced mid-round leaves exactly that.
 
 ### One round
 
-1. Take the **healthy set**: the three model ids ordered by rolling 15-minute success rate, then median latency, from
-   the in-memory health stats. A model with zero successes and at least three failures in the window is excluded —
-   unless fewer than two would remain, in which case the excluded families are **demoted to the end of the order rather
-   than dropped**. One candidate cannot produce two distinct readings, so dropping the second guarantees **Unverified**
-   without a call being attempted, and a struggling family is strictly better than a certain failure.
+1.  Take the **healthy set**: the three model ids ordered by rolling 15-minute success rate, then median latency, from
+    the in-memory health stats. A model with zero successes and at least three failures in the window is excluded —
+    unless fewer than two would remain, in which case the excluded families are **demoted to the end of the order rather
+    than dropped**. One candidate cannot produce two distinct readings, so dropping the second guarantees **Unverified**
+    without a call being attempted, and a struggling family is strictly better than a certain failure.
 
-   **The trade is not free.** When a family really is down, demoting it turns an instant **Unverified** into a slow one:
-   the seat now spends up to three attempts of 90 s on it before moving. On a projector that is an item resolving in
-   half a minute against four and a half.
+    **The trade is not free.** When a family really is down, demoting it turns an instant **Unverified** into a slow one:
+    the seat now spends up to three attempts of 90 s on it before moving. On a projector that is an item resolving in
+    half a minute against four and a half.
 
-1. Request the top two families **in parallel**, each through the [gateway client](#14-consensus-rule) and each holding
-   one slot of the global semaphore of **4**
-1. **Deferred hedge:** if a call has not returned after **45 s**, fire a duplicate of the same call to the same model,
-   holding another slot. Whichever returns first is the candidate; the other is recorded and discarded
-1. **Hard cutoff** at **90 s** per call. A call past the cutoff is aborted and recorded as timed out with no request id
-   A second ceiling of **120 s** bounds the whole call including its receipt poll, because a receipt fetch that never
-   resolves would otherwise hold a seat open indefinitely; it is the outer bound, and the 90 s cutoff is what the
-   evidence view names.
-1. If one family fails, after rejection, timeout or a non-200, try the **third family** for that seat
-1. Each model has a **retry budget of three attempts per item** per round, hedges included. When both seats have an
-   admitted reading, or every family in the healthy set has exhausted its budget, the round ends
-1. Apply the [rule](#14-consensus-rule) to the admitted readings and write `items.verdict` and `items.verdict_reason`
+1.  Request the top two families **in parallel**, each through the [gateway client](#14-consensus-rule) and each holding
+    one slot of the global semaphore of **4**
+1.  **Deferred hedge:** if a call has not returned after **45 s**, fire a duplicate of the same call to the same model,
+    holding another slot. Whichever returns first is the candidate; the other is recorded and discarded
+1.  **Hard cutoff** at **90 s** per call. A call past the cutoff is aborted and recorded as timed out with no request id
+    A second ceiling of **120 s** bounds the whole call including its receipt poll, because a receipt fetch that never
+    resolves would otherwise hold a seat open indefinitely; it is the outer bound, and the 90 s cutoff is what the
+    evidence view names.
+1.  If one family fails, after rejection, timeout or a non-200, try the **third family** for that seat
+1.  Each model has a **retry budget of three attempts per item** per round, hedges included. When both seats have an
+    admitted reading, or every family in the healthy set has exhausted its budget, the round ends
+1.  Apply the [rule](#14-consensus-rule) to the admitted readings and write `items.verdict` and `items.verdict_reason`
 
 Every call, admitted or not, is one row in `attempts`. A `429` is recorded, counted against the budget, and retried
 after a 30-second backoff (FR-QUEUE-1). The hedge fires at 45 s rather than the tech lead's 1.5–2 s because our measured
@@ -890,14 +891,14 @@ last known picture rather than an empty one.
 response headers that carry the request id ([section 4](#4-request-ids-and-provenance)). It implements the
 [validity contract](#cross-verification-validity-contract) and nothing else:
 
-1. `POST {GONKA_BASE_URL_OPENAI}/chat/completions` with headers `Authorization: Bearer`, `content-type` and
-   `X-Gonka-No-Fallback: true`
-1. The body carries `max_tokens: 1024` and the prompt with a trailing comment line `// nonce: <uuid>` so byte-identical
-   items are not served from the gateway cache ([gotcha 8](#5-verified-gotchas), FR-QUEUE-2)
-1. Read `x-request-id`, `x-devshard-id` and `X-Gonka-Fallback` from the response headers before touching the body
-1. Strip `<think>…</think>` and any orphaned tag from the content ([gotcha 1](#5-verified-gotchas), NFR-PROV-4)
-1. Parse the reading JSON
-1. `GET /v1/receipts/{x-request-id}` and require its `model` to equal the requested model
+1.  `POST {GONKA_BASE_URL_OPENAI}/chat/completions` with headers `Authorization: Bearer`, `content-type` and
+    `X-Gonka-No-Fallback: true`
+1.  The body carries `max_tokens: 1024` and the prompt with a trailing comment line `// nonce: <uuid>` so byte-identical
+    items are not served from the gateway cache ([gotcha 8](#5-verified-gotchas), FR-QUEUE-2)
+1.  Read `x-request-id`, `x-devshard-id` and `X-Gonka-Fallback` from the response headers before touching the body
+1.  Strip `<think>…</think>` and any orphaned tag from the content ([gotcha 1](#5-verified-gotchas), NFR-PROV-4)
+1.  Parse the reading JSON
+1.  `GET /v1/receipts/{x-request-id}` and require its `model` to equal the requested model
 
 Step 6 polls rather than fetches once, because the receipt is written asynchronously ([gotcha 11](#5-verified-gotchas)).
 Step 5 is not the client's: parsing the reading needs the item's option letters and the client takes a model and a
@@ -944,11 +945,11 @@ include `answer`; `reason` is shown beside the reading in the evidence view.
 
 A reading is **admitted** when all of these hold, and rejected with the first failing one as `rejection_reason`:
 
-1. HTTP 200
-1. No `X-Gonka-Fallback` header (NFR-PROV-1)
-1. Receipt fetched and its `model` equals the requested model (NFR-PROV-2, FR-VERDICT-1)
-1. The content parses as the reading JSON
-1. `answer` is one of the item's option letters
+1.  HTTP 200
+1.  No `X-Gonka-Fallback` header (NFR-PROV-1)
+1.  Receipt fetched and its `model` equals the requested model (NFR-PROV-2, FR-VERDICT-1)
+1.  The content parses as the reading JSON
+1.  `answer` is one of the item's option letters
 
 Two admitted readings are **distinct** when their receipt `model` values differ. Distinctness is proven by receipt, not
 by which model was asked for, because availability rotated across all three models within one evening
@@ -1638,10 +1639,10 @@ ids, then verify it actually answers.
 
 `src/server/gateway/only-gonkarouter.test.ts` asserts three things rather than one:
 
-1. A provider hostname may appear in `src/server/transcribe/` and **nowhere else** in `src/`
-1. That directory may not import the verdict rule, the record schema, the round or the database
-1. `gateway/`, `queue/`, `extract/` and `shared/` name **no** provider host at all, so widening the directory rule alone
-   cannot move a decision across the line
+1.  A provider hostname may appear in `src/server/transcribe/` and **nowhere else** in `src/`
+1.  That directory may not import the verdict rule, the record schema, the round or the database
+1.  `gateway/`, `queue/`, `extract/` and `shared/` name **no** provider host at all, so widening the directory rule alone
+    cannot move a decision across the line
 
 Proven against the defect it names: planting the Gemini hostname in `src/server/queue/round.ts` fails assertion 3 by
 file name. **Widening that exemption is a track requirement decision, not a refactor.**
@@ -1753,14 +1754,14 @@ stops a prompt injected into an uploaded paper from reaching another account's q
 question about a record sits closer to reasoning than transcription does. Four things hold instead, and all four are
 checkable:
 
-1. Every fact it states is retrieved by the tools from readings two Gonka models produced, each carrying an
-   `x-request-id` and a public receipt. The model phrases them and is forbidden from adding one
-1. It may not adjudicate: no saying which option is correct, no confirming or rejecting a key, no solving a question.
-   [`PRODUCT.md`](PRODUCT.md) defines Cekgu against "a single general AI chat", so an assistant that ruled on keys would
-   be the thing the product exists to replace
-1. Its own response id is labelled `Gemini · <id>` and rendered as a visibly different object — dashed, unlinked, no
-   receipt — because it is not a Gonka request id
-1. `CHAT_PROVIDER=gonka` moves it to MiniMax-M2.7 without a code change
+1.  Every fact it states is retrieved by the tools from readings two Gonka models produced, each carrying an
+    `x-request-id` and a public receipt. The model phrases them and is forbidden from adding one
+1.  It may not adjudicate: no saying which option is correct, no confirming or rejecting a key, no solving a question.
+    [`PRODUCT.md`](PRODUCT.md) defines Cekgu against "a single general AI chat", so an assistant that ruled on keys would
+    be the thing the product exists to replace
+1.  Its own response id is labelled `Gemini · <id>` and rendered as a visibly different object — dashed, unlinked, no
+    receipt — because it is not a Gonka request id
+1.  `CHAT_PROVIDER=gonka` moves it to MiniMax-M2.7 without a code change
 
 **Citations are resolved server-side, never trusted from the model.** It emits `[item:N]`, `[reading:N:A]` and
 `[receipt:<id>]` inline; `src/server/chat/citations.ts` resolves each against the loaded record and **drops any that
@@ -1800,13 +1801,13 @@ That claim rests on one flag:
 
 One search per item, before the round, in `src/server/queue/worker.ts`:
 
-1. `evidenceQuery` builds a query from subject, stem and option texts. **The supplied key is never in it** — a search
-   containing the key returns pages that agree with the key, and the reader would then be shown evidence selected to
-   confirm the very thing under test. The function takes no key argument at all, which a test asserts on its arity
-1. At most four results, snippets capped at 500 characters, 8 s timeout, `search_depth: 'basic'`
-1. Both readers are shown **the same** snippets. Retrieving per reader would make their disagreement a disagreement
-   about evidence rather than about the question, and would cost four searches an item instead of one
-1. The snippets go into the solver prompt under a heading that says they are background, not authority
+1.  `evidenceQuery` builds a query from subject, stem and option texts. **The supplied key is never in it** — a search
+    containing the key returns pages that agree with the key, and the reader would then be shown evidence selected to
+    confirm the very thing under test. The function takes no key argument at all, which a test asserts on its arity
+1.  At most four results, snippets capped at 500 characters, 8 s timeout, `search_depth: 'basic'`
+1.  Both readers are shown **the same** snippets. Retrieving per reader would make their disagreement a disagreement
+    about evidence rather than about the question, and would cost four searches an item instead of one
+1.  The snippets go into the solver prompt under a heading that says they are background, not authority
 
 **Retrieval never blocks a verdict.** Every failure path — no key, timeout, non-200, unparseable body — returns `[]`,
 and the round proceeds exactly as it did before this existed. A deployment with no `TAVILY_API_KEY` is the product as it

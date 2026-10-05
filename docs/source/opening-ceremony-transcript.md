@@ -10,19 +10,19 @@ revealed, and the rules were read out.
 
 Contents:
 
-1. [Proper-noun correction key](#proper-noun-correction-key)
-1. [00:06 Welcome and agenda](#0006-welcome-and-agenda)
-1. [00:09 MUBA, co-hosts and sponsor tiers](#0009-muba-co-hosts-and-sponsor-tiers)
-1. [00:10 StarGlobal, supporting sponsor](#0010-starglobal-supporting-sponsor)
-1. [00:13 GCC, supporting sponsor, absent](#0013-gcc-supporting-sponsor-absent)
-1. [00:14 Sui, gold sponsor and track reveal](#0014-sui-gold-sponsor-and-track-reveal)
-1. [00:21 Thetanuts Finance, silver sponsor and track reveal](#0021-thetanuts-finance-silver-sponsor-and-track-reveal)
-1. [00:27 GonkaRouter, silver sponsor and track reveal](#0027-gonkarouter-silver-sponsor-and-track-reveal)
-1. [00:31 Rules and regulations reading](#0031-rules-and-regulations-reading)
-1. [00:39 Q&A on Slido](#0039-qa-on-slido)
-1. [00:52 Announcements](#0052-announcements)
-1. [01:00 Photo session and close](#0100-photo-session-and-close)
-1. [Deltas against the public website](#deltas-against-the-public-website)
+1.  [Proper-noun correction key](#proper-noun-correction-key)
+1.  [00:06 Welcome and agenda](#0006-welcome-and-agenda)
+1.  [00:09 MUBA, co-hosts and sponsor tiers](#0009-muba-co-hosts-and-sponsor-tiers)
+1.  [00:10 StarGlobal, supporting sponsor](#0010-starglobal-supporting-sponsor)
+1.  [00:13 GCC, supporting sponsor, absent](#0013-gcc-supporting-sponsor-absent)
+1.  [00:14 Sui, gold sponsor and track reveal](#0014-sui-gold-sponsor-and-track-reveal)
+1.  [00:21 Thetanuts Finance, silver sponsor and track reveal](#0021-thetanuts-finance-silver-sponsor-and-track-reveal)
+1.  [00:27 GonkaRouter, silver sponsor and track reveal](#0027-gonkarouter-silver-sponsor-and-track-reveal)
+1.  [00:31 Rules and regulations reading](#0031-rules-and-regulations-reading)
+1.  [00:39 Q&A on Slido](#0039-qa-on-slido)
+1.  [00:52 Announcements](#0052-announcements)
+1.  [01:00 Photo session and close](#0100-photo-session-and-close)
+1.  [Deltas against the public website](#deltas-against-the-public-website)
 
 ## Proper-noun correction key
 
@@ -53,13 +53,13 @@ GM. Here is our opening ceremony for MUBA Blockchain Hackathon 2026.
 
 **[00:08:05] Agenda:**
 
-1. Intro to MUBA and the blockchain clubs
-1. Intro of the sponsors and judges
-1. Track reveal videos for all track sponsors
-1. Rules reading
-1. Q&A session
-1. Related information / announcements
-1. Closing and the announcement of start
+1.  Intro to MUBA and the blockchain clubs
+1.  Intro of the sponsors and judges
+1.  Track reveal videos for all track sponsors
+1.  Rules reading
+1.  Q&A session
+1.  Related information / announcements
+1.  Closing and the announcement of start
 
 ## 00:09 MUBA, co-hosts and sponsor tiers
 

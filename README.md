@@ -129,75 +129,75 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 
 ### How It Works
 
-1. **Enter a paper.** Type the questions, options and key into **New Check**, paste a link to a page that already has them, or upload a scan or photograph — then edit the draft that comes back. No draft submits itself; the educator corrects and sends each one.
+1.  **Enter a paper.** Type the questions, options and key into **New Check**, paste a link to a page that already has them, or upload a scan or photograph — then edit the draft that comes back. No draft submits itself; the educator corrects and sends each one.
 
-   <img src="docs/readme/steps/1-new-check.png" alt="The New Check form, with the Start From a Paper card offering a link or an upload, and the paper fields below" width="100%">
+    <img src="docs/readme/steps/1-new-check.png" alt="The New Check form, with the Start From a Paper card offering a link or an upload, and the paper fields below" width="100%">
 
-1. **Two families read it blind.** Each question is queued. A round takes two seats and fills each from a different model family through GonkaRouter. The prompt carries the stem, the lettered options, the subject and the language — never the supplied key, and never the other reader's output.
+1.  **Two families read it blind.** Each question is queued. A round takes two seats and fills each from a different model family through GonkaRouter. The prompt carries the stem, the lettered options, the subject and the language — never the supplied key, and never the other reader's output.
 
-   <img src="docs/readme/steps/2-queued-readers.png" alt="A record just submitted, its three questions queued and the two reader seats waiting beside the summary" width="100%">
+    <img src="docs/readme/steps/2-queued-readers.png" alt="A record just submitted, its three questions queued and the two reader seats waiting beside the summary" width="100%">
 
-1. **Evidence is admitted, not assumed.** A reply becomes a usable reading only if all five hold:
+1.  **Evidence is admitted, not assumed.** A reply becomes a usable reading only if all five hold:
 
-   - Returned HTTP 200
-   - Carried no fallback header
-   - Parsed as the requested JSON
-   - Answered with a letter that is actually one of the options
-   - Matched a public Gonka receipt naming the model that was requested
+    - Returned HTTP 200
+    - Carried no fallback header
+    - Parsed as the requested JSON
+    - Answered with a letter that is actually one of the options
+    - Matched a public Gonka receipt naming the model that was requested
 
-   Anything else is written down as a refused attempt with its reason, and takes no part in the verdict.
+    Anything else is written down as a refused attempt with its reason, and takes no part in the verdict.
 
-   <img src="docs/readme/steps/3-receipt.png" alt="The receipt viewer for one request id, showing the served model, outcome, devshard and timings, next to the public gateway URL to check them against" width="100%">
+    <img src="docs/readme/steps/3-receipt.png" alt="The receipt viewer for one request id, showing the served model, outcome, devshard and timings, next to the public gateway URL to check them against" width="100%">
 
-   Every request id in the product opens this page, and the gateway URL on it is public and needs no key — so the claim is checked against the gateway rather than taken from us.
+    Every request id in the product opens this page, and the gateway URL on it is public and needs no key — so the claim is checked against the gateway rather than taken from us.
 
-1. **One rule decides.** The first two admitted readings from distinct served models go through a five-outcome rule in a fixed order. The order is the design: disagreement before ambiguity, ambiguity before the key.
+1.  **One rule decides.** The first two admitted readings from distinct served models go through a five-outcome rule in a fixed order. The order is the design: disagreement before ambiguity, ambiguity before the key.
 
-   | Verdict                | Fires when                                                                    |
-   | ---------------------- | ----------------------------------------------------------------------------- |
-   | **Unverified**         | Fewer than two distinct receipt-verified readings survived. No verdict given. |
-   | **Split Opinion**      | The two readers committed to different options.                               |
-   | **Possible Ambiguity** | Both readers named more than one option as defensible.                        |
-   | **Clear**              | Both readers chose the supplied key.                                          |
-   | **Possible Key Error** | Both readers agreed on the same option, and it is not the key.                |
+    | Verdict                | Fires when                                                                    |
+    | ---------------------- | ----------------------------------------------------------------------------- |
+    | **Unverified**         | Fewer than two distinct receipt-verified readings survived. No verdict given. |
+    | **Split Opinion**      | The two readers committed to different options.                               |
+    | **Possible Ambiguity** | Both readers named more than one option as defensible.                        |
+    | **Clear**              | Both readers chose the supplied key.                                          |
+    | **Possible Key Error** | Both readers agreed on the same option, and it is not the key.                |
 
-   <img src="docs/readme/steps/4-five-outcomes.png" alt="The landing page at A Fixed Rule Decides, above the five verdict outcomes and how many sample items each one holds" width="100%">
+    <img src="docs/readme/steps/4-five-outcomes.png" alt="The landing page at A Fixed Rule Decides, above the five verdict outcomes and how many sample items each one holds" width="100%">
 
-1. **The public web is consulted, and quoted.** Before the readers run, one search fetches up to four pages relevant to the question, and both readers are shown the same snippets as background rather than authority. The supplied key is never in the query — searching for the key returns pages that agree with the key.
+1.  **The public web is consulted, and quoted.** Before the readers run, one search fetches up to four pages relevant to the question, and both readers are shown the same snippets as background rather than authority. The supplied key is never in the query — searching for the key returns pages that agree with the key.
 
-   This is a **search API, not a model**: it returns what other people published and forms no opinion. `include_answer` is hard-coded false — a provider's own generated answer would be reasoning off the gateway — and both that flag and the absence of any `answer` read are asserted by tests. Without `TAVILY_API_KEY` the readers work from their own knowledge and every verdict is unchanged.
+    This is a **search API, not a model**: it returns what other people published and forms no opinion. `include_answer` is hard-coded false — a provider's own generated answer would be reasoning off the gateway — and both that flag and the absence of any `answer` read are asserted by tests. Without `TAVILY_API_KEY` the readers work from their own knowledge and every verdict is unchanged.
 
-   **Every record states which of three retrieval states it is in:**
+    **Every record states which of three retrieval states it is in:**
 
-   | State                                 | What the record shows                                                                      |
-   | ------------------------------------- | ------------------------------------------------------------------------------------------ |
-   | Checked **with** retrieval            | Every page linked and quoted, and each reader reports what those pages did to its answer   |
-   | Checked **before** retrieval shipped  | Says so plainly, rather than leaving the feature looking absent                            |
-   | Pages attached **after** the readings | Labeled as fetched later — the readers did not see them, and no verdict or score uses them |
+    | State                                 | What the record shows                                                                      |
+    | ------------------------------------- | ------------------------------------------------------------------------------------------ |
+    | Checked **with** retrieval            | Every page linked and quoted, and each reader reports what those pages did to its answer   |
+    | Checked **before** retrieval shipped  | Says so plainly, rather than leaving the feature looking absent                            |
+    | Pages attached **after** the readings | Labeled as fetched later — the readers did not see them, and no verdict or score uses them |
 
-   The third exists because the sample's pass was captured on 3 September and retrieval shipped on the 6th; which state the sample is in depends on whether the build has re-seeded it from the committed fixture. See [TRD section 22](docs/TRD.md#22-live-retrieval-for-cross-verification).
+    The third exists because the sample's pass was captured on 3 September and retrieval shipped on the 6th; which state the sample is in depends on whether the build has re-seeded it from the committed fixture. See [TRD section 22](docs/TRD.md#22-live-retrieval-for-cross-verification).
 
-   <img src="docs/readme/steps/5-web-pages.png" alt="Evidence for the kilobyte question: both readings with their served models and request ids, then the pages retrieved from the web, labeled as fetched after the readings" width="100%">
+    <img src="docs/readme/steps/5-web-pages.png" alt="Evidence for the kilobyte question: both readings with their served models and request ids, then the pages retrieved from the web, labeled as fetched after the readings" width="100%">
 
-1. **A score puts a number on it.** The same two readings produce a Truth Score from 0 to 100, shown on the record and on every item. Computed in `src/shared/truth-score.ts` from readings already on the record — no extra inference call, and no model is asked how confident it feels, because no receipt could back that.
+1.  **A score puts a number on it.** The same two readings produce a Truth Score from 0 to 100, shown on the record and on every item. Computed in `src/shared/truth-score.ts` from readings already on the record — no extra inference call, and no model is asked how confident it feels, because no receipt could back that.
 
-   | Input                            | Weight                            |
-   | -------------------------------- | --------------------------------- |
-   | A reader's committed option      | Half the score                    |
-   | Options it would still defend    | The other half, split across them |
-   | Retrieval corroborates a reading | That reading counts for more      |
-   | Retrieval contradicts a reading  | That reading counts for half      |
-   | Retrieval finds nothing          | Exactly neutral                   |
+    | Input                            | Weight                            |
+    | -------------------------------- | --------------------------------- |
+    | A reader's committed option      | Half the score                    |
+    | Options it would still defend    | The other half, split across them |
+    | Retrieval corroborates a reading | That reading counts for more      |
+    | Retrieval contradicts a reading  | That reading counts for half      |
+    | Retrieval finds nothing          | Exactly neutral                   |
 
-   A hedge therefore costs the key something without erasing the commitment. Retrieval is a **confidence adjustment, not a vote**, and can never flip a reading into meaning its opposite; finding nothing is neutral because most exam items have no page that settles them.
+    A hedge therefore costs the key something without erasing the commitment. Retrieval is a **confidence adjustment, not a vote**, and can never flip a reading into meaning its opposite; finding nothing is neutral because most exam items have no page that settles them.
 
-   **Reading the number.** It says how much of the verified reader agreement backs the supplied key, not that the question is correct. An **Unverified** item scores null rather than 0, because 0 is what two readers agreeing _against_ the key earns. The record figure always prints its own denominator: three verified items out of twelve can average 100.
+    **Reading the number.** It says how much of the verified reader agreement backs the supplied key, not that the question is correct. An **Unverified** item scores null rather than 0, because 0 is what two readers agreeing _against_ the key earns. The record figure always prints its own denominator: three verified items out of twelve can average 100.
 
-   <img src="docs/readme/steps/6-truth-score.png" alt="The sample record in the workspace: its Truth Score of 77 in the summary, beside each item's own score of 0, 25 or 100" width="100%">
+    <img src="docs/readme/steps/6-truth-score.png" alt="The sample record in the workspace: its Truth Score of 77 in the summary, beside each item's own score of 0, 25 or 100" width="100%">
 
-1. **A human decides.** The verdict is an attention signal, not a mark. The educator records what they did — corrected the key, revised the wording, confirmed the key, dismissed the flag, or asked for a retry — and that decision is stored with the item.
+1.  **A human decides.** The verdict is an attention signal, not a mark. The educator records what they did — corrected the key, revised the wording, confirmed the key, dismissed the flag, or asked for a retry — and that decision is stored with the item.
 
-   <img src="docs/readme/steps/7-record-decisions.png" alt="A record with a corrected key, a Possible Ambiguity item, and a Clear item carrying a Retry Requested decision" width="100%">
+    <img src="docs/readme/steps/7-record-decisions.png" alt="A record with a corrected key, a Possible Ambiguity item, and a Clear item carrying a Retry Requested decision" width="100%">
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -296,56 +296,56 @@ Running it locally needs a Postgres database and a GonkaRouter key, because ther
 
 ### Installation
 
-1. **Install dependencies.** This also wires the Husky commit hooks.
+1.  **Install dependencies.** This also wires the Husky commit hooks.
 
-   ```sh
-   bun install
-   ```
+    ```sh
+    bun install
+    ```
 
-1. **Copy the environment template and fill it in.** Key names only ever live in the example file, never values.
+1.  **Copy the environment template and fill it in.** Key names only ever live in the example file, never values.
 
-   ```sh
-   cp .env.example .env
-   ```
+    ```sh
+    cp .env.example .env
+    ```
 
-   | Variable                   | Required | Notes                                                              |
-   | -------------------------- | -------- | ------------------------------------------------------------------ |
-   | `GONKA_API_KEY`            | yes      | The only inference credential                                      |
-   | `DATABASE_URL`             | yes      | Postgres connection string                                         |
-   | `BETTER_AUTH_SECRET`       | yes      | Session signing secret                                             |
-   | `GUEST_EMAIL`              | yes      | The shared Guest account, seeded on start                          |
-   | `GUEST_PASSWORD`           | yes      | As above                                                           |
-   | `GONKA_BASE_URL_OPENAI`    | no       | Defaults to `https://api.gonkarouter.io/v1`, `/v1` suffix included |
-   | `BETTER_AUTH_URL`          | no       | Defaults to `http://localhost:8080`                                |
-   | `PORT`                     | no       | Defaults to `8080`                                                 |
-   | `GOOGLE_CLIENT_ID/_SECRET` | no       | Both must be set for Google sign-in to appear                      |
-   | `MASCOT_ENABLED`           | no       | `true` turns on the Live2D readers                                 |
-   | `MIGRATE_ON_START`         | no       | `false` skips migrations and sample seeding                        |
-   | `WORKER_ENABLED`           | no       | `false` runs the API without the queue worker                      |
+    | Variable                   | Required | Notes                                                              |
+    | -------------------------- | -------- | ------------------------------------------------------------------ |
+    | `GONKA_API_KEY`            | yes      | The only inference credential                                      |
+    | `DATABASE_URL`             | yes      | Postgres connection string                                         |
+    | `BETTER_AUTH_SECRET`       | yes      | Session signing secret                                             |
+    | `GUEST_EMAIL`              | yes      | The shared Guest account, seeded on start                          |
+    | `GUEST_PASSWORD`           | yes      | As above                                                           |
+    | `GONKA_BASE_URL_OPENAI`    | no       | Defaults to `https://api.gonkarouter.io/v1`, `/v1` suffix included |
+    | `BETTER_AUTH_URL`          | no       | Defaults to `http://localhost:8080`                                |
+    | `PORT`                     | no       | Defaults to `8080`                                                 |
+    | `GOOGLE_CLIENT_ID/_SECRET` | no       | Both must be set for Google sign-in to appear                      |
+    | `MASCOT_ENABLED`           | no       | `true` turns on the Live2D readers                                 |
+    | `MIGRATE_ON_START`         | no       | `false` skips migrations and sample seeding                        |
+    | `WORKER_ENABLED`           | no       | `false` runs the API without the queue worker                      |
 
-1. **Apply the migrations.**
+1.  **Apply the migrations.**
 
-   ```sh
-   bun run db:migrate
-   ```
+    ```sh
+    bun run db:migrate
+    ```
 
-1. **Start both processes.** The API runs on `8080` under Bun's watcher and Vite serves the client on `5173`, proxying `/api` to it.
+1.  **Start both processes.** The API runs on `8080` under Bun's watcher and Vite serves the client on `5173`, proxying `/api` to it.
 
-   ```sh
-   bun run dev
-   ```
+    ```sh
+    bun run dev
+    ```
 
-1. **Run the checks.** No CI runs these.
+1.  **Run the checks.** No CI runs these.
 
-   ```sh
-   bun run check
-   ```
+    ```sh
+    bun run check
+    ```
 
-   `bun run check` runs `bun run lint` (Biome across the code, Prettier across Markdown and YAML), `bun run typecheck` (`tsc --noEmit`, strict, `noUncheckedIndexedAccess`), `bun test` (498 pass, 77 skip, 0 fail across 52 files), `bun run check:anchors` and `bun run test:guard`. `bun run e2e` runs Playwright against the deployment named by `E2E_BASE_URL`; it is not part of `check`.
+    `bun run check` runs `bun run lint` (editorconfig-checker across every tracked file, Biome across the code, Prettier across Markdown and YAML), `bun run typecheck` (`tsc --noEmit`, strict, `noUncheckedIndexedAccess`), `bun test` (498 pass, 77 skip, 0 fail across 52 files), `bun run check:anchors` and `bun run test:guard`. `bun run e2e` runs Playwright against the deployment named by `E2E_BASE_URL`; it is not part of `check`.
 
-   `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
+    `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
 
-   One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run `GEMINI_API_KEY= bun test` for a clean local pass.
+    One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run `GEMINI_API_KEY= bun test` for a clean local pass.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 

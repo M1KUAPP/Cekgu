@@ -9,7 +9,6 @@
 graphify-out/
 node_modules/
 dist/
-/agent/
 
 *.json
 *.md

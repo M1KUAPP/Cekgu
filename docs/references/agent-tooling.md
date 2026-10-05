@@ -87,7 +87,7 @@ graphify . --update     # incremental, after notable code changes
 
 `graphify-out/` is derived and gitignored apart from `graph.json`, which the org template lets a repo commit. This
 repo commits no graph, so it is per-checkout and regenerating is on you. Scope is set by
-`.graphifyignore`, which excludes config, `docs/`, agent instructions and vendored skills — a graph full of prose and
+`.graphifyignore`, which excludes config, `docs/` and agent instructions — a graph full of prose and
 dependency entries dilutes every query run against it.
 
 **Not worth building on the bare scaffold.** Build it once there is real code.

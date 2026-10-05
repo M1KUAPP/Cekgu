@@ -90,44 +90,44 @@
       copied from DESIGN.md, not reinvented. Four decisions are worth stating
       because a later editor will otherwise undo them:
 
-      1. ONE RED, AND IT IS THE PEN. DESIGN.md legislates that ink is the paper
-         and the machine, and red is the human hand: machine verdicts, model
-         names, request IDs and status text are never red, and none of them are
-         here. Read that rule as governing the product's chrome. This deck also
-         spends the same --pen on two display devices that are not product
-         chrome and carry no state: the eyebrow, and the second half of every
-         headline (.title em). Both flip with the ground, so there is exactly
-         one red in the deck and never a second accent colour. Do not add one,
-         and do not recolour a headline to something else.
+      1.  ONE RED, AND IT IS THE PEN. DESIGN.md legislates that ink is the paper
+          and the machine, and red is the human hand: machine verdicts, model
+          names, request IDs and status text are never red, and none of them are
+          here. Read that rule as governing the product's chrome. This deck also
+          spends the same --pen on two display devices that are not product
+          chrome and carry no state: the eyebrow, and the second half of every
+          headline (.title em). Both flip with the ground, so there is exactly
+          one red in the deck and never a second accent colour. Do not add one,
+          and do not recolour a headline to something else.
 
-      2. THE TRACKING CONTRACT IS THE FINGERPRINT. You can tell what a string is
-         from its letter-spacing alone. Display is Schibsted Grotesk 700 with
-         NEGATIVE tracking (titles, statements, figures). Labels are Schibsted
-         Grotesk 500, UPPERCASE, POSITIVE tracking (chrome, eyebrows, kickers,
-         diagram labels). Chip names are the same weight WITHOUT the tracking,
-         because they are TitleCase and DESIGN.md ties positive tracking to
-         text-transform: uppercase; the product agrees, with type-label for a
-         verdict chip and type-eyebrow for a label. Machine strings are Spline
-         Sans Mono with tabular numerals (request IDs, model IDs, counts,
-         receipt fields). Body prose is untracked; anything that came off the
-         exam paper is set in Source Serif 4. That last split is DESIGN.md's
-         whole structure: a reader can tell whether text came from the paper,
-         from Cekgu or from the gateway without a label saying so.
+      2.  THE TRACKING CONTRACT IS THE FINGERPRINT. You can tell what a string is
+          from its letter-spacing alone. Display is Schibsted Grotesk 700 with
+          NEGATIVE tracking (titles, statements, figures). Labels are Schibsted
+          Grotesk 500, UPPERCASE, POSITIVE tracking (chrome, eyebrows, kickers,
+          diagram labels). Chip names are the same weight WITHOUT the tracking,
+          because they are TitleCase and DESIGN.md ties positive tracking to
+          text-transform: uppercase; the product agrees, with type-label for a
+          verdict chip and type-eyebrow for a label. Machine strings are Spline
+          Sans Mono with tabular numerals (request IDs, model IDs, counts,
+          receipt fields). Body prose is untracked; anything that came off the
+          exam paper is set in Source Serif 4. That last split is DESIGN.md's
+          whole structure: a reader can tell whether text came from the paper,
+          from Cekgu or from the gateway without a label saying so.
 
-      3. ONE RADIUS LANGUAGE, BY DESCENT. --r-sheet 4px for anything descended
-         from paper (cards, panels, wells, the emphasis band); --r-bubble 999px
-         for anything descended from the OMR bubble (chips, bubbles). There is
-         no medium radius. DESIGN.md forbids a coloured rail on a rounded card
-         and no card here takes one; the rails that do exist are inside two
-         diagrams, on slide 04's five rule rows and slide 02's defective
-         question, and each one is its verdict's own colour. A rail that names
-         a verdict is a legend, not decoration. Do not put one on a card.
+      3.  ONE RADIUS LANGUAGE, BY DESCENT. --r-sheet 4px for anything descended
+          from paper (cards, panels, wells, the emphasis band); --r-bubble 999px
+          for anything descended from the OMR bubble (chips, bubbles). There is
+          no medium radius. DESIGN.md forbids a coloured rail on a rounded card
+          and no card here takes one; the rails that do exist are inside two
+          diagrams, on slide 04's five rule rows and slide 02's defective
+          question, and each one is its verdict's own colour. A rail that names
+          a verdict is a legend, not decoration. Do not put one on a card.
 
-      4. THE GROUND CARRIES EMPHASIS. Light paper is the default. The ink ground
-         is the emphasis mode and it is spent on exactly three of nine slides:
-         the problem, the proof and the close. The cover is paper with a poster
-         wash, not ink. Every accent-bearing
-         rule below ships both forms, keyed on .ink.
+      4.  THE GROUND CARRIES EMPHASIS. Light paper is the default. The ink ground
+          is the emphasis mode and it is spent on exactly three of nine slides:
+          the problem, the proof and the close. The cover is paper with a poster
+          wash, not ink. Every accent-bearing
+          rule below ships both forms, keyed on .ink.
 
       THEATRE
       The deck's one theatrical beat left with the demo-moment slide it lived on.
@@ -178,12 +178,12 @@
       fonts still embedded and subset:
 
         gs -q -o out.pdf -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 \
-           -dPDFSETTINGS=/prepress -dDetectDuplicateImages=true \
-           -dDownsampleColorImages=true -dColorImageDownsampleType=/Bicubic \
-           -dColorImageResolution=150 -dDownsampleGrayImages=true \
-           -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=150 \
-           -dAutoRotatePages=/None -dEmbedAllFonts=true -dSubsetFonts=true \
-           raw.pdf
+            -dPDFSETTINGS=/prepress -dDetectDuplicateImages=true \
+            -dDownsampleColorImages=true -dColorImageDownsampleType=/Bicubic \
+            -dColorImageResolution=150 -dDownsampleGrayImages=true \
+            -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=150 \
+            -dAutoRotatePages=/None -dEmbedAllFonts=true -dSubsetFonts=true \
+            raw.pdf
 
       150 ppi of a 20in page is 3000px across, well over the 1920 the deck is
       ever shown at. Check the result with pdfinfo for 9 pages at 1440 x 810 pts
@@ -199,13 +199,13 @@
 
     <style>
       /* ======================================================================
-         FONTS - the three DESIGN.md families, latin subset, served from disk
-         All three are embedded, mono included. Leaving mono to a system stack
-         is how a deck ends up showing request IDs in Consolas on somebody
-         else's machine, and the request IDs are the track's proof obligation.
-         font-display is block, not swap, so a slide never flashes a fallback
-         face on a projector. Licences and byte counts: assets/README.md.
-         ====================================================================== */
+       * FONTS - the three DESIGN.md families, latin subset, served from disk
+       * All three are embedded, mono included. Leaving mono to a system stack
+       * is how a deck ends up showing request IDs in Consolas on somebody
+       * else's machine, and the request IDs are the track's proof obligation.
+       * font-display is block, not swap, so a slide never flashes a fallback
+       * face on a projector. Licences and byte counts: assets/README.md.
+       * ====================================================================== */
       @font-face {
         font-family: 'Schibsted Grotesk';
         font-style: normal;
@@ -229,12 +229,12 @@
       }
 
       /* ======================================================================
-         TOKENS - copied from docs/DESIGN.md
-         The deck is a fixed print artefact, so the light side of every
-         light-dark() pair is written directly. The .ink slides override with
-         the dark side of the same pairs, which is why every rule that carries
-         emphasis is written twice below.
-         ====================================================================== */
+       * TOKENS - copied from docs/DESIGN.md
+       * The deck is a fixed print artefact, so the light side of every
+       * light-dark() pair is written directly. The .ink slides override with
+       * the dark side of the same pairs, which is why every rule that carries
+       * emphasis is written twice below.
+       * ====================================================================== */
       :root {
         --tororo: url('assets/tororo.png');
         --paper: #edeff1;
@@ -278,33 +278,33 @@
       }
 
       /* A keyboard focus ring must stay visible. Nothing here is focusable
-         today, so this rule exists to stop the next editor removing it. */
+       * today, so this rule exists to stop the next editor removing it. */
       :focus-visible {
         outline: 3px solid var(--ink);
         outline-offset: 3px;
       }
 
       /* The browser surfaces belong to the design too. A judge who drags across
-         a request ID to copy it should get the pen, because selecting text is a
-         human marking a page, which is the one thing red means here. */
+       * a request ID to copy it should get the pen, because selecting text is a
+       * human marking a page, which is the one thing red means here. */
       ::selection {
         background: var(--pen);
         color: #ffffff;
       }
 
       /* ======================================================================
-         FONT PRIMING - why this exists, because deleting it silently breaks the PDF
-         document.fonts.status reports "loaded" as soon as the faces the FIRST
-         slide needs have arrived, and only slide 01 is .active at load. Slide 01
-         is set entirely in Schibsted Grotesk, so Source Serif 4 and Spline Sans
-         Mono stayed "unloaded". @media print then reveals all nine slides at once
-         and Chromium took the print snapshot before those two decoded, so every
-         serif question stem and every request ID was dropped out of the PDF with
-         no error anywhere. This element renders one glyph in each face at load,
-         so all three are in document.fonts before anything prints. It is a real
-         rendered box, not display:none, because a face nothing renders is a face
-         nothing requests.
-         ====================================================================== */
+       * FONT PRIMING - why this exists, because deleting it silently breaks the PDF
+       * document.fonts.status reports "loaded" as soon as the faces the FIRST
+       * slide needs have arrived, and only slide 01 is .active at load. Slide 01
+       * is set entirely in Schibsted Grotesk, so Source Serif 4 and Spline Sans
+       * Mono stayed "unloaded". @media print then reveals all nine slides at once
+       * and Chromium took the print snapshot before those two decoded, so every
+       * serif question stem and every request ID was dropped out of the PDF with
+       * no error anywhere. This element renders one glyph in each face at load,
+       * so all three are in document.fonts before anything prints. It is a real
+       * rendered box, not display:none, because a face nothing renders is a face
+       * nothing requests.
+       * ====================================================================== */
       #fontprime {
         position: fixed;
         top: 0;
@@ -319,13 +319,13 @@
       }
 
       /* ======================================================================
-         STAGE - one 1920x1080 slide, scaled uniformly to the viewport
-         Authoring at a fixed pixel size is what makes the deck predictable:
-         what you see at any window size is what the projector shows, and the
-         PDF matches because the page is the same 1920 by 1080. overflow is
-         hidden on both stage and slide, so an overlong line clips visibly
-         while authoring instead of silently reflowing on stage.
-         ====================================================================== */
+       * STAGE - one 1920x1080 slide, scaled uniformly to the viewport
+       * Authoring at a fixed pixel size is what makes the deck predictable:
+       * what you see at any window size is what the projector shows, and the
+       * PDF matches because the page is the same 1920 by 1080. overflow is
+       * hidden on both stage and slide, so an overlong line clips visibly
+       * while authoring instead of silently reflowing on stage.
+       * ====================================================================== */
       #stage {
         position: fixed;
         inset: 0;
@@ -374,7 +374,7 @@
       }
 
       /* No ruling on the paper. The only texture in the deck is a faint field
-         of answer-sheet bubbles on the two poster slides, cover and close. */
+       * of answer-sheet bubbles on the two poster slides, cover and close. */
       section.slide::before {
         content: '';
         position: absolute;
@@ -388,11 +388,11 @@
       }
 
       /* ======================================================================
-         THE THREE-BAND STACK - identical on every slide, which is the point
-         .pad safe area -> .chrome -> 40px -> .head closed by a hairline -> .body
-         The hairline lands at the same y on all nine slides, so the deck reads
-         as one document rather than nine posters.
-         ====================================================================== */
+       * THE THREE-BAND STACK - identical on every slide, which is the point
+       * .pad safe area -> .chrome -> 40px -> .head closed by a hairline -> .body
+       * The hairline lands at the same y on all nine slides, so the deck reads
+       * as one document rather than nine posters.
+       * ====================================================================== */
       .pad {
         position: relative;
         z-index: 1;
@@ -434,18 +434,18 @@
         white-space: nowrap;
       }
       /* The event line is a proper name, not a label, so it keeps its own
-         capitalisation. Fifty characters of tracked uppercase is where the
-         all-caps reading penalty starts to bite, and a name is the one string
-         that should never be shouted at a judge who knows it already. */
+       * capitalisation. Fifty characters of tracked uppercase is where the
+       * all-caps reading penalty starts to bite, and a name is the one string
+       * that should never be shouted at a judge who knows it already. */
       .chrome .run.name {
         text-transform: none;
         letter-spacing: 0.08em;
       }
       /* The closing hairline hangs off the title, not off .head, so it rises
-         with the words it underlines. On .head it was the one thing in the band
-         that never animated, and it arrived on screen a frame before its own
-         contents. Geometry is unchanged: .head's only child is the title, so
-         the padding and the rule land at the same y either way. */
+       * with the words it underlines. On .head it was the one thing in the band
+       * that never animated, and it arrived on screen a frame before its own
+       * contents. Geometry is unchanged: .head's only child is the title, so
+       * the padding and the rule land at the same y either way. */
       .head {
         flex-shrink: 0;
         margin-top: 40px;
@@ -483,8 +483,8 @@
       }
 
       /* ======================================================================
-         TYPE - three tiers you can identify by tracking alone
-         ====================================================================== */
+       * TYPE - three tiers you can identify by tracking alone
+       * ====================================================================== */
       .eyebrow {
         margin: 0 0 14px;
         font-size: 21px;
@@ -529,7 +529,7 @@
         font-variant-numeric: tabular-nums slashed-zero;
       }
       /* A figure: a display numeral asserting a measurement, with its caption
-         beneath. The slot can hold a non-number, so "12 of 12" fits it. */
+       * beneath. The slot can hold a non-number, so "12 of 12" fits it. */
       .fig {
         font-size: 100px;
         font-weight: 700;
@@ -566,8 +566,8 @@
       }
 
       /* ======================================================================
-         BODY LAYOUTS - a different composition under each identical head
-         ====================================================================== */
+       * BODY LAYOUTS - a different composition under each identical head
+       * ====================================================================== */
       .duo {
         display: grid;
         gap: 76px;
@@ -581,9 +581,9 @@
         grid-template-columns: 1.3fr 1fr;
       }
       /* The chart's height follows its column width, and .foot is absolutely
-         positioned at bottom 52. At 1.3fr the SVG ran to y=1028 and printed
-         straight through its own caption. 1.13fr lands it at 983, clear of the
-         foot, with the right edge still flush to the slide's margin. */
+       * positioned at bottom 52. At 1.3fr the SVG ran to y=1028 and printed
+       * straight through its own caption. 1.13fr lands it at 983, clear of the
+       * foot, with the right edge still flush to the slide's margin. */
       .duo.chart-right {
         grid-template-columns: 0.87fr 1.13fr;
       }
@@ -591,13 +591,13 @@
         grid-template-columns: 1.2fr 1fr;
       }
       /* Text beside a full-height object aligns to its top; text beside a short
-         chart centres against it. */
+       * chart centres against it. */
       .duo.top {
         align-items: start;
       }
       /* max-height is the guard rail. An inline SVG with width 100% and height
-         auto will happily overflow its grid cell and climb through the hairline
-         into the headline, which is exactly what it did before this line. */
+       * auto will happily overflow its grid cell and climb through the hairline
+       * into the headline, which is exactly what it did before this line. */
       .duo > svg {
         width: 100%;
         height: auto;
@@ -617,8 +617,8 @@
       }
 
       /* The solid emphasis band, used exactly once, on slide 07. Its precedent
-         is DESIGN.md's guest banner: the one place ink becomes a ground, a
-         stamp on the paper rather than a card. */
+       * is DESIGN.md's guest banner: the one place ink becomes a ground, a
+       * stamp on the paper rather than a card. */
       .band {
         margin-top: 34px;
         padding: 26px 36px;
@@ -695,8 +695,8 @@
         gap: 24px;
       }
       /* A status chip, not a label. DESIGN.md keeps status TitleCase and
-         uppercases only eyebrows and table headers, and the product's own chip
-         reads Verified, so a judge lifting the word off the wall finds it. */
+       * uppercases only eyebrows and table headers, and the product's own chip
+       * reads Verified, so a judge lifting the word off the wall finds it. */
       .chip {
         display: inline-block;
         padding: 7px 20px;
@@ -721,9 +721,9 @@
       }
 
       /* ======================================================================
-         SVG - text inherits no face, so classes carry both face and fill and
-         there is one source of truth per colour
-         ====================================================================== */
+       * SVG - text inherits no face, so classes carry both face and fill and
+       * there is one source of truth per colour
+       * ====================================================================== */
       svg text {
         font-family: var(--font-ui);
       }
@@ -739,11 +739,11 @@
         letter-spacing: 0.13em;
       }
       /* A chip's name is TitleCase, so it takes Label's weight without Label's
-         tracking. DESIGN.md ties positive tracking to text-transform:
-         uppercase, and the product agrees: VerdictChip.tsx sets type-label,
-         which carries no letter-spacing, while type-eyebrow is the tracked
-         uppercase one. Verdict names had been borrowing the eyebrow's tracking
-         and one of them was overrunning its own pill by 6 units. */
+       * tracking. DESIGN.md ties positive tracking to text-transform:
+       * uppercase, and the product agrees: VerdictChip.tsx sets type-label,
+       * which carries no letter-spacing, while type-eyebrow is the tracked
+       * uppercase one. Verdict names had been borrowing the eyebrow's tracking
+       * and one of them was overrunning its own pill by 6 units. */
       svg text.chipname {
         font-weight: 500;
         letter-spacing: 0;
@@ -838,11 +838,11 @@
       }
 
       /* ======================================================================
-         COVER - the only slide allowed a gradient, per the house grammar
-         ::before is the grid, masked into a panel on the right. ::after carries
-         the 10px binding spine at the left edge and one soft radial behind the
-         mark. Neither is content; both are pointer-events none.
-         ====================================================================== */
+       * COVER - the only slide allowed a gradient, per the house grammar
+       * ::before is the grid, masked into a panel on the right. ::after carries
+       * the 10px binding spine at the left edge and one soft radial behind the
+       * mark. Neither is content; both are pointer-events none.
+       * ====================================================================== */
       .slide.cover::before {
         -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 34%, #000 58%, #000 100%);
         mask-image: linear-gradient(to right, transparent 0, transparent 34%, #000 58%, #000 100%);
@@ -876,8 +876,8 @@
       }
 
       /* Cover furniture. The left column is a four-band stack that fills the
-         height, so the slide carries the same weight as the interior ones
-         instead of floating a headline in a void. */
+       * height, so the slide carries the same weight as the interior ones
+       * instead of floating a headline in a void. */
       .cover-grid {
         display: grid;
         grid-template-columns: 1.06fr 0.94fr;
@@ -978,8 +978,8 @@
       }
 
       /* The mascot never floats: a soft wash, a drawn ring and a contact
-         shadow give it somewhere to stand, the way every deck in the house
-         stages its character. */
+       * shadow give it somewhere to stand, the way every deck in the house
+       * stages its character. */
       .cover-hero {
         position: relative;
         display: flex;
@@ -1103,8 +1103,8 @@
         margin-top: 32px;
       }
       /* The proof slide carries a .foot, and .foot is absolutely positioned in
-         the pad's bottom padding. Without this reservation the body centres
-         over the caption and the url column lands on top of it. */
+       * the pad's bottom padding. Without this reservation the body centres
+       * over the caption and the url column lands on top of it. */
       [data-section='Proof'] .body {
         padding-bottom: 44px;
       }
@@ -1190,9 +1190,9 @@
         color: rgb(255 255 255 / 0.55);
       }
       /* No pen rail down the left edge. DESIGN.md forbids a coloured rail on a
-         card and the header comment above says so; the card carried one anyway
-         until impeccable's detector caught it. The Possible Key Error chip
-         inside already says what the rail was saying, in words. */
+       * card and the header comment above says so; the card carried one anyway
+       * until impeccable's detector caught it. The Possible Key Error chip
+       * inside already says what the rail was saying, in words. */
       .defect {
         background: var(--sheet);
         border: 1px solid var(--rule);
@@ -1520,7 +1520,7 @@
         flex-shrink: 0;
       }
       /* The cover is read from the back of the room, so its badges take every
-         pixel the footer's right column does not need. */
+       * pixel the footer's right column does not need. */
       .cover-foot .sdg svg {
         width: 92px;
         height: 92px;
@@ -1708,10 +1708,10 @@
       }
 
       /* ======================================================================
-         CHROME - progress, notes, rehearsal timer. None of it prints.
-         Neutral, never pen red: red is the educator's mark in this system and a
-         progress bar is not one. Scaled, not resized, so it never lays out.
-         ====================================================================== */
+       * CHROME - progress, notes, rehearsal timer. None of it prints.
+       * Neutral, never pen red: red is the educator's mark in this system and a
+       * progress bar is not one. Scaled, not resized, so it never lays out.
+       * ====================================================================== */
       #bar {
         position: fixed;
         left: 0;
@@ -1765,21 +1765,21 @@
       }
 
       /* ======================================================================
-         MOTION - the visible end state is the BASE css
-         Nothing below is needed for the slide to be complete. The animation
-         runs FROM hidden, only under prefers-reduced-motion: no-preference,
-         and only on the active slide. Print and reduced motion therefore always
-         see fully rendered content. Slide to slide is a hard cut, deliberately:
-         a transition between slides would sit on top of the speaker's words.
-         ====================================================================== */
+       * MOTION - the visible end state is the BASE css
+       * Nothing below is needed for the slide to be complete. The animation
+       * runs FROM hidden, only under prefers-reduced-motion: no-preference,
+       * and only on the active slide. Print and reduced motion therefore always
+       * see fully rendered content. Slide to slide is a hard cut, deliberately:
+       * a transition between slides would sit on top of the speaker's words.
+       * ====================================================================== */
       /* These animate the INDIVIDUAL translate and scale properties, not the
-         transform shorthand, and that is load-bearing rather than stylistic.
-         An SVG transform="translate(...)" attribute IS the CSS transform
-         property, so a keyframe ending in transform: none silently deletes it
-         and throws the element to the origin - which is how a verdict chip
-         ended up on top of a question stem once already. translate and scale
-         are separate properties that compose with it, so any element in this
-         file can be animated without auditing its attributes first. */
+       * transform shorthand, and that is load-bearing rather than stylistic.
+       * An SVG transform="translate(...)" attribute IS the CSS transform
+       * property, so a keyframe ending in transform: none silently deletes it
+       * and throws the element to the origin - which is how a verdict chip
+       * ended up on top of a question stem once already. translate and scale
+       * are separate properties that compose with it, so any element in this
+       * file can be animated without auditing its attributes first. */
       @keyframes rise {
         from {
           opacity: 0;
@@ -1801,13 +1801,13 @@
         }
       }
       /* ======================================================================
-         MOTION - one rise per element, never a rise inside a rise
-         Two nested rises multiply their opacities and stack translateY into
-         52px, and the inner delay is dead while the outer is still fully
-         transparent. So no container animates around a child that animates
-         itself: .head hands the beat to its eyebrow and title, and .body hands
-         it to a [data-stagger] group's children wherever a slide declares one.
-         ====================================================================== */
+       * MOTION - one rise per element, never a rise inside a rise
+       * Two nested rises multiply their opacities and stack translateY into
+       * 52px, and the inner delay is dead while the outer is still fully
+       * transparent. So no container animates around a child that animates
+       * itself: .head hands the beat to its eyebrow and title, and .body hands
+       * it to a [data-stagger] group's children wherever a slide declares one.
+       * ====================================================================== */
       @media (prefers-reduced-motion: no-preference) {
         .slide.active .chrome {
           animation: rise 0.44s 0s both;
@@ -1819,12 +1819,12 @@
           animation: rise 0.62s 0.16s both;
         }
         /* The cover and the close carry their headline inside .body, so there
-           the whole band rises as one block and .head is empty. */
+         * the whole band rises as one block and .head is empty. */
         .slide.active .body:not(:has([data-stagger])) {
           animation: rise 0.56s 0.24s both;
         }
         /* A slide that declares a sub-cascade: the group's own siblings ride
-           the same first beat, so the container between them never animates. */
+         * the same first beat, so the container between them never animates. */
         .slide.active :has(> [data-stagger]) > *:not([data-stagger]) {
           animation: rise 0.56s 0.24s both;
         }
@@ -1847,10 +1847,10 @@
           animation: rise 0.5s 0.5s both;
         }
         /* The cover mark and the close panel sit inside a body that rises, so
-           they take the hand-off at 0.80s, the exact moment that rise ends.
-           Overlapping them cost nothing structurally - pop scales, it does not
-           offset - but the two opacities still multiplied on the one slide a
-           judge looks at longest. */
+         * they take the hand-off at 0.80s, the exact moment that rise ends.
+         * Overlapping them cost nothing structurally - pop scales, it does not
+         * offset - but the two opacities still multiplied on the one slide a
+         * judge looks at longest. */
         .slide.active [data-pop] {
           animation: pop 0.5s 0.8s both;
           transform-box: fill-box;
@@ -1859,10 +1859,10 @@
       }
 
       /* ======================================================================
-         PRINT - page size equals slide size, so nothing is resampled
-         Every animation is frozen at its end state, so no page can be caught
-         mid-rise with content half transparent.
-         ====================================================================== */
+       * PRINT - page size equals slide size, so nothing is resampled
+       * Every animation is frozen at its end state, so no page can be caught
+       * mid-rise with content half transparent.
+       * ====================================================================== */
       @page {
         size: 1920px 1080px;
         margin: 0;
@@ -1916,13 +1916,13 @@
     </div>
 
     <!-- The mark, defined once and used by reference. Two overlapping OMR
-         bubbles are the two independent readers; the red check is the
-         educator's pen, and it is the only red in the identity. This is the
-         in-app mark, src/client/components/Mark.tsx, not the light-ground file
-         at public/brand/cekgu-mark.svg: the ink is currentColor and the pen is
-         var(--pen), so both flip with the ground the way every other accent on
-         this deck does. A literal #B3202F would hold the light-ground red on
-         the four ink slides and land at 2.8:1 on --paper. -->
+        bubbles are the two independent readers; the red check is the
+        educator's pen, and it is the only red in the identity. This is the
+        in-app mark, src/client/components/Mark.tsx, not the light-ground file
+        at public/brand/cekgu-mark.svg: the ink is currentColor and the pen is
+        var(--pen), so both flip with the ground the way every other accent on
+        this deck does. A literal #B3202F would hold the light-ground red on
+        the four ink slides and land at 2.8:1 on --paper. -->
     <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
       <defs>
       <symbol id="lg-react" viewBox="0 0 24 24"><path fill="#61DAFB" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z" /></symbol>
@@ -1942,10 +1942,10 @@
       <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5z" /><path d="m2 14 10 5 10-5" /></symbol>
       <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></symbol>
       <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z" /><path d="m9 12 2 2 4-4" /></symbol>
-      
+
       <!-- Official UN artwork for SDG 16, Peace, Justice and Strong Institutions, public domain, from Wikimedia
-           Commons. Outlined paths only, so it needs no font. The tile
-           fill is set to the UN's own published hex. -->
+          Commons. Outlined paths only, so it needs no font. The tile
+          fill is set to the UN's own published hex. -->
       <symbol id="sdg16" viewBox="0 0 405 405" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2">
         <g transform="matrix(1,0,0,1,-9224.9,-1342.92)">
         <g transform="matrix(0.848625,0,0,0.759804,4558.41,16.2309)">
@@ -2077,8 +2077,8 @@
         </g>
       </symbol>
       <!-- Official UN artwork for SDG 4, Quality Education, public domain, from Wikimedia
-           Commons. Outlined paths only, so it needs no font. The tile
-           fill is set to the UN's own published hex. -->
+          Commons. Outlined paths only, so it needs no font. The tile
+          fill is set to the UN's own published hex. -->
       <symbol id="sdg4" viewBox="0 0 405 405" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2">
         <g transform="matrix(1,0,0,1,-9224.9,-436.74)">
         <g transform="matrix(0.848625,0,0,0.759804,4558.41,16.2309)">
@@ -2150,7 +2150,7 @@
         </g>
         </g>
       </symbol>
-      
+
         <g id="cekgu-mark">
           <path
             fill="currentColor"
@@ -2282,8 +2282,8 @@
             <div class="prob2">
               <div class="prob2-left" data-stagger>
                 <!-- The three-row "how it gets caught today" list was cut with the
-                     slot. Twenty seconds buys one thing on this slide and it is the
-                     defective question; the alternatives are a spoken sentence. -->
+                    slot. Twenty seconds buys one thing on this slide and it is the
+                    defective question; the alternatives are a spoken sentence. -->
                 <p class="kx on-ink">One question from our public sample</p>
                 <div class="defect on-ink">
                   <p class="defect-stem">Which data structure removes elements in first in, first out order?</p>
@@ -2367,7 +2367,7 @@
 
                 <text class="label f-muted" x="928" y="20" font-size="20">FLAGGED FOR HER TO READ</text>
                 <!-- The attention count is pen red: it is the number asking an
-                     educator for a decision, and DESIGN.md reserves red for that. -->
+                    educator for a decision, and DESIGN.md reserves red for that. -->
                 <text class="figure f-pen" x="1730" y="26" font-size="46" text-anchor="end">3</text>
 
                 <g data-stagger>
@@ -2394,7 +2394,7 @@
                   </g>
 
                   <!-- Two half-filled bubbles, the Possible Ambiguity glyph in
-                       DESIGN.md and in src/client/components/VerdictChip.tsx. -->
+                      DESIGN.md and in src/client/components/VerdictChip.tsx. -->
                   <g>
                     <rect x="928" y="260" width="808" height="82" rx="4" class="card-s" />
                     <text x="956" y="299" font-size="20" class="f-ink"><tspan class="mono f-muted">11</tspan>&#160;&#160;How many bytes are there in one kilobyte?</text>
@@ -2454,8 +2454,8 @@
                 aria-label="How a Cekgu check runs: the item with its key withheld, two model families answering blind, and the five-verdict rule checked in a fixed order"
               >
                 <!-- the item, with its key held back. Its column header sits on
-                     the same baseline as the other two, so all three stages of
-                     the pipeline are named rather than only the last two. -->
+                    the same baseline as the other two, so all three stages of
+                    the pipeline are named rather than only the last two. -->
                 <text class="label f-muted" x="0" y="20" font-size="20">THE QUESTION AS SHE TYPED IT</text>
                 <rect x="0.5" y="132.5" width="311" height="278" rx="4" class="card-s" />
                 <text class="paper f-ink" x="28" y="180" font-size="25">Which data structure</text>
@@ -2469,10 +2469,10 @@
                   <circle cx="226" cy="322" r="16" />
                 </g>
                 <!-- Prose, not a pill. A well-filled pill with a tracked label
-                     reads as a product status chip, and the product has no chip
-                     that says this. It says it in words, on the home page's
-                     second step, so those are the words used here verbatim:
-                     src/client/pages/home/HowItWorksSection.tsx. -->
+                    reads as a product status chip, and the product has no chip
+                    that says this. It says it in words, on the home page's
+                    second step, so those are the words used here verbatim:
+                    src/client/pages/home/HowItWorksSection.tsx. -->
                 <text class="f-muted" x="28" y="382" font-size="21">The answer key is withheld.</text>
 
                 <path class="conn" d="M336 271h60" />
@@ -2503,7 +2503,7 @@
                   <text x="776" y="282" font-size="21" font-weight="500" text-anchor="middle" class="f-ink">Queue</text>
                 </g>
 
-                
+
                 <text x="776" y="392" font-size="30" text-anchor="middle" class="f-muted">&#8800;</text>
 
                 <text class="label f-muted" x="428" y="440" font-size="20">ANSWER KEY</text>
@@ -2592,20 +2592,20 @@
             <p class="kx" style="margin: 0 0 8px">PUBLIC SAMPLE RECORD &middot; QUESTION 9 &middot; READ 3 SEP</p>
 
             <!-- ONE card, not the pair this question actually produced. Both
-                 readings are real and both IDs still resolve, but the second was
-                 served by moonshotai/Kimi-K2.6, which the gateway delisted on
-                 5 September (src/server/gateway/models.ts). Printing a delisted
-                 model beside a live one needs a footnote, and a wall is the
-                 wrong place for one, so the pair claim is made by the foot line
-                 and shown live in the demo instead. The ID below is MiniMax and
-                 it resolves today; do not add a second card without a second
-                 real, current ID. Never invent one.
+                readings are real and both IDs still resolve, but the second was
+                served by moonshotai/Kimi-K2.6, which the gateway delisted on
+                5 September (src/server/gateway/models.ts). Printing a delisted
+                model beside a live one needs a footnote, and a wall is the
+                wrong place for one, so the pair claim is made by the foot line
+                and shown live in the demo instead. The ID below is MiniMax and
+                it resolves today; do not add a second card without a second
+                real, current ID. Never invent one.
 
-                 Field order is the product's own. In EvidencePanel.tsx a reader
-                 column runs Served Model over a mono model id, then Request ID,
-                 then Receipt with Verified as its value. Verified belongs to
-                 Receipt, never to Served Model, which is always followed by an
-                 id and nothing else. -->
+                Field order is the product's own. In EvidencePanel.tsx a reader
+                column runs Served Model over a mono model id, then Request ID,
+                then Receipt with Verified as its value. Verified belongs to
+                Receipt, never to Served Model, which is always followed by an
+                id and nothing else. -->
             <div class="proof" data-stagger>
               <div class="card">
                 <p class="kx" style="margin: 0">Served Model</p>
@@ -2666,8 +2666,8 @@
                 aria-label="Architecture. The browser posts a paper to a single Bun process on Cloud Run, which runs the Hono API and the queue worker and stores records in Neon Postgres. Both reach GonkaRouter through one gateway client, which seats two of the registry's model families, MiniMax and DeepSeek, as Reader A and Reader B, then checks each receipt."
               >
                 <!-- Three group labels on one baseline, three boxes whose tops
-                     line up under them, and one 27.5 inset used by every box on
-                     the slide. -->
+                    line up under them, and one 27.5 inset used by every box on
+                    the slide. -->
                 <text class="label f-muted" x="0" y="20" font-size="19">BROWSER</text>
                 <text class="label f-muted" x="452.5" y="20" font-size="19">GOOGLE CLOUD RUN &middot; ONE BUN PROCESS</text>
                 <use href="#lg-googlecloud" x="934" y="0" width="24" height="24" />
@@ -2700,7 +2700,7 @@
                 <text class="mono f-muted" x="480" y="329" font-size="17">SKIP LOCKED &middot; 4 in flight</text>
 
                 <!-- Both halves of the process reach the network through the
-                     same box, which is the point of the slide. -->
+                    same box, which is the point of the slide. -->
                 <path class="conn" d="M772 126 H792 V206.5 H804" />
                 <path class="conn" d="M772 287 H792 V206.5" />
                 <path class="conn" d="M803 200.5 L812 206.5 L803 212.5" />
@@ -2719,15 +2719,15 @@
                 <text class="mono f-muted" x="1328" y="70" font-size="20">api.gonkarouter.io</text>
 
                 <!-- Tororo reads first and Hijiki second, the same two seats the
-                     product puts on the evidence panel, so a judge who saw the
-                     cats in the demo meets them again here. The seat is the
-                     mascot; the id under it is whichever family the queue put
-                     in that seat, and the two below are the whole registry as
-                     src/server/gateway/models.ts holds it today.
-                     moonshotai/Kimi-K2.6 was the third until 5 September, when
-                     the gateway began answering 400 for it and it was dropped.
-                     Two families is the floor, not a preference: one family
-                     cannot produce two distinct readings. -->
+                    product puts on the evidence panel, so a judge who saw the
+                    cats in the demo meets them again here. The seat is the
+                    mascot; the id under it is whichever family the queue put
+                    in that seat, and the two below are the whole registry as
+                    src/server/gateway/models.ts holds it today.
+                    moonshotai/Kimi-K2.6 was the third until 5 September, when
+                    the gateway began answering 400 for it and it was dropped.
+                    Two families is the floor, not a preference: one family
+                    cannot produce two distinct readings. -->
                 <rect x="1328" y="88" width="380" height="76" rx="8" class="f-well" />
                 <image href="assets/tororo.png" x="1346" y="94" width="40" height="40" />
                 <text class="f-ink" x="1398" y="120" font-size="22" font-weight="500">Reader A</text>
@@ -2811,8 +2811,8 @@
                   <div class="fig">1 line</div>
                   <p class="fig-cap">changed in production. The queue and the rule did not.</p>
                   <!-- A file path is a machine string, not a label, so it keeps
-                       its own case and the mono face. .kx would uppercase it
-                       into a path that does not exist. -->
+                      its own case and the mono face. .kx would uppercase it
+                      into a path that does not exist. -->
                   <p class="kx" style="margin: 16px 0 0; font-family: var(--font-mono); text-transform: none; letter-spacing: 0; font-size: 19px">src/server/gateway/models.ts</p>
                 </div>
               </div>
@@ -2854,14 +2854,14 @@
                   </g>
 
                   <!-- Below the rule is a third measurement, and it is NOT the sample record:
-                       the committed 30-question evaluation set run twice through the deployed
-                       queue, 60 item-runs in all, recorded in
-                       docs/research/three-day-rescore.md. One dot is one item-run,
-                       filled in that item's own verdict colour, so the top row carrying no
-                       flag colour at all IS the claim. The 30-item run's own Unverified rate
-                       is deliberately absent: it is a load effect that needs a spoken
-                       sentence beside it, and that sentence lives in the script and the Q&A,
-                       not on a wall. -->
+                      the committed 30-question evaluation set run twice through the deployed
+                      queue, 60 item-runs in all, recorded in
+                      docs/research/three-day-rescore.md. One dot is one item-run,
+                      filled in that item's own verdict colour, so the top row carrying no
+                      flag colour at all IS the claim. The 30-item run's own Unverified rate
+                      is deliberately absent: it is a load effect that needs a spoken
+                      sentence beside it, and that sentence lives in the script and the Q&A,
+                      not on a wall. -->
                   <line x1="0" y1="386" x2="940" y2="386" class="s-rule" />
                   <text class="label f-muted" x="0" y="422" font-size="19">
                     30-QUESTION EVALUATION SET &middot; RUN TWICE THROUGH THE DEPLOYED QUEUE
@@ -2946,9 +2946,9 @@
             </div>
 
             <!-- The build roadmap that sat here is cut. Ten seconds cannot
-                 read three phases with descriptions, and this slide answers
-                 "commercialisation", which is who buys and why, not what we
-                 build next. The roadmap lives in PRODUCT.md's scope ladder. -->
+                read three phases with descriptions, and this slide answers
+                "commercialisation", which is who buys and why, not what we
+                build next. The roadmap lives in PRODUCT.md's scope ladder. -->
             <p class="lead" style="margin: 46px 0 0; max-width: 44ch">
               The first buyer is an independent tutor, <strong>not a university procurement office.</strong>
             </p>
@@ -3010,14 +3010,14 @@
                 <span class="close-cat cat" role="img" aria-label="Tororo, the Cekgu mascot"></span>
 
                 <!-- QR for the public sample record at /sample, not the app root. The
-                     caption, the aria-label and this comment name the same URL on
-                     purpose: this is the one claim on the deck a judge can test from
-                     their seat, and /sample is public where the root is the marketing
-                     home. Encoded from that URL, then decoded back from the rasterised
-                     SVG at its display size to prove it scans. Plain rects, no library
-                     at runtime, no raster. The quiet zone is built into the 41 module
-                     grid, and the panel stays paper white on the ink ground so a phone
-                     camera can lock on. -->
+                    caption, the aria-label and this comment name the same URL on
+                    purpose: this is the one claim on the deck a judge can test from
+                    their seat, and /sample is public where the root is the marketing
+                    home. Encoded from that URL, then decoded back from the rasterised
+                    SVG at its display size to prove it scans. Plain rects, no library
+                    at runtime, no raster. The quiet zone is built into the 41 module
+                    grid, and the panel stays paper white on the ink ground so a phone
+                    camera can lock on. -->
                 <svg
                   viewBox="0 0 41 41"
                   shape-rendering="crispEdges"

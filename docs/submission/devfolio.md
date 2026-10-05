@@ -134,12 +134,12 @@ the evidence panel now carry a Truth Score and the pages retrieved from the web,
 upload in one card. Recapture from the deployment **after** the 6 September deploy, keeping the same order so the first
 image is the cover:
 
-1. `01-cover-landing.png` — landing page and product promise, 1440 × 810
-2. `02-sample-report.png` — sample verdict summary **with its Truth Score**, 1440 × 810
-3. `03-evidence-receipts.png` — two served models, two request IDs, **the pages retrieved from the web** and attempt
-   history, 1440 × 810
-4. `04-guest-records.png` — shared Guest records library, 1440 × 810
-5. `05-new-check.png` — Guest warning and the **Start From a Paper** card offering a link or an upload, 1440 × 810
+1.  `01-cover-landing.png` — landing page and product promise, 1440 × 810
+2.  `02-sample-report.png` — sample verdict summary **with its Truth Score**, 1440 × 810
+3.  `03-evidence-receipts.png` — two served models, two request IDs, **the pages retrieved from the web** and attempt
+    history, 1440 × 810
+4.  `04-guest-records.png` — shared Guest records library, 1440 × 810
+5.  `05-new-check.png` — Guest warning and the **Start From a Paper** card offering a link or an upload, 1440 × 810
 
 Refreshed versions of 2, 3 and 5 are already in the repository at `docs/readme/screenshots/sample-report.png`,
 `docs/readme/screenshots/item-evidence.png` and `docs/readme/steps/1-new-check.png` if a re-capture is not practical.

@@ -19,13 +19,13 @@ carries the article title.
 
 Contents:
 
-1. [Phenomenon: a live public issue in Malaysia, 2024-2026](#phenomenon-a-live-public-issue-in-malaysia-2024-2026)
-1. [Legal doctrine and the ombudsman process](#legal-doctrine-and-the-ombudsman-process)
-1. [Ground truth: FMOS publishes case summaries with outcomes](#ground-truth-fmos-publishes-case-summaries-with-outcomes)
-1. [Incumbents](#incumbents)
-1. [Predicted competition](#predicted-competition)
-1. [Scores against RUBRIC.md](#scores-against-rubricmd)
-1. [Why not LOCK](#why-not-lock)
+1.  [Phenomenon: a live public issue in Malaysia, 2024-2026](#phenomenon-a-live-public-issue-in-malaysia-2024-2026)
+1.  [Legal doctrine and the ombudsman process](#legal-doctrine-and-the-ombudsman-process)
+1.  [Ground truth: FMOS publishes case summaries with outcomes](#ground-truth-fmos-publishes-case-summaries-with-outcomes)
+1.  [Incumbents](#incumbents)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores against RUBRIC.md](#scores-against-rubricmd)
+1.  [Why not LOCK](#why-not-lock)
 
 ## Phenomenon: a live public issue in Malaysia, 2024-2026
 
@@ -196,20 +196,20 @@ attaches each model's reading with its Gonka request id as evidence, and the too
 
 ### The novelty test
 
-1. **Convergence count:** 1 (0-2). Defended under [Predicted competition](#predicted-competition).
-2. **Incumbent test:** Counterforce Health, Claimable, Fight Health Insurance in the US; nobody in Malaysia. What they
-   structurally cannot do:
-   - They are advocacy generators whose success metric is overturn rate, so they cannot credibly tell a user "your
-     exclusion applies, do not file"; a neutral ambiguity reading is not their product.
-   - They are wired to US appeal law (ACA external review, state insurance commissioners) and the US market; the
-     Malaysian route (insurer final decision, then FMOS within 6 months, RM250,000 cap, contra proferentem per _MMIP v
-     Teirumeniyar_ [2019] FC) is a different legal object, and a US startup's economics give no reason to build it.
-   - They cannot hand the ombudsman an auditable trail of independent readings; a single-vendor model produces one
-     opinion with no provenance.
-3. **Second-use test:** The policyholder returns twice by design: once when the insurer replies to the first complaint
-   (to re-run with the insurer's stated justification) and once at FMOS filing. The heavier repeat user is the private
-   hospital's insurance desk or a specialist's clinic manager, who sees GL denials weekly (CodeBlue survey, 855
-   specialists, 67%). Name that person in `PRODUCT.md`.
+1.  **Convergence count:** 1 (0-2). Defended under [Predicted competition](#predicted-competition).
+2.  **Incumbent test:** Counterforce Health, Claimable, Fight Health Insurance in the US; nobody in Malaysia. What they
+    structurally cannot do:
+    - They are advocacy generators whose success metric is overturn rate, so they cannot credibly tell a user "your
+      exclusion applies, do not file"; a neutral ambiguity reading is not their product.
+    - They are wired to US appeal law (ACA external review, state insurance commissioners) and the US market; the
+      Malaysian route (insurer final decision, then FMOS within 6 months, RM250,000 cap, contra proferentem per _MMIP v
+      Teirumeniyar_ [2019] FC) is a different legal object, and a US startup's economics give no reason to build it.
+    - They cannot hand the ombudsman an auditable trail of independent readings; a single-vendor model produces one
+      opinion with no provenance.
+3.  **Second-use test:** The policyholder returns twice by design: once when the insurer replies to the first complaint
+    (to re-run with the insurer's stated justification) and once at FMOS filing. The heavier repeat user is the private
+    hospital's insurance desk or a specialist's clinic manager, who sees GL denials weekly (CodeBlue survey, 855
+    specialists, 67%). Name that person in `PRODUCT.md`.
 
 ### Kill criteria
 
@@ -225,13 +225,13 @@ attaches each model's reading with its Gonka request id as evidence, and the too
 
 Two reasons, both fixable within the nine days:
 
-1. **The disagreement rate on real clauses is unmeasured.** If DeepSeek, MiniMax and Kimi agree on 95% of real FMOS
-   cases, the demo has no moment and the product is a letter-writer. First task: run ten FMOS case-study clauses through
-   the three models and record the split rate before writing a line of UI.
-2. **LLM disagreement is not legal ambiguity.** Contra proferentem is a last-resort doctrine in Malaysia and FMOS
-   decides on fairness and reasonableness. A judge who knows this will ask. The honest framing: "three independent
-   readers split on this wording; that is a reason to complain, and here is the doctrine you cite when you do." Never
-   claim the tool determines ambiguity.
+1.  **The disagreement rate on real clauses is unmeasured.** If DeepSeek, MiniMax and Kimi agree on 95% of real FMOS
+    cases, the demo has no moment and the product is a letter-writer. First task: run ten FMOS case-study clauses through
+    the three models and record the split rate before writing a line of UI.
+2.  **LLM disagreement is not legal ambiguity.** Contra proferentem is a last-resort doctrine in Malaysia and FMOS
+    decides on fairness and reasonableness. A judge who knows this will ask. The honest framing: "three independent
+    readers split on this wording; that is a reason to complain, and here is the doctrine you cite when you do." Never
+    claim the tool determines ambiguity.
 
 Also fix the name: FMOS, not OFS, everywhere.
 

@@ -12,9 +12,9 @@
     "test": "bun test",
     "e2e": "playwright test",
     "e2e:local": "E2E_BASE_URL=http://localhost:8080 playwright test",
-    "db:generate": "drizzle-kit generate",
+    "db:generate": "drizzle-kit generate && bun scripts/format-drizzle.ts",
     "db:migrate": "drizzle-kit migrate",
-    "lint": "biome check . && prettier --check .",
+    "lint": "EC_VERSION=v4.0.2 editorconfig-checker && biome check . && prettier --check .",
     "lint:fix": "biome check --write . && prettier --write .",
     "format": "biome format --write . && prettier --write \"**/*.{md,markdown,yaml,yml}\"",
     "typecheck": "tsc --noEmit",
@@ -22,7 +22,7 @@
     "check:anchors": "bun scripts/check-anchors.ts",
     "test:guard": "bash .claude/hooks/guard-git.test.sh",
     "prepare": "husky",
-    "graph": "graphify update ."
+    "graph": "graphify update . && EC_VERSION=v4.0.2 editorconfig-checker -fix graphify-out/graph.json"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs,json,jsonc,css,html}": "biome check --write --no-errors-on-unmatched",
@@ -44,6 +44,7 @@
     "css-tree": "^3.2.1",
     "domutils": "^4.0.2",
     "drizzle-kit": "^0.31.10",
+    "editorconfig-checker": "^7.0.0",
     "htmlparser2": "^12.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",

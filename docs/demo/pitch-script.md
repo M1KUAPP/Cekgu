@@ -18,23 +18,23 @@ The spoken script for Demo Day at APU, 6 September 2026, Auditorium 1 on Level 7
 
 Contents:
 
-1. [Format and conventions](#format-and-conventions)
-1. [Run of show](#0-run-of-show)
-1. [Opening route drafts](#1-opening-route-drafts)
-1. [Introduction](#2-introduction-000-014--27-words--speaker)
-1. [The problem](#3-the-problem-014-034--44-words--speaker)
-1. [The objective](#4-the-objective-034-050--34-words--speaker)
-1. [How the check works](#5-how-the-check-works-050-114--51-words--speaker)
-1. [Live demo](#6-live-demo-114-144--driver)
-1. [The proof](#7-the-proof-144-201--39-words--speaker)
-1. [How it is built](#8-how-it-is-built-201-217--35-words--speaker)
-1. [What broke](#9-what-broke-217-241--47-words--speaker)
-1. [Business model](#10-business-model-241-251--20-words--speaker)
-1. [Close](#11-close-251-300--20-words--speaker)
-1. [Q&A session](#12-qa-session-1-minute)
-1. [Fallback ladder](#13-fallback-ladder)
-1. [The 2-minute MVP video](#14-the-2-minute-mvp-video)
-1. [Pre-flight](#15-pre-flight)
+1.  [Format and conventions](#format-and-conventions)
+1.  [Run of show](#0-run-of-show)
+1.  [Opening route drafts](#1-opening-route-drafts)
+1.  [Introduction](#2-introduction-000-014--27-words--speaker)
+1.  [The problem](#3-the-problem-014-034--44-words--speaker)
+1.  [The objective](#4-the-objective-034-050--34-words--speaker)
+1.  [How the check works](#5-how-the-check-works-050-114--51-words--speaker)
+1.  [Live demo](#6-live-demo-114-144--driver)
+1.  [The proof](#7-the-proof-144-201--39-words--speaker)
+1.  [How it is built](#8-how-it-is-built-201-217--35-words--speaker)
+1.  [What broke](#9-what-broke-217-241--47-words--speaker)
+1.  [Business model](#10-business-model-241-251--20-words--speaker)
+1.  [Close](#11-close-251-300--20-words--speaker)
+1.  [Q&A session](#12-qa-session-1-minute)
+1.  [Fallback ladder](#13-fallback-ladder)
+1.  [The 2-minute MVP video](#14-the-2-minute-mvp-video)
+1.  [Pre-flight](#15-pre-flight)
 
 ## Format and conventions
 
@@ -97,14 +97,14 @@ never speed up.**
 
 In this order, and no further. Each line is already marked in its own section.
 
-1. **"Signed off."** in [section 3](#3-the-problem-014-034--44-words--speaker). Two words, one beat.
-1. **"You can grep for it."** in [section 8](#8-how-it-is-built-201-217--35-words--speaker). The claim survives without
-   the dare.
-1. **The whole of [section 8](#8-how-it-is-built-201-217--35-words--speaker), 16 seconds.** Slide 06 says it all in a
-   diagram and the judges have the repository. Advance through it and keep talking about
-   [section 9](#9-what-broke-217-241--47-words--speaker).
-1. **The measurement half of [section 9](#9-what-broke-217-241--47-words--speaker)**, from "We measured before we built"
-   to "Not one." The numbers stay on the wall.
+1.  **"Signed off."** in [section 3](#3-the-problem-014-034--44-words--speaker). Two words, one beat.
+1.  **"You can grep for it."** in [section 8](#8-how-it-is-built-201-217--35-words--speaker). The claim survives without
+    the dare.
+1.  **The whole of [section 8](#8-how-it-is-built-201-217--35-words--speaker), 16 seconds.** Slide 06 says it all in a
+    diagram and the judges have the repository. Advance through it and keep talking about
+    [section 9](#9-what-broke-217-241--47-words--speaker).
+1.  **The measurement half of [section 9](#9-what-broke-217-241--47-words--speaker)**, from "We measured before we built"
+    to "Not one." The numbers stay on the wall.
 
 **Do not cut the demo and do not cut the close.** The demo is the only thing on the clock a judge cannot get from the
 PDF, and a pitch that stops mid-sentence at 3:00 loses more than one missing claim does.
@@ -224,28 +224,28 @@ family sits in each is decided by health at run time and is printed on slide 06.
 needs no sign-in, no Guest workspace and no live gateway call. That is why it is the demo at three minutes: nothing in
 the path can be slow.
 
-1. **Already open:** `https://cekgu-op7lf5dspq-as.a.run.app/sample`. _The record header reads_ **Introductory computer
-   science practice set** _with a_ `Sample` _chip, and the five verdict chips read_ `Possible Key Error 2`,
-   `Possible Ambiguity 1`, `Split Opinion 0`, `Unverified 0`, `Clear 9`.
+1.  **Already open:** `https://cekgu-op7lf5dspq-as.a.run.app/sample`. _The record header reads_ **Introductory computer
+    science practice set** _with a_ `Sample` _chip, and the five verdict chips read_ `Possible Key Error 2`,
+    `Possible Ambiguity 1`, `Split Opinion 0`, `Unverified 0`, `Clear 9`.
 
-   > "This is the public sample record. No sign-in, and the QR at the end opens it on your phone."
+    > "This is the public sample record. No sign-in, and the QR at the end opens it on your phone."
 
-1. **Click:** `Show Evidence` on the **first row in the list**, question 3,
-   `Which data structure removes elements in first in, first out order?`. _The evidence panel opens inline beneath the
-   item. Do not filter and do not scroll to find it: the page already sorts attention items above_ `Clear` _ones, so
-   question 3 is the top row._
+1.  **Click:** `Show Evidence` on the **first row in the list**, question 3,
+    `Which data structure removes elements in first in, first out order?`. _The evidence panel opens inline beneath the
+    item. Do not filter and do not scroll to find it: the page already sorts attention items above_ `Clear` _ones, so
+    question 3 is the top row._
 
-   > "Question three. Both readers answered it without the key. Both chose Queue; the key says Stack."
+    > "Question three. Both readers answered it without the key. Both chose Queue; the key says Stack."
 
-1. **The moment.** _The supplied-key bubble is filled on_ `A`. _Both reader columns are filled on_ `B`. _The sentence
-   above the button reads_ **"Both readers chose Queue. The supplied key is Stack. Rule: two verified readings agree on
-   a non-key option, so Possible Key Error."** _A judge sees the disagreement before anyone explains it._
+1.  **The moment.** _The supplied-key bubble is filled on_ `A`. _Both reader columns are filled on_ `B`. _The sentence
+    above the button reads_ **"Both readers chose Queue. The supplied key is Stack. Rule: two verified readings agree on
+    a non-key option, so Possible Key Error."** _A judge sees the disagreement before anyone explains it._
 
-1. **Point at:** the two `Request Id` values, one in each reader column, and the `Receipt` field under each reading,
-   both reading `Verified`. _Say this one out loud._
+1.  **Point at:** the two `Request Id` values, one in each reader column, and the `Receipt` field under each reading,
+    both reading `Verified`. _Say this one out loud._
 
-   > "Two different models, two Gonka request ids, both receipts verified. That's what proves this reasoning ran on the
-   > network and not on our laptop."
+    > "Two different models, two Gonka request ids, both receipts verified. That's what proves this reasoning ran on the
+    > network and not on our laptop."
 
 _DRIVER stops. SPEAKER takes the deck back._
 

@@ -170,7 +170,7 @@ export function Records() {
           </div>
         ) : records === null ? (
           /* A skeleton in the shape of the rows that are coming, so the table does not jump when
-             they land. */
+           * they land. */
           <div className="px-6 py-1">
             {[0, 1, 2, 3].map((row) => (
               <div key={row} className="flex items-center gap-4 border-b border-rule py-4 last:border-b-0">

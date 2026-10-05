@@ -11,13 +11,13 @@ what resampling cannot do are mechanical, not empirical. Interpretation is marke
 
 Contents:
 
-1. [The baseline that kills most claims](#the-baseline-that-kills-most-claims)
-1. [The permutation test](#the-permutation-test)
-1. [What genuinely requires distinct machines](#what-genuinely-requires-distinct-machines)
-1. [The asymmetry in the Gonka roster](#the-asymmetry-in-the-gonka-roster)
-1. [The five defensible cores](#the-five-defensible-cores)
-1. [What we do not claim](#what-we-do-not-claim)
-1. [Sources](#sources)
+1.  [The baseline that kills most claims](#the-baseline-that-kills-most-claims)
+1.  [The permutation test](#the-permutation-test)
+1.  [What genuinely requires distinct machines](#what-genuinely-requires-distinct-machines)
+1.  [The asymmetry in the Gonka roster](#the-asymmetry-in-the-gonka-roster)
+1.  [The five defensible cores](#the-five-defensible-cores)
+1.  [What we do not claim](#what-we-do-not-claim)
+1.  [Sources](#sources)
 
 ## The baseline that kills most claims
 
@@ -102,11 +102,11 @@ the honest experimental design, and it exists only when the blind observer is a 
 
 Everything worth building here stands on one of these. The rest is ensemble folklore.
 
-1. **Structural capability asymmetry** — blind controls, tool execution, refusal geometry
-2. **Decorrelated implementation failures** — tokenisers, scaffolds
-3. **Dated knowledge as an interval, not a point**
-4. **Audit relations that cannot be self-referential**
-5. **Inspectable request attribution** — exposing the gateway's account of which model served each inference
+1.  **Structural capability asymmetry** — blind controls, tool execution, refusal geometry
+2.  **Decorrelated implementation failures** — tokenisers, scaffolds
+3.  **Dated knowledge as an interval, not a point**
+4.  **Audit relations that cannot be self-referential**
+5.  **Inspectable request attribution** — exposing the gateway's account of which model served each inference
 
 ### Where attribution buys something real
 

@@ -11,14 +11,14 @@ folder. Deck title: _Ship Smarter AI Apps at Zero Cost / 0 成本部署更智能
 
 Contents:
 
-1. [What this adds over what we already had](#what-this-adds-over-what-we-already-had)
-1. [Agenda](#agenda)
-1. [Part 1, why developers need GonkaRouter](#part-1-why-developers-need-gonkarouter)
-1. [Part 2, hands-on in five steps](#part-2-hands-on-in-five-steps)
-1. [Their own FAQ](#their-own-faq)
-1. [Token support for this event](#token-support-for-this-event)
-1. [Resources they pointed at](#resources-they-pointed-at)
-1. [What this means for our build](#what-this-means-for-our-build)
+1.  [What this adds over what we already had](#what-this-adds-over-what-we-already-had)
+1.  [Agenda](#agenda)
+1.  [Part 1, why developers need GonkaRouter](#part-1-why-developers-need-gonkarouter)
+1.  [Part 2, hands-on in five steps](#part-2-hands-on-in-five-steps)
+1.  [Their own FAQ](#their-own-faq)
+1.  [Token support for this event](#token-support-for-this-event)
+1.  [Resources they pointed at](#resources-they-pointed-at)
+1.  [What this means for our build](#what-this-means-for-our-build)
 
 ## What this adds over what we already had
 
@@ -32,9 +32,9 @@ Contents:
 
 ## Agenda
 
-1. **Why Gonka Router** — what Gonka is, and why one unified endpoint matters
-1. **Build an AI app, live** — key → connect → switch models → demo → best practices
-1. **Live Q&A** — integration blockers, debugged together
+1.  **Why Gonka Router** — what Gonka is, and why one unified endpoint matters
+1.  **Build an AI app, live** — key → connect → switch models → demo → best practices
+1.  **Live Q&A** — integration blockers, debugged together
 
 ## Part 1, why developers need GonkaRouter
 

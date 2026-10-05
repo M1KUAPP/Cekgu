@@ -13,26 +13,26 @@ seconds and none did so within 30 seconds. The product must make waiting, retryi
 
 Contents:
 
-1. [The decision](#the-decision)
-1. [The problem](#the-problem)
-1. [Evidence and unknowns](#evidence-and-unknowns)
-1. [Customer system](#customer-system)
-1. [Beachhead segment](#beachhead-segment)
-1. [Jobs to be done](#jobs-to-be-done)
-1. [Value proposition](#value-proposition)
-1. [Product principles](#product-principles)
-1. [The core loop](#the-core-loop)
-1. [Verdicts and human decisions](#verdicts-and-human-decisions)
-1. [Records and accounts](#records-and-accounts)
-1. [The product surface](#the-product-surface)
-1. [The scope ladder](#the-scope-ladder)
-1. [Business model](#business-model)
-1. [Acquisition and retention](#acquisition-and-retention)
-1. [Success measures](#success-measures)
-1. [The demo moment](#the-demo-moment)
-1. [Live2D mascot feasibility](#live2d-mascot-feasibility)
-1. [Risks and boundaries](#risks-and-boundaries)
-1. [Sources](#sources)
+1.  [The decision](#the-decision)
+1.  [The problem](#the-problem)
+1.  [Evidence and unknowns](#evidence-and-unknowns)
+1.  [Customer system](#customer-system)
+1.  [Beachhead segment](#beachhead-segment)
+1.  [Jobs to be done](#jobs-to-be-done)
+1.  [Value proposition](#value-proposition)
+1.  [Product principles](#product-principles)
+1.  [The core loop](#the-core-loop)
+1.  [Verdicts and human decisions](#verdicts-and-human-decisions)
+1.  [Records and accounts](#records-and-accounts)
+1.  [The product surface](#the-product-surface)
+1.  [The scope ladder](#the-scope-ladder)
+1.  [Business model](#business-model)
+1.  [Acquisition and retention](#acquisition-and-retention)
+1.  [Success measures](#success-measures)
+1.  [The demo moment](#the-demo-moment)
+1.  [Live2D mascot feasibility](#live2d-mascot-feasibility)
+1.  [Risks and boundaries](#risks-and-boundaries)
+1.  [Sources](#sources)
 
 ## The decision
 
@@ -216,42 +216,42 @@ traceable.
 
 ## Product principles
 
-1. **Protect learner marks, not AI authority.** The social outcome is a fairer assessment; the model is only a risk
-   sensor.
-1. **Blind first, compare second.** A model never sees the key or another model's response before committing its own
-   reading.
-1. **Fail closed.** Fewer than two distinct, receipt-verified model families means **Unverified**, never a verdict.
-1. **Show provenance at the point of trust.** Model names and Gonka Request IDs sit beside the reading they support, not
-   on a distant technical page.
-1. **Records are the product memory.** A submitted check exists as a record immediately, survives navigation and keeps
-   the human resolution.
-1. **Async is normal.** Cekgu sets an expectation of minutes, lets the educator leave and reports partial progress
-   rather than trapping them behind a spinner.
-1. **Privacy claims stay smaller than reality.** Version one excludes confidential final papers and student personal
-   data because prompts traverse a decentralised network.
-1. **Friendly never means frivolous.** A mascot may reduce anxiety and explain state; it never celebrates a defect,
-   obscures evidence or blocks the work.
-1. **No automatic correction.** Cekgu suggests where to look. Only the educator changes a key, wording or disposition.
+1.  **Protect learner marks, not AI authority.** The social outcome is a fairer assessment; the model is only a risk
+    sensor.
+1.  **Blind first, compare second.** A model never sees the key or another model's response before committing its own
+    reading.
+1.  **Fail closed.** Fewer than two distinct, receipt-verified model families means **Unverified**, never a verdict.
+1.  **Show provenance at the point of trust.** Model names and Gonka Request IDs sit beside the reading they support, not
+    on a distant technical page.
+1.  **Records are the product memory.** A submitted check exists as a record immediately, survives navigation and keeps
+    the human resolution.
+1.  **Async is normal.** Cekgu sets an expectation of minutes, lets the educator leave and reports partial progress
+    rather than trapping them behind a spinner.
+1.  **Privacy claims stay smaller than reality.** Version one excludes confidential final papers and student personal
+    data because prompts traverse a decentralised network.
+1.  **Friendly never means frivolous.** A mascot may reduce anxiety and explain state; it never celebrates a defect,
+    obscures evidence or blocks the work.
+1.  **No automatic correction.** Cekgu suggests where to look. Only the educator changes a key, wording or disposition.
 
 ## The core loop
 
-1. **Enter.** The visitor signs into a private account or deliberately enters the shared Guest account.
-1. **Start a check.** They name the assessment, add its subject and language, then enter one or more multiple-choice
-   questions with options and a keyed answer.
-1. **Validate locally.** Cekgu catches missing stems, duplicate options, absent keys and malformed item numbers before
-   spending an inference request.
-1. **Create the record.** Submission writes an account-scoped record immediately with **Queued** status. Closing the tab
-   does not lose the check.
-1. **Read blind.** At least two distinct GonkaRouter model families answer each item independently without the supplied
-   key or each other's output.
-1. **Verify provenance.** Only readings with the required request headers and a matching public receipt may enter the
-   decision rule.
-1. **Classify.** Cekgu compares the admitted readings with one another and only then with the educator's key.
-1. **Review.** The record opens with risky items first, while clean items remain available as the control.
-1. **Resolve.** The educator corrects the key outside or inside the record, revises wording, dismisses the flag, or
-   requests another attempt. Cekgu stores the chosen disposition.
-1. **Return.** The completed record remains in account history for reopening, selection, deletion, duplication or export
-   according to the account plan.
+1.  **Enter.** The visitor signs into a private account or deliberately enters the shared Guest account.
+1.  **Start a check.** They name the assessment, add its subject and language, then enter one or more multiple-choice
+    questions with options and a keyed answer.
+1.  **Validate locally.** Cekgu catches missing stems, duplicate options, absent keys and malformed item numbers before
+    spending an inference request.
+1.  **Create the record.** Submission writes an account-scoped record immediately with **Queued** status. Closing the tab
+    does not lose the check.
+1.  **Read blind.** At least two distinct GonkaRouter model families answer each item independently without the supplied
+    key or each other's output.
+1.  **Verify provenance.** Only readings with the required request headers and a matching public receipt may enter the
+    decision rule.
+1.  **Classify.** Cekgu compares the admitted readings with one another and only then with the educator's key.
+1.  **Review.** The record opens with risky items first, while clean items remain available as the control.
+1.  **Resolve.** The educator corrects the key outside or inside the record, revises wording, dismisses the flag, or
+    requests another attempt. Cekgu stores the chosen disposition.
+1.  **Return.** The completed record remains in account history for reopening, selection, deletion, duplication or export
+    according to the account plan.
 
 ### Asynchronous behaviour
 
@@ -551,20 +551,20 @@ The demo must show a risk light working, not models producing text.
 
 ### Two-minute product flow
 
-1. **0–15 seconds — stakes.** “We accept losing marks when we are wrong. We should not lose them because the answer key
-   was wrong.” Enter through **Sign In as Guest**, with the shared-workspace warning visible.
-1. **15–30 seconds — record.** Open the protected 12-question Computer Science sample. Show eight clean controls, two
-   planted key errors and two ambiguous items in one preserved review record.
-1. **30–55 seconds — reveal.** Filter to **Possible Key Error** and open the FIFO question whose supplied key says
-   **Stack**. Both independent readers selected **Queue**.
-1. **55–75 seconds — proof.** Show the two served model names, distinct Gonka Request IDs, receipt status and the fixed
-   rule that produced the flag.
-1. **75–95 seconds — human control.** Choose **Key Corrected**. The machine verdict remains in history while the human
-   resolution updates the record summary.
-1. **95–110 seconds — honest failure.** Open an **Unverified** item and explain that one model timed out, so Cekgu
-   refused to invent consensus.
-1. **110–120 seconds — repeatability.** Return to **Records**, show that the review persists, then start one new item
-   and leave it checking asynchronously rather than waiting on stage.
+1.  **0–15 seconds — stakes.** “We accept losing marks when we are wrong. We should not lose them because the answer key
+    was wrong.” Enter through **Sign In as Guest**, with the shared-workspace warning visible.
+1.  **15–30 seconds — record.** Open the protected 12-question Computer Science sample. Show eight clean controls, two
+    planted key errors and two ambiguous items in one preserved review record.
+1.  **30–55 seconds — reveal.** Filter to **Possible Key Error** and open the FIFO question whose supplied key says
+    **Stack**. Both independent readers selected **Queue**.
+1.  **55–75 seconds — proof.** Show the two served model names, distinct Gonka Request IDs, receipt status and the fixed
+    rule that produced the flag.
+1.  **75–95 seconds — human control.** Choose **Key Corrected**. The machine verdict remains in history while the human
+    resolution updates the record summary.
+1.  **95–110 seconds — honest failure.** Open an **Unverified** item and explain that one model timed out, so Cekgu
+    refused to invent consensus.
+1.  **110–120 seconds — repeatability.** Return to **Records**, show that the review persists, then start one new item
+    and leave it checking asynchronously rather than waiting on stage.
 
 ### Demo resilience
 

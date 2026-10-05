@@ -12,16 +12,16 @@ the article title. Definitions used in more than one section sit at the end of t
 
 Contents:
 
-1. [Phenomenon](#phenomenon)
-1. [Data](#data)
-1. [Incumbents](#incumbents)
-1. [Ground truth](#ground-truth)
-1. [Predicted competition](#predicted-competition)
-1. [Scores](#scores)
-1. [Novelty test](#novelty-test)
-1. [Kill criteria](#kill-criteria)
-1. [What would move it to LOCK](#what-would-move-it-to-lock)
-1. [Sources used](#sources-used)
+1.  [Phenomenon](#phenomenon)
+1.  [Data](#data)
+1.  [Incumbents](#incumbents)
+1.  [Ground truth](#ground-truth)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores](#scores)
+1.  [Novelty test](#novelty-test)
+1.  [Kill criteria](#kill-criteria)
+1.  [What would move it to LOCK](#what-would-move-it-to-lock)
+1.  [Sources used](#sources-used)
 
 ## Phenomenon
 
@@ -226,14 +226,14 @@ disagreement being surfaced is between the government and its own statute, which
 
 ## Novelty test
 
-1. **Convergence count:** 1, see [Predicted competition](#predicted-competition).
-2. **Incumbent test:** The Malaysian Bar and ARTICLE 19 do it by hand; BillTrack50 and Plural do the inverse with one
-   model; NZ PCO drafts the explainer with AI. What they structurally cannot do: the Bar and NGOs are parties, so their
-   reading is discounted; the summarisers consume the official summary as input; the PCO is the author of the note it
-   would have to audit.
-3. **Second-use test:** Mikha Chan at FMT, the Thursday after the PSC amends the Urban Renewal Bill: she reloads the
-   amended clause text and the minister's new statement, re-runs the same claim list, and the s.21(4) flag either clears
-   or does not. That is a real second open; the first open is the day the bill is tabled.
+1.  **Convergence count:** 1, see [Predicted competition](#predicted-competition).
+2.  **Incumbent test:** The Malaysian Bar and ARTICLE 19 do it by hand; BillTrack50 and Plural do the inverse with one
+    model; NZ PCO drafts the explainer with AI. What they structurally cannot do: the Bar and NGOs are parties, so their
+    reading is discounted; the summarisers consume the official summary as input; the PCO is the author of the note it
+    would have to audit.
+3.  **Second-use test:** Mikha Chan at FMT, the Thursday after the PSC amends the Urban Renewal Bill: she reloads the
+    amended clause text and the minister's new statement, re-runs the same claim list, and the s.21(4) flag either clears
+    or does not. That is a real second open; the first open is the day the bill is tabled.
 
 ## Kill criteria
 
@@ -247,14 +247,14 @@ disagreement being surfaced is between the government and its own statute, which
 
 ## What would move it to LOCK
 
-1. One 20-minute call with a journalist or NGO researcher who has written a clause-level rebuttal (the FMT explainer's
-   author, the Bar's secretariat, ARTICLE 19 Malaysia). Real User goes from 14 to 17 or drops the concept.
-1. Reframe the primary input from "Explanatory Statement" to "any official description: ministerial statements, press
-   releases, agency briefings, FAQs, and the Explanatory Statement". The evidence says the disputes live in the former.
-1. Extract text from one 2025 bill PDF and confirm it is not a scan, and confirm a fetch of parlimen.gov.my works with
-   the intermediate CA bundled.
-1. Put the claim-type taxonomy from [Ground truth](#ground-truth) on screen so a three-reader split on an effect claim
-   is never shown as "the government is wrong".
+1.  One 20-minute call with a journalist or NGO researcher who has written a clause-level rebuttal (the FMT explainer's
+    author, the Bar's secretariat, ARTICLE 19 Malaysia). Real User goes from 14 to 17 or drops the concept.
+1.  Reframe the primary input from "Explanatory Statement" to "any official description: ministerial statements, press
+    releases, agency briefings, FAQs, and the Explanatory Statement". The evidence says the disputes live in the former.
+1.  Extract text from one 2025 bill PDF and confirm it is not a scan, and confirm a fetch of parlimen.gov.my works with
+    the intermediate CA bundled.
+1.  Put the claim-type taxonomy from [Ground truth](#ground-truth) on screen so a three-reader split on an effect claim
+    is never shown as "the government is wrong".
 
 **Strongest fact:** in February 2025 the Prime Minister said there would be "no provision under the proposed act that
 could lead to owners...losing ownership of their property"; in August 2025 the Malaysian Bar read s.21(4) of the tabled

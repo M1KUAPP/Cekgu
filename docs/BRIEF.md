@@ -6,17 +6,17 @@ status.
 
 Contents:
 
-1. [The event](#the-event)
-1. [Dates](#dates)
-1. [Live sessions](#live-sessions)
-1. [Eligibility and team rules](#eligibility-and-team-rules)
-1. [What we submit](#what-we-submit)
-1. [How we are judged](#how-we-are-judged)
-1. [Our track: GonkaRouter, AI for Society](#our-track-gonkarouter-ai-for-society)
-1. [People](#people)
-1. [All tracks and the prize pool](#all-tracks-and-the-prize-pool)
-1. [Channels](#channels)
-1. [Admin](#admin)
+1.  [The event](#the-event)
+1.  [Dates](#dates)
+1.  [Live sessions](#live-sessions)
+1.  [Eligibility and team rules](#eligibility-and-team-rules)
+1.  [What we submit](#what-we-submit)
+1.  [How we are judged](#how-we-are-judged)
+1.  [Our track: GonkaRouter, AI for Society](#our-track-gonkarouter-ai-for-society)
+1.  [People](#people)
+1.  [All tracks and the prize pool](#all-tracks-and-the-prize-pool)
+1.  [Channels](#channels)
+1.  [Admin](#admin)
 
 ## The event
 
@@ -122,11 +122,11 @@ fallback route and announce it on Discord.
 
 **The deck must cover** five things:
 
-1. Problem statement and project objective
-1. Motivation and challenges
-1. Commercialisation and business model
-1. Technology stack and track chosen
-1. The overall concept
+1.  Problem statement and project objective
+1.  Motivation and challenges
+1.  Commercialisation and business model
+1.  Technology stack and track chosen
+1.  The overall concept
 
 **Our track adds** a live demo URL, a GitHub repo with clear documentation on the GonkaRouter integration, and a
 2-minute video pitch showing the product in action.
@@ -190,11 +190,11 @@ The four GonkaRouter requirements below still bind. Everything else about the pr
 
 Any of these missed disqualifies the entry:
 
-1. **All** AI reasoning and verification runs through GonkaRouter (`api.gonkarouter.io`). A direct OpenAI or Anthropic
-   call in that path disqualifies us. One non-reasoning step sits outside it, and only one — see below.
-1. **Two or more models** cross-verifying, for multi-model consensus.
-1. **Gonka Request IDs displayed** per inference step, the on-chain proof.
-1. **Consensus logic** for model disagreement, called out as "a major plus".
+1.  **All** AI reasoning and verification runs through GonkaRouter (`api.gonkarouter.io`). A direct OpenAI or Anthropic
+    call in that path disqualifies us. One non-reasoning step sits outside it, and only one — see below.
+1.  **Two or more models** cross-verifying, for multi-model consensus.
+1.  **Gonka Request IDs displayed** per inference step, the on-chain proof.
+1.  **Consensus logic** for model disagreement, called out as "a major plus".
 
 **Third-party AI providers are allowed for additional features**, answered by mrJiang on Discord on 3 September to a
 direct question from our own team. Once the mandatory requirements above are satisfied through GonkaRouter, a feature

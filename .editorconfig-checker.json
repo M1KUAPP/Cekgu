@@ -1,0 +1,4 @@
+{
+  "Exclude": ["\\.moc3$"],
+  "IgnoreDefaults": true
+}

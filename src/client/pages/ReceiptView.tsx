@@ -108,7 +108,7 @@ export function ReceiptView() {
               </dl>
             ) : (
               /* Three different facts, and the page says which. A receipt that was never written
-                 is the gateway answering; a gateway we could not reach is not an answer. */
+               * is the gateway answering; a gateway we could not reach is not an answer. */
               <p className="type-ui text-ink-muted">
                 {lookup.status === 'invalid'
                   ? 'That is not a Gonka request id. They are shaped req-<number>-<number>.'
