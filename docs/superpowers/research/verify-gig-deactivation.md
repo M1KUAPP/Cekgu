@@ -211,8 +211,7 @@ uses model disagreement as a signal, and no "AI deactivation appeal chatbot" mar
 [FareShare]: https://doi.org/10.1145/3788052 'FareShare, ACM CSCW 2025'
 [arXiv 2505.08904]: https://arxiv.org/abs/2505.08904
 [Gridwise appeal guide]: https://gridwise.io/blog/gig-driver-deactivation-appeal
-[Terms.Law demand-letter templates]:
-  https://terms.law/Demand-Letters/Employment/california-rideshare-deactivation-demand.html
+[Terms.Law demand-letter templates]: https://terms.law/Demand-Letters/Employment/california-rideshare-deactivation-demand.html
 
 ## Predicted competition
 

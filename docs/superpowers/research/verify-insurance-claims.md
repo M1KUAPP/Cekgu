@@ -50,44 +50,20 @@ The first is a factual dispute, not a clause-wording dispute, and the product do
 exactly a wording dispute and is where the product lands. Say this out loud in the pitch rather than let a judge find
 it.
 
-[CodeBlue, Dec 2024]:
-  https://codeblue.galencentre.org/2024/12/bank-negara-caps-medical-insurance-premium-hikes-at-10-for-most-policyholders/
-  'Bank Negara Caps Medical Insurance Premium Hikes At 10% For Most Policyholders'
-[Galen Centre, 20 Dec 2024]:
-  https://galencentre.org/2024/12/20/bank-negara-interim-measures-on-health-insurance-and-takaful-products-are-temporary-but-welcomed/
-  'BNM Interim Measures On MHIT Products Are Temporary But Welcomed'
+[CodeBlue, Dec 2024]: https://codeblue.galencentre.org/2024/12/bank-negara-caps-medical-insurance-premium-hikes-at-10-for-most-policyholders/ 'Bank Negara Caps Medical Insurance Premium Hikes At 10% For Most Policyholders'
+[Galen Centre, 20 Dec 2024]: https://galencentre.org/2024/12/20/bank-negara-interim-measures-on-health-insurance-and-takaful-products-are-temporary-but-welcomed/ 'BNM Interim Measures On MHIT Products Are Temporary But Welcomed'
 [PIAM]: https://piam.org.my/medical-health-insurance-and-takaful-repricing/ 'Interim Measures for MHIT Policyholders'
-[Milliman]:
-  https://www.milliman.com/en/insight/asia-e-alert-malaysia-interim-measures-takaful-products
-  'Malaysia: Interim measures on MHIT products'
-[Malay Mail, 23 Jan 2026]:
-  https://www.malaymail.com/news/malaysia/2026/01/23/finance-ministry-fmos-handled-3253-complaints-in-its-first-year-resolving-over-2200-cases/206441
-  'Finance Ministry: FMOS handled 3,253 complaints in its first year, resolving over 2,200 cases'
-[CodeBlue, 15 Oct 2025]:
-  https://codeblue.galencentre.org/2025/10/deny-delay-revoke-specialists-reveal-health-insurance-underbelly-in-malaysia/
-  "Alifah Zainuddin, 'Deny, Delay, Revoke': Specialists Reveal Health Insurance Underbelly In Malaysia"
-[The Sun, 2025 or 2026]:
-  https://thesun.my/news/malaysia-news/fomca-sounds-alarm-over-surging-insurance-premiums/
-  'Fomca sounds alarm over surging insurance premiums (date not captured)'
-[CodeBlue, Mar 2025]:
-  https://codeblue.galencentre.org/2025/03/malaysians-taking-loans-to-pay-for-health-insurance-fomca/
-  'Malaysians Taking Loans To Pay For Health Insurance: Fomca'
-[FOMCA, 2025]:
-  https://www.fomca.org.my/v1/index.php/fomca-di-pentas-media/fomca-di-pentas-media-2025/1899-insurance-industry-must-provide-clear-explanations-for-premium-hikes-fomca
-  'Insurance industry must provide clear explanations for premium hikes'
-[FOMCA, 2026]:
-  https://www.fomca.org.my/v1/index.php/fomca-di-pentas-media/fomca-di-pentas-media-2026/2076-addressing-medical-inflation-in-malaysia
-  'Addressing Medical Inflation in Malaysia'
-[The Rakyat Post, 18 Aug 2026]:
-  https://www.therakyatpost.com/living/2026/08/18/malaysians-cant-keep-up-with-their-medical-insurance-price-hike/
-  "Malaysians Can't Keep Up With Their Medical Insurance Price Hike"
-[FMOS, 22 Jul 2026]:
-  https://www.fmos.org.my/en/why-insurance-and-takaful-claims-get-rejected-the-most-common-reasons-we-see-at-fmos/
-  'Why insurance and takaful claims get rejected: The most common reasons we see at FMOS'
+[Milliman]: https://www.milliman.com/en/insight/asia-e-alert-malaysia-interim-measures-takaful-products 'Malaysia: Interim measures on MHIT products'
+[Malay Mail, 23 Jan 2026]: https://www.malaymail.com/news/malaysia/2026/01/23/finance-ministry-fmos-handled-3253-complaints-in-its-first-year-resolving-over-2200-cases/206441 'Finance Ministry: FMOS handled 3,253 complaints in its first year, resolving over 2,200 cases'
+[CodeBlue, 15 Oct 2025]: https://codeblue.galencentre.org/2025/10/deny-delay-revoke-specialists-reveal-health-insurance-underbelly-in-malaysia/ "Alifah Zainuddin, 'Deny, Delay, Revoke': Specialists Reveal Health Insurance Underbelly In Malaysia"
+[The Sun, 2025 or 2026]: https://thesun.my/news/malaysia-news/fomca-sounds-alarm-over-surging-insurance-premiums/ 'Fomca sounds alarm over surging insurance premiums (date not captured)'
+[CodeBlue, Mar 2025]: https://codeblue.galencentre.org/2025/03/malaysians-taking-loans-to-pay-for-health-insurance-fomca/ 'Malaysians Taking Loans To Pay For Health Insurance: Fomca'
+[FOMCA, 2025]: https://www.fomca.org.my/v1/index.php/fomca-di-pentas-media/fomca-di-pentas-media-2025/1899-insurance-industry-must-provide-clear-explanations-for-premium-hikes-fomca 'Insurance industry must provide clear explanations for premium hikes'
+[FOMCA, 2026]: https://www.fomca.org.my/v1/index.php/fomca-di-pentas-media/fomca-di-pentas-media-2026/2076-addressing-medical-inflation-in-malaysia 'Addressing Medical Inflation in Malaysia'
+[The Rakyat Post, 18 Aug 2026]: https://www.therakyatpost.com/living/2026/08/18/malaysians-cant-keep-up-with-their-medical-insurance-price-hike/ "Malaysians Can't Keep Up With Their Medical Insurance Price Hike"
+[FMOS, 22 Jul 2026]: https://www.fmos.org.my/en/why-insurance-and-takaful-claims-get-rejected-the-most-common-reasons-we-see-at-fmos/ 'Why insurance and takaful claims get rejected: The most common reasons we see at FMOS'
 [Malaysiakini]: https://www.malaysiakini.com/finance-news/780252 'Syndication of the FMOS piece of 22 Jul 2026'
-[The Edge Malaysia]:
-  https://theedgemalaysia.com/article/most-disputes-involve-insurance-claims-%E2%80%94-ofs
-  'Most disputes involve insurance claims — OFS (date not captured; reports 2015 figures)'
+[The Edge Malaysia]: https://theedgemalaysia.com/article/most-disputes-involve-insurance-claims-%E2%80%94-ofs 'Most disputes involve insurance claims — OFS (date not captured; reports 2015 figures)'
 
 ## Legal doctrine and the ombudsman process
 
@@ -124,16 +100,10 @@ whether the exception applies; where the clause is clear the court gives effect 
 | Name           | FMOS since 1 Jan 2025 (OFS + SIDREC)                                                                                                                                                                  | BNM and BIS sources in the introduction   |
 
 [FMOS scope]: https://www.fmos.org.my/en/our-scope/ 'What FMOS Can and Cannot Handle'
-[Insurance Business Asia]:
-  https://www.insurancebusinessmag.com/asia/news/breaking-news/malaysia-launches-financial-ombudsman-49932.aspx
-  'Malaysia launches financial ombudsman'
+[Insurance Business Asia]: https://www.insurancebusinessmag.com/asia/news/breaking-news/malaysia-launches-financial-ombudsman-49932.aspx 'Malaysia launches financial ombudsman'
 [FMOS FAQ]: https://www.fmos.org.my/en/faq/
-[FMOS filing guide]:
-  https://www.fmos.org.my/en/filing-a-complaint-with-fmos-what-to-expect-and-what-you-need-to-know/
-  'Filing a Complaint with FMOS: What to Expect'
-[BJAK]:
-  https://bjak.my/blog/car-insurance/how-to-dispute-a-rejected-car-insurance-claim-your-rights
-  'How to Dispute a Rejected Car Insurance Claim'
+[FMOS filing guide]: https://www.fmos.org.my/en/filing-a-complaint-with-fmos-what-to-expect-and-what-you-need-to-know/ 'Filing a Complaint with FMOS: What to Expect'
+[BJAK]: https://bjak.my/blog/car-insurance/how-to-dispute-a-rejected-car-insurance-claim-your-rights 'How to Dispute a Rejected Car Insurance Claim'
 
 ## Ground truth: FMOS publishes case summaries with outcomes
 
@@ -190,20 +160,12 @@ Insurer-side chatbots were excluded per the brief.
 blind to each other on the clause, (b) treats their disagreement as the ambiguity signal, or (c) declines to draft when
 they agree the exclusion applies.
 
-[Axios Raleigh, 20 Aug 2025]:
-  https://www.axios.com/local/raleigh/2025/08/20/using-ai-to-fight-back-against-insurance-denials-counteforce
-  'RTP startup uses AI to fight health insurance denials'
+[Axios Raleigh, 20 Aug 2025]: https://www.axios.com/local/raleigh/2025/08/20/using-ai-to-fight-back-against-insurance-denials-counteforce 'RTP startup uses AI to fight health insurance denials'
 [Counterforce homepage]: https://www.counterforcehealth.org/
 [Wikipedia]: https://en.wikipedia.org/wiki/Counterforce_Health 'Counterforce Health'
-[Stateline, 20 Nov 2025]:
-  https://stateline.org/2025/11/20/patients-deploy-bots-to-battle-health-insurers-that-deny-care/
-  'AI vs. AI: Patients deploy bots to battle health insurers that deny care'
-[CareYaya]:
-  https://www.careyaya.org/resources/blog/ai-tools-patients-health-insurance-denials
-  'AI Tools Every Patient Can Use to Overturn Health-Insurance Claim Denials'
-[US News]:
-  https://health.usnews.com/wellness/articles/use-ai-to-help-fight-a-health-insurance-denial
-  'How AI Can Help Fight a Health Insurance Denial by Writing an Appeal'
+[Stateline, 20 Nov 2025]: https://stateline.org/2025/11/20/patients-deploy-bots-to-battle-health-insurers-that-deny-care/ 'AI vs. AI: Patients deploy bots to battle health insurers that deny care'
+[CareYaya]: https://www.careyaya.org/resources/blog/ai-tools-patients-health-insurance-denials 'AI Tools Every Patient Can Use to Overturn Health-Insurance Claim Denials'
+[US News]: https://health.usnews.com/wellness/articles/use-ai-to-help-fight-a-health-insurance-denial 'How AI Can Help Fight a Health Insurance Denial by Writing an Appeal'
 
 ## Predicted competition
 

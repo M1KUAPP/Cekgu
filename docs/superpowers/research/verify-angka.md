@@ -61,21 +61,11 @@ Format facts:
 - JPA publishes a follow-up status PDF, again a PDF: JPA, "Status Tindakan Susulan Laporan Ketua Audit Negara Tahun
   2015 - 2025", 10 Oct 2025, https://docs.jpa.gov.my/docs/pnerbitan/2025/LKAN_10102025.pdf
 
-[LKAN portal]:
-  https://lkan.audit.gov.my/
-  'Jabatan Audit Negara, Laporan Ketua Audit Negara (LKAN), portal listing, fetched 2 Sep 2026'
-[CMD.4.2025]:
-  https://parlimen.gov.my/ipms/eps/2025-02-24/CMD.4.2025%20-%20CMD4.2025.pdf
-  'Parlimen Malaysia, command paper CMD.4.2025, 24 Feb 2025'
-[Malay Mail, 24 Jul 2025]:
-  https://www.malaymail.com/news/malaysia/2025/07/24/dewan-rakyat-passes-auditor-generals-report-22025-ministries-respond-to-audit-findings/184971
-  "Dewan Rakyat passes Auditor-General's Report 2/2025, ministries respond to audit findings"
-[Parlimen media statement 3/2025]:
-  https://www.parlimen.gov.my/images/webuser/bkk/Kenyataan%20Media%20Laporan%20Ketua%20Audit%20Negara%203-2025.pdf
-  'Parlimen Malaysia, Kenyataan Media Laporan Ketua Audit Negara 3/2025'
-[BusinessToday, 6 Oct 2025]:
-  https://www.businesstoday.com.my/2025/10/06/federal-accounts-for-2024-found-in-good-order-says-auditor-general/
-  'Federal Accounts For 2024 Found In Good Order, Says Auditor-General'
+[LKAN portal]: https://lkan.audit.gov.my/ 'Jabatan Audit Negara, Laporan Ketua Audit Negara (LKAN), portal listing, fetched 2 Sep 2026'
+[CMD.4.2025]: https://parlimen.gov.my/ipms/eps/2025-02-24/CMD.4.2025%20-%20CMD4.2025.pdf 'Parlimen Malaysia, command paper CMD.4.2025, 24 Feb 2025'
+[Malay Mail, 24 Jul 2025]: https://www.malaymail.com/news/malaysia/2025/07/24/dewan-rakyat-passes-auditor-generals-report-22025-ministries-respond-to-audit-findings/184971 "Dewan Rakyat passes Auditor-General's Report 2/2025, ministries respond to audit findings"
+[Parlimen media statement 3/2025]: https://www.parlimen.gov.my/images/webuser/bkk/Kenyataan%20Media%20Laporan%20Ketua%20Audit%20Negara%203-2025.pdf 'Parlimen Malaysia, Kenyataan Media Laporan Ketua Audit Negara 3/2025'
+[BusinessToday, 6 Oct 2025]: https://www.businesstoday.com.my/2025/10/06/federal-accounts-for-2024-found-in-good-order-says-auditor-general/ 'Federal Accounts For 2024 Found In Good Order, Says Auditor-General'
 
 ### Hansard and written replies
 
@@ -137,12 +127,8 @@ Format facts:
 [Sinar GitHub]: https://github.com/Sinar
 [Digital Hansard]: https://hansard.parlimen.gov.my/
 [AG Dashboard]: https://agdashboard.audit.gov.my/ "AGD - Auditor General's Dashboard V3.0"
-[TI-M]:
-  http://transparency.org.my/pages/news-and-events/press-releases/ti-m-demands-accountability-and-reform-following-auditor-general-s-report-2-2025
-  "TI-M Demands Accountability and Reform Following Auditor-General's Report 2/2025"
-[CAP]:
-  https://consumer.org.my/strengthening-public-accountability-after-the-2025-auditor-generals-report/
-  "Strengthening Public Accountability After the 2025 Auditor General's Report"
+[TI-M]: http://transparency.org.my/pages/news-and-events/press-releases/ti-m-demands-accountability-and-reform-following-auditor-general-s-report-2-2025 "TI-M Demands Accountability and Reform Following Auditor-General's Report 2/2025"
+[CAP]: https://consumer.org.my/strengthening-public-accountability-after-the-2025-auditor-generals-report/ "Strengthening Public Accountability After the 2025 Auditor General's Report"
 
 ### Global extraction products
 
@@ -217,12 +203,9 @@ budget. The team should get one sentence from one named reporter before Demo Day
 [The Edge, constitutional row]: https://theedgemalaysia.com/node/763727
 [Malaysiakini, PTPTN]: https://www.malaysiakini.com/news/735455
 [Malaysiakini, C4 tag]: https://www.malaysiakini.com/en/tag/c4%20center
-[The Sun, 273 issues]:
-  https://thesun.my/news/malaysia-news/people-issues/auditor-general-uncovers-273-new-issues-in-latest-audit-report/
+[The Sun, 273 issues]: https://thesun.my/news/malaysia-news/people-issues/auditor-general-uncovers-273-new-issues-in-latest-audit-report/
 [C4 Annual Report 2025]: https://c4center.org/annual-report-2025/
-[Wikipedia, PAC Malaysia]:
-  https://en.wikipedia.org/wiki/Public_Accounts_Committee_(Malaysia)
-  'Public Accounts Committee (Malaysia)'
+[Wikipedia, PAC Malaysia]: https://en.wikipedia.org/wiki/Public_Accounts_Committee_(Malaysia) 'Public Accounts Committee (Malaysia)'
 
 ## Track fit
 

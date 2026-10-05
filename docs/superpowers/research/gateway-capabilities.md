@@ -47,9 +47,18 @@ GET https://api.gonkarouter.io/v1/receipts/{x-request-id}      # no auth require
 Verified working against two ids, including one captured two days earlier:
 
 ```json
-{"x_request_id":"req-1788016913316163460-503197","x_devshard_id":"65725",
- "model":"moonshotai/Kimi-K2.6","created_at":"2026-08-29T15:21:54Z","outcome":"success",
- "status_code":200,"stream":false,"total_tokens":19,"ttft_ms":709,"duration_ms":709}
+{
+  "x_request_id": "req-1788016913316163460-503197",
+  "x_devshard_id": "65725",
+  "model": "moonshotai/Kimi-K2.6",
+  "created_at": "2026-08-29T15:21:54Z",
+  "outcome": "success",
+  "status_code": 200,
+  "stream": false,
+  "total_tokens": 19,
+  "ttft_ms": 709,
+  "duration_ms": 709
+}
 ```
 
 | Property                                                     | Consequence                                                             |
@@ -231,7 +240,7 @@ unmeasured.
 call, sequential single requests included, with `X-Gonka-No-Fallback: true` set. The body each time:
 
 ```json
-{"error":{"message":"rate limit exceeded: too many concurrent requests","type":"upstream_error"}}
+{ "error": { "message": "rate limit exceeded: too many concurrent requests", "type": "upstream_error" } }
 ```
 
 Earlier the same evening, under [Latency and hedging](#latency-and-hedging), Kimi was the model timing out and DeepSeek

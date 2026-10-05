@@ -31,8 +31,7 @@ Contents:
 | **Auditable determination record**        | Nothing found. C2PA writes provenance at creation; verifiers only read manifests                                                                                       | **Gap**                         |
 
 [exameval-flaws]: https://www.exameval.com/articles/flaws/unfocused-unclear-open-stem
-[sirion-conflicting-terms]:
-  https://www.sirion.ai/library/contract-insights/contract-intelligence-conflicting-terms-solutions/
+[sirion-conflicting-terms]: https://www.sirion.ai/library/contract-insights/contract-intelligence-conflicting-terms-solutions/
 
 ### The load-bearing correction
 
@@ -163,8 +162,7 @@ Searched 2026-08-30 against the round 2 candidates in [`candidate-concepts.md`](
 | **AI-cheating defence**           | [GPTZero sells a "Writing Report"](https://gptzero.me/news/falsely-accused-of-ai-cheating/) to prove authorship — the accuser also selling the defence; plus student-discipline law firms                                                                     | Crowded genre                                                                                                           |
 | **Shrinkflation**                 | Subreddits, press databases, consumer apps                                                                                                                                                                                                                    | Concept crowded; the two-chain instrument is the fresh part                                                             |
 
-[worker-info-exchange]:
-  https://www.cambridge.org/core/journals/the-economic-and-labour-relations-review/article/confronting-algorithmic-management-using-subject-access-requests-insights-using-the-case-of-food-deliveries/C9E469DA7A3348AFC15CBF48FFB0926B
+[worker-info-exchange]: https://www.cambridge.org/core/journals/the-economic-and-labour-relations-review/article/confronting-algorithmic-management-using-subject-access-requests-insights-using-the-case-of-food-deliveries/C9E469DA7A3348AFC15CBF48FFB0926B
 
 ### The quantified gaps
 

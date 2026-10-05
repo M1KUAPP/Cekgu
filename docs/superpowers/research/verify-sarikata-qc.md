@@ -36,35 +36,17 @@ Contents:
 | DBKL signboard enforcement in 2024                                                    | Enforcement notices to five premises (12 Oct 2024); 13 operations in 2024, 264 notices, action against 36 businesses (1 Dec 2024); the ops to remove Chinese signboards sparked debate online (14 Oct 2024)                                                                                                                                            | Confirmed; about language priority, not translation accuracy                    | [Malay Mail, 12 Oct 2024], [Malay Mail, 1 Dec 2024], [The Star, 14 Oct 2024] |
 | DBP reacts to viral signage                                                           | DBP "views seriously the issue of neglecting the national language on public signage, especially those that went viral." Undated; context is the Oct 2024 DBKL row                                                                                                                                                                                     | Confirmed                                                                       | [World of Buzz, DBP]                                                         |
 
-[Utusan Malaysia, Aug 2024]:
-  https://www.utusan.com.my/lipatan-sejarah/2024/08/sarikata-bahasa-malaysia-diwajibkan-untuk-setiap-filem-dan-iklan/
-  'Sarikata Bahasa Malaysia diwajibkan untuk setiap filem dan iklan, Lipatan Sejarah'
+[Utusan Malaysia, Aug 2024]: https://www.utusan.com.my/lipatan-sejarah/2024/08/sarikata-bahasa-malaysia-diwajibkan-untuk-setiap-filem-dan-iklan/ 'Sarikata Bahasa Malaysia diwajibkan untuk setiap filem dan iklan, Lipatan Sejarah'
 [FINAS circulars]: https://www.finas.gov.my/industry/circulars 'Akta & Peraturan'
 [FINAS Wajib Tayang]: https://www.finas.gov.my/services/wajib-tayang?swt_page=12 'Wajib Tayang'
-[Kementerian Komunikasi]:
-  https://www.komunikasi.gov.my/info-korporat/pengenalan/akta-akta
-  'Akta-Akta Kementerian Komunikasi'
-[Languages Unlimited]:
-  https://www.languagesunlimited.com/netflix-timed-text-style-guide/
-  'Netflix Timed Text Style Guide: Requirements, Rules, Timing (undated)'
-[Netflix Malay style guide]:
-  https://partnerhelp.netflixstudios.com/hc/en-us/articles/115002675707-Malay-Timed-Text-Style-Guide
-  'Netflix Partner Help Center, Malay Timed Text Style Guide'
-[Sinar Daily, 14 Jan 2024]:
-  https://www.sinardaily.my/article/214742/focus/signboard-blunders-threaten-bahasa-melayus-identity---experts
-  "Signboard blunders threaten Bahasa Melayu's identity - Experts"
-[Malay Mail, 12 Oct 2024]:
-  https://www.malaymail.com/news/malaysia/2024/10/12/dbkl-issues-enforcement-notices-to-five-premises-for-non-compliance-with-malay-language-signboard-rule/153374
-  'DBKL issues enforcement notices to five premises for non-compliance with Malay language signboard rule'
-[Malay Mail, 1 Dec 2024]:
-  https://www.malaymail.com/news/malaysia/2024/12/01/as-dbkl-signboard-row-festers-dr-zaliha-insists-crackdown-was-colour-blind/158546
-  'As DBKL signboard row festers, Dr Zaliha insists crackdown was colour-blind'
-[The Star, 14 Oct 2024]:
-  https://www.thestar.com.my/metro/metro-news/2024/10/14/dbkls-ops-to-remove-chinese-signboards-sparks-debate-online
-  "DBKL's ops to remove Chinese signboards sparks debate online"
-[World of Buzz, DBP]:
-  https://worldofbuzz.com/after-tun-mahathirs-viral-chinese-signboard-rant-dbp-tells-msians-not-to-neglect-or-belittle-bahasa-melayu/
-  "After Tun Mahathir's Viral Chinese Signboard Rant, DBP Tells M'sians Not to Neglect or Belittle Bahasa Melayu"
+[Kementerian Komunikasi]: https://www.komunikasi.gov.my/info-korporat/pengenalan/akta-akta 'Akta-Akta Kementerian Komunikasi'
+[Languages Unlimited]: https://www.languagesunlimited.com/netflix-timed-text-style-guide/ 'Netflix Timed Text Style Guide: Requirements, Rules, Timing (undated)'
+[Netflix Malay style guide]: https://partnerhelp.netflixstudios.com/hc/en-us/articles/115002675707-Malay-Timed-Text-Style-Guide 'Netflix Partner Help Center, Malay Timed Text Style Guide'
+[Sinar Daily, 14 Jan 2024]: https://www.sinardaily.my/article/214742/focus/signboard-blunders-threaten-bahasa-melayus-identity---experts "Signboard blunders threaten Bahasa Melayu's identity - Experts"
+[Malay Mail, 12 Oct 2024]: https://www.malaymail.com/news/malaysia/2024/10/12/dbkl-issues-enforcement-notices-to-five-premises-for-non-compliance-with-malay-language-signboard-rule/153374 'DBKL issues enforcement notices to five premises for non-compliance with Malay language signboard rule'
+[Malay Mail, 1 Dec 2024]: https://www.malaymail.com/news/malaysia/2024/12/01/as-dbkl-signboard-row-festers-dr-zaliha-insists-crackdown-was-colour-blind/158546 'As DBKL signboard row festers, Dr Zaliha insists crackdown was colour-blind'
+[The Star, 14 Oct 2024]: https://www.thestar.com.my/metro/metro-news/2024/10/14/dbkls-ops-to-remove-chinese-signboards-sparks-debate-online "DBKL's ops to remove Chinese signboards sparks debate online"
+[World of Buzz, DBP]: https://worldofbuzz.com/after-tun-mahathirs-viral-chinese-signboard-rant-dbp-tells-msians-not-to-neglect-or-belittle-bahasa-melayu/ "After Tun Mahathir's Viral Chinese Signboard Rant, DBP Tells M'sians Not to Neglect or Belittle Bahasa Melayu"
 
 ### Phenomenon: negative results
 
@@ -109,36 +91,18 @@ rejection and turnaround pressure, not virality, unless a 2024-26 incident is fo
 | COMET-QE / COMETKiwi                                                       | Reference-free quality _score_ per segment; one model, one number, no explanation of what changed                                                                                                                  | No (score, not diff)                             | [Unbabel COMET]; [Hugging Face COMETKiwi]; [arXiv 2210.15696]; [arXiv 2403.14118] |
 | Intento MT Studio                                                          | Runs COMET-family metrics in evaluation projects                                                                                                                                                                   | No                                               | [Intento]                                                                         |
 
-[XL8 AQC]:
-  https://support.xl8.ai/support/solutions/articles/150000211958-automated-quality-control-aqc-by-mediacat-ai
-  'XL8 support, Automated Quality Control (AQC) by MediaCAT AI, modified 26 Aug 2025'
+[XL8 AQC]: https://support.xl8.ai/support/solutions/articles/150000211958-automated-quality-control-aqc-by-mediacat-ai 'XL8 support, Automated Quality Control (AQC) by MediaCAT AI, modified 26 Aug 2025'
 [Media Play News]: https://www.mediaplaynews.com/tag/xl8/ 'XL8 tag page, accessed 2 Sept 2026'
-[XL8 MediaCAT features]:
-  https://www.xl8.ai/blog/boost-your-localization-qc-productivity-5-key-mediacat-features
-  'Boost Your Localization QC Productivity: 5 Key MediaCAT Features (undated)'
-[GeekLink, 26 Jun 2026]:
-  https://geeklink.dev/use-cases/best-subtitle-qa-verification-tools-2026/
-  '7 Best Subtitle QA & Verification Tools (2026)'
-[Alconost]:
-  https://alconost.com/en/blog/ai-subtitle-translation-benchmark
-  "AI Subtitle Translation Benchmark: We Tested 6 Models. Here's What Metrics Missed. (undated)"
-[Translated]:
-  https://translated.com/resources/evaluating-best-ai-subtitle-translation-tools
-  'Best AI Subtitle Translation Tools for Professional-Quality Localization (undated)'
-[Netflix general requirements]:
-  https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements
-  'Netflix Partner Help Center, Timed Text Style Guide: General Requirements, accessed 2 Sept 2026'
+[XL8 MediaCAT features]: https://www.xl8.ai/blog/boost-your-localization-qc-productivity-5-key-mediacat-features 'Boost Your Localization QC Productivity: 5 Key MediaCAT Features (undated)'
+[GeekLink, 26 Jun 2026]: https://geeklink.dev/use-cases/best-subtitle-qa-verification-tools-2026/ '7 Best Subtitle QA & Verification Tools (2026)'
+[Alconost]: https://alconost.com/en/blog/ai-subtitle-translation-benchmark "AI Subtitle Translation Benchmark: We Tested 6 Models. Here's What Metrics Missed. (undated)"
+[Translated]: https://translated.com/resources/evaluating-best-ai-subtitle-translation-tools 'Best AI Subtitle Translation Tools for Professional-Quality Localization (undated)'
+[Netflix general requirements]: https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements 'Netflix Partner Help Center, Timed Text Style Guide: General Requirements, accessed 2 Sept 2026'
 [Unbabel COMET]: https://unbabel.com/research/comet/ 'COMET: The New Standard in MT Evaluation'
 [Hugging Face COMETKiwi]: https://huggingface.co/Unbabel/wmt22-cometkiwi-da 'Unbabel/wmt22-cometkiwi-da'
-[arXiv 2210.15696]:
-  https://arxiv.org/pdf/2210.15696
-  'COMET-QE and Active Learning for Low-Resource Machine Translation, 2022'
-[arXiv 2403.14118]:
-  https://arxiv.org/html/2403.14118v1
-  'From Handcrafted Features to LLMs: A Brief Survey for Machine Translation Quality Estimation, 2024'
-[Intento]:
-  https://help.inten.to/article/mt-studio-mt-quality-metrics
-  'MT Studio - Evaluation Projects - MT Quality Metrics, accessed 2 Sept 2026'
+[arXiv 2210.15696]: https://arxiv.org/pdf/2210.15696 'COMET-QE and Active Learning for Low-Resource Machine Translation, 2022'
+[arXiv 2403.14118]: https://arxiv.org/html/2403.14118v1 'From Handcrafted Features to LLMs: A Brief Survey for Machine Translation Quality Estimation, 2024'
+[Intento]: https://help.inten.to/article/mt-studio-mt-quality-metrics 'MT Studio - Evaluation Projects - MT Quality Metrics, accessed 2 Sept 2026'
 
 ### Incumbents: negative results
 
@@ -179,23 +143,13 @@ so the moat is the independence and the audit trail, not the back-translation.
 | Astro runs a Cantonese channel with Malay subtitles                                                                                                                                                                | [Wikipedia, Astro Wah Lai Toi] |
 
 [Iyuno Malaysia]: https://iyuno.com/locations/malaysia 'Iyuno, Malaysia location page snippet, accessed 2 Sept 2026'
-[Other FanDub Database]:
-  https://otherfandubdb.fandom.com/wiki/Iyuno_Malaysia
-  'The Other FanDub Database Wiki, Iyuno Malaysia, accessed 2 Sept 2026'
+[Other FanDub Database]: https://otherfandubdb.fandom.com/wiki/Iyuno_Malaysia 'The Other FanDub Database Wiki, Iyuno Malaysia, accessed 2 Sept 2026'
 [Wikipedia, Iyuno]: https://en.wikipedia.org/wiki/Iyuno 'Iyuno, accessed 2 Sept 2026'
-[GoLocalise]:
-  https://golocalise.com/malay-subtitling-captioning-services/
-  'Malay Subtitling And Captioning Services (undated)'
+[GoLocalise]: https://golocalise.com/malay-subtitling-captioning-services/ 'Malay Subtitling And Captioning Services (undated)'
 [ProZ subtitlers]: https://www.proz.com/pools/subtitlers 'Freelance subtitlers, accessed 2 Sept 2026'
-[Indeed Malaysia, 13 Jun 2026]:
-  https://malaysia.indeed.com/q-translation,-subtitle-jobs.html
-  'Translation, Subtitle Jobs'
-[Glassdoor]:
-  https://www.glassdoor.com/Salaries/kuala-lumpur-malaysia-subtitling-salary-SRCH_IL.0,21_IM1100_KO22,32.htm
-  'Salary: Subtitling in Kuala Lumpur, Malaysia 2025'
-[Wikipedia, Astro Wah Lai Toi]:
-  https://en.wikipedia.org/wiki/Astro_Wah_Lai_Toi
-  'Astro Wah Lai Toi, accessed 2 Sept 2026'
+[Indeed Malaysia, 13 Jun 2026]: https://malaysia.indeed.com/q-translation,-subtitle-jobs.html 'Translation, Subtitle Jobs'
+[Glassdoor]: https://www.glassdoor.com/Salaries/kuala-lumpur-malaysia-subtitling-salary-SRCH_IL.0,21_IM1100_KO22,32.htm 'Salary: Subtitling in Kuala Lumpur, Malaysia 2025'
+[Wikipedia, Astro Wah Lai Toi]: https://en.wikipedia.org/wiki/Astro_Wah_Lai_Toi 'Astro Wah Lai Toi, accessed 2 Sept 2026'
 
 ### Users: negative results
 

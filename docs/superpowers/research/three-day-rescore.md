@@ -712,8 +712,7 @@ Accessed 2026-09-02 unless an entry says otherwise.
 
 [exameval-miskeyed]: https://www.exameval.com/articles/flaws/miskeyed-answer
 [cramkit-verify]: https://cramkit.com/how-we-verify
-[uitm-vetting]:
-  https://fskm.uitm.edu.my/v4/images/quality/proseduroperasi/PKO09-Penyediaan-Kertas-Soalan-Peperiksaan-Akhir.pdf
+[uitm-vetting]: https://fskm.uitm.edu.my/v4/images/quality/proseduroperasi/PKO09-Penyediaan-Kertas-Soalan-Peperiksaan-Akhir.pdf
 [fasttest-item-bank]: https://assess.com/item-banking/
 [questionmark-ai]: https://www.questionmark.com/platform/flexible-authoring/
 [elsevier-assessment]: https://www-prod.elsevier.com/products/elseviers-assessment-builder

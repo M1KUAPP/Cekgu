@@ -718,8 +718,7 @@ two-reader idea land in the first ten seconds.
   [Cubism Web samples][live2d-samples] and [SDK publication licence][sdk-license] — mascot compatibility and licence
   boundaries
 
-[uitm-vetting]:
-  https://fskm.uitm.edu.my/v4/images/quality/proseduroperasi/PKO09-Penyediaan-Kertas-Soalan-Peperiksaan-Akhir.pdf
+[uitm-vetting]: https://fskm.uitm.edu.my/v4/images/quality/proseduroperasi/PKO09-Penyediaan-Kertas-Soalan-Peperiksaan-Akhir.pdf
 [exameval]: https://www.exameval.com/articles/flaws/miskeyed-answer
 [cramkit]: https://cramkit.com/how-we-verify
 [tororo-hijiki]: https://www.live2d.com/en/learn/sample/tororo-hijiki/
