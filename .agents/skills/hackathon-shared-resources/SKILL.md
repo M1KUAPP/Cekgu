@@ -22,7 +22,7 @@ description: >-
 >
 > **There is no on-site rebuild.** Any instruction about a 2-hour rebuild, a 1080x1080 poster, community voting, a Qwen
 > model, or a Creativity 50 / Presentation 30 / Qwen Integration 20 rubric belongs to a different event and does not
-> apply. Full rules: `docs/brief.md`.
+> apply. Full rules: `docs/BRIEF.md`.
 
 # hackathon-shared-resources
 

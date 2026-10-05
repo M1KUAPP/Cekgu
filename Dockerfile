@@ -1,4 +1,4 @@
-FROM oven/bun:1 AS build
+FROM oven/bun:1.4.2 AS build
 WORKDIR /app
 ENV HUSKY=0
 COPY package.json bun.lock ./
@@ -8,7 +8,7 @@ COPY src/ ./src/
 COPY public/ ./public/
 RUN bun run build
 
-FROM oven/bun:1 AS runtime
+FROM oven/bun:1.4.2 AS runtime
 WORKDIR /app
 ENV HUSKY=0
 ENV NODE_ENV=production

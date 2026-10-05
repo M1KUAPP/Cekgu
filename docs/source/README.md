@@ -22,11 +22,11 @@ reality disagree.
 ## Conventions
 
 - **Never change a quotation.** Headings, ordering and our own framing follow
-  [`../reference/markdown-style.md`](../reference/markdown-style.md), but the words an organizer said or wrote are
+  [`../references/markdown-style.md`](../references/markdown-style.md), but the words an organizer said or wrote are
   reproduced exactly. A reworded quote is a wrong quote.
-- **Do not rewrite these to match later beliefs.** Corrections belong in [`../brief.md`](../brief.md), which is the
+- **Do not rewrite these to match later beliefs.** Corrections belong in [`../BRIEF.md`](../BRIEF.md), which is the
   working reference; this folder is what it was drawn from.
-- **Transcribe, do not summarise.** Summaries belong in [`../brief.md`](../brief.md).
+- **Transcribe, do not summarise.** Summaries belong in [`../BRIEF.md`](../BRIEF.md).
 - **One file per source**, named `<topic>.md`, or `<topic>-<YYYY-MM-DD>.md` when the same source recurs.
 - **Head each file with provenance**: what the source was, how it was captured, when. **Name the tool, not your path to
   it** — a teammate does not have your `~/CS/...` or `C:\Users\...` layout.

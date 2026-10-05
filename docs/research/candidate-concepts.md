@@ -146,7 +146,7 @@ capability. This round starts from a Malaysian phenomenon of 2025–26 and admit
 
 **Team judgement, not research.** The team's own read on 2 Sept 2026, after the first five verifications below, was that
 these candidates sit outside the team's domain expertise and outside that of the track judges, GonkaRouter's tech lead
-and product manager ([`brief.md`](../../brief.md#people)). A further round constrained to that expertise was requested.
+and product manager ([`BRIEF.md`](../BRIEF.md#people)). A further round constrained to that expertise was requested.
 Nothing in the reports was rescored on it.
 
 **The second sub-round.** Minit and Sumber below answer that request. Both were constrained to the team's own domains,

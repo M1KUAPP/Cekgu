@@ -1,17 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
-  "useTabs": false,
-  "tabWidth": 2,
   "printWidth": 120,
   "singleQuote": true,
   "semi": false,
-  "trailingComma": "none",
-  "proseWrap": "always",
-  "embeddedLanguageFormatting": "off",
-  "overrides": [
-    {
-      "files": "./README.md",
-      "options": { "proseWrap": "preserve" }
-    }
-  ]
+  "trailingComma": "none"
 }

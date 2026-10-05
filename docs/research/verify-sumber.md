@@ -190,20 +190,12 @@ https://arxiv.org/html/2606.21155.
 
 [Clearbrief]: https://clearbrief.com/
 [Legaltech Hub]: https://www.legaltechnologyhub.com/vendors/clearbrief/ 'Legaltech Hub vendor page, Clearbrief'
-[LawSites, Dec 2025]:
-  https://www.lawnext.com/2025/12/clearbrief-launches-cite-check-report-to-give-law-firm-partners-an-audit-trail-against-ai-hallucinations.html
-  'Clearbrief Launches Cite Check Report to Give Law Firm Partners an Audit Trail Against AI Hallucinations'
-[Factiverse blog]:
-  https://www.factiverse.ai/blog/how-factiverse-scans-the-web-to-tackle-misinformation-at-scale
-  'How Factiverse Scans the Web to Tackle Misinformation at Scale'
-[Hello Future]:
-  https://hellofuture.orange.com/en/factiverse-reliable-ai-fact-checking-in-more-than-100-languages/
-  'Hello Future (Orange), Factiverse: reliable AI fact-checking in more than 100 languages'
+[LawSites, Dec 2025]: https://www.lawnext.com/2025/12/clearbrief-launches-cite-check-report-to-give-law-firm-partners-an-audit-trail-against-ai-hallucinations.html 'Clearbrief Launches Cite Check Report to Give Law Firm Partners an Audit Trail Against AI Hallucinations'
+[Factiverse blog]: https://www.factiverse.ai/blog/how-factiverse-scans-the-web-to-tackle-misinformation-at-scale 'How Factiverse Scans the Web to Tackle Misinformation at Scale'
+[Hello Future]: https://hellofuture.orange.com/en/factiverse-reliable-ai-fact-checking-in-more-than-100-languages/ 'Hello Future (Orange), Factiverse: reliable AI fact-checking in more than 100 languages'
 [Originality.ai]: https://originality.ai/automated-fact-checker 'Automated Fact-Checker'
 [Grammarly]: https://www.grammarly.com/ai-agents/citation-finder 'Citation Finder'
-[CALL Bulletin, Nov 2025]:
-  https://bulletin.chicagolawlib.org/2025/11/detecting-ai-hallucinations-in-legal-materials/
-  'Tools and strategies for detecting AI case citation hallucinations'
+[CALL Bulletin, Nov 2025]: https://bulletin.chicagolawlib.org/2025/11/detecting-ai-hallucinations-in-legal-materials/ 'Tools and strategies for detecting AI case citation hallucinations'
 [Vaquill]: https://www.vaquill.ai/blog/lexis-ai-vs-westlaw-ai 'Lexis+ AI vs Westlaw AI 2026'
 
 ### What they structurally cannot do

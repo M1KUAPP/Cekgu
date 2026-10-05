@@ -165,7 +165,7 @@ So there is no application form for the unlimited tokens. Just register, and ema
 
 ## Deltas against the brief
 
-**All six are now promoted into [`../brief.md`](../brief.md)** — this table is kept as the record of where they came
+**All six are now promoted into [`../BRIEF.md`](../BRIEF.md)** — this table is kept as the record of where they came
 from. The brief is the working reference; this is the source.
 
 | Item                  | Brief said                        | Workshop said                                                                     |

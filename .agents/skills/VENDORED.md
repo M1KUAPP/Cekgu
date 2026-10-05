@@ -176,7 +176,9 @@ short list that remains destructive outside the PR gate: deleting the repo, forc
 `rm -rf /`. PR merging is intentionally allowed; `AGENTS.md` defines the green, non-breaking merge gate.
 
 `main` has no branch protection or ruleset on GitHub, so `guard-git.sh` is the only enforcement layer and the
-pinned-head merge command prevents a PR from changing between verification and merge.
+pinned-head merge command prevents a PR from changing between verification and merge. The repository settings allow
+only squash merges and delete merged branches, which matches the guard. Auto-merge is enabled there too, but the guard
+still blocks `--auto` for agents, so an agent never queues a merge it has not verified.
 
 Three rules that are easy to get wrong:
 
@@ -197,12 +199,12 @@ and it trades a little safety for the convenience.
 Four guards in `.claude/settings.json`, each exiting 0 on any internal failure so a broken guard can never wedge a
 session.
 
-| Hook               | Event             | Does                                                                                                           |
-| ------------------ | ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| `session-brief.sh` | SessionStart      | Branch, uncommitted count, days to deadline                                                                    |
-| `env-drift.mjs`    | SessionStart      | Reports a local `.env` disagreeing with `.env.example`. Names keys, never values                               |
-| `guard-git.sh`     | PreToolUse(Bash)  | Enforces pinned squash merges; blocks direct or force pushes, merge API bypasses and `.env`. **The only stop** |
-| `format-edited.sh` | PostToolUse(Edit) | Formats edited files with Biome or Prettier. Silent, never blocks                                              |
+| Hook               | Event             | Does                                                                                                                               |
+| ------------------ | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `session-brief.sh` | SessionStart      | Branch, uncommitted count, days to deadline                                                                                        |
+| `env-drift.mjs`    | SessionStart      | Reports a local `.env` disagreeing with `.env.example`. Names keys, never values                                                   |
+| `guard-git.sh`     | PreToolUse(Bash)  | Enforces pinned squash merges and blocks `--auto`; blocks direct or force pushes, merge API bypasses and `.env`. **The only stop** |
+| `format-edited.sh` | PostToolUse(Edit) | Formats edited files with Biome or Prettier. Silent, never blocks                                                                  |
 
 `guard-git.sh` matches on the command substring, so an `rtk`-prefixed command is caught too. It also false-positives on
 any command whose _text_ contains those patterns, including writing this file: use the Write tool, not an inline

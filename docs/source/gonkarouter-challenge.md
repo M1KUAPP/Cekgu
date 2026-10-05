@@ -103,7 +103,7 @@ hand-wave.
 | 3   | **Video Pitch**       | **2 minutes**, showing a _live fact-check in action_                   |
 
 These sit **on top of** the event-wide submission requirements — pitch deck, socials link, deployed app link, MVP video
-on Devfolio. See [`../brief.md`](../brief.md).
+on Devfolio. See [`../BRIEF.md`](../BRIEF.md).
 
 ## 7. Reading between the lines
 
