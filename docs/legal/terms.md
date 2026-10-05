@@ -1,6 +1,6 @@
 # Terms
 
-<!-- Review baseline: 5 September 2026, main 8f8e890. -->
+<!-- Review baseline: 5 September 2026, main c4e6d48. -->
 
 Cekgu is a demo for educators aged 18 or older who check multiple-choice practice questions before publication. It
 highlights possible problems for a human to review. It does not certify a paper as correct or replace subject expertise
