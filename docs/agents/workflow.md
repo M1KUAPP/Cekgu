@@ -34,11 +34,11 @@ behind, cut scope, not the quality of what ships. **Demo-first:** if it will not
 **No implementation starts until `docs/` holds all three.** Cheap to write, expensive to skip: without them the first
 days produce code nobody agreed to, and the deck's required sections get invented at the end from whatever got built.
 
-| File              | Answers                                                                         | Owns                                              |
-| ----------------- | ------------------------------------------------------------------------------- | ------------------------------------------------- |
-| `docs/PRODUCT.md` | **Who and why.** The user, their problem, the demo moment, the scope ladder     | The spine. Everything downstream cites it         |
-| `docs/PRD.md`     | **What.** Requirements, user stories, acceptance criteria, what is out of scope | Scope. What `hackathon-scope-cutter` cuts against |
-| `docs/TRD.md`     | **How.** Architecture, API contracts, data models, schemas, decision rationale  | Technical truth. Canonical over this file         |
+| File              | Answers                                                                         | Owns                                        |
+| ----------------- | ------------------------------------------------------------------------------- | ------------------------------------------- |
+| `docs/PRODUCT.md` | **Who and why.** The user, their problem, the demo moment, the scope ladder     | The spine. Everything downstream cites it   |
+| `docs/PRD.md`     | **What.** Requirements, user stories, acceptance criteria, what is out of scope | Scope. What every scope cut is made against |
+| `docs/TRD.md`     | **How.** Architecture, API contracts, data models, schemas, decision rationale  | Technical truth. Canonical over this file   |
 
 `docs/DESIGN.md` is the fourth, and owns the design system: palette, type pairing, radius and border treatment, spacing
 scale.

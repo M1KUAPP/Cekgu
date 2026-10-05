@@ -10,7 +10,6 @@ amendments to the guide itself are in [Markdown style amendments](project.md#mar
 - **Forward-looking only.** Apply this to what you write or touch. Do not sweep existing docs to conform
 - **Never change a quotation.** In [`docs/source/`](../source/) the structure and our own framing follow the style
   guide, but an organizer's words are reproduced exactly. A reworded quote is a wrong quote
-- **Do not reformat installed skills.** `.agents/skills/` and `.claude/skills/` carry vendored upstream content
 - **No clumped prose.** No block over four lines. Three or more consecutive bolded-lead-in paragraphs are a list. An
   enumeration of three or more items inside a sentence is a list
 - **A table must earn itself.** Use one for uniform data across two dimensions. A two-column table of labels and prose

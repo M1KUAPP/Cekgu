@@ -1,24 +1,12 @@
-# Skills, subagents and hooks
-
-**38 skills are committed** and all are optional: invoke one when the task matches, not as a checkpoint before every
-action. Your tool already lists them with descriptions, so the inventory is not repeated here. Provenance, what was
-retargeted, what was deliberately not taken, and what each hook does:
-[`.agents/skills/VENDORED.md`](../../.agents/skills/VENDORED.md).
-
-Three things the listing does not tell you:
-
-- **`brainstorming` is not the ideation skill.** It shapes a build once a concept is locked. The eight business skills
-  are what concept selection runs on
-- **Taste sets the target, `impeccable` hits it.** Do not start with `impeccable`
-- **The `hackathon-*` skills were retargeted.** Their bodies still name a different event's rules. The `> ## This Event`
-  block at the top of each wins
+# Subagents, hooks and standing references
 
 **One subagent.** `pitch-smith` owns `docs/demo/` — the pitch script, the deck, the PDF and the 2-minute video script,
 and nothing else. Dispatch it once the build is frozen, or earlier to draft against what already works.
 
 **Four hooks** are wired in `.claude/settings.json`, each exiting 0 on internal failure so a broken guard never wedges a
 session. Only one can stop you: `guard-git.sh` blocks unreviewed pushes to `main` and `git add .env`. The other three
-are informational.
+are informational or tidy up: `session-brief.sh` prints one line of orientation, `env-drift.mjs` reports a local `.env`
+that disagrees with the repository, and `format-edited.sh` formats the file just edited.
 
 ## Appendix: standing references
 

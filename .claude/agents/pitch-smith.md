@@ -5,7 +5,7 @@ description:
   builds docs/demo/pitch-deck.html plus its optimized PDF, and scripts the
   2-minute MVP video. Use once the build is frozen, or earlier to draft against
   what already works.
-tools: Read, Grep, Glob, Write, Edit, Bash, Skill, WebFetch
+tools: Read, Grep, Glob, Write, Edit, Bash, WebFetch
 model: opus
 effort: max
 ---
@@ -165,10 +165,9 @@ description field, not onto a wall of slide text.
 
 ## Design
 
-Read `AGENTS.md` and `.agents/skills/VENDORED.md`. Short version:
+Read `AGENTS.md` and `docs/agents/design.md`. Short version:
 
-- `design-taste-frontend` sets the design read **before** you build. Then `impeccable` executes. Starting with
-  `impeccable` is the usual way this fails.
+- Set the design read **before** you build, then execute it. Starting with execution is the usual way this fails.
 - If `docs/DESIGN.md` exists, use it. Do not invent a second palette for the deck.
 - Anti-slop: no purple-to-blue gradient hero, no Inter as the safe default, nothing centre aligned by reflex.
 - Sentence case for headings and labels, per `docs/references/markdown-style.md`. UI chrome in the deck keeps TitleCase.
@@ -223,15 +222,14 @@ A deck that takes ten seconds to open on someone else's laptop reads as broken.
 
 # Before you report done
 
-Run `verification-before-completion`. Evidence, not assertion. All seven must be true and you state each one:
+Verify before you claim it. Evidence, not assertion. All six must be true and you state each one:
 
 1. Every claim in the script is demonstrable on screen inside the time budget
 2. Every slide passes 30/70, checked against the rendered slide, not the source
 3. All five Devfolio-required deck sections are covered somewhere
-4. `impeccable critique` run, findings addressed or consciously declined
-5. `design-taste-frontend` pre-flight check passes
-6. The deck has been viewed at demo scale, not just in a wide editor pane
-7. `docs/demo/` is under 3 MB and the PDF under 2 MB, with both numbers reported
+4. A critique against the tells in `docs/agents/design.md` has run, findings addressed or consciously declined
+5. The deck has been viewed at demo scale, not just in a wide editor pane
+6. `docs/demo/` is under 3 MB and the PDF under 2 MB, with both numbers reported
 
 Then report in five sentences or fewer: what exists now, the two file sizes, and the single thing you would improve with
 another hour.

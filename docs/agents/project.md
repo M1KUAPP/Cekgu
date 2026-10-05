@@ -10,7 +10,7 @@ Contents:
 1. [Track requirements](#track-requirements)
 1. [Coding guidelines override](#coding-guidelines-override)
 1. [Markdown style amendments](#markdown-style-amendments)
-1. [Superpowers output](#superpowers-output)
+1. [Specs, plans and research](#specs-plans-and-research)
 
 ## Project
 
@@ -73,8 +73,8 @@ rediscovered from PR descriptions each time.
 in [`docs/research/gateway-capabilities.md`](../research/gateway-capabilities.md): removing the em dash leaves a doubled
 space, and GitHub turns that into the doubled hyphen their anchors carry. Three inbound links depend on it.
 
-## Superpowers output
+## Specs, plans and research
 
-The superpowers skills (`brainstorming`, `writing-plans` and the rest) default to `docs/superpowers/specs/` and
-`docs/superpowers/plans/`. In this repo they write both specs and plans to [`docs/plans/`](../plans/), keeping their
-file names, and research goes to [`docs/research/`](../research/). There is no `docs/superpowers/` folder.
+Specs and plans go to [`docs/plans/`](../plans/), and research goes to [`docs/research/`](../research/). A tool that
+defaults elsewhere, such as `docs/superpowers/specs/` or `docs/superpowers/plans/`, writes here instead and keeps its
+file names. There is no `docs/superpowers/` folder.
