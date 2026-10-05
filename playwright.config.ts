@@ -29,7 +29,6 @@ export default defineConfig({
   // record that smoke.e2e.ts is asserting the counts of. Run in parallel those race: four workers
   // failed 6 of 14 and left 2 unrun, while the same suite serially passes 13 in 11 seconds. The
   // shared state is the product's design, not the suite's mistake, so the suite yields.
-  fullyParallel: false,
   workers: 1,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
