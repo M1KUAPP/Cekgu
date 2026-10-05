@@ -252,8 +252,9 @@ it: `main` has no branch protection or ruleset, and no CI runs on pull requests.
 
 1. **Branch.** `<type>/<short-slug>`, matching the commit types below
 1. **Commit** in [Conventional Commits](https://www.conventionalcommits.org/) form: `<type>[scope]: <description>`, a
-   single imperative sentence, lowercase, no trailing period. Allowed types: `feat`, `fix`, `refactor`, `docs`, `test`,
-   `chore`, `style`, `perf`
+   single imperative sentence, lowercase, no trailing period. `commitlint.config.mjs` extends
+   `@commitlint/config-conventional`, so the allowed types are `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`,
+   `refactor`, `revert`, `style` and `test`. The header, scope included, is at most 50 characters
 1. **Push the branch** and open a PR with `gh pr create`
 1. **Merge** the verified head with
    `gh pr merge <number> --squash --delete-branch --match-head-commit <40-character-head-sha>`. Capture `headRefOid`
