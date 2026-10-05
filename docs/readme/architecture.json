@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Cekgu: one Cloud Run container, every reasoning call through GonkaRouter",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "vision",
+      "type": "external",
+      "label": "Vision Transcription",
+      "sublabel": "uploads only, decides nothing",
+      "pos": [40, 60],
+      "size": [200, 64]
+    },
+    {
+      "id": "spa",
+      "type": "frontend",
+      "label": "React 19 SPA",
+      "sublabel": "records, evidence, receipts",
+      "pos": [40, 250],
+      "size": [200, 64]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "PostgreSQL · Neon",
+      "sublabel": "records, items, attempts",
+      "pos": [40, 450],
+      "size": [200, 64]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "Hono API",
+      "sublabel": "/api/* · SSE",
+      "pos": [360, 250],
+      "size": [190, 64]
+    },
+    {
+      "id": "assistant",
+      "type": "backend",
+      "label": "Record Assistant",
+      "sublabel": "phrases facts it retrieved",
+      "pos": [700, 60],
+      "size": [200, 64]
+    },
+    {
+      "id": "semaphore",
+      "type": "backend",
+      "label": "Gateway Semaphore",
+      "sublabel": "4 calls in flight",
+      "pos": [700, 250],
+      "size": [200, 64]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Queue Worker",
+      "sublabel": "claim → round → verdict",
+      "pos": [700, 450],
+      "size": [200, 64]
+    },
+    {
+      "id": "retrieval",
+      "type": "external",
+      "label": "Search API · Tavily",
+      "sublabel": "include_answer: false",
+      "pos": [700, 630],
+      "size": [200, 64]
+    },
+    {
+      "id": "gonka",
+      "type": "cloud",
+      "label": "GonkaRouter",
+      "sublabel": "api.gonkarouter.io/v1",
+      "pos": [1040, 250],
+      "size": [210, 64]
+    },
+    {
+      "id": "receipts",
+      "type": "cloud",
+      "label": "Public Receipts",
+      "sublabel": "GET /v1/receipts/:id",
+      "pos": [1040, 450],
+      "size": [210, 64]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Google Cloud Run · one container",
+      "wraps": ["api", "assistant", "semaphore", "worker"]
+    }
+  ],
+  "connections": [
+    {
+      "id": "spa-api",
+      "from": "spa",
+      "to": "api",
+      "label": "fetch · SSE",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-structure",
+      "from": "api",
+      "to": "semaphore",
+      "label": "structure a draft"
+    },
+    {
+      "id": "api-vision",
+      "from": "api",
+      "to": "vision",
+      "label": "image or PDF, text back",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "right"
+    },
+    {
+      "id": "api-assistant",
+      "from": "api",
+      "to": "assistant",
+      "label": "record questions",
+      "fromSide": "top",
+      "toSide": "left"
+    },
+    {
+      "id": "api-db",
+      "from": "api",
+      "to": "db",
+      "label": "records · items",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "worker-solve",
+      "from": "worker",
+      "to": "semaphore",
+      "label": "solver prompt"
+    },
+    {
+      "id": "worker-db",
+      "from": "worker",
+      "to": "db",
+      "label": "attempts · verdict"
+    },
+    {
+      "id": "worker-search",
+      "from": "worker",
+      "to": "retrieval",
+      "label": "query without the key",
+      "variant": "dashed",
+      "labelAt": [739, 575]
+    },
+    {
+      "id": "gateway-call",
+      "from": "semaphore",
+      "to": "gonka",
+      "label": "no fallback",
+      "variant": "emphasis"
+    },
+    {
+      "id": "gateway-id",
+      "from": "gonka",
+      "to": "semaphore",
+      "label": "x-request-id",
+      "labelDy": 30
+    },
+    {
+      "id": "assistant-call",
+      "from": "assistant",
+      "to": "gonka",
+      "label": "own x-request-id",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "top"
+    },
+    {
+      "id": "receipt-check",
+      "from": "semaphore",
+      "to": "receipts",
+      "label": "confirm the served model",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ]
+}
