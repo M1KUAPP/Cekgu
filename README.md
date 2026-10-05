@@ -338,12 +338,10 @@ Running it locally needs a Postgres database and a GonkaRouter key, because ther
 1. **Run the checks.** No CI runs these.
 
    ```sh
-   bun run lint           # Biome across the code, Prettier across Markdown and YAML
-   bun run typecheck      # tsc --noEmit, strict, noUncheckedIndexedAccess
-   bun test               # 498 pass, 77 skip, 0 fail across 52 files
-   bun run e2e            # Playwright against the deployment named by E2E_BASE_URL
-   bun run check:anchors
+   bun run check
    ```
+
+   `bun run check` runs `bun run lint` (Biome across the code, Prettier across Markdown and YAML), `bun run typecheck` (`tsc --noEmit`, strict, `noUncheckedIndexedAccess`), `bun test` (498 pass, 77 skip, 0 fail across 52 files), `bun run check:anchors` and `bun run test:guard`. `bun run e2e` runs Playwright against the deployment named by `E2E_BASE_URL`; it is not part of `check`.
 
    `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
 
