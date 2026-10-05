@@ -87,7 +87,7 @@ A mis-keyed question rewards the learner who guessed and penalizes the one who u
 
 **Why the right-hand column matters.** Two confident readers who agree are indistinguishable from an unambiguous question. The sample carries a real instance: a question written to be ambiguous came back **Clear** because both readers committed to the same single answer. Built for practice papers and synthetic examples, not for confidential or unreleased examinations.
 
-Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — AI for Society track, where it placed **4th** and earned **20M GonkaRouter tokens over six months**.
+Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) (GonkaRouter — AI for Society track), where it placed 4th.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -386,9 +386,11 @@ See [LICENSE](LICENSE) for more information.
 
 ## Acknowledgments
 
-- [GonkaRouter](https://gonkarouter.io) — the gateway every reasoning call in this project runs through
-- [MUBA Blockchain Hackathon 2026](docs/brief.md) — the event and the AI for Society track brief
-- Tororo and Hijiki are Live2D sample characters, not Cekgu originals — used under the Live2D Free Material License Agreement and built with the Live2D Cubism SDK.
+- [GonkaRouter](https://gonkarouter.io) — the gateway every reasoning call in this project runs through.
+- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](docs/brief.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
+- [Live2D sample data](https://www.live2d.com/download/sample-data/) — Tororo and Hijiki are Live2D sample characters, not Cekgu originals — used under the Live2D Free Material License Agreement and built with the Live2D Cubism SDK.
+- [Acceptable use](docs/legal/acceptable-use.md) — **Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md), [acceptable use](docs/legal/acceptable-use.md).
+- [archify](https://github.com/tt-a1i/archify) — architecture diagrams.
 - [Shields.io](https://shields.io)
 - [contrib.rocks](https://contrib.rocks)
 
