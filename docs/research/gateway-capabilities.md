@@ -1,10 +1,10 @@
 # Gateway capabilities
 
 What the GonkaRouter gateway can be relied on to do, and the two gaps that threaten a hard track requirement. Read
-alongside [`../../TRD.md`](../../TRD.md), which is canonical for implementation detail; this file records the
+alongside [`../TRD.md`](../TRD.md), which is canonical for implementation detail; this file records the
 **provenance and confidence** of each fact and the questions still open.
 
-**Method.** Extracted from `../../TRD.md` and `../../source/` by a delegated model, then spot-checked against the same
+**Method.** Extracted from `../TRD.md` and `../source/` by a delegated model, then spot-checked against the same
 files. Web claims in [What the Request ID actually proves](#what-the-request-id-actually-proves) were fetched from
 primary sources on 2026-08-30. Interpretation is marked as such throughout.
 
@@ -391,7 +391,7 @@ verifiable" is weaker than it sounds.
 
 | Source                                                                                                                                               | Accessed   |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `../../TRD.md`, `../../source/gonkarouter-tutorial.md`, `../../source/gonkarouter-workshop-slides.md`                                                | 2026-08-30 |
+| `../TRD.md`, `../source/gonkarouter-tutorial.md`, `../source/gonkarouter-workshop-slides.md`                                                         | 2026-08-30 |
 | [Gonka whitepaper](https://gonka.ai/whitepaper.pdf) (§6, §7, Reputation, Verification challenges)                                                    | 2026-08-30 |
 | [Gonka docs](https://docs.gonka.ai) — architecture, FAQ, developer quickstart                                                                        | 2026-08-30 |
 | [Building open AI infrastructure — crypto.news](https://crypto.news/building-open-ai-infrastructure-inside-gonkas-vision-for-decentralized-compute/) | 2026-08-30 |

@@ -393,7 +393,7 @@ readings from the same family side by side as if they were independent.
 ### The sample record
 
 **FR-SAMPLE-1.** One sample record exists in the Guest account containing the 12 typed Computer Science questions from
-[the mechanism benchmark](superpowers/research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september), with
+[the mechanism benchmark](research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september), with
 recorded readings and public request ids from a real pass; nothing in it is fabricated.
 
 - Every request id in the sample resolves to a public receipt whose model matches the displayed served model
@@ -631,7 +631,7 @@ The mascot (FR-MASCOT-1 to FR-MASCOT-5) is not a floor bullet. It ships behind i
 
 - **Which benchmark pass seeds the sample record.** ~~Decided 3 September: pass 1~~ — **superseded 3 September.** Pass
   1's per-item output does not exist in this repository; only two of its request ids survive, quoted in
-  [`three-day-rescore.md`](superpowers/research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september). The
+  [`three-day-rescore.md`](research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september). The
   sample is seeded instead from `capture-2026-09-03`, a fresh pass over a twelve-item subset of the committed
   `src/server/fixtures/evaluation-set.json`, run through the shipped queue. Three consequences follow:
   - It verified **12 of 12** against the ten this clause required, and both planted key errors were caught

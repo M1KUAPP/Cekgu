@@ -232,7 +232,7 @@ pass A and 19.3 s in pass B — so the turnaround figures above are dominated by
 
 **This rate is a load effect and should not be read against the sample record.** The 12-item capture on 3 September
 returned 0 Unverified; these 30-item passes returned 7 and 12. Thirty items back to back sustain rate limiting that a
-twelve-item paper never reaches, and [gotcha 10](../../TRD.md#5-verified-gotchas) in the TRD is account-level. Quoting 0
+twelve-item paper never reaches, and [gotcha 10](../TRD.md#5-verified-gotchas) in the TRD is account-level. Quoting 0
 of 12 beside 19 of 60 without that explanation would misrepresent both.
 
 **All three families served, and the ordering moved between passes.** Pass A was carried by MiniMax (31 readings) and
@@ -257,7 +257,7 @@ What is actually left, once the things that are not build work are subtracted:
 | **Build**                                                                                                    | **≈ 2.5 days** | 3 Sept, 4 Sept and the morning of 5 Sept, for a team of two to four      |
 
 So the question is no longer "which concept wins in nine days". It is: **which concept ships as a deployed, working demo
-in two and a half days**, including the call layer [`../../TRD.md`](../../TRD.md) already specifies: the no-fallback
+in two and a half days**, including the call layer [`../TRD.md`](../TRD.md) already specifies: the no-fallback
 header, the receipt check, the request-id record and reasoning-tag stripping. Three things lose most of their
 buildability points under that clock:
 

@@ -50,7 +50,7 @@ That is the whole remit. Do not touch `src/`, do not open issues, do not review 
 - `README.md` for what we actually claim to have built
 - **The working code, not the plan for it.** Every line of the script has to be demonstrable on screen. If you cannot
   find the code that does a thing, it does not go in the script.
-- `docs/superpowers/research/` for the positioning the concept was chosen on
+- `docs/research/` for the positioning the concept was chosen on
 - `docs/TRD.md` for the architecture slide, and `docs/DESIGN.md` for the palette and type pairing if one is recorded
 
 ---
@@ -171,7 +171,7 @@ Read `AGENTS.md` and `.agents/skills/VENDORED.md`. Short version:
   `impeccable` is the usual way this fails.
 - If `docs/DESIGN.md` exists, use it. Do not invent a second palette for the deck.
 - Anti-slop: no purple-to-blue gradient hero, no Inter as the safe default, nothing centre aligned by reflex.
-- Sentence case for headings and labels, per `docs/reference/markdown-style.md`. UI chrome in the deck keeps TitleCase.
+- Sentence case for headings and labels, per `docs/references/markdown-style.md`. UI chrome in the deck keeps TitleCase.
 
 ## Structure that works
 

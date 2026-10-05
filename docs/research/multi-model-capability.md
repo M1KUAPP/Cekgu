@@ -134,4 +134,4 @@ All accessed 2026-08-30.
 - [arXiv:2603.10060](https://arxiv.org/html/2603.10060v1) — self-consistency vs structural evidence
 - [arXiv:2604.07650](https://arxiv.org/abs/2604.07650) — auditing behavioural entanglement between LLMs
 - [arXiv:2607.19899](https://arxiv.org/html/2607.19899v1) — correlated agreement blindness
-- Model capabilities: [`gateway-capabilities.md`](gateway-capabilities.md), sourced from `../../TRD.md`
+- Model capabilities: [`gateway-capabilities.md`](gateway-capabilities.md), sourced from `../TRD.md`

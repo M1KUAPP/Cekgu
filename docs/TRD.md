@@ -153,7 +153,7 @@ magnitude, not a benchmark.
 
 **Availability, measured 2026-09-02.** That evening Kimi-K2.6 timed out on every call at 60–90 s, while DeepSeek
 answered in 0.7–5 s and MiniMax in 2–50 s. Design for Kimi being absent. Provenance and the MiniMax failure pattern are
-in [`superpowers/research/gateway-capabilities.md`](superpowers/research/gateway-capabilities.md#latency-and-hedging).
+in [`research/gateway-capabilities.md`](research/gateway-capabilities.md#latency-and-hedging).
 
 **Availability, measured 2026-09-02, about 22:40 MYT.** Later the same evening the roles swapped:
 `deepseek-ai/DeepSeek-V4-Flash-0731` returned `429` on every call, sequential single requests included, with
@@ -164,7 +164,7 @@ in about 50 s and MiniMax in 8–23 s. Single run.
 **Interpretation, not yet shown to generalise.** Upstream availability rotates across the three models within a single
 evening. Treat the labs as interchangeable readers, run on whichever two are up, and prove distinctness by receipt
 rather than by which model was asked for. Detail in
-[`superpowers/research/gateway-capabilities.md`](superpowers/research/gateway-capabilities.md#measured-2-september-2026).
+[`research/gateway-capabilities.md`](research/gateway-capabilities.md#measured-2-september-2026).
 
 **Availability, measured 2026-09-03, 00:49–01:08 MYT.** In a controlled two-pass benchmark of 12 short CS questions,
 MiniMax completed **24 of 24** item calls, while Kimi completed **13 of 24** before a 90-second cutoff. Kimi had no
@@ -173,7 +173,7 @@ from DeepSeek.
 
 Of 24 item-runs, 13 obtained two receipt-verified model families and none obtained two within 30 seconds. Full method
 and request-id examples are in
-[`three-day-rescore.md`](superpowers/research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september).
+[`three-day-rescore.md`](research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september).
 
 **Parallel fan-out works.** Three concurrent requests, one per model, completed in **16.2 s wall clock** — bounded by
 the slowest model, not the sum. Each returned its own distinct `x-request-id`. Multi-model consensus is therefore a
@@ -1704,7 +1704,7 @@ cost, not an oversight.
 ## 21. The readers' voice and the record assistant
 
 Two features on `/record/:id`, agreed 4 September. Design record:
-[`superpowers/specs/2026-09-04-talking-cats-and-record-agent-design.md`](superpowers/specs/2026-09-04-talking-cats-and-record-agent-design.md).
+[`plans/2026-09-04-talking-cats-and-record-agent-design.md`](plans/2026-09-04-talking-cats-and-record-agent-design.md).
 
 ### The cats are seats, and so are the voices
 

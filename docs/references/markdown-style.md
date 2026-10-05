@@ -821,5 +821,5 @@ here so the exceptions are not rediscovered from PR descriptions each time.
     `Model Changelog`, `Bahasa Nenek` and `Hound`.
 
 **Two headings must keep their em dash.** `Receipts — shipped 2026-08-31` and `Network reality — measured, not marketed`
-in `superpowers/research/gateway-capabilities.md`: removing the em dash leaves a doubled space, and GitHub turns that
+in `research/gateway-capabilities.md`: removing the em dash leaves a doubled space, and GitHub turns that
 into the doubled hyphen their anchors carry. Three inbound links depend on it.

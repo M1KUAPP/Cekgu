@@ -129,7 +129,7 @@ formatter setting `biome.json` states, so both wrap at 120 and neither can undo 
 is off, so fenced code samples are never rewritten.
 
 `rtk` and `graphify`, both optional and per-machine, are documented in
-[`docs/reference/agent-tooling.md`](docs/reference/agent-tooling.md). The repository layout is not written down
+[`docs/references/agent-tooling.md`](docs/references/agent-tooling.md). The repository layout is not written down
 anywhere: `README.md` is judge-facing and carries architecture rather than a directory tree. Read it off the tree
 itself.
 
@@ -160,11 +160,11 @@ their behalf. Read the screen, do the navigation, hand back the one action that 
 - **Types:** no `any`; prefer `unknown` plus narrowing. Validate at system boundaries
 - **Error handling:** validate at boundaries; do not wrap internal framework calls in try/catch
 - **Comments:** default to none. Comment only when the _why_ is non-obvious. Never describe _what_ the code does
-- **Changes are surgical.** See [guideline 3](docs/reference/coding-guidelines.md#3-surgical-changes)
+- **Changes are surgical.** See [guideline 3](docs/references/coding-guidelines.md#3-surgical-changes)
 
 ## Documentation hygiene
 
-**[`docs/reference/markdown-style.md`](docs/reference/markdown-style.md) is the style guide for every Markdown file in
+**[`docs/references/markdown-style.md`](docs/references/markdown-style.md) is the style guide for every Markdown file in
 this repo.** It covers document layout, headings, lists, code blocks, links, images and tables. Read it before
 restructuring a document. The rules below are this project's additions to it, not a replacement.
 
@@ -197,7 +197,7 @@ Both may describe architecture. They differ in **depth and audience**, not subje
 the README.** The track brief asks for "clean code with clear documentation on the GonkaRouter integration", and that is
 where they look. It lives at the repo root, where GitHub renders it as the landing page, so keep links relative to the
 root. It follows the M1KUAPP org README template, which wins over
-[`docs/reference/markdown-style.md`](docs/reference/markdown-style.md) for that file.
+[`docs/references/markdown-style.md`](docs/references/markdown-style.md) for that file.
 
 ## Design standards
 
@@ -334,12 +334,12 @@ are informational.
 Moved out of this file so they are not reloaded into every session. **The sections above outrank them wherever they
 disagree.**
 
-| Reference                               | Lives in                                                                                                 | Applies                                                                                 |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| **Markdown style guide**                | [`docs/reference/markdown-style.md`](docs/reference/markdown-style.md)                                   | Every Markdown file in the repo                                                         |
-| **Coding guidelines (Andrej Karpathy)** | [`docs/reference/coding-guidelines.md`](docs/reference/coding-guidelines.md)                             | Always. Guideline 1 is overridden by **How to work** above; the file says so at the top |
-| **RTK (Rust Token Killer)**             | [`docs/reference/agent-tooling.md`](docs/reference/agent-tooling.md#rtk-the-rust-token-killer)           | Only if `which rtk` finds it                                                            |
-| **Graphify**                            | [`docs/reference/agent-tooling.md`](docs/reference/agent-tooling.md#graphify-a-codebase-knowledge-graph) | Only if `which graphify` finds it, and only once there is real code                     |
+| Reference                               | Lives in                                                                                                   | Applies                                                                                 |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Markdown style guide**                | [`docs/references/markdown-style.md`](docs/references/markdown-style.md)                                   | Every Markdown file in the repo                                                         |
+| **Coding guidelines (Andrej Karpathy)** | [`docs/references/coding-guidelines.md`](docs/references/coding-guidelines.md)                             | Always. Guideline 1 is overridden by **How to work** above; the file says so at the top |
+| **RTK (Rust Token Killer)**             | [`docs/references/agent-tooling.md`](docs/references/agent-tooling.md#rtk-the-rust-token-killer)           | Only if `which rtk` finds it                                                            |
+| **Graphify**                            | [`docs/references/agent-tooling.md`](docs/references/agent-tooling.md#graphify-a-codebase-knowledge-graph) | Only if `which graphify` finds it, and only once there is real code                     |
 
 Two rules from them that change behaviour even if you never open them:
 
