@@ -10,24 +10,24 @@ thing after this file is edited. Retired ids are never reused.
 
 Contents:
 
-1. [Goals and non-goals](#goals-and-non-goals)
-1. [Users](#users)
-1. [Functional requirements](#functional-requirements)
-   1. [Public pages](#public-pages)
-   1. [Accounts and entry](#accounts-and-entry)
-   1. [Starting a check](#starting-a-check)
-   1. [The queue](#the-queue)
-   1. [Verdicts](#verdicts)
-   1. [Records](#records)
-   1. [Evidence](#evidence)
-   1. [The sample record](#the-sample-record)
-   1. [The mascot](#the-mascot)
-1. [Non-functional requirements](#non-functional-requirements)
-1. [User stories](#user-stories)
-1. [The submission demo as an acceptance test](#the-submission-demo-as-an-acceptance-test)
-1. [Out of scope](#out-of-scope)
-1. [Traceability](#traceability)
-1. [Open questions](#open-questions)
+1.  [Goals and non-goals](#goals-and-non-goals)
+1.  [Users](#users)
+1.  [Functional requirements](#functional-requirements)
+    1.  [Public pages](#public-pages)
+    1.  [Accounts and entry](#accounts-and-entry)
+    1.  [Starting a check](#starting-a-check)
+    1.  [The queue](#the-queue)
+    1.  [Verdicts](#verdicts)
+    1.  [Records](#records)
+    1.  [Evidence](#evidence)
+    1.  [The sample record](#the-sample-record)
+    1.  [The mascot](#the-mascot)
+1.  [Non-functional requirements](#non-functional-requirements)
+1.  [User stories](#user-stories)
+1.  [The submission demo as an acceptance test](#the-submission-demo-as-an-acceptance-test)
+1.  [Out of scope](#out-of-scope)
+1.  [Traceability](#traceability)
+1.  [Open questions](#open-questions)
 
 ## Goals and non-goals
 
@@ -563,21 +563,21 @@ The [two-minute product flow](PRODUCT.md#two-minute-product-flow) must be execut
 sample record loaded, on the demo machine, with the mascot flag in whichever state is planned for the pitch. The test
 passes only if every step passes; a live model outage must not fail it.
 
-1. Given the sign-in page, when **Sign In as Guest** is clicked, then the Guest workspace opens with the warning banner
-   visible. Covers FR-AUTH-2, FR-AUTH-3
-1. Given the Guest records library, when the sample row is opened, then the record shows its verdict summary counts,
-   with the counts matching the loaded benchmark pass and **Unverified** items present where that pass had them. Covers
-   FR-SAMPLE-1, FR-RECORD-3
-1. Given the sample record, when the **Possible Key Error** filter is chosen and the FIFO item is opened, then the
-   supplied key reads **Stack** and both readings read **Queue**. Covers FR-RECORD-3, FR-VERDICT-3
-1. Given the FIFO item, then two served model names, two distinct request ids, two receipt statuses and the printed rule
-   are on one screen. Covers FR-EVIDENCE-1, FR-EVIDENCE-3, FR-VERDICT-4
-1. Given the FIFO item, when **Key Corrected** is chosen, then the disposition is stored, the summary updates and the
-   machine verdict is still shown. Covers FR-RECORD-4, FR-SAMPLE-3
-1. Given an **Unverified** sample item, when opened, then the attempt history shows which family timed out and the
-   fail-closed sentence is printed. Covers FR-VERDICT-2, FR-EVIDENCE-2
-1. Given **Records**, then the sample still shows the disposition, and when a new one-item check is submitted, then its
-   record appears as **Queued** within 1 second and the presenter can leave it. Covers FR-CHECK-3, NFR-PERF-1
+1.  Given the sign-in page, when **Sign In as Guest** is clicked, then the Guest workspace opens with the warning banner
+    visible. Covers FR-AUTH-2, FR-AUTH-3
+1.  Given the Guest records library, when the sample row is opened, then the record shows its verdict summary counts,
+    with the counts matching the loaded benchmark pass and **Unverified** items present where that pass had them. Covers
+    FR-SAMPLE-1, FR-RECORD-3
+1.  Given the sample record, when the **Possible Key Error** filter is chosen and the FIFO item is opened, then the
+    supplied key reads **Stack** and both readings read **Queue**. Covers FR-RECORD-3, FR-VERDICT-3
+1.  Given the FIFO item, then two served model names, two distinct request ids, two receipt statuses and the printed rule
+    are on one screen. Covers FR-EVIDENCE-1, FR-EVIDENCE-3, FR-VERDICT-4
+1.  Given the FIFO item, when **Key Corrected** is chosen, then the disposition is stored, the summary updates and the
+    machine verdict is still shown. Covers FR-RECORD-4, FR-SAMPLE-3
+1.  Given an **Unverified** sample item, when opened, then the attempt history shows which family timed out and the
+    fail-closed sentence is printed. Covers FR-VERDICT-2, FR-EVIDENCE-2
+1.  Given **Records**, then the sample still shows the disposition, and when a new one-item check is submitted, then its
+    record appears as **Queued** within 1 second and the presenter can leave it. Covers FR-CHECK-3, NFR-PERF-1
 
 Before each rehearsal and before the pitch, **Reset Sample** is run so step 5 starts from **Unreviewed**.
 

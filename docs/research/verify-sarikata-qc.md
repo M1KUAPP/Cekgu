@@ -10,16 +10,16 @@ source is a reference link; its definition, at the end of the section, carries t
 
 Contents:
 
-1. [Phenomenon](#phenomenon)
-1. [Incumbents](#incumbents)
-1. [Users](#users)
-1. [Track fit](#track-fit)
-1. [Predicted competition](#predicted-competition)
-1. [Scores](#scores)
-1. [Novelty test](#novelty-test)
-1. [Kill criteria](#kill-criteria)
-1. [Not checked in budget](#not-checked-in-budget)
-1. [Why not LOCK](#why-not-lock)
+1.  [Phenomenon](#phenomenon)
+1.  [Incumbents](#incumbents)
+1.  [Users](#users)
+1.  [Track fit](#track-fit)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores](#scores)
+1.  [Novelty test](#novelty-test)
+1.  [Kill criteria](#kill-criteria)
+1.  [Not checked in budget](#not-checked-in-budget)
+1.  [Why not LOCK](#why-not-lock)
 
 ## Phenomenon
 
@@ -172,9 +172,9 @@ use case fails the second-use test and should stay a footnote.
 
 Yes. The product has no output without the disagreement between readers. Three roles from different labs:
 
-1. Forward reader translates the source cue blind (never sees the delivered subtitle).
-2. Back reader back-translates the delivered subtitle blind (never sees the source).
-3. Diff reader lists every fact that changed between source and back-translation: negation, names, numbers, agent.
+1.  Forward reader translates the source cue blind (never sees the delivered subtitle).
+2.  Back reader back-translates the delivered subtitle blind (never sees the source).
+3.  Diff reader lists every fact that changed between source and back-translation: negation, names, numbers, agent.
 
 Consensus logic is explicit: a cue passes when the diff reader reports no changed fact **and** the forward reading
 agrees with the delivered subtitle on the same fact set; otherwise it is queued with both readings. Thresholds and the
@@ -219,12 +219,12 @@ translator and their demo remains a chat box.
 
 ## Novelty test
 
-1. **Convergence count:** 1-2 of ~30. Defended under [Predicted competition](#predicted-competition).
-2. **Incumbent test:** XL8 MediaCAT AQC, OOONA, EZTitles, Subtitle Edit, Netflix internal QC, COMETKiwi. What they
-   structurally cannot do: sell an independent audit of their own translation, or expose a public per-reading provenance
-   trail. See [Incumbents](#incumbents).
-3. **Second-use test:** Iyuno KL QC editor, next Monday, next episode of the same series, glossary carried over, last
-   week's overrides visible. See [Users](#users).
+1.  **Convergence count:** 1-2 of ~30. Defended under [Predicted competition](#predicted-competition).
+2.  **Incumbent test:** XL8 MediaCAT AQC, OOONA, EZTitles, Subtitle Edit, Netflix internal QC, COMETKiwi. What they
+    structurally cannot do: sell an independent audit of their own translation, or expose a public per-reading provenance
+    trail. See [Incumbents](#incumbents).
+3.  **Second-use test:** Iyuno KL QC editor, next Monday, next episode of the same series, glossary carried over, last
+    week's overrides visible. See [Users](#users).
 
 ## Kill criteria
 
@@ -246,11 +246,11 @@ staffing.
 
 Two reasons, and a phone call would close the second:
 
-1. **The phenomenon is under-evidenced for Malaysia 2023-26.** No viral subtitle blunder and no viral government
-   mistranslation newer than 2018-2020 was found in 15 calls, so the pitch must rest on QC rejection and turnaround
-   pressure, not on virality, until a dated 2024-26 incident is found.
-2. **No named Malaysian buyer or stated pain.** One conversation with a KL vendor QC desk would move Real User from 13
-   to 17 and the verdict toward LOCK.
+1.  **The phenomenon is under-evidenced for Malaysia 2023-26.** No viral subtitle blunder and no viral government
+    mistranslation newer than 2018-2020 was found in 15 calls, so the pitch must rest on QC rejection and turnaround
+    pressure, not on virality, until a dated 2024-26 incident is found.
+2.  **No named Malaysian buyer or stated pain.** One conversation with a KL vendor QC desk would move Real User from 13
+    to 17 and the verdict toward LOCK.
 
 **Strongest fact:** the June 2026 GeekLink roundup of seven subtitle QA tools finds all of them rule-based or
 ASR-confidence, and XL8's own AQC documentation (Aug 2025) describes a rewrite pass with no disclosed mechanism, so

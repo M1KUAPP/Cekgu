@@ -11,15 +11,15 @@ source is a reference link; its definition, at the end of the section, carries t
 
 Contents:
 
-1. [The law](#the-law)
-1. [The phenomenon](#the-phenomenon)
-1. [Ground truth](#ground-truth)
-1. [Incumbents](#incumbents)
-1. [Predicted competition](#predicted-competition)
-1. [Scores](#scores)
-1. [Novelty test](#novelty-test)
-1. [Kill criteria](#kill-criteria)
-1. [What must change before PRODUCT.md](#what-must-change-before-productmd)
+1.  [The law](#the-law)
+1.  [The phenomenon](#the-phenomenon)
+1.  [Ground truth](#ground-truth)
+1.  [Incumbents](#incumbents)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores](#scores)
+1.  [Novelty test](#novelty-test)
+1.  [Kill criteria](#kill-criteria)
+1.  [What must change before PRODUCT.md](#what-must-change-before-productmd)
 
 ## The law
 
@@ -241,14 +241,14 @@ rights".
 
 ## Novelty test
 
-1. **Convergence count:** 2 in domain, 0-1 in mechanism, see [Predicted competition](#predicted-competition). Under
-   five. What makes ours unrecognisable: the product's output is a verdict on the _notice_, not advice to the worker;
-   disagreement between three labs is the measurement, not a bug to average away
-2. **Incumbent test:** named under [Incumbents](#incumbents). Structural gap: platforms cannot be an independent reader
-   of their own accusation; WIE and FareShare are jurisdiction-bound human or numeric tools; eAduan Gig is a mailbox
-3. **Second-use test:** the same rider, day 14, when the s.14(6) decision arrives with its s.14(9) written explanation,
-   pastes that to check whether the explanation now names a rule the first notice did not; or a Penghantar volunteer on
-   a Monday morning with five members' notices from the weekend. Passes, so Real User is not capped at 8
+1.  **Convergence count:** 2 in domain, 0-1 in mechanism, see [Predicted competition](#predicted-competition). Under
+    five. What makes ours unrecognisable: the product's output is a verdict on the _notice_, not advice to the worker;
+    disagreement between three labs is the measurement, not a bug to average away
+2.  **Incumbent test:** named under [Incumbents](#incumbents). Structural gap: platforms cannot be an independent reader
+    of their own accusation; WIE and FareShare are jurisdiction-bound human or numeric tools; eAduan Gig is a mailbox
+3.  **Second-use test:** the same rider, day 14, when the s.14(6) decision arrives with its s.14(9) written explanation,
+    pastes that to check whether the explanation now names a rule the first notice did not; or a Penghantar volunteer on
+    a Monday morning with five members' notices from the weekend. Passes, so Real User is not capped at 8
 
 ## Kill criteria
 
@@ -262,11 +262,11 @@ rights".
 
 ## What must change before PRODUCT.md
 
-1. Replace "fails the Act's notice-and-hearing requirement" with "cannot support a meaningful s.14(7) right to be
-   heard", see [The framing problem](#the-framing-problem)
-2. Fix the four factual errors in the competitor-scan paragraph, see
-   [Corrections to the team's competitor-scan paragraph](#corrections-to-the-teams-competitor-scan-paragraph), and the
-   80% phrasing, see [The 80% Figure](#the-80-figure-source-found-the-teams-phrasing-is-wrong)
-3. Find one 2025-26 Malaysian data point on vague notices: a Penghantar statement post-31 March 2026, or an eAduan Gig
-   filing count from KESUMA. Without it, Real User stays at 13
-4. Verify Grab Malaysia's driver code of conduct is public text, or scope the demo to Foodpanda
+1.  Replace "fails the Act's notice-and-hearing requirement" with "cannot support a meaningful s.14(7) right to be
+    heard", see [The framing problem](#the-framing-problem)
+2.  Fix the four factual errors in the competitor-scan paragraph, see
+    [Corrections to the team's competitor-scan paragraph](#corrections-to-the-teams-competitor-scan-paragraph), and the
+    80% phrasing, see [The 80% Figure](#the-80-figure-source-found-the-teams-phrasing-is-wrong)
+3.  Find one 2025-26 Malaysian data point on vague notices: a Penghantar statement post-31 March 2026, or an eAduan Gig
+    filing count from KESUMA. Without it, Real User stays at 13
+4.  Verify Grab Malaysia's driver code of conduct is public text, or scope the demo to Foodpanda

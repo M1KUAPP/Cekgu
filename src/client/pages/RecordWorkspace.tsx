@@ -196,10 +196,10 @@ export function RecordWorkspace() {
               </div>
             ) : (
               /* Hairlines, not tiles. DESIGN.md keeps level 0 for rows that are the sheet's own and
-                 names the review document's items among them: these are the paper, read in order,
-                 not a set of separate objects. */
+               * names the review document's items among them: these are the paper, read in order,
+               * not a set of separate objects. */
               /* No border-t here: every ItemRow already opens on one, and the two together drew a
-                 2 px edge above the first item that no other list in the product has. */
+               * 2 px edge above the first item that no other list in the product has. */
               <ul className="m-0 list-none p-0 px-6">
                 {shown.map((item) => (
                   <ItemRow key={item.id} item={item} onDisposition={onDisposition} onRetry={onRetry} readOnly={false} />

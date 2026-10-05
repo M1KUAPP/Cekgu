@@ -22,17 +22,17 @@ Citations are inline by publisher, title and date; every URL is under [Sources](
 
 Contents:
 
-1. [Phenomenon: AI note-takers invent and omit](#phenomenon-ai-note-takers-invent-and-omit)
-1. [Malaysian wedge](#malaysian-wedge)
-1. [Incumbents](#incumbents)
-1. [Track fit](#track-fit)
-1. [Predicted competition](#predicted-competition)
-1. [Scores](#scores)
-1. [Novelty test](#novelty-test)
-1. [Kill criteria](#kill-criteria)
-1. [Judge legibility](#judge-legibility)
-1. [Open risks](#open-risks)
-1. [Sources](#sources)
+1.  [Phenomenon: AI note-takers invent and omit](#phenomenon-ai-note-takers-invent-and-omit)
+1.  [Malaysian wedge](#malaysian-wedge)
+1.  [Incumbents](#incumbents)
+1.  [Track fit](#track-fit)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores](#scores)
+1.  [Novelty test](#novelty-test)
+1.  [Kill criteria](#kill-criteria)
+1.  [Judge legibility](#judge-legibility)
+1.  [Open risks](#open-risks)
+1.  [Sources](#sources)
 
 ## Phenomenon: AI note-takers invent and omit
 
@@ -152,15 +152,15 @@ evidence.
 
 **What they structurally cannot do.** Three properties, none of them a missing feature:
 
-1. **A vendor cannot be its own second reader.** Otter could add a second model in a sprint, but a check run by the same
-   party, on the same pipeline, with no external record of which model saw what, is a feature, not independence. Minit's
-   readings come from two labs the user does not control, and the Gonka request id is a record neither lab nor Minit can
-   rewrite
-2. **Their business is "you do not have to read it".** A note-taker that flagged a third of its items as "one reader
-   heard this" would be undermining its own promise. Minit's product is the flagged third
-3. **They sell the recording, not the statutory document.** None outputs minutes shaped to paragraph 7 (signed, dated,
-   resolutions listed, filed with the COB) at a price a volunteer JMB can pay. Board portals do the document but at
-   corporate prices and without independent verification
+1.  **A vendor cannot be its own second reader.** Otter could add a second model in a sprint, but a check run by the same
+    party, on the same pipeline, with no external record of which model saw what, is a feature, not independence. Minit's
+    readings come from two labs the user does not control, and the Gonka request id is a record neither lab nor Minit can
+    rewrite
+2.  **Their business is "you do not have to read it".** A note-taker that flagged a third of its items as "one reader
+    heard this" would be undermining its own promise. Minit's product is the flagged third
+3.  **They sell the recording, not the statutory document.** None outputs minutes shaped to paragraph 7 (signed, dated,
+    resolutions listed, filed with the COB) at a price a volunteer JMB can pay. Board portals do the document but at
+    corporate prices and without independent verification
 
 ## Track fit
 
@@ -220,14 +220,14 @@ year. Open with the JMB chair, not with the transcript.
 
 ## Novelty test
 
-1. **Convergence count: 2.** Generic meeting summarisers. What makes ours unrecognisable: the unit is a minute item with
-   two request ids and a chair-confirm state, and the output is a paragraph 7 document, not a summary
-2. **Incumbent test:** Otter, Fireflies, Fathom, tl;dv, Zoom, Microsoft, Google; Diligent, OnBoard, Boardable, BoardPro;
-   iNeighbour. Structural gaps: a vendor cannot be its own independent reader; their promise is "do not read it" and
-   ours is "read these five"; none ships the statutory document at a volunteer price
-3. **Second use:** the JMB committee meets monthly and paragraph 7(2)(a) gives 21 days to post the minutes; the AGM
-   minutes must accompany next year's notice under 12(3)(a). The second opening is the next committee meeting, with the
-   previous minutes already in the tool as the "matters arising" input
+1.  **Convergence count: 2.** Generic meeting summarisers. What makes ours unrecognisable: the unit is a minute item with
+    two request ids and a chair-confirm state, and the output is a paragraph 7 document, not a summary
+2.  **Incumbent test:** Otter, Fireflies, Fathom, tl;dv, Zoom, Microsoft, Google; Diligent, OnBoard, Boardable, BoardPro;
+    iNeighbour. Structural gaps: a vendor cannot be its own independent reader; their promise is "do not read it" and
+    ours is "read these five"; none ships the statutory document at a volunteer price
+3.  **Second use:** the JMB committee meets monthly and paragraph 7(2)(a) gives 21 days to post the minutes; the AGM
+    minutes must accompany next year's notice under 12(3)(a). The second opening is the next committee meeting, with the
+    previous minutes already in the tool as the "matters arising" input
 
 ## Kill criteria
 
@@ -252,16 +252,16 @@ Otter. The risk for legibility is the screen, not the sentence: if it looks like
 
 ## Open risks
 
-1. **Transcript availability.** The product assumes Zoom, Teams or Meet produced a transcript. Many JMB AGMs are held in
-   a hall, in Malay, English and Chinese, with no recording. Not verified either way; the single biggest hole.
-   Mitigation to test: accept a phone recording plus a transcript from whatever the user has, or narrow the launch wedge
-   to bodies that already meet online (student societies, NGO boards, hybrid MCs)
-2. **Fact-checker lookalike** on the projector. Mitigation: make the artefact a minutes document with a signature line
-   and a COB filing date, not a claims table
-3. **The matcher.** Decide deterministic versus third-model before the TRD; it changes what "consensus" means
-4. **Transcript length** against GonkaRouter context and rate limits; check the TRD's measured figures
-5. **Legal weight.** Minit's output is a draft; the chair's signature makes it evidence. Frame as a feature; never claim
-   the tool produces evidence
+1.  **Transcript availability.** The product assumes Zoom, Teams or Meet produced a transcript. Many JMB AGMs are held in
+    a hall, in Malay, English and Chinese, with no recording. Not verified either way; the single biggest hole.
+    Mitigation to test: accept a phone recording plus a transcript from whatever the user has, or narrow the launch wedge
+    to bodies that already meet online (student societies, NGO boards, hybrid MCs)
+2.  **Fact-checker lookalike** on the projector. Mitigation: make the artefact a minutes document with a signature line
+    and a COB filing date, not a claims table
+3.  **The matcher.** Decide deterministic versus third-model before the TRD; it changes what "consensus" means
+4.  **Transcript length** against GonkaRouter context and rate limits; check the TRD's measured figures
+5.  **Legal weight.** Minit's output is a draft; the chair's signature makes it evidence. Frame as a feature; never claim
+    the tool produces evidence
 
 **Strongest fact:** Second Schedule paragraph 7 of the Strata Management Act 2013 makes the management committee keep
 minutes, display committee minutes within 21 days and file AGM minutes with the Commissioner within 28, and makes the

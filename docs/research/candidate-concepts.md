@@ -13,23 +13,23 @@ material and attacked it; selection and scoring were done by hand, per
 
 Contents:
 
-1. [What rounds 1 and 2 got wrong](#what-rounds-1-and-2-got-wrong)
-1. [The two gates](#the-two-gates)
-1. [Round 4 scores](#round-4-scores)
-1. [Round 11 — phenomenon first](#round-11--phenomenon-first)
-1. [Round 10 — social benefit reweighted](#round-10--social-benefit-reweighted)
-1. [Round 9 — the final five](#round-9--the-final-five)
-1. [Round 8 — after the receipts endpoint shipped](#round-8--after-the-receipts-endpoint-shipped)
-1. [Round 7 — divergent brainstorm](#round-7--divergent-brainstorm)
-1. [Rounds 5 and 6 — nothing survived](#rounds-5-and-6--nothing-survived)
-1. [Rank 1 — Model Changelog](#rank-1--model-changelog)
-1. [Why Dua Keping fell from 93 to 69](#why-dua-keping-fell-from-93-to-69)
-1. [Why Bil Tinggi now leads](#why-bil-tinggi-now-leads)
-1. [Superseded — Dua Keping](#superseded--dua-keping)
-1. [The survivors, briefly](#the-survivors-briefly)
-1. [Killed](#killed)
-1. [Open questions](#open-questions)
-1. [What was not done](#what-was-not-done)
+1.  [What rounds 1 and 2 got wrong](#what-rounds-1-and-2-got-wrong)
+1.  [The two gates](#the-two-gates)
+1.  [Round 4 scores](#round-4-scores)
+1.  [Round 11 — phenomenon first](#round-11--phenomenon-first)
+1.  [Round 10 — social benefit reweighted](#round-10--social-benefit-reweighted)
+1.  [Round 9 — the final five](#round-9--the-final-five)
+1.  [Round 8 — after the receipts endpoint shipped](#round-8--after-the-receipts-endpoint-shipped)
+1.  [Round 7 — divergent brainstorm](#round-7--divergent-brainstorm)
+1.  [Rounds 5 and 6 — nothing survived](#rounds-5-and-6--nothing-survived)
+1.  [Rank 1 — Model Changelog](#rank-1--model-changelog)
+1.  [Why Dua Keping fell from 93 to 69](#why-dua-keping-fell-from-93-to-69)
+1.  [Why Bil Tinggi now leads](#why-bil-tinggi-now-leads)
+1.  [Superseded — Dua Keping](#superseded--dua-keping)
+1.  [The survivors, briefly](#the-survivors-briefly)
+1.  [Killed](#killed)
+1.  [Open questions](#open-questions)
+1.  [What was not done](#what-was-not-done)
 
 ## What rounds 1 and 2 got wrong
 
@@ -488,9 +488,9 @@ in 5), and the best designs make that failure _part of the demo_ rather than a r
 the hackathon Discord, and confirmed several things that invalidate earlier assumptions. Full detail in
 [`gateway-capabilities.md`](gateway-capabilities.md#receipts--shipped-2026-08-31). The two that matter most:
 
-1. **Any third party can inspect the gateway's record of which model served a call**, by request id, without
-   authentication.
-2. **The router silently substitutes models under saturation** — and the track _requires_ two models to cross-verify.
+1.  **Any third party can inspect the gateway's record of which model served a call**, by request id, without
+    authentication.
+2.  **The router silently substitutes models under saturation** — and the track _requires_ two models to cross-verify.
 
 ### The top 5
 

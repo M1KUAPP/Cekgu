@@ -18,17 +18,17 @@ definition, at the end of the section, carries the article title.
 
 Contents:
 
-1. [Wedge A: newsrooms](#wedge-a-newsrooms)
-1. [Wedge B: government communications](#wedge-b-government-communications)
-1. [Wedge C: hallucinated citations](#wedge-c-hallucinated-citations)
-1. [Incumbents](#incumbents)
-1. [Predicted competition](#predicted-competition)
-1. [Scores](#scores)
-1. [Novelty test](#novelty-test)
-1. [Kill criteria](#kill-criteria)
-1. [Judge legibility](#judge-legibility)
-1. [Recommendation](#recommendation)
-1. [Open items for the next round](#open-items-for-the-next-round)
+1.  [Wedge A: newsrooms](#wedge-a-newsrooms)
+1.  [Wedge B: government communications](#wedge-b-government-communications)
+1.  [Wedge C: hallucinated citations](#wedge-c-hallucinated-citations)
+1.  [Incumbents](#incumbents)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores](#scores)
+1.  [Novelty test](#novelty-test)
+1.  [Kill criteria](#kill-criteria)
+1.  [Judge legibility](#judge-legibility)
+1.  [Recommendation](#recommendation)
+1.  [Open items for the next round](#open-items-for-the-next-round)
 
 ## Wedge A: newsrooms
 
@@ -249,15 +249,15 @@ phrase "fact-check".
 
 ## Novelty test
 
-1. **Convergence count: 2.** Defended under [Predicted competition](#predicted-competition). Fails to 10-plus if the
-   judges file it as a fact-checker, which is a presentation risk, not a concept flaw.
-2. **Incumbent: Clearbrief**, then Factiverse, Originality.ai, Grammarly Citation Finder, Westlaw Quick Check. What
-   Sumber does that they structurally cannot: independent, externally resolvable attestations from two labs the vendor
-   does not own, and a public reader-facing check page. Multi-model alone is not the moat and should not be claimed as
-   one.
-3. **Second use:** the same desk editor, the next morning, on the next AI-assisted rewrite of a ministry statement. What
-   changed is the draft. Alternatively the comms officer the next time Workspace Gemini drafts a statement from a
-   40-page report. Both are weekly, not once.
+1.  **Convergence count: 2.** Defended under [Predicted competition](#predicted-competition). Fails to 10-plus if the
+    judges file it as a fact-checker, which is a presentation risk, not a concept flaw.
+2.  **Incumbent: Clearbrief**, then Factiverse, Originality.ai, Grammarly Citation Finder, Westlaw Quick Check. What
+    Sumber does that they structurally cannot: independent, externally resolvable attestations from two labs the vendor
+    does not own, and a public reader-facing check page. Multi-model alone is not the moat and should not be claimed as
+    one.
+3.  **Second use:** the same desk editor, the next morning, on the next AI-assisted rewrite of a ministry statement. What
+    changed is the draft. Alternatively the comms officer the next time Workspace Gemini drafts a statement from a
+    40-page report. Both are weekly, not once.
 
 ## Kill criteria
 

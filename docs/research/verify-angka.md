@@ -16,16 +16,16 @@ in more than one section sit at the end of the file.
 
 Contents:
 
-1. [Phenomenon and data](#phenomenon-and-data)
-1. [Incumbents](#incumbents)
-1. [Users](#users)
-1. [Track fit](#track-fit)
-1. [Predicted competition](#predicted-competition)
-1. [Scores](#scores)
-1. [Novelty test](#novelty-test)
-1. [Kill criteria](#kill-criteria)
-1. [Risks ranked](#risks-ranked)
-1. [Negative results recorded](#negative-results-recorded)
+1.  [Phenomenon and data](#phenomenon-and-data)
+1.  [Incumbents](#incumbents)
+1.  [Users](#users)
+1.  [Track fit](#track-fit)
+1.  [Predicted competition](#predicted-competition)
+1.  [Scores](#scores)
+1.  [Novelty test](#novelty-test)
+1.  [Kill criteria](#kill-criteria)
+1.  [Risks ranked](#risks-ranked)
+1.  [Negative results recorded](#negative-results-recorded)
 
 ## Phenomenon and data
 
@@ -268,15 +268,15 @@ not the headline, or a judge will file the whole thing under the worked example.
 
 ## Novelty test
 
-1. **Convergence count:** 2 recognisably similar (Hansard or budget chatbots), 0 to 1 identical, see
-   [Predicted competition](#predicted-competition). Unrecognisable because there is no question, no generated prose, and
-   the disagreement queue is the home screen. Passes.
-2. **Incumbent test:** Sinar pardocs (full text, hand-extracted tables, volunteer), Extend Review Agent (single-vendor
-   second pass), MADP and bioRxiv 2026 (research, no product). Structurally cannot: a closed vendor cannot issue a
-   third-party-verifiable receipt from three independent labs without making its own model replaceable. Passes.
-3. **Second-use test:** An Edge or Malaysiakini reporter, Monday 6 October 2026 or the nearest sitting day, when LKAN
-   3/2026 is tabled; and again in February 2027 for 1/2027. What changed: a new 14-document series and a table that
-   already exists for the previous two. Passes.
+1.  **Convergence count:** 2 recognisably similar (Hansard or budget chatbots), 0 to 1 identical, see
+    [Predicted competition](#predicted-competition). Unrecognisable because there is no question, no generated prose, and
+    the disagreement queue is the home screen. Passes.
+2.  **Incumbent test:** Sinar pardocs (full text, hand-extracted tables, volunteer), Extend Review Agent (single-vendor
+    second pass), MADP and bioRxiv 2026 (research, no product). Structurally cannot: a closed vendor cannot issue a
+    third-party-verifiable receipt from three independent labs without making its own model replaceable. Passes.
+3.  **Second-use test:** An Edge or Malaysiakini reporter, Monday 6 October 2026 or the nearest sitting day, when LKAN
+    3/2026 is tabled; and again in February 2027 for 1/2027. What changed: a new 14-document series and a table that
+    already exists for the previous two. Passes.
 
 ## Kill criteria
 
@@ -290,15 +290,15 @@ not the headline, or a judge will file the whole thing under the worked example.
 
 ## Risks ranked
 
-1. **The demo split may not appear on clean text.** LKAN command papers are text-native PDFs; digit drops between three
-   models reading the same clean paragraph will be rare. Expect splits on agency attribution, unit ("juta" vs "bilion"),
-   and what a figure means (cost vs loss). Pick a page in advance that produces a real split and say so honestly
-2. **Token cost.** A 14-document series at three calls per paragraph is thousands of calls. Demo on one chapter;
-   AGENTS.md forbids idle burn and the tutorial's rate limits apply
-3. **Malay accuracy of DeepSeek, MiniMax and Kimi on audit prose is unverified.** Spend the first hour on a 20-paragraph
-   sample and measure the three-way agreement rate before committing the UI
-4. **Correlated OCR error.** State it on the first slide; it is the question a technical judge will ask
-5. **Real-user evidence is inferred.** One quoted sentence from one named reporter closes the gap; get it this week
+1.  **The demo split may not appear on clean text.** LKAN command papers are text-native PDFs; digit drops between three
+    models reading the same clean paragraph will be rare. Expect splits on agency attribution, unit ("juta" vs "bilion"),
+    and what a figure means (cost vs loss). Pick a page in advance that produces a real split and say so honestly
+2.  **Token cost.** A 14-document series at three calls per paragraph is thousands of calls. Demo on one chapter;
+    AGENTS.md forbids idle burn and the tutorial's rate limits apply
+3.  **Malay accuracy of DeepSeek, MiniMax and Kimi on audit prose is unverified.** Spend the first hour on a 20-paragraph
+    sample and measure the three-way agreement rate before committing the UI
+4.  **Correlated OCR error.** State it on the first slide; it is the question a technical judge will ask
+5.  **Real-user evidence is inferred.** One quoted sentence from one named reporter closes the gap; get it this week
 
 **Strongest fact:** within 24 hours of LKAN 2/2025 being tabled, the Auditor-General corrected "several media portals"
 that had reported RM48.873bn of audited programme cost as leakages or losses, and secondary coverage of the same report

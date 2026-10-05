@@ -1,6 +1,5 @@
 .git
 .github
-.agents
 .claude
 .husky
 node_modules

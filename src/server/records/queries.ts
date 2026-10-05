@@ -19,21 +19,21 @@ function emptyCounts(): VerdictCounts {
 }
 
 /* The Truth Score is derived here rather than stored, so there is no column that can disagree with
-   the attempts underneath it. It is read off the same admitted readings the verdict used, in the
-   order the round produced them — attempts arrive newest first for the evidence view, and a score
-   built in that order would pick a different pair from the rule and could then contradict the
-   verdict printed beside it. Sorting on finishedAt puts them back in completion order.
-
-   The retry boundary is the other half of that, and omitting it was a real defect rather than a
-   theoretical one. A retry leaves every earlier attempt row in place — requeue() resets the item and
-   deletes nothing — so an item checked twice carries both rounds. Taking the first distinct pair
-   across all of them selects the OLDEST two, while the stored verdict came from the newest round, and
-   the two then disagree on screen: an item whose chip says Unverified would print a number, which is
-   exactly what "Unverified scores null, never 0" exists to prevent.
-
-   POST /api/records/:id/items/:itemId/retry already writes a `retry_requested` disposition to make
-   this boundary visible, and says in its own comment that the rule only considers attempts started
-   after it. This is that rule. */
+ * the attempts underneath it. It is read off the same admitted readings the verdict used, in the
+ * order the round produced them — attempts arrive newest first for the evidence view, and a score
+ * built in that order would pick a different pair from the rule and could then contradict the
+ * verdict printed beside it. Sorting on finishedAt puts them back in completion order.
+ *
+ * The retry boundary is the other half of that, and omitting it was a real defect rather than a
+ * theoretical one. A retry leaves every earlier attempt row in place — requeue() resets the item and
+ * deletes nothing — so an item checked twice carries both rounds. Taking the first distinct pair
+ * across all of them selects the OLDEST two, while the stored verdict came from the newest round, and
+ * the two then disagree on screen: an item whose chip says Unverified would print a number, which is
+ * exactly what "Unverified scores null, never 0" exists to prevent.
+ *
+ * POST /api/records/:id/items/:itemId/retry already writes a `retry_requested` disposition to make
+ * this boundary visible, and says in its own comment that the rule only considers attempts started
+ * after it. This is that rule. */
 function admittedReadings(attemptsForItem: Attempt[], dispositionsForItem: Disposition[]) {
   const boundary = dispositionsForItem
     .filter((disposition) => disposition.kind === 'retry_requested')
@@ -81,10 +81,10 @@ export async function listRecords(userId: string, filters: ListFilters): Promise
       updatedAt: records.updatedAt,
       itemCount: sql<number>`(select count(*)::int from items i where i.record_id = records.id)`,
       /* An item needs attention while it is flagged AND nobody has decided what to do about it.
-         Recording a decision is the educator saying they have dealt with it, so it leaves this
-         count — while the machine verdict it carries never changes, because that is a finding
-         rather than a task. Without the second clause the number never moves and the screen asks
-         for work that is already done. */
+       * Recording a decision is the educator saying they have dealt with it, so it leaves this
+       * count — while the machine verdict it carries never changes, because that is a finding
+       * rather than a task. Without the second clause the number never moves and the screen asks
+       * for work that is already done. */
       attentionCount: sql<number>`(
         select count(*)::int from items i
         where i.record_id = records.id

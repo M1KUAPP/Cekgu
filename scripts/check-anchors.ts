@@ -9,7 +9,7 @@
 
 import { Glob } from 'bun'
 
-const SKIP = ['node_modules/', '.agents/skills/', '.claude/skills/', 'graphify-out/']
+const SKIP = ['node_modules/', 'graphify-out/']
 
 // GitHub's rule: lowercase, drop anything that is not a word character, whitespace or hyphen,
 // then turn each remaining space into a hyphen. Runs are NOT collapsed, so a heading with an
