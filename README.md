@@ -14,7 +14,7 @@
   <h3>Cekgu</h3>
 
   <p>
-    Two AI readers solve a multiple-choice paper without seeing its answer key.
+    An answer-key checker that has two AI model families solve a multiple-choice paper blind to its key, flagging mis-keyed and ambiguous items.
     <br />
     <a href="https://cekgu-op7lf5dspq-as.a.run.app"><strong>Live Demo »</strong></a>
     &middot;
