@@ -102,7 +102,7 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
 
 ### Screenshots
 
-<video src="https://github.com/user-attachments/assets/09f7f9f2-9757-4d40-8aa3-0973fe5ee2b2" controls muted poster="docs/assets/demo-poster.jpg" width="100%">
+<video src="https://github.com/user-attachments/assets/09f7f9f2-9757-4d40-8aa3-0973fe5ee2b2" controls muted poster="docs/readme/demo-poster.jpg" width="100%">
   Your browser does not support inline video playback.
   <a href="https://github.com/M1KUAPP/Cekgu/releases/download/demo-video-v1/Cekgu-Demo-720p.mp4">Download the film</a> instead.
 </video>
@@ -110,24 +110,24 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
 <table>
   <tr>
     <td width="50%" valign="top" align="left">
-      <img src="docs/assets/landing.png" alt="The Cekgu landing page" width="100%">
+      <img src="docs/readme/screenshots/landing.png" alt="The Cekgu landing page" width="100%">
       <br />
       <strong>Landing Page</strong> · What a signed-out visitor sees first.
     </td>
     <td width="50%" valign="top" align="left">
-      <img src="docs/assets/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%">
+      <img src="docs/readme/screenshots/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%">
       <br />
       <strong>Sample Report</strong> · A public report with its Truth Score and verdict breakdown, no account needed.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top" align="left">
-      <img src="docs/assets/dashboard.png" alt="The account dashboard" width="100%">
+      <img src="docs/readme/screenshots/dashboard.png" alt="The account dashboard" width="100%">
       <br />
       <strong>Dashboard</strong> · Verified readings against total, the verdict breakdown, and each family's share of the work.
     </td>
     <td width="50%" valign="top" align="left">
-      <img src="docs/assets/item-evidence.png" alt="Item evidence on the deployed sample: two served models, two request ids, receipt states, and the pages retrieved from the web, labelled as fetched after the readings" width="100%">
+      <img src="docs/readme/screenshots/item-evidence.png" alt="Item evidence on the deployed sample: two served models, two request ids, receipt states, and the pages retrieved from the web, labelled as fetched after the readings" width="100%">
       <br />
       <strong>Item Evidence</strong> · Two served models, two request ids, receipt states, and the attempts that were refused.
     </td>
@@ -142,7 +142,7 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
    them, or upload a scan or photograph — then edit the draft that comes back. No draft submits itself; the educator
    corrects and sends each one.
 
-   <img src="docs/assets/new-check.png" alt="The New Check form, with the Start From a Paper card offering a link or an upload, and the paper fields below" width="100%">
+   <img src="docs/readme/steps/1-new-check.png" alt="The New Check form, with the Start From a Paper card offering a link or an upload, and the paper fields below" width="100%">
 
 1. **Two families read it blind.** Each question is queued. A round takes two seats and fills each from a different
    model family through GonkaRouter. The prompt carries the stem, the lettered options, the subject and the language —
@@ -158,7 +158,7 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
 
    Anything else is written down as a refused attempt with its reason, and takes no part in the verdict.
 
-   <img src="docs/assets/receipt.png" alt="The receipt viewer for one request id, showing the served model, outcome, devshard and timings, next to the public gateway URL to check them against" width="100%">
+   <img src="docs/readme/steps/3-receipt.png" alt="The receipt viewer for one request id, showing the served model, outcome, devshard and timings, next to the public gateway URL to check them against" width="100%">
 
    Every request id in the product opens this page, and the gateway URL on it is public and needs no key — so the claim
    is checked against the gateway rather than taken from us.
@@ -220,7 +220,7 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
    the key, revised the wording, confirmed the key, dismissed the flag, or asked for a retry — and that decision is
    stored with the item.
 
-   <img src="docs/assets/record-decisions.png" alt="A record with a corrected key, a Possible Ambiguity item, and a Clear item carrying a Retry Requested decision" width="100%">
+   <img src="docs/readme/steps/7-record-decisions.png" alt="A record with a corrected key, a Possible Ambiguity item, and a Clear item carrying a Retry Requested decision" width="100%">
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -287,9 +287,9 @@ describe the same evidence. It grades within a verdict rather than ranking acros
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/architecture-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme/architecture-dark.svg">
     <img
-      src="docs/assets/architecture-light.svg"
+      src="docs/readme/architecture-light.svg"
       alt="A React SPA and a Hono API on one Cloud Run container, with a queue worker and a gateway semaphore behind it, PostgreSQL on Neon beside them, and every reasoning call leaving through GonkaRouter with a request id and a public receipt"
       width="100%">
   </picture>

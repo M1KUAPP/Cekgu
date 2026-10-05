@@ -141,8 +141,8 @@ image is the cover:
 4. `04-guest-records.png` — shared Guest records library, 1440 × 810
 5. `05-new-check.png` — Guest warning and the **Start From a Paper** card offering a link or an upload, 1440 × 810
 
-Refreshed versions of 2, 3 and 5 are already in the repository at `docs/assets/sample-report.png`,
-`docs/assets/item-evidence.png` and `docs/assets/new-check.png` if a re-capture is not practical.
+Refreshed versions of 2, 3 and 5 are already in the repository at `docs/readme/screenshots/sample-report.png`,
+`docs/readme/screenshots/item-evidence.png` and `docs/readme/steps/1-new-check.png` if a re-capture is not practical.
 
 The images are direct Playwright captures, not generated stand-ins.
 
