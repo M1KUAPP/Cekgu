@@ -3,7 +3,6 @@
 
 .agents/
 .claude/
-.github/
 .husky/
 graphify-out/
 node_modules/

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Deploy the production Cloud Run service from a laptop when GitHub Actions cannot run.
-# Use this only while Actions is gated at the org level (issue #260).
+# Deploy the production Cloud Run service from a laptop. Deploys are manual and this is the
+# only deploy path; see docs/TRD.md section 10.
 # Prerequisites: logged-in gcloud with `gcloud auth login`, Docker daemon, jq and curl.
 # The new revision inherits the previous revision's environment variables from Cloud Run.
-# Secrets live in GitHub and production, never in a laptop .env.
+# Secrets live only in production, never in a laptop .env.
 
 set -euo pipefail
 
@@ -75,7 +75,7 @@ docker build --platform linux/amd64 --tag "$image" .
 # Push to Artifact Registry
 docker push "$image"
 
-# Deploy: secrets live in GitHub and the last production revision, never in a laptop .env
+# Deploy: secrets live in the last production revision, never in a laptop .env
 # The new revision inherits the previous revision's environment variables since none are given
 revision=$(gcloud run deploy "$SERVICE" \
   --image "$image" \

@@ -175,9 +175,8 @@ The posture is deliberately broad so the harness does not stop to ask during the
 short list that remains destructive outside the PR gate: deleting the repo, force-pushing, `git reset --hard`, and
 `rm -rf /`. PR merging is intentionally allowed; `AGENTS.md` defines the green, non-breaking merge gate.
 
-GitHub currently returns HTTP 403 for both rulesets and classic branch protection on this private repository's plan.
-Until the plan changes, `guard-git.sh` is the local enforcement layer and the pinned-head merge command prevents a PR
-from changing between verification and merge.
+`main` has no branch protection or ruleset on GitHub, so `guard-git.sh` is the only enforcement layer and the
+pinned-head merge command prevents a PR from changing between verification and merge.
 
 Three rules that are easy to get wrong:
 
