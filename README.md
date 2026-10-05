@@ -112,12 +112,12 @@ Built by **Team M1KU** for the MUBA Blockchain Hackathon 2026, GonkaRouter — A
     <td width="50%" valign="top" align="left">
       <img src="docs/assets/landing.png" alt="The Cekgu landing page" width="100%">
       <br />
-      <strong>Landing Page</strong> · The landing page, signed out.
+      <strong>Landing Page</strong> · What a signed-out visitor sees first.
     </td>
     <td width="50%" valign="top" align="left">
       <img src="docs/assets/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%">
       <br />
-      <strong>Sample Report</strong> · The public sample report, readable without an account.
+      <strong>Sample Report</strong> · A public report with its Truth Score and verdict breakdown, no account needed.
     </td>
   </tr>
   <tr>
