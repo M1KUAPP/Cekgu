@@ -1,6 +1,6 @@
 # Acceptable use
 
-<!-- Review baseline: 5 September 2026, main 8f8e890. -->
+<!-- Review baseline: 5 September 2026, main c4e6d48. -->
 
 Use Cekgu only if you are at least 18, and only to review practice or synthetic multiple-choice questions that you are
 permitted to share for processing through GonkaRouter's decentralised inference network. If you use the upload option,

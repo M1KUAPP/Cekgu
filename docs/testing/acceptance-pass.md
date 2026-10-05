@@ -1,6 +1,6 @@
 # Desktop acceptance pass
 
-Production acceptance record for `origin/main` at `74057b6` on 5 September 2026. This is a desktop/laptop record, not a
+Production acceptance record for `origin/main` at `8bafbdf` on 5 September 2026. This is a desktop/laptop record, not a
 release approval or a claim that the live gateway never rate-limits.
 
 The production pass used Chromium at 1280 × 800 and 1440 × 900. Cekgu targets desktop/laptop; a 375 px structural sweep
