@@ -2,10 +2,10 @@
 
 Contents:
 
-1. [How to work](#how-to-work)
-1. [The gate before implementation](#the-gate-before-implementation)
-1. [How to report](#how-to-report)
-1. [How work ships](#how-work-ships)
+1.  [How to work](#how-to-work)
+1.  [The gate before implementation](#the-gate-before-implementation)
+1.  [How to report](#how-to-report)
+1.  [How work ships](#how-work-ships)
 
 ## How to work
 
@@ -16,13 +16,13 @@ decision made now beats a correct decision made after a ten minute conversation.
 
 **Stop and ask only for these six.** If it is not on this list, proceed:
 
-1. **A track requirement is at risk.** Routing inference off GonkaRouter, dropping to one model, or losing the Request
-   ID trail
-1. **The change would break something already working**, and you cannot avoid it
-1. **`bun run lint` or `bun run typecheck` fails and you cannot fix it.** Say what fails and what you tried
-1. **Two pieces of work genuinely conflict** and shipping both is impossible
-1. **A credential or external account is missing** and you cannot proceed
-1. **The work would change the demo** in a way the team has not agreed to
+1.  **A track requirement is at risk.** Routing inference off GonkaRouter, dropping to one model, or losing the Request
+    ID trail
+1.  **The change would break something already working**, and you cannot avoid it
+1.  **`bun run lint` or `bun run typecheck` fails and you cannot fix it.** Say what fails and what you tried
+1.  **Two pieces of work genuinely conflict** and shipping both is impossible
+1.  **A credential or external account is missing** and you cannot proceed
+1.  **The work would change the demo** in a way the team has not agreed to
 
 **The bar for shipping.** Work is ready when the checks pass and it does what was asked. It need not be complete,
 elegant or final. **Partial work that runs beats finished work still sitting on a branch on 5 September.** If you are
@@ -65,20 +65,20 @@ it: `main` has no branch protection or ruleset, and no CI runs on pull requests.
 is the only merge method, the squash commit takes the PR title as its title and the PR body as its message, and merged
 branches are deleted. Auto-merge and update-branch are enabled on the repository.
 
-1. **Branch.** `<type>/<short-slug>`, matching the commit types below
-1. **Commit** in [Conventional Commits](https://www.conventionalcommits.org/) form: `<type>[scope]: <description>`, a
-   single imperative sentence, lowercase, no trailing period. `commitlint.config.mjs` extends
-   `@commitlint/config-conventional`, so the allowed types are `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`,
-   `refactor`, `revert`, `style` and `test`. The header, scope included, is at most 50 characters
-1. **Push the branch** and open a PR with `gh pr create`. The PR title becomes the squash commit's header, so it
-   follows the commit rules above, 50 characters at most
-1. **Merge** the verified head with
-   `gh pr merge <number> --squash --delete-branch --match-head-commit <40-character-head-sha>`. Capture `headRefOid`
-   from `gh pr view`, verify and review that exact SHA, then put its literal value in the merge command. Agents are
-   authorised to merge without per-PR human approval when all of these are true:
-   - The PR targets `main`, is not a draft and GitHub reports it mergeable
-   - Fresh project verification passes against the PR head
-   - There is no unresolved Critical or Important review finding and no known regression
+1.  **Branch.** `<type>/<short-slug>`, matching the commit types below
+1.  **Commit** in [Conventional Commits](https://www.conventionalcommits.org/) form: `<type>[scope]: <description>`, a
+    single imperative sentence, lowercase, no trailing period. `commitlint.config.mjs` extends
+    `@commitlint/config-conventional`, so the allowed types are `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`,
+    `refactor`, `revert`, `style` and `test`. The header, scope included, is at most 50 characters
+1.  **Push the branch** and open a PR with `gh pr create`. The PR title becomes the squash commit's header, so it
+    follows the commit rules above, 50 characters at most
+1.  **Merge** the verified head with
+    `gh pr merge <number> --squash --delete-branch --match-head-commit <40-character-head-sha>`. Capture `headRefOid`
+    from `gh pr view`, verify and review that exact SHA, then put its literal value in the merge command. Agents are
+    authorised to merge without per-PR human approval when all of these are true:
+    - The PR targets `main`, is not a draft and GitHub reports it mergeable
+    - Fresh project verification passes against the PR head
+    - There is no unresolved Critical or Important review finding and no known regression
 
 If any condition cannot be verified, leave the PR open and report the blocker. Direct and force pushes to `main` remain
 forbidden; autonomous merge authority does not bypass the PR gate. Never use `--admin` or `--auto` to override or defer

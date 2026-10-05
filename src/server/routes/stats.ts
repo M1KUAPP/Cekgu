@@ -60,8 +60,8 @@ statsRoutes.get('/stats', async (c) => {
   // served model is the receipt's, never what was asked for.
   const families = await db.execute<{ model: string; readings: number; verified: number }>(sql`
     select a.served_model as model,
-           count(*)::int as readings,
-           count(*) filter (where a.receipt_status = 'verified')::int as verified
+      count(*)::int as readings,
+      count(*) filter (where a.receipt_status = 'verified')::int as verified
     from attempts a
     join items i on i.id = a.item_id
     join records r on r.id = i.record_id

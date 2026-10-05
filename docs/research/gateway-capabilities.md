@@ -10,17 +10,17 @@ primary sources on 2026-08-30. Interpretation is marked as such throughout.
 
 Contents:
 
-1. [The two findings that change design](#the-two-findings-that-change-design)
-1. [Receipts — shipped 2026-08-31](#receipts--shipped-2026-08-31)
-1. [The fallback trap](#the-fallback-trap)
-1. [Latency and hedging](#latency-and-hedging)
-1. [Track requirement clarified](#track-requirement-clarified)
-1. [Endpoints](#endpoints)
-1. [Models](#models)
-1. [The Request ID](#the-request-id)
-1. [Limits](#limits)
-1. [What the Request ID actually proves](#what-the-request-id-actually-proves)
-1. [Sources](#sources)
+1.  [The two findings that change design](#the-two-findings-that-change-design)
+1.  [Receipts — shipped 2026-08-31](#receipts--shipped-2026-08-31)
+1.  [The fallback trap](#the-fallback-trap)
+1.  [Latency and hedging](#latency-and-hedging)
+1.  [Track requirement clarified](#track-requirement-clarified)
+1.  [Endpoints](#endpoints)
+1.  [Models](#models)
+1.  [The Request ID](#the-request-id)
+1.  [Limits](#limits)
+1.  [What the Request ID actually proves](#what-the-request-id-actually-proves)
+1.  [Sources](#sources)
 
 ## The two findings that change design
 
@@ -100,12 +100,12 @@ which node picks up the request. Measured TTFT ranges **~1.5 s to ~17 s**. Node 
 
 The tech lead's own guidance, worth following verbatim:
 
-1. **Keep hedging separate from cross-verification.** Racing two _different_ models and taking the first answer
-   collapses a safety property into a latency tactic and destroys the independent second opinion. Hedge _within_ each
-   check by sending a redundant copy of the _same_ check.
-2. **Use a deferred hedge.** Fire the backup only if the primary has not responded within ~1.5–2 s — same tail
-   reduction, roughly half the token cost.
-3. **Pin the model per check** with `X-Gonka-No-Fallback: true`, and read `X-Devshard-ID` to see which node served it.
+1.  **Keep hedging separate from cross-verification.** Racing two _different_ models and taking the first answer
+    collapses a safety property into a latency tactic and destroys the independent second opinion. Hedge _within_ each
+    check by sending a redundant copy of the _same_ check.
+2.  **Use a deferred hedge.** Fire the backup only if the primary has not responded within ~1.5–2 s — same tail
+    reduction, roughly half the token cost.
+3.  **Pin the model per check** with `X-Gonka-No-Fallback: true`, and read `X-Devshard-ID` to see which node served it.
 
 **Measured 2026-09-02, evening.** Taken during the Round 11 mechanism tests in
 [`candidate-concepts.md`](candidate-concepts.md#round-11--phenomenon-first):
@@ -341,10 +341,10 @@ we can defend.
 
 **What this leaves as verified, durable and defensible** — the short list any concept must live within:
 
-1. **Public governance over model identity**, with a real contested history — the process is permanent even though the
-   models are not
-2. **Model identity pinned to a verifiable commit hash**
-3. **No account, so nothing to revoke or ban**
+1.  **Public governance over model identity**, with a real contested history — the process is permanent even though the
+    models are not
+2.  **Model identity pinned to a verifiable commit hash**
+3.  **No account, so nothing to revoke or ban**
 
 ### Models churn — do not build on a specific lineup
 

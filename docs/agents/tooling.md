@@ -2,9 +2,9 @@
 
 Contents:
 
-1. [Tech stack and commands](#tech-stack-and-commands)
-1. [CLI first, always](#cli-first-always)
-1. [Code style](#code-style)
+1.  [Tech stack and commands](#tech-stack-and-commands)
+1.  [CLI first, always](#cli-first-always)
+1.  [Code style](#code-style)
 
 ## Tech stack and commands
 

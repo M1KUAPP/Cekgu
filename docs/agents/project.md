@@ -6,11 +6,11 @@ other `docs/agents/` topics; `CLAUDE.md` and `GEMINI.md` are symlinks to it.
 
 Contents:
 
-1. [Project](#project)
-1. [Track requirements](#track-requirements)
-1. [Coding guidelines override](#coding-guidelines-override)
-1. [Markdown style amendments](#markdown-style-amendments)
-1. [Specs, plans and research](#specs-plans-and-research)
+1.  [Project](#project)
+1.  [Track requirements](#track-requirements)
+1.  [Coding guidelines override](#coding-guidelines-override)
+1.  [Markdown style amendments](#markdown-style-amendments)
+1.  [Specs, plans and research](#specs-plans-and-research)
 
 ## Project
 
@@ -24,21 +24,21 @@ source material is in [`docs/source/`](../source/).
 
 Non-negotiable, from [`docs/source/gonkarouter-challenge.md`](../source/gonkarouter-challenge.md):
 
-1. **All AI reasoning and verification runs through GonkaRouter** (`https://api.gonkarouter.io`). Reasoning and
-   verification, which is the organizers' own wording — see [`docs/BRIEF.md`](../BRIEF.md). Two directories are
-   exempt, and neither may decide anything: `src/server/transcribe/` turns an uploaded image or PDF into the text
-   printed on it ([`docs/TRD.md` section 20](../TRD.md#20-reading-a-paper-from-an-upload)), and `src/server/chat/`
-   phrases the record assistant's answers from facts the Gonka readers already produced
-   ([section 21](../TRD.md#21-the-readers-voice-and-the-record-assistant)).
-   `src/server/gateway/only-gonkarouter.test.ts` fails the build if a provider host appears anywhere else, or if either
-   directory imports the verdict rule. **`src/server/retrieval/` is not a third exemption**: it is a search API that
-   returns text other people published and calls no model, so the Gonka readers still do every piece of reasoning. The
-   same guard holds it to deciding nothing, and asserts its `include_answer: false`
-   ([`docs/TRD.md` section 22](../TRD.md#22-live-retrieval-for-cross-verification))
-1. **At least two models cross-verify.** Multi-model consensus
-1. **Gonka Request IDs are surfaced in the UI** for every inference step. This is the on-chain proof: wire it through
-   from the first commit, not at the end
-1. **Explicit consensus logic** for model disagreement. The organizers call this "a major plus"
+1.  **All AI reasoning and verification runs through GonkaRouter** (`https://api.gonkarouter.io`). Reasoning and
+    verification, which is the organizers' own wording — see [`docs/BRIEF.md`](../BRIEF.md). Two directories are
+    exempt, and neither may decide anything: `src/server/transcribe/` turns an uploaded image or PDF into the text
+    printed on it ([`docs/TRD.md` section 20](../TRD.md#20-reading-a-paper-from-an-upload)), and `src/server/chat/`
+    phrases the record assistant's answers from facts the Gonka readers already produced
+    ([section 21](../TRD.md#21-the-readers-voice-and-the-record-assistant)).
+    `src/server/gateway/only-gonkarouter.test.ts` fails the build if a provider host appears anywhere else, or if either
+    directory imports the verdict rule. **`src/server/retrieval/` is not a third exemption**: it is a search API that
+    returns text other people published and calls no model, so the Gonka readers still do every piece of reasoning. The
+    same guard holds it to deciding nothing, and asserts its `include_answer: false`
+    ([`docs/TRD.md` section 22](../TRD.md#22-live-retrieval-for-cross-verification))
+1.  **At least two models cross-verify.** Multi-model consensus
+1.  **Gonka Request IDs are surfaced in the UI** for every inference step. This is the on-chain proof: wire it through
+    from the first commit, not at the end
+1.  **Explicit consensus logic** for model disagreement. The organizers call this "a major plus"
 
 Gateway setup, model ids, client wiring and rate limits: [`docs/TRD.md`](../TRD.md) is canonical, measured against the
 live API. [`docs/source/gonkarouter-workshop-slides.md`](../source/gonkarouter-workshop-slides.md) is the organizers'
@@ -61,13 +61,13 @@ Strong success criteria let you loop on your own. Weak criteria force check-ins,
 byte. Two points where this repository's tooling or house rules override it, recorded here so the exceptions are not
 rediscovered from PR descriptions each time.
 
-1. **Prettier owns list indentation.** Nested list spacing in the guide prescribes a 3-space bullet with a 4-space wrap
-   indent, but Prettier rewrites a bullet to one space after the marker and a 2-space continuation indent. The formatter
-   wins, per the guide's own advice that the tools always win.
-1. **Sentence case for headings, bold lead-in labels and table headers**, per Capitalization of titles and headers in
-   the guide. Product, tool and proper names keep their form. The ones that read like ordinary words, and so get
-   lowercased by accident, are the research ledger's concept names: `You Decide`, `Ubat Mak`, `Dua Keping`,
-   `Bil Tinggi`, `Tawaran Uni Sah`, `Frozen Friend`, `Model Changelog`, `Bahasa Nenek` and `Hound`.
+1.  **Prettier owns list indentation.** Nested list spacing in the guide prescribes a 3-space bullet with a 4-space wrap
+    indent, but Prettier rewrites a bullet to one space after the marker and a 2-space continuation indent. The formatter
+    wins, per the guide's own advice that the tools always win.
+1.  **Sentence case for headings, bold lead-in labels and table headers**, per Capitalization of titles and headers in
+    the guide. Product, tool and proper names keep their form. The ones that read like ordinary words, and so get
+    lowercased by accident, are the research ledger's concept names: `You Decide`, `Ubat Mak`, `Dua Keping`,
+    `Bil Tinggi`, `Tawaran Uni Sah`, `Frozen Friend`, `Model Changelog`, `Bahasa Nenek` and `Hound`.
 
 **Two headings must keep their em dash.** `Receipts — shipped 2026-08-31` and `Network reality — measured, not marketed`
 in [`docs/research/gateway-capabilities.md`](../research/gateway-capabilities.md): removing the em dash leaves a doubled

@@ -5,14 +5,14 @@ grounded chat about the record. This file is the integration contract every work
 
 Contents:
 
-1. [Decisions taken](#decisions-taken)
-1. [The seat rule](#the-seat-rule)
-1. [What the cats say](#what-the-cats-say)
-1. [Voice, captions and mute](#voice-captions-and-mute)
-1. [The chat](#the-chat)
-1. [The provider decision and its consequences](#the-provider-decision-and-its-consequences)
-1. [Shared types](#shared-types)
-1. [Work split](#work-split)
+1.  [Decisions taken](#decisions-taken)
+1.  [The seat rule](#the-seat-rule)
+1.  [What the cats say](#what-the-cats-say)
+1.  [Voice, captions and mute](#voice-captions-and-mute)
+1.  [The chat](#the-chat)
+1.  [The provider decision and its consequences](#the-provider-decision-and-its-consequences)
+1.  [Shared types](#shared-types)
+1.  [Work split](#work-split)
 
 ## Decisions taken
 
@@ -138,17 +138,17 @@ already does for free.
 The chat's model call goes to Gemini by the team's decision, recorded above. Three consequences are handled rather than
 discovered:
 
-1. **`only-gonkarouter.test.ts` gains a second named exemption.** The test is never deleted or weakened. The exemption
-   is one directory, `src/server/chat/`, added with the date, the decider and the reasoning in the file, exactly as the
-   transcription exemption is. Assertion 3, that `gateway/`, `queue/`, `extract/` and `shared/` name no provider host at
-   all, is unchanged and still binds
-1. **`docs/README.md:115` becomes false and must be corrected.** It currently tells judges Gemini is "the sole"
-   exception and that GonkaRouter "handles every later reasoning or verification step". A judge reads the README, so a
-   stale claim there is worse than the exception it hides
-1. **The chat turn carries no Gonka request id.** It is labelled `Gemini · <responseId>` and is visually distinct from a
-   Gonka receipt pill, following the precedent `transcribe/gemini.ts` already set: "It is not a Gonka request id and
-   must never be displayed as one." Every **cited** fact still carries a real Gonka request id and a public receipt,
-   because the readings are Gonka's. That distinction is what keeps the surface honest
+1.  **`only-gonkarouter.test.ts` gains a second named exemption.** The test is never deleted or weakened. The exemption
+    is one directory, `src/server/chat/`, added with the date, the decider and the reasoning in the file, exactly as the
+    transcription exemption is. Assertion 3, that `gateway/`, `queue/`, `extract/` and `shared/` name no provider host at
+    all, is unchanged and still binds
+1.  **`docs/README.md:115` becomes false and must be corrected.** It currently tells judges Gemini is "the sole"
+    exception and that GonkaRouter "handles every later reasoning or verification step". A judge reads the README, so a
+    stale claim there is worse than the exception it hides
+1.  **The chat turn carries no Gonka request id.** It is labelled `Gemini · <responseId>` and is visually distinct from a
+    Gonka receipt pill, following the precedent `transcribe/gemini.ts` already set: "It is not a Gonka request id and
+    must never be displayed as one." Every **cited** fact still carries a real Gonka request id and a public receipt,
+    because the readings are Gonka's. That distinction is what keeps the surface honest
 
 **`CHAT_PROVIDER=gemini|gonka` is a one-word switch**, both paths built, so the decision is reversible without a code
 change if a judge or a teammate objects.

@@ -5,17 +5,17 @@ matching subtitles, and writes a 1920×1080 MP4. Media stays in a scratch direct
 
 Contents:
 
-1. [Pipeline](#pipeline)
-1. [Run the complete pipeline](#run-the-complete-pipeline)
-1. [Install Kokoro once](#install-kokoro-once)
-1. [Recorder contract](#recorder-contract)
-1. [Assemble the deck](#assemble-the-deck)
-1. [Assemble the deck alone](#assemble-the-deck-alone)
-1. [Narrate and subtitle](#narrate-and-subtitle)
-1. [Narrate with a cloned voice](#narrate-with-a-cloned-voice)
-1. [Environment overrides](#environment-overrides)
-1. [Verify the result](#verify-the-result)
-1. [Troubleshooting](#troubleshooting)
+1.  [Pipeline](#pipeline)
+1.  [Run the complete pipeline](#run-the-complete-pipeline)
+1.  [Install Kokoro once](#install-kokoro-once)
+1.  [Recorder contract](#recorder-contract)
+1.  [Assemble the deck](#assemble-the-deck)
+1.  [Assemble the deck alone](#assemble-the-deck-alone)
+1.  [Narrate and subtitle](#narrate-and-subtitle)
+1.  [Narrate with a cloned voice](#narrate-with-a-cloned-voice)
+1.  [Environment overrides](#environment-overrides)
+1.  [Verify the result](#verify-the-result)
+1.  [Troubleshooting](#troubleshooting)
 
 ## Pipeline
 
@@ -30,7 +30,7 @@ pitch-deck.pdf ──► assemble.sh ───────┤ append slide beats
                           capture-joined.mp4
                                       │
 narration.txt ──► Kokoro WAVs ────────┤
-               └─► matching SRT ──────┤
+              └─► matching SRT ───────┤
                                       ▼
                               cekgu-demo.mp4
 ```
@@ -304,11 +304,11 @@ bun run typecheck
 
 Then open the MP4 at full screen and check:
 
-1. Product narration follows the action after any slow page transition.
-2. `slide-1` begins only after the browser capture ends.
-3. Subtitles stay readable and never stack two different claims.
-4. The request IDs and both `Verified` receipts remain visible during the proof beats.
-5. The last frame and spoken line finish between 4:30 and 5:00.
+1.  Product narration follows the action after any slow page transition.
+2.  `slide-1` begins only after the browser capture ends.
+3.  Subtitles stay readable and never stack two different claims.
+4.  The request IDs and both `Verified` receipts remain visible during the proof beats.
+5.  The last frame and spoken line finish between 4:30 and 5:00.
 
 ## Troubleshooting
 

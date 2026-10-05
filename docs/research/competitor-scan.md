@@ -10,12 +10,12 @@ negative result, not as proof of absence.
 
 Contents:
 
-1. [Prior art for our own candidates](#prior-art-for-our-own-candidates)
-1. [Predicted competition in this track](#predicted-competition-in-this-track)
-1. [Commercial landscape: AI output verification](#commercial-landscape-ai-output-verification)
-1. [Regulatory pressure](#regulatory-pressure)
-1. [Sources](#sources)
-1. [Round 2 prior art](#round-2-prior-art)
+1.  [Prior art for our own candidates](#prior-art-for-our-own-candidates)
+1.  [Predicted competition in this track](#predicted-competition-in-this-track)
+1.  [Commercial landscape: AI output verification](#commercial-landscape-ai-output-verification)
+1.  [Regulatory pressure](#regulatory-pressure)
+1.  [Sources](#sources)
+1.  [Round 2 prior art](#round-2-prior-art)
 
 ## Prior art for our own candidates
 

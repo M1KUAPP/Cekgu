@@ -39,6 +39,6 @@ Give it an absolute path, and resize before anything lands in the repo. Art dire
 
 **Nothing visual is done until all three are true.** State them when you report:
 
-1. A critique against the tells above has run, and its findings are addressed or consciously declined
-1. The screen has been viewed at demo scale, not just in a wide editor pane
-1. Capitalization has been checked against rendered text, not source
+1.  A critique against the tells above has run, and its findings are addressed or consciously declined
+1.  The screen has been viewed at demo scale, not just in a wide editor pane
+1.  Capitalization has been checked against rendered text, not source

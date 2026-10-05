@@ -97,6 +97,10 @@ const THEMES = {
   }
 }
 
+// The viewer's export leaves trailing spaces in its stylesheet and no final newline. Both break the repository's
+// .editorconfig, which editorconfig-checker enforces in `bun run lint`.
+const tidy = (text) => `${text.replace(/[ \t]+$/gm, '').replace(/\n+$/, '')}\n`
+
 const declarations = (vars) =>
   Object.entries(vars)
     .map(([name, value]) => `${name}: ${value};`)
@@ -164,7 +168,7 @@ try {
     // the <picture> element, not the image, decides which one a reader sees.
     for (const scheme of ['light', 'dark']) {
       const outFile = path.join(README_DIR, `architecture-${scheme}.svg`)
-      fs.writeFileSync(outFile, svg.replace(/<svg /, `<svg data-theme="${scheme}" `))
+      fs.writeFileSync(outFile, tidy(svg.replace(/<svg /, `<svg data-theme="${scheme}" `)))
       console.log(`wrote ${path.relative(process.cwd(), outFile)}`)
     }
   } finally {

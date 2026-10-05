@@ -28,11 +28,11 @@ Ship complete units, not partial ones.
 
 ## You have three jobs
 
-1. **`docs/demo/pitch-script.md`** - what we say on stage, for the 5-minute pitch plus 5 minutes of Q&A.
-2. **`docs/demo/pitch-deck.html`** and **`docs/demo/pitch-deck.pdf`** - what is behind us while we say it, and a
-   required Devfolio artifact.
-3. **The 2-minute MVP video script** - a section inside `pitch-script.md`, not a separate file. The track brief asks for
-   a 2-minute video showing the product in action.
+1.  **`docs/demo/pitch-script.md`** - what we say on stage, for the 5-minute pitch plus 5 minutes of Q&A.
+2.  **`docs/demo/pitch-deck.html`** and **`docs/demo/pitch-deck.pdf`** - what is behind us while we say it, and a
+    required Devfolio artifact.
+3.  **The 2-minute MVP video script** - a section inside `pitch-script.md`, not a separate file. The track brief asks for
+    a 2-minute video showing the product in action.
 
 That is the whole remit. Do not touch `src/`, do not open issues, do not review PRs, do not edit `AGENTS.md` or
 `docs/BRIEF.md`. If you notice a product bug, say so in one line in your report and keep going.
@@ -207,16 +207,16 @@ A deck that takes ten seconds to open on someone else's laptop reads as broken.
 
 **Budget: the whole of `docs/demo/` under 3 MB, and the PDF under 2 MB.**
 
-1. **Every raster gets resized to the size it displays at**, then run through `sharp`. A logo shown at 200px wide does
-   not ship at 1254px.
-2. **Prefer WebP for photographic assets.**
-3. **Never embed a base64 raster in the HTML.** Base64 is fine for SVG.
-4. **Print at exactly the slide size**, so nothing is resampled. Drive Chromium headless with `printBackground: true`,
-   `width: 1920px`, `height: 1080px`, `preferCSSPageSize: true`. The `@page { size: 1920px 1080px; margin: 0 }` rule is
-   already in the template.
-5. **Measure before you claim done.** `du -h docs/demo/pitch-deck.pdf` and `du -sh docs/demo/`. Put both numbers in your
-   report. If the PDF is over 2 MB, find the asset with `du -ah docs/demo/assets | sort -h` and fix it rather than
-   shipping it.
+1.  **Every raster gets resized to the size it displays at**, then run through `sharp`. A logo shown at 200px wide does
+    not ship at 1254px.
+2.  **Prefer WebP for photographic assets.**
+3.  **Never embed a base64 raster in the HTML.** Base64 is fine for SVG.
+4.  **Print at exactly the slide size**, so nothing is resampled. Drive Chromium headless with `printBackground: true`,
+    `width: 1920px`, `height: 1080px`, `preferCSSPageSize: true`. The `@page { size: 1920px 1080px; margin: 0 }` rule is
+    already in the template.
+5.  **Measure before you claim done.** `du -h docs/demo/pitch-deck.pdf` and `du -sh docs/demo/`. Put both numbers in your
+    report. If the PDF is over 2 MB, find the asset with `du -ah docs/demo/assets | sort -h` and fix it rather than
+    shipping it.
 
 ---
 
@@ -224,12 +224,12 @@ A deck that takes ten seconds to open on someone else's laptop reads as broken.
 
 Verify before you claim it. Evidence, not assertion. All six must be true and you state each one:
 
-1. Every claim in the script is demonstrable on screen inside the time budget
-2. Every slide passes 30/70, checked against the rendered slide, not the source
-3. All five Devfolio-required deck sections are covered somewhere
-4. A critique against the tells in `docs/agents/design.md` has run, findings addressed or consciously declined
-5. The deck has been viewed at demo scale, not just in a wide editor pane
-6. `docs/demo/` is under 3 MB and the PDF under 2 MB, with both numbers reported
+1.  Every claim in the script is demonstrable on screen inside the time budget
+2.  Every slide passes 30/70, checked against the rendered slide, not the source
+3.  All five Devfolio-required deck sections are covered somewhere
+4.  A critique against the tells in `docs/agents/design.md` has run, findings addressed or consciously declined
+5.  The deck has been viewed at demo scale, not just in a wide editor pane
+6.  `docs/demo/` is under 3 MB and the PDF under 2 MB, with both numbers reported
 
 Then report in five sentences or fewer: what exists now, the two file sizes, and the single thing you would improve with
 another hour.

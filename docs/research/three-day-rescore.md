@@ -16,17 +16,17 @@ the team's experience and newly found competitors. Real User scores are reasoned
 
 Contents:
 
-1. [The verdict](#the-verdict)
-1. [The second opinion](#the-second-opinion)
-1. [The window](#the-window)
-1. [Verified on 2 September](#verified-on-2-september)
-1. [The rescore](#the-rescore)
-1. [Rank 1: Vetting Room](#rank-1-vetting-room)
-1. [Ranks 2 to 5](#ranks-2-to-5)
-1. [Kills that hold](#kills-that-hold)
-1. [How to read the ledger](#how-to-read-the-ledger)
-1. [Next 72 hours](#next-72-hours)
-1. [Sources](#sources)
+1.  [The verdict](#the-verdict)
+1.  [The second opinion](#the-second-opinion)
+1.  [The window](#the-window)
+1.  [Verified on 2 September](#verified-on-2-september)
+1.  [The rescore](#the-rescore)
+1.  [Rank 1: Vetting Room](#rank-1-vetting-room)
+1.  [Ranks 2 to 5](#ranks-2-to-5)
+1.  [Kills that hold](#kills-that-hold)
+1.  [How to read the ledger](#how-to-read-the-ledger)
+1.  [Next 72 hours](#next-72-hours)
+1.  [Sources](#sources)
 
 ## The verdict
 
@@ -376,7 +376,7 @@ curl -sD - -o /dev/null https://api.gonkarouter.io/v1/chat/completions \
   -H "Authorization: Bearer $GONKA_API_KEY" -H "content-type: application/json" \
   -H "X-Gonka-No-Fallback: true" \
   -d '{"model":"deepseek-ai/DeepSeek-V4-Flash-0731","max_tokens":1024,"stream":true,
-       "messages":[{"role":"user","content":"Reply with just: pong"}]}' | grep -i -E 'x-request-id|x-gonka'
+        "messages":[{"role":"user","content":"Reply with just: pong"}]}' | grep -i -E 'x-request-id|x-gonka'
 ```
 
 ```shell
@@ -641,16 +641,16 @@ changed:
 
 ## Next 72 hours
 
-1. **Tonight.** Lock the concept on a team call. Then write `PRODUCT.md` and `PRD.md`, with the 2.5-day cut above as the
-   scope ladder. Nothing else can start before both exist
-2. **Tonight, five minutes.** Run the two probes with the key in the shell. If the request id is missing on streamed
-   responses, the app does not stream. If Kimi is still failing four in five, the deferred hedge is not optional
-3. **3 September.** The call layer first, exactly as TRD section 4 specifies, returning one provenance record per call.
-   Then the rule, the seeded paper and the paper view
-4. **4 September.** Item view, the control and aggregate, hedging, deploy, and the `DESIGN.md` pass. Freeze features at
-   the end of the day
-5. **5 September.** README on the GonkaRouter integration, deck with the five required sections, the 2-minute video,
-   socials, Devfolio before 23:59. Dispatch `pitch-smith` the moment the build is frozen
+1.  **Tonight.** Lock the concept on a team call. Then write `PRODUCT.md` and `PRD.md`, with the 2.5-day cut above as the
+    scope ladder. Nothing else can start before both exist
+2.  **Tonight, five minutes.** Run the two probes with the key in the shell. If the request id is missing on streamed
+    responses, the app does not stream. If Kimi is still failing four in five, the deferred hedge is not optional
+3.  **3 September.** The call layer first, exactly as TRD section 4 specifies, returning one provenance record per call.
+    Then the rule, the seeded paper and the paper view
+4.  **4 September.** Item view, the control and aggregate, hedging, deploy, and the `DESIGN.md` pass. Freeze features at
+    the end of the day
+5.  **5 September.** README on the GonkaRouter integration, deck with the five required sections, the 2-minute video,
+    socials, Devfolio before 23:59. Dispatch `pitch-smith` the moment the build is frozen
 
 ## Sources
 

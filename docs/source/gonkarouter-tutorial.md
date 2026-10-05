@@ -12,15 +12,15 @@ live docs.
 
 Contents:
 
-1. [The domain changed since the video](#the-domain-changed-since-the-video)
-1. [1. What GonkaRouter is](#1-what-gonkarouter-is)
-1. [2. Getting an API key](#2-getting-an-api-key)
-1. [3. The 30-second smoke test](#3-the-30-second-smoke-test)
-1. [4. Models](#4-models)
-1. [5. Wiring it into clients](#5-wiring-it-into-clients)
-1. [6. Limits and specifications](#6-limits-and-specifications)
-1. [7. Error-code cheat sheet](#7-error-code-cheat-sheet)
-1. [8. Implications for our build](#8-implications-for-our-build)
+1.  [The domain changed since the video](#the-domain-changed-since-the-video)
+1.  [1. What GonkaRouter is](#1-what-gonkarouter-is)
+1.  [2. Getting an API key](#2-getting-an-api-key)
+1.  [3. The 30-second smoke test](#3-the-30-second-smoke-test)
+1.  [4. Models](#4-models)
+1.  [5. Wiring it into clients](#5-wiring-it-into-clients)
+1.  [6. Limits and specifications](#6-limits-and-specifications)
+1.  [7. Error-code cheat sheet](#7-error-code-cheat-sheet)
+1.  [8. Implications for our build](#8-implications-for-our-build)
 
 ## The domain changed since the video
 
@@ -41,9 +41,9 @@ video's screenshots are otherwise still accurate.
 
 ## 2. Getting an API key
 
-1. Open the **Dashboard** at gonkarouter.io
-2. Sign in — **email or Google** (docs) / **Connect MetaMask** wallet (video UI, with a _Continue as guest_ option)
-3. **Create API Key** → give it a label → copy the `sk-…` value
+1.  Open the **Dashboard** at gonkarouter.io
+2.  Sign in — **email or Google** (docs) / **Connect MetaMask** wallet (video UI, with a _Continue as guest_ option)
+3.  **Create API Key** → give it a label → copy the `sk-…` value
 
 New accounts get a **one-time $20 free credit** (the docs also mention a `$20/day for 7 days` variant).
 

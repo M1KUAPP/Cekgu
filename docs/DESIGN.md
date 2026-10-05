@@ -14,16 +14,16 @@ belong.
 
 Contents:
 
-1. [Identity](#identity)
-1. [Colour](#colour)
-1. [Typography](#typography)
-1. [Spacing, radius, borders and elevation](#spacing-radius-borders-and-elevation)
-1. [Layout](#layout)
-1. [Components](#components)
-1. [Motion and the mascot](#motion-and-the-mascot)
-1. [Capitalisation](#capitalisation)
-1. [Accessibility](#accessibility)
-1. [Tells this system avoids](#tells-this-system-avoids)
+1.  [Identity](#identity)
+1.  [Colour](#colour)
+1.  [Typography](#typography)
+1.  [Spacing, radius, borders and elevation](#spacing-radius-borders-and-elevation)
+1.  [Layout](#layout)
+1.  [Components](#components)
+1.  [Motion and the mascot](#motion-and-the-mascot)
+1.  [Capitalisation](#capitalisation)
+1.  [Accessibility](#accessibility)
+1.  [Tells this system avoids](#tells-this-system-avoids)
 
 ## Identity
 
@@ -351,15 +351,15 @@ the post-authentication measure, widened from 880 px on 4 September because thes
 filter rows and evidence rather than prose. The public side keeps the 880 px measure, which is where prose wants to be.
 It reads top to bottom like the paper it reviews:
 
-1. **Header.** Record title (heading 1), subject and language as a caption line, the record status chip, and for Guest
-   records the expiry. The **Sample** label from FR-SAMPLE-2 sits here as a status chip in ink, not a banner
-1. **Summary.** Five verdict filters in one row, each a chip with its count in mono. They are both the summary counts
-   and the filter, so the same numbers are never printed twice. The attention count sits at the row's end in pen red,
-   because it is the number asking for a decision
-1. **Items.** Attention items first, then **Clear**, per FR-RECORD-3. Each item is a level-0 row, numbered with the
-   paper's own item number in a 40 px left gutter in mono. The numbering is the paper's, so it is allowed
-1. **Evidence.** Opens inline beneath its item as a `--well` panel, never as a separate page, so two model names and two
-   request ids are on the same screen as the stem (FR-EVIDENCE-1)
+1.  **Header.** Record title (heading 1), subject and language as a caption line, the record status chip, and for Guest
+    records the expiry. The **Sample** label from FR-SAMPLE-2 sits here as a status chip in ink, not a banner
+1.  **Summary.** Five verdict filters in one row, each a chip with its count in mono. They are both the summary counts
+    and the filter, so the same numbers are never printed twice. The attention count sits at the row's end in pen red,
+    because it is the number asking for a decision
+1.  **Items.** Attention items first, then **Clear**, per FR-RECORD-3. Each item is a level-0 row, numbered with the
+    paper's own item number in a 40 px left gutter in mono. The numbering is the paper's, so it is allowed
+1.  **Evidence.** Opens inline beneath its item as a `--well` panel, never as a separate page, so two model names and two
+    request ids are on the same screen as the stem (FR-EVIDENCE-1)
 
 ### Item rows
 
