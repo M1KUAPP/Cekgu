@@ -514,9 +514,9 @@ separate step.
 **Deploys are manual: [`scripts/deploy-local.sh`](../scripts/deploy-local.sh) is the only deploy path.** Nothing deploys
 on a push or merge to `main`, and pull requests get no preview. The workflows that did both were removed, and their last
 versions keep the flags they passed:
-[`deploy.yml`](https://github.com/M1KUAPP/Cekgu/blob/c032ea40c9b7e7a7dab476c2df00e9885e99395f/.github/workflows/deploy.yml)
+[`deploy.yml`](https://github.com/M1KUAPP/Cekgu/blob/fceb7f0b3548c4a1a069cf9c3ddd7f0d872ab6b9/.github/workflows/deploy.yml)
 for production and
-[`ci.yml`](https://github.com/M1KUAPP/Cekgu/blob/c032ea40c9b7e7a7dab476c2df00e9885e99395f/.github/workflows/ci.yml) for
+[`ci.yml`](https://github.com/M1KUAPP/Cekgu/blob/fceb7f0b3548c4a1a069cf9c3ddd7f0d872ab6b9/.github/workflows/ci.yml) for
 checks and previews.
 
 The script builds the checked-out commit for `linux/amd64`, pushes it to Artifact Registry and deploys it with the
