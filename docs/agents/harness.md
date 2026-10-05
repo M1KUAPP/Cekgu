@@ -1,12 +1,8 @@
-# Subagents, hooks and standing references
+# Hooks and standing references
 
-**One subagent.** `pitch-smith` owns `docs/demo/` — the pitch script, the deck, the PDF and the 2-minute video script,
-and nothing else. Dispatch it once the build is frozen, or earlier to draft against what already works.
-
-**Four hooks** are wired in `.claude/settings.json`, each exiting 0 on internal failure so a broken guard never wedges a
-session. Only one can stop you: `guard-git.sh` blocks unreviewed pushes to `main` and `git add .env`. The other three
-are informational or tidy up: `session-brief.sh` prints one line of orientation, `env-drift.mjs` reports a local `.env`
-that disagrees with the repository, and `format-edited.sh` formats the file just edited.
+**One repo hook** sits in `.claude/settings.json` beside the org template's: `guard-git.sh` blocks unreviewed pushes to
+`main` and `git add .env`. It exits 0 on internal failure, so a broken guard never wedges a session. Next to it,
+`permissions.deny` refuses force pushes, hard resets, `rm -rf /`, `gh repo delete` and reads of `.env`.
 
 ## Appendix: standing references
 
