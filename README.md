@@ -6,8 +6,8 @@
 <div align="center">
   <a href="https://github.com/M1KUAPP/Cekgu">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="public/brand/cekgu-lockup-dark.svg">
-      <img src="public/brand/cekgu-lockup.svg" alt="Banner">
+      <source media="(prefers-color-scheme: dark)" srcset="docs/readme/banner-dark.png">
+      <img src="docs/readme/banner-light.png" alt="Cekgu banner">
     </picture>
   </a>
 
@@ -16,11 +16,11 @@
   <p>
     An answer-key checker that has two AI model families solve a multiple-choice paper blind to its key, flagging mis-keyed and ambiguous items.
     <br />
-    <a href="https://cekgu-op7lf5dspq-as.a.run.app"><strong>Live Demo »</strong></a>
+    <a href="https://youtu.be/zFASN69yQr8"><strong>Watch the Demo »</strong></a>
     &middot;
-    <a href="https://cekgu-op7lf5dspq-as.a.run.app/sample">Sample Report</a>
+    <a href="#screenshots">Screenshots</a>
     &middot;
-    <a href="https://x.com/Cekgu0903">X</a>
+    <a href="https://github.com/M1KUAPP/Cekgu/issues/new?labels=bug">Report a Bug</a>
     <br />
   </p>
 

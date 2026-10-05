@@ -1,0 +1,18 @@
+{
+  "name": "Cekgu",
+  "description": "An answer-key checker that has two AI model families solve a multiple-choice paper blind to its key, flagging mis-keyed and ambiguous items.",
+  "logo": {
+    "light": "../../public/brand/cekgu-mark.svg",
+    "dark": "../../public/brand/cekgu-mark-dark.svg"
+  },
+  "screenshot": {
+    "light": "banner-screenshot.png"
+  },
+  "colors": {
+    "paper": "#edeff1",
+    "ink": "#14181f",
+    "accent": "#b3202f"
+  },
+  "font": "fonts/schibsted-grotesk-latin.woff2",
+  "out": "docs/readme"
+}
