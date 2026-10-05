@@ -61,7 +61,7 @@ and one stroke for the pen, no raster and no filters.
 | -------------------- | ------------------------------------------------------- | --------------------------------------------------------------- |
 | `cekgu-mark.svg`     | Symbol only, `viewBox 0 0 64 64`, ink in `currentColor` | 16 px (tab, inline), 24 px (nav), 48 px (record header), 512 px |
 | `cekgu-wordmark.svg` | The name as SVG `<text>`, `viewBox 0 0 160 48`          | 96 px to 320 px wide                                            |
-| `cekgu-lockup.svg`   | Mark plus wordmark, `viewBox 0 0 240 64`                | 120 px to 480 px wide; the deck, the README, the home page      |
+| `cekgu-lockup.svg`   | Mark plus wordmark, `viewBox 0 0 240 64`                | 120 px to 480 px wide; the deck, the home page                  |
 | `favicon.svg`        | Mark on a solid paper ground with a 12-unit corner      | 16 px and 32 px tabs, 180 px touch icon after rasterising       |
 
 The wordmark and lockup set the name as `<text>` in `'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif` at weight
