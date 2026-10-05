@@ -344,8 +344,8 @@ directory imports the verdict rule or the record writer, or if a provider hostna
 - **Retrieval:** Search API, no model. Text other people published, quoted verbatim, no judgement
 - **Assistant:** GonkaRouter, MiniMax-M2.7 with tool calling. Grounded answers about one record, with receipts
 - **Mascot:** PixiJS, pixi-live2d-display, Web Speech. Live2D reader seats, their captions and their voice
-- **Hosting and CI:** Cloud Run, Artifact Registry, GitHub Actions. Container build, tagged PR previews, production
-  deploy
+- **Hosting:** Cloud Run, Artifact Registry. Container build and a manual production deploy with
+  [`scripts/deploy-local.sh`](scripts/deploy-local.sh)
 - **Quality:** Biome, Prettier, TypeScript, Playwright. Lint, format, strict types, browser smoke pass
 
 Implementation detail, API contracts, model measurements, queue policy and test evidence live in [TRD](docs/TRD.md).
@@ -411,7 +411,7 @@ is not meant to be one.
    | `PORT`                     | no       | Defaults to `8080`                                                 |
    | `GOOGLE_CLIENT_ID/_SECRET` | no       | Both must be set for Google sign-in to appear                      |
    | `MASCOT_ENABLED`           | no       | `true` turns on the Live2D readers                                 |
-   | `MIGRATE_ON_START`         | no       | `false` skips migrations and sample seeding; PR previews set this  |
+   | `MIGRATE_ON_START`         | no       | `false` skips migrations and sample seeding                        |
    | `WORKER_ENABLED`           | no       | `false` runs the API without the queue worker                      |
 
 1. Apply the migrations.
@@ -427,7 +427,7 @@ is not meant to be one.
    bun run dev
    ```
 
-**Verifying a change.** The first three are what CI runs on every pull request.
+**Verifying a change.** No CI runs these.
 
 ```sh
 bun run lint           # Biome across the code, Prettier across Markdown and YAML
@@ -438,12 +438,12 @@ bun run check:anchors
 ```
 
 `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use
-`bun run e2e:local`, or set `E2E_BASE_URL` to a PR preview. The 77 skipped tests need a live gateway key or database and
-are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
+`bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or
+database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
 
 One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a
 `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run
-`GEMINI_API_KEY= bun test` for a clean local pass; CI has no `.env` and is unaffected.
+`GEMINI_API_KEY= bun test` for a clean local pass.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
