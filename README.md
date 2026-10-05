@@ -279,33 +279,30 @@ Implementation detail, API contracts, model measurements, queue policy and test 
 
 ## Getting Started
 
-The deployed app needs nothing installed: open the [live demo](https://cekgu-op7lf5dspq-as.a.run.app) and press **Sign In as Guest**, or read the [sample report](https://cekgu-op7lf5dspq-as.a.run.app/sample) without signing in at all.
-
-**Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md), [acceptable use](docs/legal/acceptable-use.md).
-
 Running it locally needs a Postgres database and a GonkaRouter key, because there is no offline inference path and there is not meant to be one.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
 ### Prerequisites
 
-- [Bun](https://bun.sh) 1.4 or newer
-- A PostgreSQL database, local or hosted
-- A GonkaRouter API key from [gonkarouter.io](https://gonkarouter.io)
-- Optional: a Tavily key (`TAVILY_API_KEY`) to enable live retrieval. Without it the readers work from their own knowledge and every verdict is unchanged.
-- Optional: a Google OAuth client for Google sign-in, and a vision API key to enable paper uploads. Without either, the app still runs — Google sign-in disappears and `POST /api/extract` answers 503 saying uploads are off. Pasting a link to a web page keeps working, because that path needs no vision model.
+- [Bun](https://bun.sh) 1.4 or newer — the server runtime, package manager and test runner.
+- [PostgreSQL](https://www.postgresql.org/) — a database, local or hosted.
+- [GonkaRouter](https://gonkarouter.io) API key — the only inference credential, since there is no offline inference path.
+- [Tavily](https://tavily.com) key (`TAVILY_API_KEY`), optional — enables live retrieval. Without it the readers work from their own knowledge and every verdict is unchanged.
+- [Google OAuth](https://developers.google.com/identity/protocols/oauth2) client, optional — for Google sign-in. Without it the app still runs and Google sign-in disappears.
+- [Gemini API](https://ai.google.dev/gemini-api/docs) key (`GEMINI_API_KEY`), optional — a vision API key to enable paper uploads. Without it the app still runs and `POST /api/extract` answers 503 saying uploads are off; pasting a link to a web page keeps working, because that path needs no vision model.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
 ### Installation
 
-1. Install dependencies. This also wires the Husky commit hooks.
+1. **Install dependencies.** This also wires the Husky commit hooks.
 
    ```sh
    bun install
    ```
 
-1. Copy the environment template and fill it in. Key names only ever live in the example file, never values.
+1. **Copy the environment template and fill it in.** Key names only ever live in the example file, never values.
 
    ```sh
    cp .env.example .env
@@ -326,31 +323,31 @@ Running it locally needs a Postgres database and a GonkaRouter key, because ther
    | `MIGRATE_ON_START`         | no       | `false` skips migrations and sample seeding                        |
    | `WORKER_ENABLED`           | no       | `false` runs the API without the queue worker                      |
 
-1. Apply the migrations.
+1. **Apply the migrations.**
 
    ```sh
    bun run db:migrate
    ```
 
-1. Start both processes. The API runs on `8080` under Bun's watcher and Vite serves the client on `5173`, proxying `/api` to it.
+1. **Start both processes.** The API runs on `8080` under Bun's watcher and Vite serves the client on `5173`, proxying `/api` to it.
 
    ```sh
    bun run dev
    ```
 
-**Verifying a change.** No CI runs these.
+1. **Run the checks.** No CI runs these.
 
-```sh
-bun run lint           # Biome across the code, Prettier across Markdown and YAML
-bun run typecheck      # tsc --noEmit, strict, noUncheckedIndexedAccess
-bun test               # 498 pass, 77 skip, 0 fail across 52 files
-bun run e2e            # Playwright against the deployment named by E2E_BASE_URL
-bun run check:anchors
-```
+   ```sh
+   bun run lint           # Biome across the code, Prettier across Markdown and YAML
+   bun run typecheck      # tsc --noEmit, strict, noUncheckedIndexedAccess
+   bun test               # 498 pass, 77 skip, 0 fail across 52 files
+   bun run e2e            # Playwright against the deployment named by E2E_BASE_URL
+   bun run check:anchors
+   ```
 
-`bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
+   `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
 
-One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run `GEMINI_API_KEY= bun test` for a clean local pass.
+   One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run `GEMINI_API_KEY= bun test` for a clean local pass.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
