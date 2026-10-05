@@ -585,8 +585,9 @@ delete rows on a timer.
 ## 11. Data model
 
 Neon Postgres, Singapore region (`ap-southeast-1`), one database, one schema. Drizzle ORM defines the tables in
-`src/server/db/schema.ts`; `drizzle-kit generate` writes SQL into `drizzle/`, and the server applies pending migrations
-at start.
+`src/server/db/schema.ts`; `bun run db:generate` runs `drizzle-kit generate`, which writes SQL into `drizzle/`, then
+`scripts/format-drizzle.ts`, which re-indents that output to `.editorconfig`. The server applies pending migrations at
+start.
 
 **Why Neon and Postgres.** Records are the product memory ([product principle 5](PRODUCT.md#product-principles)), so
 they need a database that survives a redeploy, which rules out SQLite on Cloud Run's ephemeral disk. The queue claim in

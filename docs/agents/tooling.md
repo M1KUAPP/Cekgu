@@ -13,6 +13,7 @@ Contents:
 | **Bun**                              | Package manager and script runner                                         |
 | **Biome**                            | Lint and format for JS, TS, JSON, CSS, HTML                               |
 | **Prettier**                         | Format for Markdown and YAML, the two Biome does not cover                |
+| **editorconfig-checker**             | Every tracked file against `.editorconfig`, run first in `bun run lint`   |
 | **TypeScript**                       | `tsc --noEmit`; strict, `noUncheckedIndexedAccess`                        |
 | **commitlint + husky + lint-staged** | Conventional Commits on `commit-msg`; staged files linted on `pre-commit` |
 | **GonkaRouter**                      | The only permitted inference path                                         |
@@ -21,7 +22,7 @@ Contents:
 bun install          # dev tooling; also wires husky hooks
 bun run check        # lint, typecheck, test, check:anchors and test:guard, in that order
 bun run test:guard   # regression tests for merge and main-branch enforcement
-bun run lint         # Biome across the code, Prettier across Markdown and YAML
+bun run lint         # editorconfig-checker, Biome across the code, Prettier across Markdown and YAML
 bun run lint:fix     # Biome fixes and Prettier, writing
 bun run format       # the same two, writing
 bun run typecheck    # tsc --noEmit
