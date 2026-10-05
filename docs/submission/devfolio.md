@@ -95,7 +95,7 @@ GonkaRouter — AI for Society
 
 ## Repository URL
 
-https://github.com/MUBA-M1KU/Cekgu
+https://github.com/M1KUAPP/Cekgu
 
 ## Live project URL
 

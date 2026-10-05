@@ -404,7 +404,7 @@ recorded readings and public request ids from a real pass; nothing in it is fabr
   requirement exists to forbid
 
 **Pages added 6 September.** Live retrieval shipped three days after this pass was captured, so no record a judge could
-open showed any ([#292](https://github.com/MUBA-M1KU/Cekgu/issues/292)) and the feature read as missing rather than as
+open showed any ([#292](https://github.com/M1KUAPP/Cekgu/issues/292)) and the feature read as missing rather than as
 dated. Real Tavily results for the sample's own twelve questions are now attached — three pages each, snippets verbatim,
 retrieved through `src/server/retrieval/tavily.ts` on 6 September 2026.
 

@@ -17,7 +17,7 @@ sections, not separate required routes.
 
 The one unresolved product risk is the external GonkaRouter path. An earlier `E2E_FLOW=1 bun run e2e -- e2e/flow.e2e.ts`
 run remained **Checking** after 480 seconds with Reader A admitted and Reader B absent. It is tracked in
-[#189](https://github.com/MUBA-M1KU/Cekgu/issues/189). This pass did not rerun that test because a production deploy had
+[#189](https://github.com/M1KUAPP/Cekgu/issues/189). This pass did not rerun that test because a production deploy had
 started less than five minutes before the test window; a deploy-period result would not distinguish rate limiting from
 instance replacement. No retry was made.
 
@@ -84,7 +84,7 @@ the source is absent. It keeps this record from silently promoting older manual 
 
 ## Follow-up
 
-Desktop acceptance is complete for normal use. Keep [#48](https://github.com/MUBA-M1KU/Cekgu/issues/48) open while #189
+Desktop acceptance is complete for normal use. Keep [#48](https://github.com/M1KUAPP/Cekgu/issues/48) open while #189
 remains open, because a live check can be delayed by GonkaRouter rate limiting or a stranded claim. The current
 deployment has no controlled **Unverified** record, so **Retry Verification** remains unwalked. Mobile rows are
 intentionally excluded from this project scope.
@@ -92,7 +92,7 @@ intentionally excluded from this project scope.
 ## Phone walk at 375 px, 6 September
 
 Walked at 17:20 UTC on 5 September 2026 against production, which still served the 14:47 UTC build because deploys are
-gated ([#260](https://github.com/MUBA-M1KU/Cekgu/issues/260)). Headless Chromium emulating an iPhone SE at 375 px, not a
+gated ([#260](https://github.com/M1KUAPP/Cekgu/issues/260)). Headless Chromium emulating an iPhone SE at 375 px, not a
 physical phone. Covers steps 1 to 4 of the PRD demo acceptance test: the landing page, the public sample record with its
 evidence, Guest sign-in landing on the dashboard, and four workspace routes.
 
@@ -125,7 +125,7 @@ ingestion and the New Check card merge added that morning.
 targets the deployment, not the tree, and production was still serving a build from before this session because deploys
 are gated on exhausted GitHub Actions minutes. So the 27 green tests say the deployed demo path is healthy; they say
 nothing about the Truth Score, retrieval or link input. Only a deploy of this build, then a rerun, would. The same trap
-is recorded in [#148](https://github.com/MUBA-M1KU/Cekgu/issues/148).
+is recorded in [#148](https://github.com/M1KUAPP/Cekgu/issues/148).
 
 The opt-in `E2E_FLOW=1` live-gateway test stayed skipped. Against a deployment without this build it would exercise the
 old path at the cost of real gateway tokens, which buys nothing.
