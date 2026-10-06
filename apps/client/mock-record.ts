@@ -18,7 +18,7 @@ import { verdict } from '../shared/verdict'
 // A stand-in for GET /api/records/:id behind VITE_MOCK_API, shaped exactly like TRD section 15.
 // The FIFO item is the demo's reveal: the supplied key says Stack and both readers chose Queue.
 //
-// EVERY REQUEST ID BELOW IS REAL. They are lifted verbatim from src/server/fixtures/benchmark-pass.json,
+// EVERY REQUEST ID BELOW IS REAL. They are lifted verbatim from apps/server/fixtures/benchmark-pass.json,
 // the 3 September pass this product ran against the live gateway, together with the devshard and the
 // latency the same call reported. Each one resolves to HTTP 200 at
 // https://api.gonkarouter.io/v1/receipts/<id> today.
@@ -127,7 +127,7 @@ type Spec = {
 }
 
 // Captured by running the real retrieval path against every question on this paper on 6 September
-// 2026: src/server/retrieval/tavily.ts, the same evidenceQuery the worker builds, one search each.
+// 2026: apps/server/retrieval/tavily.ts, the same evidenceQuery the worker builds, one search each.
 // Every snippet is the string Tavily returned, verbatim and truncated the way the client truncates.
 // Results whose snippet was nothing but site navigation were dropped; nothing was rewritten.
 //

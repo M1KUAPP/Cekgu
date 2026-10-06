@@ -2,7 +2,7 @@ import type { Seat } from '../../shared/chat'
 import type { Utterance } from './speech'
 
 // The cats' voices are the browser's own. speechSynthesis needs no key, reaches no host and ships
-// no bytes, so the gateway fence in src/server/gateway/only-gonkarouter.test.ts is untouched and no
+// no bytes, so the gateway fence in apps/server/gateway/only-gonkarouter.test.ts is untouched and no
 // second track exemption is spent on a voice. It is also the only engine that cannot fail on stage
 // for a network reason.
 //

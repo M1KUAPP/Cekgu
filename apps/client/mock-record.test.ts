@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'bun:test'
 import { mockRecord, mockStats } from './mock-record'
 
-const pass = await Bun.file('./src/server/fixtures/benchmark-pass.json').json()
+const pass = await Bun.file('./apps/server/fixtures/benchmark-pass.json').json()
 
 const captured = new Map<string, string>()
 for (const item of pass.items) {

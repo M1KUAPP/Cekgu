@@ -126,7 +126,7 @@ export function CitationPills({ citations, onCite }: { citations: Citation[]; on
  * Under `CHAT_PROVIDER=gonka` the id is a real request id with a public receipt, so it is the same
  * pill every cited reading gets. Under `gemini` it is not one, and it must never look like one:
  * no fill, a dashed edge, no link to follow, and the provider named before the id. That is the
- * precedent src/server/transcribe/gemini.ts set, and it is load-bearing rather than decorative,
+ * precedent apps/server/transcribe/gemini.ts set, and it is load-bearing rather than decorative,
  * because the whole surface's claim is that a cited fact carries a receipt and this does not.
  */
 export function ProvenancePill({ provenance }: { provenance: ChatProvenance }) {
