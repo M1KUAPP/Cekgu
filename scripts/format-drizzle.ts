@@ -9,7 +9,7 @@ import { Glob } from 'bun'
 
 let changed = 0
 
-for await (const path of new Glob('drizzle/**/*.{sql,json}').scan('.')) {
+for await (const path of new Glob('apps/server/drizzle/**/*.{sql,json}').scan('.')) {
   const text = await Bun.file(path).text()
   const fixed = text.replace(/^\t+/gm, (tabs) => '  '.repeat(tabs.length)).replace(/\n*$/, '\n')
 
