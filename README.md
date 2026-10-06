@@ -93,11 +93,6 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 
 ### Screenshots
 
-<video src="https://github.com/user-attachments/assets/09f7f9f2-9757-4d40-8aa3-0973fe5ee2b2" controls muted poster="docs/readme/demo-poster.jpg" width="100%">
-  Your browser does not support inline video playback.
-  <a href="https://github.com/M1KUAPP/Cekgu/releases/download/demo-video-v1/Cekgu-Demo-720p.mp4">Download the film</a> instead.
-</video>
-
 <table>
   <tr>
     <td width="50%" valign="top" align="left">
