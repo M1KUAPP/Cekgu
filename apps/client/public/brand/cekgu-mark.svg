@@ -1,6 +1,6 @@
 <!-- Light-ground variant. Ink is the light `ink` token (#17202b) from docs/DESIGN.md, written
     literally because currentColor does not inherit into an SVG loaded through an img element.
-    The in-app mark is inline in src/client/components/Mark.tsx and does follow the theme.
+    The in-app mark is inline in apps/client/components/Mark.tsx and does follow the theme.
 
     Token names are written without their CSS prefix on purpose: a double hyphen is illegal
     inside an XML comment, and it made this file fail to parse as a standalone document. It
