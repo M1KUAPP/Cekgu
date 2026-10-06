@@ -6,7 +6,7 @@ import { z } from 'zod'
 // twenty-first record. The 24-hour sweep in guest.ts is what actually bounds the shared workspace.
 export const GUEST_MAX_ITEM_CHARS = 2000
 
-// Both windows are printed in Settings and enforced by the sweep in src/server/retention.ts, so
+// Both windows are printed in Settings and enforced by the sweep in apps/server/retention.ts, so
 // they live here rather than on either side of that pair. RETENTION_DAYS is the default keep
 // period for a private account; TRASH_DAYS is how long a deleted record stays recoverable.
 export const RETENTION_DAYS = 90

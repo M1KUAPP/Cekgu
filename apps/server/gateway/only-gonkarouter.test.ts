@@ -34,17 +34,17 @@ const DIRECT_PROVIDER_HOST =
 const PROVIDER_PACKAGE =
   /^(openai|@openai\/|@anthropic-ai\/|@google\/gene|@google\/gen|@google-cloud\/aiplatform|@mistralai\/|cohere-ai|groq-sdk|@ai-sdk\/|ai$|langchain|@langchain\/|llamaindex|replicate)/
 
-const sources = [...new Glob('src/**/*.{ts,tsx}').scanSync({ cwd: new URL('.', root).pathname })]
+const sources = [...new Glob('apps/**/*.{ts,tsx}').scanSync({ cwd: new URL('.', root).pathname })]
 
 // The exemptions, spelled as path prefixes so a second file inside one is covered and a provider
 // host anywhere else is not. Widening this list is the change a reviewer should stop, and each
 // entry below records who decided it and on what reasoning.
 //
-//   src/server/transcribe/  Vision to text. Turns pixels and PDF bytes into the words already
+//   apps/server/transcribe/  Vision to text. Turns pixels and PDF bytes into the words already
 //                           printed on the page and is forbidden by its own prompt from deciding
 //                           anything about them. TRD section 20.
 //
-//   src/server/chat/        The record agent's phrasing layer. Decided by chaosiris on 4 September,
+//   apps/server/chat/        The record agent's phrasing layer. Decided by chaosiris on 4 September,
 //                           on the record in
 //                           docs/plans/2026-09-04-talking-cats-and-record-agent-design.md.
 //                           THIS ONE IS DIFFERENT FROM THE FIRST AND THE DIFFERENCE MATTERS: an
@@ -55,11 +55,11 @@ const sources = [...new Glob('src/**/*.{ts,tsx}').scanSync({ cwd: new URL('.', r
 //                           carry Gonka request ids and public receipts, the model only phrases
 //                           them, and the phrasing layer's own id is labelled by provider and never
 //                           rendered as a Gonka one. Set CHAT_PROVIDER=gonka to close it.
-const PROVIDER_DIRS = ['src/server/transcribe/', 'src/server/chat/']
+const PROVIDER_DIRS = ['apps/server/transcribe/', 'apps/server/chat/']
 
 // Where reasoning actually happens. Named separately because the exemption above is a directory
 // rule, and a directory rule alone would not notice the day somebody moves a verdict into it.
-const REASONING_DIRS = ['src/server/gateway/', 'src/server/queue/', 'src/server/extract/', 'src/shared/']
+const REASONING_DIRS = ['apps/server/gateway/', 'apps/server/queue/', 'apps/server/extract/', 'apps/shared/']
 
 describe('every inference goes through GonkaRouter', () => {
   test('no source file outside the transcription boundary names a provider host', () => {
@@ -101,13 +101,13 @@ describe('every inference goes through GonkaRouter', () => {
     expect(offences).toEqual([])
   })
 
-  // Live retrieval is not an exemption, because it is not inference: src/server/retrieval/ fetches
+  // Live retrieval is not an exemption, because it is not inference: apps/server/retrieval/ fetches
   // text other people published and runs no model. What makes that true rather than merely claimed
   // is that it cannot decide anything and cannot reach the gateway, so it is held to the same
   // "decides nothing" rule the two provider directories are.
   test('the retrieval boundary decides nothing', () => {
     const offences: string[] = []
-    for (const file of sources.filter((name) => name.startsWith('src/server/retrieval/'))) {
+    for (const file of sources.filter((name) => name.startsWith('apps/server/retrieval/'))) {
       if (file.endsWith('.test.ts')) continue
       const text = read(file)
       for (const forbidden of ['shared/verdict', 'db/schema', 'queue/round', 'createRecordSchema', 'gateway/client']) {
@@ -129,7 +129,7 @@ describe('every inference goes through GonkaRouter', () => {
   // The base URL is configurable, which is right — a preview or a local mock needs to point
   // somewhere else. What must not drift is the value a deployment gets when nobody sets it.
   test('the gateway base URL defaults to GonkaRouter', () => {
-    const env = read('src/server/env.ts')
+    const env = read('apps/server/env.ts')
     const fallback = /gonkaBaseUrlOpenai:\s*optional\('GONKA_BASE_URL_OPENAI'\)\s*\?\?\s*'([^']+)'/.exec(env)
     expect(fallback?.[1]).toBeDefined()
     expect(new URL(fallback?.[1] ?? '').host).toBe(GATEWAY)
@@ -138,7 +138,7 @@ describe('every inference goes through GonkaRouter', () => {
   // Belt and braces on the one call that actually leaves the process: whatever the client builds
   // its request from, it has to come from env rather than from a literal of its own.
   test('the gateway client takes its host from env, never from a literal', () => {
-    const client = read('src/server/gateway/client.ts')
+    const client = read('apps/server/gateway/client.ts')
     const literals = [...client.matchAll(/https?:\/\/[a-z0-9.-]+/g)].map((match) => match[0])
     expect(literals.filter((url) => new URL(url).host !== GATEWAY)).toEqual([])
   })

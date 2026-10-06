@@ -11,7 +11,7 @@ import { sampleRoutes } from './sample'
 import { statsRoutes } from './stats'
 
 // Routes from TRD section 15 mount here. An unmatched /api path gets a JSON 404 from
-// src/server/index.ts only once the caller has a session; without one the gate below answers 401
+// apps/server/index.ts only once the caller has a session; without one the gate below answers 401
 // first, which is the right order — an anonymous caller should not learn which routes exist.
 export const api = new Hono<AppEnv>()
 

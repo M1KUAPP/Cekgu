@@ -80,7 +80,7 @@ function overBudget(c: Context<AppEnv>) {
 export const extractRoutes = new Hono<AppEnv>()
 
 // TRD section 20's third input, and the one the compliance audit called out as missing: a link.
-// The page is fetched and reduced to its words by src/server/extract/fetch-url.ts, which calls no
+// The page is fetched and reduced to its words by apps/server/extract/fetch-url.ts, which calls no
 // model at all, and only then does a Gonka model decide what the questions are.
 //
 // A link to an HTML page needs no transcription, so unlike the upload route this one works on a

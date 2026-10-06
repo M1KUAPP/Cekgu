@@ -4,7 +4,7 @@ import { type AgentAnswer, MAX_ROUNDS, SYSTEM, TOOLS, type ToolReporter } from '
 import { runTool } from './tools'
 
 // THE SECOND CALL IN THIS PRODUCT THAT DOES NOT GO TO GONKAROUTER, and it is a more serious
-// exemption than the first. src/server/transcribe/ turns pixels into the words already on the page
+// exemption than the first. apps/server/transcribe/ turns pixels into the words already on the page
 // and decides nothing; an answer about a record is closer to reasoning, and a strict reading of the
 // track's first rule does not permit it. It is here because the team decided it on 4 September, on
 // the record in docs/plans/2026-09-04-talking-cats-and-record-agent-design.md.

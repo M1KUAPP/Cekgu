@@ -51,7 +51,7 @@ export const env = {
   gemini: geminiApiKey ? { apiKey: geminiApiKey, model: optional('GEMINI_MODEL') ?? 'gemini-2.5-flash' } : null,
   // Live retrieval for cross-verification. Optional in the same way the vision key is: absent, the
   // readers work from their own knowledge exactly as they did before, and every other route is
-  // unaffected. It buys evidence, never a judgement — see src/server/retrieval/tavily.ts.
+  // unaffected. It buys evidence, never a judgement — see apps/server/retrieval/tavily.ts.
   tavily: tavilyApiKey ? { apiKey: tavilyApiKey } : null,
   // The record agent. Its provider is a one-word switch because it is a track requirement decision
   // rather than a technical one: 'gemini' phrases answers off the gateway, 'gonka' keeps every
