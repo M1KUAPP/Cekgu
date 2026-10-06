@@ -9,12 +9,11 @@
 Moved out of `AGENTS.md` and its imports so they are not reloaded into every session, apart from the Karpathy
 guidelines, which the org template imports. **The `docs/agents/` topic files outrank them wherever they disagree.**
 
-| Reference                               | Lives in                                                                                                 | Applies                                                                                                                                  |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Markdown style guide**                | [`docs/references/markdown-style.md`](../references/markdown-style.md)                                   | Every Markdown file in the repo                                                                                                          |
-| **Coding guidelines (Andrej Karpathy)** | [`docs/agents/andrej-karpathy-skills.md`](andrej-karpathy-skills.md)                                     | Always, imported by `AGENTS.md`. Guideline 1 is overridden by **How to work**; see [the override](project.md#coding-guidelines-override) |
-| **RTK (Rust Token Killer)**             | [`docs/references/agent-tooling.md`](../references/agent-tooling.md#rtk-the-rust-token-killer)           | Only if `which rtk` finds it                                                                                                             |
-| **Graphify**                            | [`docs/references/agent-tooling.md`](../references/agent-tooling.md#graphify-a-codebase-knowledge-graph) | Only if `which graphify` finds it, and only once there is real code                                                                      |
+| Reference                               | Lives in                                                                                       | Applies                                                                                                                                  |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Markdown style guide**                | [`docs/references/markdown-style.md`](../references/markdown-style.md)                         | Every Markdown file in the repo                                                                                                          |
+| **Coding guidelines (Andrej Karpathy)** | [`docs/agents/andrej-karpathy-skills.md`](andrej-karpathy-skills.md)                           | Always, imported by `AGENTS.md`. Guideline 1 is overridden by **How to work**; see [the override](project.md#coding-guidelines-override) |
+| **RTK (Rust Token Killer)**             | [`docs/references/agent-tooling.md`](../references/agent-tooling.md#rtk-the-rust-token-killer) | Only if `which rtk` finds it                                                                                                             |
 
 Two rules from them that change behaviour even if you never open them:
 

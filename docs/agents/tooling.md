@@ -35,7 +35,7 @@ YAML, Biome owns everything else**, split by file extension: `.prettierignore` l
 matches every formatter setting `biome.json` states, so both wrap at 120 and neither can undo the other.
 `embeddedLanguageFormatting` is at Prettier's default, so fenced code samples in Markdown are formatted too.
 
-`rtk` and `graphify`, both optional and per-machine, are documented in
+`rtk`, optional and per-machine, is documented in
 [`docs/references/agent-tooling.md`](../references/agent-tooling.md). The repository layout is not written down
 anywhere: `README.md` is judge-facing and carries architecture rather than a directory tree. Read it off the tree
 itself.
