@@ -777,8 +777,8 @@ options, **20 non-sample records** at once.
 The worker runs two sweeps. `sweepExpiredGuestRecords` runs every five minutes and hard-deletes Guest records whose
 `expires_at` has passed. `sweepRetiredRecords` runs hourly, hard-deletes any record whose `deleted_at` is more than
 `TRASH_DAYS` old, and hard-deletes any record untouched for `RETENTION_DAYS` (FR-RECORD-7, FR-RECORD-8). Both windows
-live in `apps/shared/schemas.ts` because Settings prints them, so the notice and the sweep cannot drift apart. The hourly
-cadence is deliberate: the shorter of the two windows is thirty days.
+live in `apps/shared/schemas.ts` because Settings prints them, so the notice and the sweep cannot drift apart. The
+hourly cadence is deliberate: the shorter of the two windows is thirty days.
 
 Both sweeps exempt `is_sample = true`. The sample record is owned by the Guest user, is the one record with that flag,
 and is refused by every mutating route except dispositions (FR-SAMPLE-2, FR-SAMPLE-3).
@@ -1063,8 +1063,8 @@ has not earned it, and collapsing the two would let a gateway outage read on scr
 the UI prints the denominator, because three verified items out of twelve can average 100 and that number alone would
 describe nine items nobody read.
 
-The score is **derived in the read path** (`apps/server/records/queries.ts`), not stored, so no column can drift from the
-attempts underneath it. Attempts are selected newest-first for the evidence view, so the readings are re-sorted on
+The score is **derived in the read path** (`apps/server/records/queries.ts`), not stored, so no column can drift from
+the attempts underneath it. Attempts are selected newest-first for the evidence view, so the readings are re-sorted on
 `finishedAt` ascending to recover the order the round produced them before the pair is chosen.
 
 ## 15. API contracts
@@ -1416,9 +1416,9 @@ that generation.
 | Resolved             | `Tap` once           | `Tap` once           | After the human disposition, never confetti     |
 
 **Fallbacks.** `prefers-reduced-motion: reduce` or the user's Reduce Motion setting stops the loop on the first idle
-frame. A failed WebGL context, core script or asset swaps the canvas for the still PNG in `apps/client/public/brand/` with no error
-surfaced. The canvas is `aria-hidden`, ignores pointer events, pauses on `visibilitychange` and when scrolled off
-screen, and is hidden below 768 px wide. State text on the record remains the only authoritative signal.
+frame. A failed WebGL context, core script or asset swaps the canvas for the still PNG in `apps/client/public/brand/`
+with no error surfaced. The canvas is `aria-hidden`, ignores pointer events, pauses on `visibilitychange` and when
+scrolled off screen, and is hidden below 768 px wide. State text on the record remains the only authoritative signal.
 
 Tororo and Hijiki are Live2D sample characters, used under the Live2D Free Material License Agreement, and are not
 Cekgu's own. Built with the Live2D Cubism SDK. That attribution used to render as a footer on every page; AlaskanTuna
@@ -1789,8 +1789,8 @@ That claim rests on one flag:
 - The request sends **`include_answer: false`**. Tavily will otherwise return an LLM-written answer to the query, and
   taking it would put reasoning on a provider that is not the gateway — the track's one fatal rule
 - It also sends `include_raw_content: false`, so a prompt cannot be filled with a scraped page
-- `apps/server/retrieval/tavily.test.ts` asserts both flags on the source, and asserts no `answer` field is ever read off
-  the response
+- `apps/server/retrieval/tavily.test.ts` asserts both flags on the source, and asserts no `answer` field is ever read
+  off the response
 - `only-gonkarouter.test.ts` holds `apps/server/retrieval/` to the same "decides nothing" rule the two provider
   directories are held to: it may not import the verdict rule, the schema, the round or the gateway client
 

@@ -220,9 +220,9 @@ GonkaRouter and carries a request id, so requirement 1's own wording is met rath
 transcription on the gateway would spend the demo path's slowest reader on the one job in the product that needs no
 judgement.
 
-**The boundary is enforced, not promised.** `apps/server/gateway/only-gonkarouter.test.ts` permits a provider hostname in
-`apps/server/transcribe/` and fails the build anywhere else, forbids that directory from importing the verdict rule or
-the record schema, and separately asserts that the reasoning path names no provider host at all. So the grep a judge
+**The boundary is enforced, not promised.** `apps/server/gateway/only-gonkarouter.test.ts` permits a provider hostname
+in `apps/server/transcribe/` and fails the build anywhere else, forbids that directory from importing the verdict rule
+or the record schema, and separately asserts that the reasoning path names no provider host at all. So the grep a judge
 would run still returns one directory and a stated reason, rather than nothing —
 [`TRD.md` section 20](TRD.md#20-reading-a-paper-from-an-upload) holds the decision in full.
 

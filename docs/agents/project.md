@@ -30,10 +30,10 @@ Non-negotiable, from [`docs/source/gonkarouter-challenge.md`](../source/gonkarou
     printed on it ([`docs/TRD.md` section 20](../TRD.md#20-reading-a-paper-from-an-upload)), and `apps/server/chat/`
     phrases the record assistant's answers from facts the Gonka readers already produced
     ([section 21](../TRD.md#21-the-readers-voice-and-the-record-assistant)).
-    `apps/server/gateway/only-gonkarouter.test.ts` fails the build if a provider host appears anywhere else, or if either
-    directory imports the verdict rule. **`apps/server/retrieval/` is not a third exemption**: it is a search API that
-    returns text other people published and calls no model, so the Gonka readers still do every piece of reasoning. The
-    same guard holds it to deciding nothing, and asserts its `include_answer: false`
+    `apps/server/gateway/only-gonkarouter.test.ts` fails the build if a provider host appears anywhere else, or if
+    either directory imports the verdict rule. **`apps/server/retrieval/` is not a third exemption**: it is a search API
+    that returns text other people published and calls no model, so the Gonka readers still do every piece of reasoning.
+    The same guard holds it to deciding nothing, and asserts its `include_answer: false`
     ([`docs/TRD.md` section 22](../TRD.md#22-live-retrieval-for-cross-verification))
 1.  **At least two models cross-verify.** Multi-model consensus
 1.  **Gonka Request IDs are surfaced in the UI** for every inference step. This is the on-chain proof: wire it through
