@@ -449,7 +449,7 @@ apps/
                       (`seedSample` re-seeds when this file no longer matches the stored row — see below)
     index.ts          entry point: migrate, seed the Guest user and sample, start the worker, listen
   shared/             TypeScript types, zod schemas, verdict.ts (the rule as a pure function)
-e2e/                  Playwright: smoke.e2e.ts against a deployed URL, flow.e2e.ts behind E2E_FLOW=1
+tests/                Playwright: smoke.e2e.ts against a deployed URL, flow.e2e.ts behind E2E_FLOW=1
 scripts/              repo tooling, including deploy-local.sh, the manual production deploy (section 10)
 Dockerfile            multi-stage on oven/bun:1.4.2
 vite.config.ts        client build, dev proxy of /api to the server
