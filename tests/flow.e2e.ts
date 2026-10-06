@@ -7,7 +7,7 @@ import { expect, test } from '@playwright/test'
 //
 // It is slow by nature — a round is two live model calls — so it is excluded from the default run:
 //
-//   E2E_FLOW=1 bunx playwright test e2e/flow.e2e.ts
+//   E2E_FLOW=1 bunx playwright test tests/flow.e2e.ts
 //
 test.skip(!process.env.E2E_FLOW, 'Set E2E_FLOW=1 to run the live gateway path.')
 
