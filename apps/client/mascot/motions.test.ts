@@ -17,8 +17,8 @@ const DESIGN: Record<MascotState, { tororo: Row; hijiki: Row }> = {
 }
 
 const MODEL_PATH = {
-  tororo: 'public/live2d/tororo/runtime/tororo.model3.json',
-  hijiki: 'public/live2d/hijiki/runtime/hijiki.model3.json'
+  tororo: 'apps/client/public/live2d/tororo/runtime/tororo.model3.json',
+  hijiki: 'apps/client/public/live2d/hijiki/runtime/hijiki.model3.json'
 }
 
 type Model3 = { FileReferences: { Motions: Record<string, { File: string }[]> } }

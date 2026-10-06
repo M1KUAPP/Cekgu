@@ -54,7 +54,7 @@ on the paper-coloured ink and reads as the same pen.
 
 ### Assets
 
-All four files live under `public/brand/`. They are hand-authored SVG with a `viewBox`, one compound path for the ink
+All four files live under `apps/client/public/brand/`. They are hand-authored SVG with a `viewBox`, one compound path for the ink
 and one stroke for the pen, no raster and no filters.
 
 | File                 | Contents                                                | Intended sizes                                                  |

@@ -10,7 +10,7 @@ import { Glob } from 'bun'
 // no browser and no external tool, so it runs everywhere the rest of the suite does.
 
 const root = new URL('../../', import.meta.url)
-const files = [...new Glob('public/**/*.svg').scanSync({ cwd: root.pathname })].sort()
+const files = [...new Glob('apps/client/public/**/*.svg').scanSync({ cwd: root.pathname })].sort()
 
 // Everything between `<!--` and the first following `-->`, which is what XML calls a comment.
 function comments(source: string): string[] {
