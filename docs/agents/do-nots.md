@@ -1,7 +1,7 @@
 # Critical do-nots
 
 - **Do not** call an AI provider directly. Everything goes through GonkaRouter, with the two documented exemptions in
-  `src/server/transcribe/` and `src/server/chat/`. Widening either directory, or adding a third, is a track requirement
+  `apps/server/transcribe/` and `apps/server/chat/`. Widening either directory, or adding a third, is a track requirement
   decision and not a refactor
 - **Do not** import or adapt code written before 26 Aug 2026
 - **Do not** commit `.env` or any `sk-…` key. `.env.example` carries key names, never values

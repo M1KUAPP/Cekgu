@@ -13,7 +13,7 @@ import { extractRoutes } from './extract'
 // than a simulated one — which is also the assertion that a deployment without the key stays a
 // working product with one affordance missing.
 
-// The routes sit behind requireSession in src/server/routes/index.ts, so a session is always set by
+// The routes sit behind requireSession in apps/server/routes/index.ts, so a session is always set by
 // the time they run. These tests call them directly, which means the middleware has to be stood back
 // up here or `sessionOf` has nothing to read.
 //

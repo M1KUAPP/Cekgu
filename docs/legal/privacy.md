@@ -81,5 +81,5 @@ third-party systems.
 
 See also [terms](terms.md) and [acceptable use](acceptable-use.md).
 
-<!-- Release review: verified 5 September against src/client/pages/Settings.tsx and src/server/retention.ts. Opening a
+<!-- Release review: verified 5 September against apps/client/pages/Settings.tsx and apps/server/retention.ts. Opening a
 record does not renew private-record retention. Re-review against the deployed product before publication. -->

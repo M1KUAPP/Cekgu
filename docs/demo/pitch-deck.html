@@ -52,7 +52,7 @@
 
       WHICH MODELS ARE NAMED, AND WHERE
       The gateway stopped serving moonshotai/Kimi-K2.6 on 5 September and
-      src/server/gateway/models.ts now holds two families. So:
+      apps/server/gateway/models.ts now holds two families. So:
         - Slides 04 and 06 name seats, "Reader A" and "Reader B", never a fixed
           pair. Slide 06 prints the registry as it stands today.
         - Slide 05 carries ONE receipt, MiniMax, because the pair on that
@@ -1918,7 +1918,7 @@
     <!-- The mark, defined once and used by reference. Two overlapping OMR
         bubbles are the two independent readers; the red check is the
         educator's pen, and it is the only red in the identity. This is the
-        in-app mark, src/client/components/Mark.tsx, not the light-ground file
+        in-app mark, apps/client/components/Mark.tsx, not the light-ground file
         at public/brand/cekgu-mark.svg: the ink is currentColor and the pen is
         var(--pen), so both flip with the ground the way every other accent on
         this deck does. A literal #B3202F would hold the light-ground red on
@@ -2394,7 +2394,7 @@
                   </g>
 
                   <!-- Two half-filled bubbles, the Possible Ambiguity glyph in
-                      DESIGN.md and in src/client/components/VerdictChip.tsx. -->
+                      DESIGN.md and in apps/client/components/VerdictChip.tsx. -->
                   <g>
                     <rect x="928" y="260" width="808" height="82" rx="4" class="card-s" />
                     <text x="956" y="299" font-size="20" class="f-ink"><tspan class="mono f-muted">11</tspan>&#160;&#160;How many bytes are there in one kilobyte?</text>
@@ -2472,7 +2472,7 @@
                     reads as a product status chip, and the product has no chip
                     that says this. It says it in words, on the home page's
                     second step, so those are the words used here verbatim:
-                    src/client/pages/home/HowItWorksSection.tsx. -->
+                    apps/client/pages/home/HowItWorksSection.tsx. -->
                 <text class="f-muted" x="28" y="382" font-size="21">The answer key is withheld.</text>
 
                 <path class="conn" d="M336 271h60" />
@@ -2594,7 +2594,7 @@
             <!-- ONE card, not the pair this question actually produced. Both
                 readings are real and both IDs still resolve, but the second was
                 served by moonshotai/Kimi-K2.6, which the gateway delisted on
-                5 September (src/server/gateway/models.ts). Printing a delisted
+                5 September (apps/server/gateway/models.ts). Printing a delisted
                 model beside a live one needs a footnote, and a wall is the
                 wrong place for one, so the pair claim is made by the foot line
                 and shown live in the demo instead. The ID below is MiniMax and
@@ -2707,7 +2707,7 @@
 
                 <rect x="812.5" y="123" width="327" height="167" rx="10" class="card-s" />
                 <text class="f-ink" x="840" y="165" font-size="25">Gateway client</text>
-                <text class="mono f-muted" x="840" y="199" font-size="20">src/server/gateway/</text>
+                <text class="mono f-muted" x="840" y="199" font-size="20">apps/server/gateway/</text>
                 <text class="f-muted" x="840" y="231" font-size="20">The only file that calls out.</text>
                 <text class="mono f-ink" x="840" y="263" font-size="20">X-Gonka-No-Fallback</text>
 
@@ -2723,7 +2723,7 @@
                     cats in the demo meets them again here. The seat is the
                     mascot; the id under it is whichever family the queue put
                     in that seat, and the two below are the whole registry as
-                    src/server/gateway/models.ts holds it today.
+                    apps/server/gateway/models.ts holds it today.
                     moonshotai/Kimi-K2.6 was the third until 5 September, when
                     the gateway began answering 400 for it and it was dropped.
                     Two families is the floor, not a preference: one family
@@ -2813,7 +2813,7 @@
                   <!-- A file path is a machine string, not a label, so it keeps
                       its own case and the mono face. .kx would uppercase it
                       into a path that does not exist. -->
-                  <p class="kx" style="margin: 16px 0 0; font-family: var(--font-mono); text-transform: none; letter-spacing: 0; font-size: 19px">src/server/gateway/models.ts</p>
+                  <p class="kx" style="margin: 16px 0 0; font-family: var(--font-mono); text-transform: none; letter-spacing: 0; font-size: 19px">apps/server/gateway/models.ts</p>
                 </div>
               </div>
 

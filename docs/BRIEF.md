@@ -204,7 +204,7 @@ The exchange is in the team's Discord and was confirmed by the team lead on 4 Se
 in [`source/`](source/), so a judge who asks is handed the message rather than our account of it. **The qualifier "as
 long as every mandatory requirement is met" is the team's characterisation of the ruling rather than a quoted clause**,
 and it is recorded that way on purpose: the scoping it describes is one we hold ourselves to regardless, stated in
-requirement 1 above and enforced by `src/server/gateway/only-gonkarouter.test.ts`.
+requirement 1 above and enforced by `apps/server/gateway/only-gonkarouter.test.ts`.
 
 This relaxes requirement 1, which is written here and in [`../AGENTS.md`](../AGENTS.md) as though any third-party call
 disqualifies. It does not; only the mandatory reasoning and verification path is constrained.
@@ -220,8 +220,8 @@ GonkaRouter and carries a request id, so requirement 1's own wording is met rath
 transcription on the gateway would spend the demo path's slowest reader on the one job in the product that needs no
 judgement.
 
-**The boundary is enforced, not promised.** `src/server/gateway/only-gonkarouter.test.ts` permits a provider hostname in
-`src/server/transcribe/` and fails the build anywhere else, forbids that directory from importing the verdict rule or
+**The boundary is enforced, not promised.** `apps/server/gateway/only-gonkarouter.test.ts` permits a provider hostname in
+`apps/server/transcribe/` and fails the build anywhere else, forbids that directory from importing the verdict rule or
 the record schema, and separately asserts that the reasoning path names no provider host at all. So the grep a judge
 would run still returns one directory and a stated reason, rather than nothing —
 [`TRD.md` section 20](TRD.md#20-reading-a-paper-from-an-upload) holds the decision in full.

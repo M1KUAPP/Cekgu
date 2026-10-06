@@ -4,7 +4,7 @@ import { afterAll, beforeAll, describe, expect, test } from 'bun:test'
 // and watches what survives. It is opt-in rather than skipped in CI by accident:
 //
 //   docker run -d --name cekgu-test -e POSTGRES_PASSWORD=x -e POSTGRES_DB=cekgu -p 55432:5432 postgres:18-alpine
-//   TEST_DATABASE_URL='postgres://postgres:x@127.0.0.1:55432/cekgu' bun test src/server/guest.sweep.test.ts
+//   TEST_DATABASE_URL='postgres://postgres:x@127.0.0.1:55432/cekgu' bun test apps/server/guest.sweep.test.ts
 //
 // Name the file. ./db exports one pool built at first import, so in a whole-suite run another file
 // may construct it against the preloaded placeholder before this one is reached, and every query

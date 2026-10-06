@@ -393,7 +393,7 @@ CHAT_PROVIDER=gemini                                    # gemini | gonka. See se
 CHAT_MODEL=gemini-2.5-flash                             # Separate from GEMINI_MODEL. Never …-flash-lite
 ```
 
-The three model ids are not configuration. They are a constant list in `src/server/gateway/models.ts`. **They are not
+The three model ids are not configuration. They are a constant list in `apps/server/gateway/models.ts`. **They are not
 verified against `GET /v1/models` at start**, which was the intention when this section was first written and is not
 what shipped: a renamed id would surface as a `400` on the first call of a round rather than as a loud failure at boot.
 The gateway has returned the same three ids on every check since 29 August, so the exposure is a gateway rename during
@@ -433,7 +433,7 @@ critical path, and Bun runs TypeScript directly so the server has no build step.
 ### Repository layout
 
 ```text
-src/
+apps/
   client/             Vite + React 19 single-page app, TypeScript strict, Tailwind v4
   server/             Hono on Bun: /api routes, static serving, the queue worker
     db/               the Drizzle schema and the pooled connection
@@ -456,8 +456,8 @@ vite.config.ts        client build, dev proxy of /api to the server
 drizzle.config.ts     schema path, migrations folder, DATABASE_URL
 ```
 
-`src/shared` is imported by both halves and contains no I/O. Anything that touches `fetch`, the database or the DOM
-lives on its own side. The zod schemas in `src/shared` validate API bodies on the server and form input on the client
+`apps/shared` is imported by both halves and contains no I/O. Anything that touches `fetch`, the database or the DOM
+lives on its own side. The zod schemas in `apps/shared` validate API bodies on the server and form input on the client
 from one definition, which is what keeps FR-CHECK-2's server-side checks equal to the client's.
 
 ### Stack
@@ -470,12 +470,12 @@ from one definition, which is what keeps FR-CHECK-2's server-side checks equal t
 | Language          | TypeScript 7, strict                          | `noUncheckedIndexedAccess`; the shared types are the contract between the halves             |
 | ORM               | Drizzle with drizzle-kit migrations           | Schema in TypeScript, SQL migrations committed, Better Auth adapter exists                   |
 | Auth              | Better Auth                                   | Google OAuth and email/password with a Drizzle adapter, sessions in Postgres                 |
-| Validation        | zod, in `src/shared`                          | One schema for the form and the API boundary                                                 |
+| Validation        | zod, in `apps/shared`                         | One schema for the form and the API boundary                                                 |
 | Lint, format      | Biome for code, Prettier for Markdown         | Unchanged from the tooling table in [`AGENTS.md`](agents/tooling.md#tech-stack-and-commands) |
 | Tests             | `bun test`, Playwright                        | See [Testing](#18-testing)                                                                   |
 
 The client talks to the server only through the contracts in [section 15](#15-api-contracts). The GonkaRouter key never
-reaches the client (NFR-SEC-2); every inference call originates in `src/server/gateway`.
+reaches the client (NFR-SEC-2); every inference call originates in `apps/server/gateway`.
 
 ## 10. Hosting and deploys
 
@@ -505,8 +505,8 @@ closest region to the Kuala Lumpur demo and to the Neon database, so the two hop
 server and server to database, are both short. Multi-region would only add a second place for the worker to be.
 
 The Dockerfile is multi-stage on `oven/bun:1.4.2`: stage one runs `bun install --frozen-lockfile` and `bun run build` for
-the client; stage two copies `src/`, `drizzle/`, `public/` and the built client, and starts with
-`bun src/server/index.ts`. The server runs pending migrations at start, so a deploy that adds a migration needs no
+the client; stage two copies `apps/`, `drizzle/`, `public/` and the built client, and starts with
+`bun apps/server/index.ts`. The server runs pending migrations at start, so a deploy that adds a migration needs no
 separate step.
 
 ### Deploys
@@ -584,7 +584,7 @@ delete rows on a timer.
 ## 11. Data model
 
 Neon Postgres, Singapore region (`ap-southeast-1`), one database, one schema. Drizzle ORM defines the tables in
-`src/server/db/schema.ts`; `bun run db:generate` runs `drizzle-kit generate`, which writes SQL into `drizzle/`, then
+`apps/server/db/schema.ts`; `bun run db:generate` runs `drizzle-kit generate`, which writes SQL into `drizzle/`, then
 `scripts/format-drizzle.ts`, which re-indents that output to `.editorconfig`. The server applies pending migrations at
 start.
 
@@ -776,7 +776,7 @@ options, **20 non-sample records** at once.
 The worker runs two sweeps. `sweepExpiredGuestRecords` runs every five minutes and hard-deletes Guest records whose
 `expires_at` has passed. `sweepRetiredRecords` runs hourly, hard-deletes any record whose `deleted_at` is more than
 `TRASH_DAYS` old, and hard-deletes any record untouched for `RETENTION_DAYS` (FR-RECORD-7, FR-RECORD-8). Both windows
-live in `src/shared/schemas.ts` because Settings prints them, so the notice and the sweep cannot drift apart. The hourly
+live in `apps/shared/schemas.ts` because Settings prints them, so the notice and the sweep cannot drift apart. The hourly
 cadence is deliberate: the shorter of the two windows is thirty days.
 
 Both sweeps exempt `is_sample = true`. The sample record is owned by the Guest user, is the one record with that flag,
@@ -886,7 +886,7 @@ last known picture rather than an empty one.
 
 ### Gateway client
 
-`src/server/gateway/client.ts` is a hand-rolled `fetch` against the OpenAI surface, because the SDK discards the
+`apps/server/gateway/client.ts` is a hand-rolled `fetch` against the OpenAI surface, because the SDK discards the
 response headers that carry the request id ([section 4](#4-request-ids-and-provenance)). It implements the
 [validity contract](#cross-verification-validity-contract) and nothing else:
 
@@ -901,7 +901,7 @@ response headers that carry the request id ([section 4](#4-request-ids-and-prove
 
 Step 6 polls rather than fetches once, because the receipt is written asynchronously ([gotcha 11](#5-verified-gotchas)).
 Step 5 is not the client's: parsing the reading needs the item's option letters and the client takes a model and a
-string, so `admitReading` in `src/server/gateway/reading.ts` does it as part of the admission test below.
+string, so `admitReading` in `apps/server/gateway/reading.ts` does it as part of the admission test below.
 
 It returns one provenance record:
 
@@ -956,7 +956,7 @@ by which model was asked for, because availability rotated across all three mode
 
 ### The rule
 
-The rule is a pure function in `src/shared/verdict.ts`, applied to exactly the first two admitted distinct readings of
+The rule is a pure function in `apps/shared/verdict.ts`, applied to exactly the first two admitted distinct readings of
 the current round, in the order below. It is the [machine verdict table](PRODUCT.md#machine-verdicts) made executable
 (FR-VERDICT-2, FR-VERDICT-3).
 
@@ -966,7 +966,7 @@ import type { Option, Reading, Verdict } from './types'
 export function verdict(readings: Reading[], key: string, options: Option[]): { verdict: Verdict; reason: string }
 ```
 
-`Reading`, `Verdict` and `Option` live in [`src/shared/types.ts`](../src/shared/types.ts) and are imported, not
+`Reading`, `Verdict` and `Option` live in [`apps/shared/types.ts`](../apps/shared/types.ts) and are imported, not
 redeclared here; the client needed them before this function existed. `options` is the item's option list, and it is a
 parameter because `answer` and `key` are option **letters** while FR-VERDICT-4 requires the printed reason to name
 options in words — "Both readers chose Queue. The supplied key is Stack." A letter with no matching option falls back to
@@ -1005,7 +1005,7 @@ and reading — and two properties make it usable rather than merely present:
   out does not stringify to the same bytes as the one in the file even when nothing about it changed, so a raw
   `JSON.stringify` comparison would also re-seed forever
 
-Both failure modes are asserted in `src/server/sample.fingerprint.test.ts`, which needs no database.
+Both failure modes are asserted in `apps/server/sample.fingerprint.test.ts`, which needs no database.
 
 **Every branch is written so a failure leaves the existing sample untouched**, because a half-replaced sample is worse
 than a stale one: the fixture is loaded and validated before anything is deleted, an unreadable or malformed file keeps
@@ -1018,7 +1018,7 @@ database it shared.
 
 ### Truth Score
 
-The track brief asks for a Truth Score from 0 to 100. `src/shared/truth-score.ts` computes one over the **same pair**
+The track brief asks for a Truth Score from 0 to 100. `apps/shared/truth-score.ts` computes one over the **same pair**
 `firstDistinctPair` hands the verdict rule, so a score can never contradict the verdict shown beside it. No gateway call
 is made: a model's own confidence report is not evidence, no receipt could back it, and putting one on the critical path
 would cost a second inference per item for a number nobody could check.
@@ -1062,14 +1062,14 @@ has not earned it, and collapsing the two would let a gateway outage read on scr
 the UI prints the denominator, because three verified items out of twelve can average 100 and that number alone would
 describe nine items nobody read.
 
-The score is **derived in the read path** (`src/server/records/queries.ts`), not stored, so no column can drift from the
+The score is **derived in the read path** (`apps/server/records/queries.ts`), not stored, so no column can drift from the
 attempts underneath it. Attempts are selected newest-first for the evidence view, so the readings are re-sorted on
 `finishedAt` ascending to recover the order the round produced them before the pair is chosen.
 
 ## 15. API contracts
 
 All routes are JSON under `/api`, require a session cookie unless marked public, and validate bodies with the zod
-schemas in `src/shared`. Errors are `{ "error": { "code": string, "message": string } }` with 400 for validation, 401
+schemas in `apps/shared`. Errors are `{ "error": { "code": string, "message": string } }` with 400 for validation, 401
 for no session, 403 for a record the session does not own or a mutation the sample refuses, 404 for a missing or expired
 record, and 429 for a Guest limit. Timestamps are ISO 8601. Better Auth's own routes under `/api/auth/*` are documented
 by Better Auth.
@@ -1428,16 +1428,16 @@ removed it from the frontend on 3 September and owns the licence position, so it
 
 `bun test`: 194 pass, 72 skip, 0 fail, 266 tests across 24 files; the Playwright pass: 9 passed, 1 skipped.
 
-- `src/shared/verdict.test.ts`: every row of the [rule table](#14-consensus-rule) plus the two edge cases, with the
+- `apps/shared/verdict.test.ts`: every row of the [rule table](#14-consensus-rule) plus the two edge cases, with the
   reason text asserted
-- `src/server/gateway/client.test.ts`: the gateway client with a mocked `fetch`, covering a clean 200, a
+- `apps/server/gateway/client.test.ts`: the gateway client with a mocked `fetch`, covering a clean 200, a
   `X-Gonka-Fallback` response, a receipt whose model mismatches, a `<think>`-wrapped body, unparseable JSON, a 429 and a
   timeout. Each asserts the returned provenance record and the rejection reason
-- `src/server/queue/claim.concurrency.test.ts`: two concurrent claims never take the same item, a crashed claim is
+- `apps/server/queue/claim.concurrency.test.ts`: two concurrent claims never take the same item, a crashed claim is
   released, and the semaphore never exceeds four
-- `src/server/retention.sweep.test.ts`: a record either side of each of the two windows, so a flipped comparison fails
+- `apps/server/retention.sweep.test.ts`: a record either side of each of the two windows, so a flipped comparison fails
   rather than only a wrong window, and the sample surviving however old it is
-- `src/server/routes/account.test.ts`: erasure taking a private account's Trash with its live records, the sample
+- `apps/server/routes/account.test.ts`: erasure taking a private account's Trash with its live records, the sample
   refused and named, and another account untouched
 
 **The database-backed suites are opt-in, and are run one file at a time.** They are the 72 skips in the count above,
@@ -1449,12 +1449,12 @@ at a time, against a throwaway Postgres:
 docker run -d --name cekgu-test -e POSTGRES_PASSWORD=x -e POSTGRES_DB=cekgu -p 55432:5432 postgres:18-alpine
 export TEST_DATABASE_URL='postgres://postgres:x@127.0.0.1:55432/cekgu'
 
-bun test src/server/sample.test.ts                    # 17 pass
-bun test src/server/guest.sweep.test.ts               # 5 pass
-bun test src/server/retention.sweep.test.ts           # 5 pass
-bun test src/server/queue/claim.concurrency.test.ts   # 8 pass
-bun test src/server/routes/records.test.ts            # 23 pass
-bun test src/server/routes/account.test.ts            # 6 pass
+bun test apps/server/sample.test.ts                    # 17 pass
+bun test apps/server/guest.sweep.test.ts               # 5 pass
+bun test apps/server/retention.sweep.test.ts           # 5 pass
+bun test apps/server/queue/claim.concurrency.test.ts   # 8 pass
+bun test apps/server/routes/records.test.ts            # 23 pass
+bun test apps/server/routes/account.test.ts            # 6 pass
 ```
 
 **The Playwright pass** runs against a **deployed URL**, never a local build: production by default, any other
@@ -1529,7 +1529,7 @@ Two measured reasons, not a preference:
 
 ### The route
 
-`POST /api/extract`, session required, so the default gate in `src/server/routes/index.ts` covers it. Request is
+`POST /api/extract`, session required, so the default gate in `apps/server/routes/index.ts` covers it. Request is
 `multipart/form-data` with one `file` field.
 
 | Field       | Value                                                                                                                                                               |
@@ -1538,7 +1538,7 @@ Two measured reasons, not a preference:
 | **200**     | `{ draft, provenance: { requestId, servedModel, receiptStatus }, warnings: string[] }`                                                                              |
 | **Errors**  | `{ error: { code, message } }` — 400 `no_file` / `bad_upload`, 413 `too_large`, 415 `unsupported_type`, 422 `unreadable` / `not_structured`, 503 `uploads_disabled` |
 
-`draft` matches `createRecordSchema` in `src/shared/schemas.ts` exactly. **It prefills the form and stops.** No record
+`draft` matches `createRecordSchema` in `apps/shared/schemas.ts` exactly. **It prefills the form and stops.** No record
 is created and no check is queued: a wrong extraction that submitted itself would put the product's name on a claim
 nobody read. The route holds the same `gatewaySemaphore` the queue holds rather than a second one beside it, because
 [gotcha 10](#5-verified-gotchas) measured account-level `429`s above four concurrent calls and an upload taking its own
@@ -1636,14 +1636,14 @@ ids, then verify it actually answers.
 
 ### How the boundary is enforced
 
-`src/server/gateway/only-gonkarouter.test.ts` asserts three things rather than one:
+`apps/server/gateway/only-gonkarouter.test.ts` asserts three things rather than one:
 
-1.  A provider hostname may appear in `src/server/transcribe/` and **nowhere else** in `src/`
+1.  A provider hostname may appear in `apps/server/transcribe/` and **nowhere else** in `apps/`
 1.  That directory may not import the verdict rule, the record schema, the round or the database
 1.  `gateway/`, `queue/`, `extract/` and `shared/` name **no** provider host at all, so widening the directory rule alone
     cannot move a decision across the line
 
-Proven against the defect it names: planting the Gemini hostname in `src/server/queue/round.ts` fails assertion 3 by
+Proven against the defect it names: planting the Gemini hostname in `apps/server/queue/round.ts` fails assertion 3 by
 file name. **Widening that exemption is a track requirement decision, not a refactor.**
 
 That decision was taken once more on 4 September, and section 21 is what it bought.
@@ -1659,7 +1659,7 @@ actually read, after redirects.
 | HTML, XHTML, plain text | `htmlToText`, a parser. **No model at all** | Structure, on GonkaRouter |
 | PDF, PNG, JPEG, WebP    | Transcribe, as an upload does               | Structure, on GonkaRouter |
 
-`src/server/extract/fetch-url.ts` calls no model, which is why it sits outside the two exempt directories rather than
+`apps/server/extract/fetch-url.ts` calls no model, which is why it sits outside the two exempt directories rather than
 beside the transcriber. A link to a web page therefore works on a deployment with no `GEMINI_API_KEY`; a link to a file
 answers 503 with a sentence saying so.
 
@@ -1687,7 +1687,7 @@ TLS validation. A hostname resolving to both a public and a private address is r
 **Only ports 80 and 443.** A paper is served over http or https and nothing else the fetcher could usefully reach is,
 while an open port field turns the guard into a port scanner that reports back through timing and error text.
 
-**Both extraction routes are rate limited**, six per minute per account, in `src/server/extract/rate-limit.ts`. The
+**Both extraction routes are rate limited**, six per minute per account, in `apps/server/extract/rate-limit.ts`. The
 routes sit behind a session but `POST /api/auth/guest` is public, so a session costs one request; without a limit an
 anonymous caller could drive an unbounded number of URL fetches and, behind them, `structurePaper` spending real gateway
 calls. Keyed on the account, so the shared Guest workspace shares one budget — keying finer would let a caller mint a
@@ -1712,7 +1712,7 @@ Two features on `/record/:id`, agreed 4 September. Design record:
 a seat varies per item ([section 3](#3-models-measured)). A voice is bound to a seat and never moves; the family that
 filled it is named in the caption and read from `attempt.servedModel`.
 
-**Nothing spoken is generated.** Every line is a template in `src/client/mascot/speech.ts` filled from a stored reading
+**Nothing spoken is generated.** Every line is a template in `apps/client/mascot/speech.ts` filled from a stored reading
 and a stored verdict, so the feature costs no inference, works with the gateway down, and cannot state anything the
 evidence panel does not already show.
 
@@ -1736,7 +1736,7 @@ Mute is a separate switch from Reduce Motion, persisted at `cekgu.mute`; neither
 ### The assistant, and what is true of it
 
 `POST /api/records/:id/chat`. Scoped to one record: the record is loaded by id against the session and handed to five
-pure tools in `src/server/chat/tools.ts`. No tool takes a record id and there is no cross-record search, which is what
+pure tools in `apps/server/chat/tools.ts`. No tool takes a record id and there is no cross-record search, which is what
 stops a prompt injected into an uploaded paper from reaching another account's questions.
 
 | Tool             | Answers                                              |
@@ -1763,7 +1763,7 @@ checkable:
 1.  `CHAT_PROVIDER=gonka` moves it to MiniMax-M2.7 without a code change
 
 **Citations are resolved server-side, never trusted from the model.** It emits `[item:N]`, `[reading:N:A]` and
-`[receipt:<id>]` inline; `src/server/chat/citations.ts` resolves each against the loaded record and **drops any that
+`[receipt:<id>]` inline; `apps/server/chat/citations.ts` resolves each against the loaded record and **drops any that
 does not resolve**, so an invented request id cannot become a pill a judge can click. Paragraphs become separate
 messages, and one citing a single seat is spoken by that seat.
 
@@ -1775,7 +1775,7 @@ attempts. `GEMINI_MODEL` is separate, so the transcriber and the assistant can d
 
 The track's second requirement is that at least two models cross-verify. Until 6 September 2026 they did so from their
 own training alone, which the compliance audit recorded as partial: there was no live external step, so a fact that
-changed after training could not be caught. `src/server/retrieval/tavily.ts` adds one.
+changed after training could not be caught. `apps/server/retrieval/tavily.ts` adds one.
 
 ### It is retrieval, not inference
 
@@ -1788,17 +1788,17 @@ That claim rests on one flag:
 - The request sends **`include_answer: false`**. Tavily will otherwise return an LLM-written answer to the query, and
   taking it would put reasoning on a provider that is not the gateway — the track's one fatal rule
 - It also sends `include_raw_content: false`, so a prompt cannot be filled with a scraped page
-- `src/server/retrieval/tavily.test.ts` asserts both flags on the source, and asserts no `answer` field is ever read off
+- `apps/server/retrieval/tavily.test.ts` asserts both flags on the source, and asserts no `answer` field is ever read off
   the response
-- `only-gonkarouter.test.ts` holds `src/server/retrieval/` to the same "decides nothing" rule the two provider
+- `only-gonkarouter.test.ts` holds `apps/server/retrieval/` to the same "decides nothing" rule the two provider
   directories are held to: it may not import the verdict rule, the schema, the round or the gateway client
 
-`src/server/retrieval/` is therefore **not a third exemption**. The two exemptions in
+`apps/server/retrieval/` is therefore **not a third exemption**. The two exemptions in
 [Track requirements](agents/project.md#track-requirements) are directories that call a model; this one does not.
 
 ### What runs, and when
 
-One search per item, before the round, in `src/server/queue/worker.ts`:
+One search per item, before the round, in `apps/server/queue/worker.ts`:
 
 1.  `evidenceQuery` builds a query from subject, stem and option texts. **The supplied key is never in it** — a search
     containing the key returns pages that agree with the key, and the reader would then be shown evidence selected to
@@ -1846,7 +1846,7 @@ existing `reading_json` column.
 A record can also carry pages with **no** grounding, which is a third state and not a degenerate one: evidence attached
 after the readings, as the sample's was on 6 September. `corroboration()` counts those under `sourcesOnly` and never as
 corroboration, the score does not move, and both the summary line and the evidence panel say the readers did not see
-them. `src/server/sample.ts` accepts `sources` on a recorded reading for exactly this and still has no field for
+them. `apps/server/sample.ts` accepts `sources` on a recorded reading for exactly this and still has no field for
 `grounding`, so a fabricated one cannot be seeded even by accident.
 
 `corroboration()` tallies a record per item, not per reading: an item counts as supported only when **both** readers

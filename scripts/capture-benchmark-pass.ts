@@ -8,13 +8,13 @@
 // the first eight clean items. The twelve are then emitted in the evaluation set's own order.
 process.env.DATABASE_URL ??= 'postgres://cekgu@localhost:5432/cekgu'
 
-const OUT = './src/server/fixtures/benchmark-pass.json'
+const OUT = './apps/server/fixtures/benchmark-pass.json'
 
-const { callGonka } = await import('../src/server/gateway/client')
-const { solverPrompt } = await import('../src/server/gateway/reading')
-const { runRound } = await import('../src/server/queue/round')
-const { healthyOrder, recordOutcome } = await import('../src/server/queue/health')
-const { Semaphore } = await import('../src/server/queue/semaphore')
+const { callGonka } = await import('../apps/server/gateway/client')
+const { solverPrompt } = await import('../apps/server/gateway/reading')
+const { runRound } = await import('../apps/server/queue/round')
+const { healthyOrder, recordOutcome } = await import('../apps/server/queue/health')
+const { Semaphore } = await import('../apps/server/queue/semaphore')
 
 type EvalItem = {
   id: string
@@ -24,7 +24,7 @@ type EvalItem = {
   key: string
 }
 
-const set = await Bun.file('./src/server/fixtures/evaluation-set.json').json()
+const set = await Bun.file('./apps/server/fixtures/evaluation-set.json').json()
 const all: EvalItem[] = set.items
 
 const NAMED_MIS_KEYS = ['fifo-structure', 'dns-role']

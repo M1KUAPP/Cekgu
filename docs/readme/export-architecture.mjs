@@ -4,7 +4,7 @@
  *
  * archify (https://github.com/tt-a1i/archify) renders architecture.json into a standalone HTML viewer. This script
  * delivers that viewer from a temporary copy of the source, restyles it with the light and dark tokens from
- * src/client/styles.css and the UI font stack, saves the viewer's own SVG export, and pins one copy to each theme.
+ * apps/client/styles.css and the UI font stack, saves the viewer's own SVG export, and pins one copy to each theme.
  *
  * The viewer's SVG export copies every page rule whose selector starts with `svg`, `:root` or `[data-theme`, and
  * resolves each theme's variables from them, so the overrides below reach the file. archify requires `meta.output`,
@@ -32,7 +32,7 @@ import { chromium } from '@playwright/test'
 const README_DIR = path.dirname(fileURLToPath(import.meta.url))
 const SOURCE = path.join(README_DIR, 'architecture.json')
 
-// src/client/styles.css tokens mapped onto archify's theme variables: paper is the ground, sheet the raised surface,
+// apps/client/styles.css tokens mapped onto archify's theme variables: paper is the ground, sheet the raised surface,
 // well the recessed one, pen the accent, and the verdict colours tint the component kinds.
 const THEMES = {
   light: {

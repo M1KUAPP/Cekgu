@@ -406,7 +406,7 @@ recorded readings and public request ids from a real pass; nothing in it is fabr
 **Pages added 6 September.** Live retrieval shipped three days after this pass was captured, so no record a judge could
 open showed any ([#292](https://github.com/M1KUAPP/Cekgu/issues/292)) and the feature read as missing rather than as
 dated. Real Tavily results for the sample's own twelve questions are now attached — three pages each, snippets verbatim,
-retrieved through `src/server/retrieval/tavily.ts` on 6 September 2026.
+retrieved through `apps/server/retrieval/tavily.ts` on 6 September 2026.
 
 **Nothing about the pass moved.** The readings, verdicts, request ids, receipts and the 77/100 Truth Score are exactly
 as captured on 3 September. The added pages carry no grounding, so `corroboration()` counts them under `sourcesOnly` and
@@ -414,7 +414,7 @@ never as corroboration, and the score is arithmetically untouched. What a reader
 were fetched later and the readers did not see them.
 
 **How the loaded pass satisfies this, 3 September.** The twelve items are a subset of
-`src/server/fixtures/evaluation-set.json`, which is the benchmark's own paper — its `fifo-structure` and `dns-role`
+`apps/server/fixtures/evaluation-set.json`, which is the benchmark's own paper — its `fifo-structure` and `dns-role`
 entries are the two mis-keys the write-up names, word for word. The subset is both of those, the first two items
 labelled ambiguous and the first eight labelled clean, and their stems, options and keys are byte-identical to that
 file, so the sample's questions can be diffed against the repository.
@@ -504,10 +504,10 @@ stated for attempts that did not.
 before comparison or display.
 
 **NFR-SEC-1.** Every call that reasons or verifies goes to `api.gonkarouter.io`. Exactly one non-reasoning call may go
-elsewhere: the transcription step in `src/server/transcribe/`, which turns an uploaded image or PDF into the words
+elsewhere: the transcription step in `apps/server/transcribe/`, which turns an uploaded image or PDF into the words
 printed on it under instructions forbidding it to answer, to mark an option correct or to supply an absent key. No
 provider SDK is installed anywhere. Checkable by searching the repository for provider hostnames and SDK imports, and
-asserted by `src/server/gateway/only-gonkarouter.test.ts`, which fails the build if a hostname appears outside that one
+asserted by `apps/server/gateway/only-gonkarouter.test.ts`, which fails the build if a hostname appears outside that one
 directory or if that directory imports the verdict rule or the record schema.
 [`TRD.md` section 20](TRD.md#20-reading-a-paper-from-an-upload) holds the decision and its measurements.
 
@@ -633,7 +633,7 @@ The mascot (FR-MASCOT-1 to FR-MASCOT-5) is not a floor bullet. It ships behind i
   1's per-item output does not exist in this repository; only two of its request ids survive, quoted in
   [`three-day-rescore.md`](research/three-day-rescore.md#the-mechanism-benchmark--failed-3-september). The
   sample is seeded instead from `capture-2026-09-03`, a fresh pass over a twelve-item subset of the committed
-  `src/server/fixtures/evaluation-set.json`, run through the shipped queue. Three consequences follow:
+  `apps/server/fixtures/evaluation-set.json`, run through the shipped queue. Three consequences follow:
   - It verified **12 of 12** against the ten this clause required, and both planted key errors were caught
   - **It contains no Unverified item**, where pass 1 had two. The acceptance test's step 6 has no Unverified verdict to
     demonstrate and step 2's "Unverified items present where that pass had them" now passes vacuously; the rehearsal

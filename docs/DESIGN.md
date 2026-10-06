@@ -523,7 +523,7 @@ The model files expose five motion groups per cat: `Idle`, `Tap`, `FlickUp`, `Fl
 lip-sync parameters and no hit areas. The mapping below names groups because the individual motion files carry no
 descriptive names. Lip-sync is never driven and the cats never react to the pointer.
 
-The file chosen inside each group, the same for both cats, is held as data in `src/client/mascot/motions.ts`:
+The file chosen inside each group, the same for both cats, is held as data in `apps/client/mascot/motions.ts`:
 
 | Group       | File and index        | Why                                                                                                   |
 | ----------- | --------------------- | ----------------------------------------------------------------------------------------------------- |

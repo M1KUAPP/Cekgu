@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile --ignore-scripts
 COPY tsconfig.json vite.config.ts ./
-COPY src/ ./src/
+COPY apps/ ./apps/
 COPY public/ ./public/
 RUN bun run build
 
@@ -13,8 +13,8 @@ ENV NODE_ENV=production
 ENV PORT=8080
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile --production --ignore-scripts
-COPY src/ ./src/
+COPY apps/ ./apps/
 COPY drizzle/ ./drizzle/
 COPY --from=build /app/dist/client ./dist/client
 EXPOSE 8080
-CMD ["bun", "src/server/index.ts"]
+CMD ["bun", "apps/server/index.ts"]

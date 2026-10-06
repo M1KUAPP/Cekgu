@@ -26,12 +26,12 @@ Non-negotiable, from [`docs/source/gonkarouter-challenge.md`](../source/gonkarou
 
 1.  **All AI reasoning and verification runs through GonkaRouter** (`https://api.gonkarouter.io`). Reasoning and
     verification, which is the organizers' own wording — see [`docs/BRIEF.md`](../BRIEF.md). Two directories are
-    exempt, and neither may decide anything: `src/server/transcribe/` turns an uploaded image or PDF into the text
-    printed on it ([`docs/TRD.md` section 20](../TRD.md#20-reading-a-paper-from-an-upload)), and `src/server/chat/`
+    exempt, and neither may decide anything: `apps/server/transcribe/` turns an uploaded image or PDF into the text
+    printed on it ([`docs/TRD.md` section 20](../TRD.md#20-reading-a-paper-from-an-upload)), and `apps/server/chat/`
     phrases the record assistant's answers from facts the Gonka readers already produced
     ([section 21](../TRD.md#21-the-readers-voice-and-the-record-assistant)).
-    `src/server/gateway/only-gonkarouter.test.ts` fails the build if a provider host appears anywhere else, or if either
-    directory imports the verdict rule. **`src/server/retrieval/` is not a third exemption**: it is a search API that
+    `apps/server/gateway/only-gonkarouter.test.ts` fails the build if a provider host appears anywhere else, or if either
+    directory imports the verdict rule. **`apps/server/retrieval/` is not a third exemption**: it is a search API that
     returns text other people published and calls no model, so the Gonka readers still do every piece of reasoning. The
     same guard holds it to deciding nothing, and asserts its `include_answer: false`
     ([`docs/TRD.md` section 22](../TRD.md#22-live-retrieval-for-cross-verification))
