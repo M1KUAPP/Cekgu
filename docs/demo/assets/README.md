@@ -77,7 +77,7 @@ Base64 costs a third more, so 204 KB of woff2 becomes 275 KB of CSS. Measured af
 is 924 KB, both inside [the size budget](#stay-inside-the-size-budget). `font-display` is `block`, not `swap`, so a
 slide never flashes a fallback face in front of a judge.
 
-Re-fetch them from the same Google Fonts URL the scaffold's `src/client/index.html` uses, keep only the `/* latin */`
+Re-fetch them from the same Google Fonts URL the scaffold's `apps/client/index.html` uses, keep only the `/* latin */`
 blocks, and base64 each file once.
 
 ## Hero images the deck is waiting for

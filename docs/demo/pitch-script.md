@@ -321,7 +321,7 @@ something a judge outside the team can check. Say "tonight"; keep the hour for t
 announced it on Discord at 6:21 PM on 5 September; the commit is
 `fix(gateway): drop the delisted Kimi family from the model registry`. The registry was the only production edit, and
 the queue's own health window already demotes a family with no successes and three failures inside fifteen minutes
-([`src/server/queue/health.ts`](../../src/server/queue/health.ts)). **WE DID NOT SIT AND WATCH THAT DEMOTION HAPPEN IN
+([`apps/server/queue/health.ts`](../../apps/server/queue/health.ts)). **WE DID NOT SIT AND WATCH THAT DEMOTION HAPPEN IN
 PRODUCTION TRAFFIC. If a judge asks whether we observed it live, say no, and say the design is what made the fix one
 line.**
 
@@ -544,7 +544,7 @@ The Guest workspace is shared and will hold other guests' records, so find the s
       top row opens the panel with two request ids visible without scrolling sideways
 - [ ] `req-1788427238422211326-414866` queried against `api.gonkarouter.io/v1/receipts/` on the day, and it still
       answers `outcome: success` with `MiniMaxAI/MiniMax-M2.7`
-- [ ] The model names on slide 06 checked against `src/server/gateway/models.ts` on the day
+- [ ] The model names on slide 06 checked against `apps/server/gateway/models.ts` on the day
 - [ ] Sections 2 to 11 rehearsed end to end with the timer (`T`), last word before 3:00
 - [ ] [Section 6](#6-live-demo-114-144--driver) walked against the running app, and every literal label re-checked
       against the screen
