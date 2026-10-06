@@ -179,7 +179,7 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 
     <img src="docs/readme/steps/5-web-pages.png" alt="Evidence for the kilobyte question: both readings with their served models and request ids, then the pages retrieved from the web, labeled as fetched after the readings" width="100%">
 
-1.  **A score puts a number on it.** The same two readings produce a Truth Score from 0 to 100, shown on the record and on every item. Computed in `src/shared/truth-score.ts` from readings already on the record — no extra inference call, and no model is asked how confident it feels, because no receipt could back that.
+1.  **A score puts a number on it.** The same two readings produce a Truth Score from 0 to 100, shown on the record and on every item. Computed in `apps/shared/truth-score.ts` from readings already on the record — no extra inference call, and no model is asked how confident it feels, because no receipt could back that.
 
     | Input                            | Weight                            |
     | -------------------------------- | --------------------------------- |
@@ -208,7 +208,7 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 - **Request IDs surfaced in the UI.** Every reading shows request id, devshard, requested and served model, and receipt state, and `/receipt/:requestId` reads the receipt back through the server, because the gateway sends no CORS header. The viewer distinguishes a receipt that does not exist from a gateway it could not reach.
 - **Explicit consensus logic.** The five-outcome rule is a pure function in `shared/verdict.ts`, with its reason sentence shown beside the verdict. The Truth Score is a second pure function over the same two readings from the same round, so number and verdict always describe the same evidence, and it grades within a verdict rather than ranking across verdicts — [TRD section 14](docs/TRD.md#truth-score) sets out where the bands overlap.
 - **No silent substitution.** Every call sends `X-Gonka-No-Fallback: true`, and any reply carrying an `X-Gonka-Fallback` header is refused even when its body is a perfectly good completion.
-- **Retrieval decides nothing.** `src/server/retrieval/` reaches the public web and is held by `only-gonkarouter.test.ts` to the same rule as the two provider directories: it may not import the verdict rule, the schema, the round or the gateway client. It is not a third exemption, because it calls no model.
+- **Retrieval decides nothing.** `apps/server/retrieval/` reaches the public web and is held by `only-gonkarouter.test.ts` to the same rule as the two provider directories: it may not import the verdict rule, the schema, the round or the gateway client. It is not a third exemption, because it calls no model.
 - **Every attempt recorded.** Admitted or refused, a timeout, a 429, a receipt mismatch and a fallback each leave a row with its own reason, shown in the evidence panel under the two readings, and a record streams progress over SSE, so a queued paper fills in without a refresh.
 - **Bounded concurrency and model health.** A Postgres `SKIP LOCKED` claim per item, at most four calls in flight against the gateway account, three attempts per family, and a deferred hedge that duplicates a call only after 45 seconds. Model health is tracked over a rolling 15-minute window, and a family with three failures and nothing successful behind it is demoted rather than dropped, because dropping it can leave a round with one candidate and a guaranteed **Unverified**.
 - **Public sample report.** Readable signed out, seeded from a real recorded benchmark pass — 12 questions, 42 attempts, 24 of them admitted, captured 3 September 2026 with the request ids intact.
@@ -239,10 +239,10 @@ Checking is asynchronous because a decentralized network is sometimes slow and s
 
 **The two directories that may name a provider**, stated here rather than left to be found. Neither decides anything, and the guard test holds both to that.
 
-| Directory                | Role                                                           | Its own prompt forbids                                                                        |
-| ------------------------ | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `src/server/transcribe/` | Transcribes the words already printed on an image or PDF       | Answering a question, marking an option correct, supplying an unprinted key, writing a record |
-| `src/server/chat/`       | Phrases the record assistant's answers from readers' own facts | Naming a correct option, confirming or rejecting a key, solving a question                    |
+| Directory                 | Role                                                           | Its own prompt forbids                                                                        |
+| ------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `apps/server/transcribe/` | Transcribes the words already printed on an image or PDF       | Answering a question, marking an option correct, supplying an unprinted key, writing a record |
+| `apps/server/chat/`       | Phrases the record assistant's answers from readers' own facts | Naming a correct option, confirming or rejecting a key, solving a question                    |
 
 Every judgment about what transcribed words mean is made afterwards by Gonka models carrying request ids ([TRD section 20](docs/TRD.md#20-reading-a-paper-from-an-upload)).
 
@@ -252,12 +252,12 @@ Every judgment about what transcribed words mean is made afterwards by Gonka mod
 
 Four things hold, all checkable in the code:
 
-- Every fact it states is retrieved by pure functions in [`src/server/chat/`](src/server/chat/) from readings two Gonka models produced, each carrying an `x-request-id` and a public receipt. The model phrases those facts, and may not add one
+- Every fact it states is retrieved by pure functions in [`apps/server/chat/`](apps/server/chat/) from readings two Gonka models produced, each carrying an `x-request-id` and a public receipt. The model phrases those facts, and may not add one
 - Citations resolve server-side against the loaded record, never trusted from the model; one that does not resolve is dropped rather than rendered, so an invented request id never becomes a link a judge can click
 - It may not adjudicate — no naming a correct option, confirming or rejecting a key, or solving a question. Asked "why is question 1 flagged?" on a **Clear** question, it says so instead of inventing a reason
 - The off-gateway path survives behind `CHAT_PROVIDER=gemini`; if used, the turn's id is labeled by provider and drawn as a visibly different object from a Gonka receipt — unlinked, because there is nothing to open
 
-**Every blind read, verdict, receipt and answer in this product is GonkaRouter's.** `src/server/transcribe/` is used; `src/server/chat/`'s off-gateway client is dormant. The test named above fails the build if that list widens, if either directory imports the verdict rule or the record writer, or if a provider hostname reaches the reasoning path at all. [TRD section 21](docs/TRD.md#21-the-readers-voice-and-the-record-assistant) holds the decision and its reasoning.
+**Every blind read, verdict, receipt and answer in this product is GonkaRouter's.** `apps/server/transcribe/` is used; `apps/server/chat/`'s off-gateway client is dormant. The test named above fails the build if that list widens, if either directory imports the verdict rule or the record writer, or if a provider hostname reaches the reasoning path at all. [TRD section 21](docs/TRD.md#21-the-readers-voice-and-the-record-assistant) holds the decision and its reasoning.
 
 Implementation detail, API contracts, model measurements, queue policy and test evidence live in [TRD](docs/TRD.md). Users, scope and the business hypothesis live in [PRODUCT](docs/PRODUCT.md), and the acceptance criteria in [PRD](docs/PRD.md).
 
@@ -345,7 +345,7 @@ Running it locally needs a Postgres database and a GonkaRouter key, because ther
 
     `bun run e2e` points at the **deployed** URL by default, not your working tree, and prints its target on every run — use `bun run e2e:local`, or set `E2E_BASE_URL` to another deployment. The 77 skipped tests need a live gateway key or database and are opt-in on purpose: gateway latency varies, and **Unverified** is a valid result rather than a failure.
 
-    One local-only trap: `src/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run `GEMINI_API_KEY= bun test` for a clean local pass.
+    One local-only trap: `apps/server/routes/extract.test.ts` asserts the 503 a missing transcription key produces, so a `.env` setting `GEMINI_API_KEY` sends it down the live path into a database that is not running. Run `GEMINI_API_KEY= bun test` for a clean local pass.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 

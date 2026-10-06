@@ -590,8 +590,9 @@ and never blocks input, results or evidence, but a static image is only the redu
 not the shipped default.
 
 The supplied Tororo & Hijiki archive is healthy and contains deployable runtime material for two cats; the runtime files
-are committed under `public/live2d/` and the authoring sources are not. The pair is unusually relevant: two visibly
-distinct readers can make “two independent model families” understandable before the technical explanation begins.
+are committed under `apps/client/public/live2d/` and the authoring sources are not. The pair is unusually relevant: two
+visibly distinct readers can make “two independent model families” understandable before the technical explanation
+begins.
 
 This is a product-feasibility decision, not the branding design. Logo shape, mascot identity, palette and generated
 concept art belong in the later branding round requested by the team.
