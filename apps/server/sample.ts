@@ -15,7 +15,7 @@ import { recordDetail } from './records/queries'
 
 // Written by scripts/capture-benchmark-pass.ts, which ran the twelve-item paper through the product's
 // own queue against the live gateway on 3 September. Absent, seeding is a no-op rather than an error.
-export const SAMPLE_PASS_PATH = './src/server/fixtures/benchmark-pass.json'
+export const SAMPLE_PASS_PATH = './apps/server/fixtures/benchmark-pass.json'
 
 const option = z.object({ letter: z.string().min(1), text: z.string().min(1) })
 

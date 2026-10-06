@@ -7,7 +7,7 @@ import type { AppEnv } from '../session'
 // Opt in, local only, the same shape as the other database suites:
 //
 //   docker run -d --name cekgu-test -e POSTGRES_PASSWORD=x -e POSTGRES_DB=cekgu -p 55432:5432 postgres:18-alpine
-//   TEST_DATABASE_URL='postgres://postgres:x@127.0.0.1:55432/cekgu' bun test src/server/routes/records.test.ts
+//   TEST_DATABASE_URL='postgres://postgres:x@127.0.0.1:55432/cekgu' bun test apps/server/routes/records.test.ts
 //
 const url = process.env.TEST_DATABASE_URL
 const describeDb = url ? describe : describe.skip
@@ -69,12 +69,12 @@ const post = (path: string, payload?: unknown) =>
     body: payload === undefined ? undefined : JSON.stringify(payload)
   })
 
-// GET /api/sample and POST /api/sample/reset are covered by src/server/sample.test.ts, which owns
+// GET /api/sample and POST /api/sample/reset are covered by apps/server/sample.test.ts, which owns
 // the seed path. The handler there calls the same recordDetail() these tests exercise.
 describeDb('the records API', () => {
   beforeEach(async () => {
     who = 'guest'
-    await migrate(db, { migrationsFolder: './drizzle' })
+    await migrate(db, { migrationsFolder: './apps/server/drizzle' })
     await db.delete(records)
     await db.delete(user)
     await db.insert(user).values([

@@ -13,7 +13,7 @@ export type Citation =
 
 /**
  * Named apart from Gonka provenance on purpose, exactly as TranscriptionProvenance is in
- * src/server/transcribe/gemini.ts: a Gemini response id is not a Gonka request id and must never be
+ * apps/server/transcribe/gemini.ts: a Gemini response id is not a Gonka request id and must never be
  * rendered as one. Every fact the agent cites still carries a Gonka id, because the readings are
  * Gonka's; this field describes only the layer that phrased them.
  */
