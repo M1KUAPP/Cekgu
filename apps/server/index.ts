@@ -13,7 +13,7 @@ import { seedGuestUser } from './seed'
 
 const CLIENT_DIR = './dist/client'
 
-if (env.migrateOnStart) await migrate(db, { migrationsFolder: './drizzle' })
+if (env.migrateOnStart) await migrate(db, { migrationsFolder: './apps/server/drizzle' })
 await seedGuestUser()
 if (env.migrateOnStart) await seedSample(SAMPLE_PASS_PATH)
 if (env.workerEnabled) {

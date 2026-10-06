@@ -30,7 +30,7 @@ describeDb('sweepRetiredRecords against real Postgres', () => {
   const ids = { trashed: '', justTrashed: '', stale: '', touched: '', sample: '', staleSample: '' }
 
   beforeAll(async () => {
-    await migrate(db, { migrationsFolder: './drizzle' })
+    await migrate(db, { migrationsFolder: './apps/server/drizzle' })
     await db.delete(records)
     await db.delete(user)
     await db.insert(user).values({ id: 'private-user', name: 'An educator', email: 'educator@example.invalid' })

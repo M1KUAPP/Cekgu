@@ -74,7 +74,7 @@ const post = (path: string, payload?: unknown) =>
 describeDb('the records API', () => {
   beforeEach(async () => {
     who = 'guest'
-    await migrate(db, { migrationsFolder: './drizzle' })
+    await migrate(db, { migrationsFolder: './apps/server/drizzle' })
     await db.delete(records)
     await db.delete(user)
     await db.insert(user).values([

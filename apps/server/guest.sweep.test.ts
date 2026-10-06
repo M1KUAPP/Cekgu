@@ -36,7 +36,7 @@ describeDb('sweepExpiredGuestRecords against real Postgres', () => {
   const ids = { expired: '', sample: '', fresh: '', private: '', otherAccount: '' }
 
   beforeAll(async () => {
-    await migrate(db, { migrationsFolder: './drizzle' })
+    await migrate(db, { migrationsFolder: './apps/server/drizzle' })
     await db.delete(records)
     await db.delete(user)
     await db.insert(user).values([

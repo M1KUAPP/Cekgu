@@ -57,7 +57,7 @@ describeDb('claimNextItem under real concurrency', () => {
   }
 
   beforeAll(async () => {
-    await migrate(db, { migrationsFolder: './drizzle' })
+    await migrate(db, { migrationsFolder: './apps/server/drizzle' })
   })
 
   beforeEach(async () => {

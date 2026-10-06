@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!**/.claude", "!docs/demo", "!drizzle", "!docs/readme/architecture-*.svg"]
+    "includes": ["**", "!**/.claude", "!docs/demo", "!apps/server/drizzle", "!docs/readme/architecture-*.svg"]
   },
   "formatter": {
     "indentStyle": "space",

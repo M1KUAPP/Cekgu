@@ -103,7 +103,7 @@ describeDb('the sample record', () => {
   let passPath = ''
 
   beforeAll(async () => {
-    await migrate(db, { migrationsFolder: './drizzle' })
+    await migrate(db, { migrationsFolder: './apps/server/drizzle' })
     passPath = await writePass(PASS)
   })
 
