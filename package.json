@@ -5,10 +5,10 @@
   "packageManager": "bun@1.4.2",
   "scripts": {
     "dev": "concurrently -k -n server,client -c blue,magenta \"bun run dev:server\" \"bun run dev:client\"",
-    "dev:server": "bun --watch src/server/index.ts",
+    "dev:server": "bun --watch apps/server/index.ts",
     "dev:client": "vite",
     "build": "vite build",
-    "start": "bun src/server/index.ts",
+    "start": "bun apps/server/index.ts",
     "test": "bun test",
     "e2e": "playwright test",
     "e2e:local": "E2E_BASE_URL=http://localhost:8080 playwright test",
@@ -21,8 +21,7 @@
     "check": "bun run lint && bun run typecheck && bun run test && bun run check:anchors && bun run test:guard",
     "check:anchors": "bun scripts/check-anchors.ts",
     "test:guard": "bash .claude/hooks/guard-git.test.sh",
-    "prepare": "husky",
-    "graph": "graphify update . && EC_VERSION=v4.0.2 editorconfig-checker -fix graphify-out/graph.json"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs,json,jsonc,css,html}": "biome check --write --no-errors-on-unmatched",

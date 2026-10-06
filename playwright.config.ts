@@ -11,7 +11,7 @@ if (!process.env.TEST_WORKER_INDEX)
   )
 
 export default defineConfig({
-  testDir: './e2e',
+  testDir: './tests',
   // Not .spec.ts or .test.ts: bun test claims those and cannot run Playwright's test().
   testMatch: '**/*.e2e.ts',
   // One worker: every test shares the one Guest account, and demo.e2e.ts resets the sample record

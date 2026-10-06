@@ -2,8 +2,8 @@
   "name": "Cekgu",
   "description": "An answer-key checker that has two AI model families solve a multiple-choice paper blind to its key, flagging mis-keyed and ambiguous items.",
   "logo": {
-    "light": "../../public/brand/cekgu-mark.svg",
-    "dark": "../../public/brand/cekgu-mark-dark.svg"
+    "light": "../../apps/client/public/brand/cekgu-mark.svg",
+    "dark": "../../apps/client/public/brand/cekgu-mark-dark.svg"
   },
   "screenshot": {
     "light": "banner-screenshot.png"
