@@ -6,8 +6,8 @@
 <div align="center">
   <a href="https://github.com/M1KUAPP/Cekgu">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/readme/banner-dark.png">
-      <img src="docs/readme/banner-light.png" alt="Cekgu banner">
+      <source media="(prefers-color-scheme: dark)" srcset="/docs/readme/banner-dark.png">
+      <img src="/docs/readme/banner-light.png" alt="Cekgu banner">
     </picture>
   </a>
 
@@ -96,24 +96,24 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 <table>
   <tr>
     <td width="50%" valign="top" align="left">
-      <img src="docs/readme/screenshots/landing.png" alt="The Cekgu landing page" width="100%">
+      <img src="/docs/readme/screenshots/landing.png" alt="The Cekgu landing page" width="100%">
       <br />
       <strong>Landing Page</strong> · What a signed-out visitor sees first.
     </td>
     <td width="50%" valign="top" align="left">
-      <img src="docs/readme/screenshots/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%">
+      <img src="/docs/readme/screenshots/sample-report.png" alt="The public sample report, with its Truth Score and verdict breakdown" width="100%">
       <br />
       <strong>Sample Report</strong> · A public report with its Truth Score and verdict breakdown, no account needed.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top" align="left">
-      <img src="docs/readme/screenshots/dashboard.png" alt="The account dashboard" width="100%">
+      <img src="/docs/readme/screenshots/dashboard.png" alt="The account dashboard" width="100%">
       <br />
       <strong>Dashboard</strong> · Verified readings against total, the verdict breakdown, and each family's share of the work.
     </td>
     <td width="50%" valign="top" align="left">
-      <img src="docs/readme/screenshots/item-evidence.png" alt="Item evidence on the deployed sample: two served models, two request ids, receipt states, and the pages retrieved from the web, labeled as fetched after the readings" width="100%">
+      <img src="/docs/readme/screenshots/item-evidence.png" alt="Item evidence on the deployed sample: two served models, two request ids, receipt states, and the pages retrieved from the web, labeled as fetched after the readings" width="100%">
       <br />
       <strong>Item Evidence</strong> · Two served models, two request ids, receipt states, and the attempts that were refused.
     </td>
@@ -126,11 +126,11 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 
 1.  **Enter a paper.** Type the questions, options and key into **New Check**, paste a link to a page that already has them, or upload a scan or photograph — then edit the draft that comes back. No draft submits itself; the educator corrects and sends each one.
 
-    <img src="docs/readme/steps/1-new-check.png" alt="The New Check form, with the Start From a Paper card offering a link or an upload, and the paper fields below" width="100%">
+    <img src="/docs/readme/steps/1-new-check.png" alt="The New Check form, with the Start From a Paper card offering a link or an upload, and the paper fields below" width="100%">
 
 1.  **Two families read it blind.** Each question is queued. A round takes two seats and fills each from a different model family through GonkaRouter. The prompt carries the stem, the lettered options, the subject and the language — never the supplied key, and never the other reader's output.
 
-    <img src="docs/readme/steps/2-queued-readers.png" alt="A record just submitted, its three questions queued and the two reader seats waiting beside the summary" width="100%">
+    <img src="/docs/readme/steps/2-queued-readers.png" alt="A record just submitted, its three questions queued and the two reader seats waiting beside the summary" width="100%">
 
 1.  **Evidence is admitted, not assumed.** A reply becomes a usable reading only if all five hold:
 
@@ -142,7 +142,7 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 
     Anything else is written down as a refused attempt with its reason, and takes no part in the verdict.
 
-    <img src="docs/readme/steps/3-receipt.png" alt="The receipt viewer for one request id, showing the served model, outcome, devshard and timings, next to the public gateway URL to check them against" width="100%">
+    <img src="/docs/readme/steps/3-receipt.png" alt="The receipt viewer for one request id, showing the served model, outcome, devshard and timings, next to the public gateway URL to check them against" width="100%">
 
     Every request id in the product opens this page, and the gateway URL on it is public and needs no key — so the claim is checked against the gateway rather than taken from us.
 
@@ -156,7 +156,7 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
     | **Clear**              | Both readers chose the supplied key.                                          |
     | **Possible Key Error** | Both readers agreed on the same option, and it is not the key.                |
 
-    <img src="docs/readme/steps/4-five-outcomes.png" alt="The landing page at A Fixed Rule Decides, above the five verdict outcomes and how many sample items each one holds" width="100%">
+    <img src="/docs/readme/steps/4-five-outcomes.png" alt="The landing page at A Fixed Rule Decides, above the five verdict outcomes and how many sample items each one holds" width="100%">
 
 1.  **The public web is consulted, and quoted.** Before the readers run, one search fetches up to four pages relevant to the question, and both readers are shown the same snippets as background rather than authority. The supplied key is never in the query — searching for the key returns pages that agree with the key.
 
@@ -170,9 +170,9 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
     | Checked **before** retrieval shipped  | Says so plainly, rather than leaving the feature looking absent                            |
     | Pages attached **after** the readings | Labeled as fetched later — the readers did not see them, and no verdict or score uses them |
 
-    The third exists because the sample's pass was captured on 3 September and retrieval shipped on the 6th; which state the sample is in depends on whether the build has re-seeded it from the committed fixture. See [TRD section 22](docs/TRD.md#22-live-retrieval-for-cross-verification).
+    The third exists because the sample's pass was captured on 3 September and retrieval shipped on the 6th; which state the sample is in depends on whether the build has re-seeded it from the committed fixture. See [TRD section 22](/docs/TRD.md#22-live-retrieval-for-cross-verification).
 
-    <img src="docs/readme/steps/5-web-pages.png" alt="Evidence for the kilobyte question: both readings with their served models and request ids, then the pages retrieved from the web, labeled as fetched after the readings" width="100%">
+    <img src="/docs/readme/steps/5-web-pages.png" alt="Evidence for the kilobyte question: both readings with their served models and request ids, then the pages retrieved from the web, labeled as fetched after the readings" width="100%">
 
 1.  **A score puts a number on it.** The same two readings produce a Truth Score from 0 to 100, shown on the record and on every item. Computed in `apps/shared/truth-score.ts` from readings already on the record — no extra inference call, and no model is asked how confident it feels, because no receipt could back that.
 
@@ -188,11 +188,11 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 
     **Reading the number.** It says how much of the verified reader agreement backs the supplied key, not that the question is correct. An **Unverified** item scores null rather than 0, because 0 is what two readers agreeing _against_ the key earns. The record figure always prints its own denominator: three verified items out of twelve can average 100.
 
-    <img src="docs/readme/steps/6-truth-score.png" alt="The sample record in the workspace: its Truth Score of 77 in the summary, beside each item's own score of 0, 25 or 100" width="100%">
+    <img src="/docs/readme/steps/6-truth-score.png" alt="The sample record in the workspace: its Truth Score of 77 in the summary, beside each item's own score of 0, 25 or 100" width="100%">
 
 1.  **A human decides.** The verdict is an attention signal, not a mark. The educator records what they did — corrected the key, revised the wording, confirmed the key, dismissed the flag, or asked for a retry — and that decision is stored with the item.
 
-    <img src="docs/readme/steps/7-record-decisions.png" alt="A record with a corrected key, a Possible Ambiguity item, and a Clear item carrying a Retry Requested decision" width="100%">
+    <img src="/docs/readme/steps/7-record-decisions.png" alt="A record with a corrected key, a Possible Ambiguity item, and a Clear item carrying a Retry Requested decision" width="100%">
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -201,7 +201,7 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 - **All reasoning through GonkaRouter.** The track's four requirements are enforced in code, not asserted in prose: one file, `gateway/client.ts`, calls a model, and the guard fails the build if a provider appears anywhere else.
 - **Two models cross-verify.** A verdict needs two admitted readings whose **served** models differ, taken from the receipt and never from the model requested, so two calls to one family can never count as two readers (`gateway/`, `verdict.ts`). Reasoning content is cleaned before comparison: `<think>` blocks are stripped, and each prompt carries a nonce so the gateway cache cannot serve one inference under two request ids.
 - **Request IDs surfaced in the UI.** Every reading shows request id, devshard, requested and served model, and receipt state, and `/receipt/:requestId` reads the receipt back through the server, because the gateway sends no CORS header. The viewer distinguishes a receipt that does not exist from a gateway it could not reach.
-- **Explicit consensus logic.** The five-outcome rule is a pure function in `shared/verdict.ts`, with its reason sentence shown beside the verdict. The Truth Score is a second pure function over the same two readings from the same round, so number and verdict always describe the same evidence, and it grades within a verdict rather than ranking across verdicts — [TRD section 14](docs/TRD.md#truth-score) sets out where the bands overlap.
+- **Explicit consensus logic.** The five-outcome rule is a pure function in `shared/verdict.ts`, with its reason sentence shown beside the verdict. The Truth Score is a second pure function over the same two readings from the same round, so number and verdict always describe the same evidence, and it grades within a verdict rather than ranking across verdicts — [TRD section 14](/docs/TRD.md#truth-score) sets out where the bands overlap.
 - **No silent substitution.** Every call sends `X-Gonka-No-Fallback: true`, and any reply carrying an `X-Gonka-Fallback` header is refused even when its body is a perfectly good completion.
 - **Retrieval decides nothing.** `apps/server/retrieval/` reaches the public web and is held by `only-gonkarouter.test.ts` to the same rule as the two provider directories: it may not import the verdict rule, the schema, the round or the gateway client. It is not a third exemption, because it calls no model.
 - **Every attempt recorded.** Admitted or refused, a timeout, a 429, a receipt mismatch and a fallback each leave a row with its own reason, shown in the evidence panel under the two readings, and a record streams progress over SSE, so a queued paper fills in without a refresh.
@@ -216,45 +216,11 @@ Built for [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_lan
 ### Architecture
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/readme/architecture-dark.svg">
-  <img src="docs/readme/architecture-light.svg" alt="A React SPA and a Hono API on one Cloud Run container, with a queue worker and a gateway semaphore behind it, PostgreSQL on Neon beside them, and every reasoning call leaving through GonkaRouter with a request id and a public receipt">
+  <source media="(prefers-color-scheme: dark)" srcset="/docs/readme/architecture-dark.svg">
+  <img src="/docs/readme/architecture-light.svg" alt="Cekgu architecture">
 </picture>
 
-The diagram is drawn with [archify](https://github.com/tt-a1i/archify) from [`architecture.json`](docs/readme/architecture.json).
-
-| Piece                 | What it holds or does                                                                     |
-| --------------------- | ----------------------------------------------------------------------------------------- |
-| Hono on Cloud Run     | One process serving both the API and the built client                                     |
-| PostgreSQL            | Accounts, records and decisions — plus `attempts`, which is the evidence trail            |
-| An `attempts` row     | Request id, devshard, requested and served model, receipt JSON, latency, rejection reason |
-| Queue worker          | Claims one item, runs its round, writes the verdict, moves on                             |
-| 15-minute claim lease | Released when it expires, so a Cloud Run restart cannot strand a question                 |
-
-Checking is asynchronous because a decentralized network is sometimes slow and sometimes unavailable. Where evidence is insufficient the pipeline fails closed to **Unverified** rather than manufacturing a second opinion.
-
-**The two directories that may name a provider**, stated here rather than left to be found. Neither decides anything, and the guard test holds both to that.
-
-| Directory                 | Role                                                           | Its own prompt forbids                                                                        |
-| ------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `apps/server/transcribe/` | Transcribes the words already printed on an image or PDF       | Answering a question, marking an option correct, supplying an unprinted key, writing a record |
-| `apps/server/chat/`       | Phrases the record assistant's answers from readers' own facts | Naming a correct option, confirming or rejecting a key, solving a question                    |
-
-Every judgment about what transcribed words mean is made afterwards by Gonka models carrying request ids ([TRD section 20](docs/TRD.md#20-reading-a-paper-from-an-upload)).
-
-**The record assistant runs on the gateway.** It was briefly phrased off-gateway — the more serious of the two exemptions, since answering a question about a record sits closer to reasoning than transcription does. It no longer is: `CHAT_PROVIDER` defaults to `gonka`, and its inference goes to MiniMax-M2.7 through GonkaRouter.
-
-**Its turn carries a real `x-request-id` with a public receipt**, not a provider response id. Measured on production at 06:35 on 5 September: two tool calls and an answer in 15 s, `req-1788590155239980984-1077255`.
-
-Four things hold, all checkable in the code:
-
-- Every fact it states is retrieved by pure functions in [`apps/server/chat/`](apps/server/chat/) from readings two Gonka models produced, each carrying an `x-request-id` and a public receipt. The model phrases those facts, and may not add one
-- Citations resolve server-side against the loaded record, never trusted from the model; one that does not resolve is dropped rather than rendered, so an invented request id never becomes a link a judge can click
-- It may not adjudicate — no naming a correct option, confirming or rejecting a key, or solving a question. Asked "why is question 1 flagged?" on a **Clear** question, it says so instead of inventing a reason
-- The off-gateway path survives behind `CHAT_PROVIDER=gemini`; if used, the turn's id is labeled by provider and drawn as a visibly different object from a Gonka receipt — unlinked, because there is nothing to open
-
-**Every blind read, verdict, receipt and answer in this product is GonkaRouter's.** `apps/server/transcribe/` is used; `apps/server/chat/`'s off-gateway client is dormant. The test named above fails the build if that list widens, if either directory imports the verdict rule or the record writer, or if a provider hostname reaches the reasoning path at all. [TRD section 21](docs/TRD.md#21-the-readers-voice-and-the-record-assistant) holds the decision and its reasoning.
-
-Implementation detail, API contracts, model measurements, queue policy and test evidence live in [TRD](docs/TRD.md). Users, scope and the business hypothesis live in [PRODUCT](docs/PRODUCT.md), and the acceptance criteria in [PRD](docs/PRD.md).
+Made with [Archify](https://github.com/tt-a1i/archify) from [`architecture.json`](/docs/readme/architecture.json).
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -265,7 +231,7 @@ Implementation detail, API contracts, model measurements, queue policy and test 
 - **Backend:** Bun 1.4 as server runtime, package manager and test runner; Hono and Zod for the API, boundary validation and SSE; Better Auth for email and password, Google OAuth and the shared Guest workspace.
 - **Data:** PostgreSQL (Neon), Drizzle ORM and Drizzle Kit for records, items, attempts, dispositions, model health and migrations.
 - **AI and services:** GonkaRouter for blind reads, draft structuring and receipts — all reasoning; GonkaRouter's MiniMax-M2.7 with tool calling for the assistant's grounded answers about one record, with receipts; a vision model, uploads only, for printed text from an image or PDF, no judgment; a search API, no model, for text other people published, quoted verbatim, no judgment.
-- **Infrastructure:** Docker, Cloud Run and Artifact Registry for the container build and a manual production deploy with [`scripts/deploy-local.sh`](scripts/deploy-local.sh).
+- **Infrastructure:** Docker, Cloud Run and Artifact Registry for the container build and a manual production deploy with [`scripts/deploy-local.sh`](/scripts/deploy-local.sh).
 - **Tooling:** Biome, Prettier, TypeScript and Playwright for lint, format, strict types and a browser smoke pass.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
@@ -357,7 +323,7 @@ See [open issues](https://github.com/M1KUAPP/Cekgu/issues) for a full list of pr
 ## Team
 
 <a href="https://github.com/M1KUAPP/Cekgu/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=M1KUAPP/Cekgu" alt="Team" />
+  <img src="https://contrib.rocks/image?repo=M1KUAPP/Cekgu" alt="Cekgu team" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
@@ -368,7 +334,7 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
-See [LICENSE](LICENSE) for more information.
+See [LICENSE](/LICENSE) for more information.
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
@@ -377,12 +343,12 @@ See [LICENSE](LICENSE) for more information.
 ## Acknowledgments
 
 - [GonkaRouter](https://gonkarouter.io) — the gateway every reasoning call in this project runs through.
-- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](docs/BRIEF.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
+- [MUBA Blockchain Hackathon 2026](https://www.mubahack.xyz/official_landing_page/code.html) — the event and the AI for Society track [brief](/docs/BRIEF.md); Team M1KU built Cekgu for it, placing 4th and earning 20M GonkaRouter tokens over six months.
 - [Live2D sample data](https://www.live2d.com/download/sample-data/) — Tororo and Hijiki are Live2D sample characters, not Cekgu originals — used under the Live2D Free Material License Agreement and built with the Live2D Cubism SDK.
-- [Acceptable use](docs/legal/acceptable-use.md) — **Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days is removed. Demo notices: [terms](docs/legal/terms.md), [privacy](docs/legal/privacy.md), [acceptable use](docs/legal/acceptable-use.md).
-- [archify](https://github.com/tt-a1i/archify) — architecture diagrams.
-- [Shields.io](https://shields.io)
+- [Acceptable use](/docs/legal/acceptable-use.md) — **Do not put confidential papers, unreleased examination content, personal data or learner identifiers into any deployment.** Guest is one shared workspace: other guests can see and delete what you add, and guest records are removed after 24 hours. Deleting a private record hides it and purges it after 30 days; a record untouched for 90 days is removed. Demo notices: [terms](/docs/legal/terms.md), [privacy](/docs/legal/privacy.md), [acceptable use](/docs/legal/acceptable-use.md).
+- [Archify](https://github.com/tt-a1i/archify)
 - [contrib.rocks](https://contrib.rocks)
+- [Shields.io](https://shields.io)
 
 <p align="right"><a href="#readme-top">&uarr;</a></p>
 
