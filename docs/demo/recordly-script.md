@@ -69,7 +69,7 @@ Segment 1 ends at 2:30.
 
 ## Segment 2, the deck
 
-1.  [2:30] Slide 01, Cover, 12 seconds. "We're Team M1KU, and we built Cekgu. Cekgu checks a quiz before a single student
+1.  [2:30] Slide 01, Cover, 12 seconds. "We built Cekgu. Cekgu checks a quiz before a single student
     sits it."
 2.  [2:42] Slide 02, Problem, 12 seconds. "Here's one question from a twelve-question quiz: which data structure removes
     elements first in, first out? The answer key says Stack. The answer is Queue."
