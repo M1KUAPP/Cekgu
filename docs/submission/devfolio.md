@@ -111,7 +111,7 @@ https://youtu.be/zFASN69yQr8
 
 ## Team
 
-M1KU. Devfolio already shows two accepted members, which satisfies the event's two-to-four-member rule. The owner must
+Devfolio already shows two accepted members, which satisfies the event's two-to-four-member rule. The owner must
 confirm the roster in the final preview.
 
 ## Team LinkedIn URLs

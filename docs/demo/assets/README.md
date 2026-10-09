@@ -92,7 +92,7 @@ the persona slide when the deck was re-cut for the 3-minute pitch.
 | `hero-problem.jpg` | 02, problem | 1920x1080, JPEG | A painterly, cinematic illustration, wide format: a tutor alone at a desk past midnight, seen from the side, head resting in one hand, the other hand holding a red pen over an exam paper covered in red circles and crossings-out, a crumpled sheet and a cold cup of coffee beside her, a tall stack of papers still to mark, a harsh desk lamp, a wall clock reading well past twelve, muted dark navy tones fading to near-black across the left half so text can sit there, the strain visible in her posture, no face in sharp focus, no readable text, no logos. |
 
 ```bash
-codex exec --skip-git-repo-check "<prompt above>. Use your image generation tool. Save to C:/Users/User/Documents/MUBA-M1KU/dev/docs/demo/assets/hero-cover.png"
+codex exec --skip-git-repo-check "<prompt above>. Use your image generation tool. Save to docs/demo/assets/hero-cover.png"
 ```
 
 Resize to the listed size before committing. The cover slot is `.hero-obj`, the problem slot is `.hero-bg` with

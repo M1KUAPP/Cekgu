@@ -47,7 +47,7 @@ Contents:
 - **Speakers** — **SPEAKER** narrates and owns the deck and the clock. **DRIVER** owns the keyboard and the app. One
   person can do both if the app is already on `/sample` before the pitch starts.
 - **Notation** — plain text is **spoken**, _italics_ are on-stage action, `NOTE:` is internal and never spoken.
-- **Team** — Team M1KU: @AlaskanTuna, @kymil4, @chaosiris, @c3638. The four handles are on slide 01 and slide 09, so
+- **Team** — @AlaskanTuna, @kymil4, @chaosiris, @c3638. The four handles are on slide 01 and slide 09, so
   nobody is introduced aloud.
 
 **Never present a recording as live.** If something fails, say so out loud and take the
@@ -119,7 +119,7 @@ Local, checkable, and it disarms the first objection before it is asked. Every M
 vetting ([UiTM guidance](../PRODUCT.md#the-problem)), so a judge is about to think "they already have a committee for
 that".
 
-> "We're Team M1KU. We built Cekgu. Every university in this room already vets its exam papers by committee. That
+> "We built Cekgu. Every university in this room already vets its exam papers by committee. That
 > process is careful. Here's what it cannot catch."
 
 **Chosen.** It is specific to this audience, it takes fourteen seconds, and it disarms the objection before the product
@@ -135,7 +135,7 @@ projecting it spends the same fourteen seconds twice. The opening now hands the 
 The line the concept was selected on, from
 [the plain-language pitch](../research/three-day-rescore.md#the-product-in-plain-language).
 
-> "Every one of us has lost a mark we deserved, because the answer key was wrong. We're Team M1KU, and Cekgu is how that
+> "Every one of us has lost a mark we deserved, because the answer key was wrong. Cekgu is how that
 > stops."
 
 **Why not.** It spends the closing line in the opening, and it makes us sound like the customer. The buyer is the
@@ -145,8 +145,8 @@ educator, and a judge scoring practicality wants to meet them early.
 
 Opens on the real record and puts the product in the room by the second sentence.
 
-> "Twelve questions. Three of them had something wrong with them, and the teacher who wrote them didn't know. We're Team
-> M1KU, and we built Cekgu."
+> "Twelve questions. Three of them had something wrong with them, and the teacher who wrote them didn't know. We built
+> Cekgu."
 
 **Why not.** It gives away slide 03's number before slide 02 has made anyone care about it, and the room has not met the
 problem yet.
@@ -158,7 +158,7 @@ problem yet.
 _Deck up on the presenter machine. The app is already open in the other window on
 `cekgu-op7lf5dspq-as.a.run.app/sample`, signed out, scrolled to the top. DRIVER is idle with the cursor off screen._
 
-> "We're Team M1KU. We built Cekgu. Every university in this room already vets its exam papers by committee. That
+> "We built Cekgu. Every university in this room already vets its exam papers by committee. That
 > process is careful. Here's what it cannot catch."
 
 `NOTE:` Beat before the last sentence, then advance. **Do not finish the thought;** slide 02's headline finishes it, in
